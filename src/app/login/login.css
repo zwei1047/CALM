@@ -1,0 +1,26 @@
+input.ng-invalid.ng-touched {
+  border-left: 5px solid red;
+}
+
+input.ng-valid.ng-touched {
+  border-left: 5px solid green;
+}
+
+form {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.modal-body {
+  padding: 100px 25px;
+  position: relative;
+}
+
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+
+#myModalHorizontal {
+  top: 10%;
+}

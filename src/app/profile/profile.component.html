@@ -1,0 +1,47 @@
+<div class="jumbotron text-center">
+<h3>Page de profil</h3>
+
+<div class="container" *ngIf="isLogged">
+  <div class="row" *ngIf="user">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <div class="well well-sm">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <img src="{{image}}"
+                 class="img-rounded" alt="Image Profil"/>
+          </div>
+          <div class="col-sm-6 col-md-8">
+            <h4>
+              {{user.first_name}} {{user.last_name}}</h4>
+            <small><cite title="address">{{user.address.city}}, {{user.address.country}} <i class="glyphicon glyphicon-map-marker">
+            </i></cite></small>
+            <p>
+              <i class="glyphicon glyphicon-envelope"></i>{{user.email}}
+              <br />
+              <i class="glyphicon glyphicon-gift"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />
+              <i class="glyphicon glyphicon-info-sign"></i>{{user.role}}
+            </p>
+            <!-- button -->
+            <div class="btn-group">
+              <a type="button" href="/settings" routerLinkActive="active" class="btn btn-default btn-lg">
+                <i class="glyphicon glyphicon-cog"></i> Paramètres</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--<div class="form-group" [ngClass] = "{
+         'has-error': profile_img.invalid && profile_img.touched,
+         'has-success': profile_img.valid && profile_img.touched}">
+  <label class="control-label">Image de profil</label>
+  <input name="profile_img" type="file" class="form-control" [(ngModel)]="user.profile_img"
+         (change)="handleFileSelect($event)" #profile_img="ngModel" accept="image/*">
+  <span class="help-block" *ngIf="profile_img.invalid && profile_img.touched">
+            Image de profil requise
+    </span>
+</div>-->
+

@@ -1,0 +1,37 @@
+<div class="panel panel-primary" *ngIf="isLogged">
+  <div class="panel-heading"><h3><i class="glyphicon glyphicon-user"></i> Mon médecin traitant</h3></div>
+  <div class="panel-body">
+  <div class="row" *ngIf="patient">
+    <div class="col-sm-6 col-md-4">
+      <img src="{{image}}"
+           class="img-rounded" alt="Image Profil"/>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <h4>{{patient.general_doctor.user_id.first_name}} {{patient.general_doctor.user_id.last_name}}</h4>
+      <small><cite title="Cabinet"> {{patient.general_doctor.cabinet}} <i class="glyphicon glyphicon-map-marker">
+      </i></cite></small>
+      <p>
+        <i class="glyphicon glyphicon-envelope"></i> {{patient.general_doctor.user_id.email}}
+        <br />
+        <i class="glyphicon glyphicon-earphone"></i> {{patient.general_doctor.phone}}<br />
+      </p>
+      <br><button class="btn btn-default btn-lg">Contacter</button>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!--<div class="row" *ngIf="!patient.general_doctor.user_id">-->
+    <!--<div class="col-sm-6 col-md-4">-->
+      <!--<img src="{{image}}"-->
+           <!--class="img-rounded" alt="Image Profil"/>-->
+    <!--</div>-->
+    <!--<div class="col-sm-6 col-md-8">-->
+      <!--<h3>Votre médecin traitant</h3>-->
+        <!--<p>Veuillez renseigner votre médecin traitant dans les paramètres de votre compte</p>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+

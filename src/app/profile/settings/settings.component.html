@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+  <div *ngIf="user"><h2>Paramètres</h2>
+
+    <div *ngIf="user.role=='patient'">
+      <h3>Choisissez votre médecin généraliste</h3>
+      <div *ngFor="let doctor of doctors">
+        <a class="btn btn-default btn-lg" routerLinkActive="active" (click)="addDoctor(doctor)">
+          {{doctor.user_id.first_name}} {{doctor.user_id.last_name}}</a>
+        <h5><br></h5>
+      </div>
+    </div>
+
+  </div>
+</div>

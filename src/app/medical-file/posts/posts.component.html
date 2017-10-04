@@ -1,0 +1,16 @@
+<div class="panel panel-primary">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12">
+      <div class="panel-heading"><h3><i class="glyphicon glyphicon-comment"></i> Mes messages</h3></div>
+      <div class="panel-body">
+        <div class="row" *ngFor="let post of posts">
+          <div class="card card-block">
+            <h4 class="card-title">{{ post.doctor.first_name }} {{ post.doctor.last_name }}</h4>
+            <p class="card-text">{{post.text}}</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+

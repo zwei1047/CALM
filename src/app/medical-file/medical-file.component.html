@@ -1,0 +1,54 @@
+<<div class="jumbotron text-center">
+<div *ngIf="isLogged">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <!--Hello-->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
+      <app-posts></app-posts>
+    </div>
+
+    <div class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
+      <app-current-treatment></app-current-treatment>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <app-reminder></app-reminder>
+        </div>
+        <div class="col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <div>
+        <app-google-map></app-google-map>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row shift-up">
+    <div class="col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <app-calendar></app-calendar>
+
+    </div>
+    <div class="col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" >
+      <app-doctor-profile></app-doctor-profile>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="!isLogged">
+  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
+</div>
+
+</div>

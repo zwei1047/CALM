@@ -1,0 +1,71 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a routerLink="/" class="navbar-brand"><i class="glyphicon glyphicon-apple"></i>CALM</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+        <li><a *ngIf="isLogged && (user.role == 'patient')" routerLink="medical-file" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-folder-open"></i> Mon dossier</a></li>
+        <li><a *ngIf="isLogged && (user.role == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace médecin</a></li>
+        <li><a href="#about">A propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a routerLink="users" routerLinkActive="active">Utilisateurs</a></li>
+        <!--<li><a href="https://localhost:3000/api">API</a></li>-->
+            <li>
+              <div *ngIf="isLogged" class="dropdown">
+              <button class="btn btn-default btn-lg" type="button" data-toggle="dropdown" *ngIf="user">{{user.first_name}}
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a routerLink="profile" routerLinkActive="active"> Profil</a></li>
+                <li><a routerLink="settings" routerLinkActive="active"> Paramètres</a></li>
+                <li><a routerLinkActive="active" (click)="logout()"> Deconnexion</a></li>
+              </ul>
+              </div>
+            </li>
+
+          <li><a *ngIf="!isLogged" routerLink="register" routerLinkActive="active">
+            <span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+          <li><a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">
+            <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+      </ul>
+      </div>
+
+      <!--<ul class="nav navbar-nav navbar-right">-->
+
+        <!--<div *ngIf="isLogged" class="dropdown">-->
+          <!--<button class="btn btn-default btn-lg" type="button" data-toggle="dropdown" *ngIf="user">{{user.first_name}}-->
+            <!--<span class="caret"></span></button>-->
+          <!--<ul class="dropdown-menu">-->
+            <!--<li><a routerLink="profile" routerLinkActive="active"> Profil</a></li>-->
+            <!--<li><a routerLink="settings" routerLinkActive="active"> Paramètres</a></li>-->
+            <!--<li><a routerLinkActive="active" (click)="logout()"> Deconnexion</a></li>-->
+          <!--</ul>-->
+        <!--</div>-->
+
+        <!--<li><a *ngIf="!isLogged" routerLink="register" routerLinkActive="active">-->
+          <!--<span class="glyphicon glyphicon-user"></span> Inscription</a></li>-->
+        <!--<li><a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">-->
+          <!--<span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>-->
+      <!--</ul>-->
+    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>CALM Site Copyrights</p>
+</footer>
