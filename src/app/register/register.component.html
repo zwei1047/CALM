@@ -76,6 +76,8 @@
   <select name="role" class="form-control" required [(ngModel)]="user.role" #role="ngModel">
     <option value="patient">Patient</option>
     <option value="medecin">Medecin</option>
+    <option value="building">Infrastructure</option>
+    <option value="organisation">Organisation</option>
   </select>
     <span class="help-block" *ngIf="role.invalid && role.touched">
             Profil requis

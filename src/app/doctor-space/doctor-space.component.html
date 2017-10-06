@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <div class="container">
+  <div *ngIf="isLogged" class="container">
     <div class="row" *ngFor="let patient of patients">
       <div class="card card-block" *ngIf="patient.general_doctor">
         <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->
@@ -21,6 +21,10 @@
       </div>
     </div>
     </form>
+  </div>
+
+  <div *ngIf="!isLogged">
+    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
   </div>
 </div>
 

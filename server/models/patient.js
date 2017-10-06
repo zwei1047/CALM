@@ -4,11 +4,14 @@
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var Doctor = require('../models/doctor');
+var Patient = require('../models/patient');
 
 //define the schema
 var patientSchema = mongoose.Schema ({
   user_id : {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  general_doctor : {type: mongoose.Schema.Types.ObjectId, ref: 'Doctor'}
+  phone:String,
+  general_doctor : {type: mongoose.Schema.Types.ObjectId, ref: 'Doctor'},
+  patient_followed:{type: [mongoose.Schema.Types.ObjectId], ref:'Patient'}
 });
 
 

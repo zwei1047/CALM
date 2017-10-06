@@ -10,6 +10,7 @@ var User = mongoose.model('User');
 var Address = require('../models/address');
 var Doctor = require('../models/doctor');
 var Patient = require('../models/patient');
+var Building = require('../models/building');
 var fs = require('fs');
 
 
@@ -33,7 +34,7 @@ module.exports.register = function(req, res) {
   user.email = req.body.email;
   user.password = user.generateHash(req.body.password);
   user.birth_date = req.body.birth_date;
-  user.role = req.body.role;
+  user.role = ['patient',req.body.role];
   user.address = new Address(address);
 
 
@@ -56,7 +57,10 @@ module.exports.register = function(req, res) {
       switch (req.body.role) {
         case "medecin":
           var doctor = new Doctor({user_id: user._id});
+          var patient = new Patient({user_id: user._id});
           doctor.save(function(err) {
+          });
+          patient.save(function(err){
           });
           break;
         case "patient":
@@ -64,6 +68,9 @@ module.exports.register = function(req, res) {
           patient.save(function(err) {
           });
           break;
+        case "building":
+          var building = new Building({user_id:user._id});
+          building.save(function(err){});
         default:
           console.log("Default case");
           break;

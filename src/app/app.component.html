@@ -11,10 +11,14 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-        <li><a *ngIf="isLogged && (user.role == 'patient')" routerLink="medical-file" routerLinkActive="active"
+        <li><a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')" routerLink="medical-file" routerLinkActive="active"
                [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-folder-open"></i> Mon dossier</a></li>
-        <li><a *ngIf="isLogged && (user.role == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
+        <li><a *ngIf="isLogged && (user.role[1] == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
                [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace médecin</a></li>
+        <li><a *ngIf="isLogged && (user.role[1] == 'building')" routerLink="building-space" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace infrastructure</a></li>
+        <li><a *ngIf="isLogged && (user.role[1] == 'organisation')" routerLink="organisation-space" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace organisation</a></li>
         <li><a href="#about">A propos</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a routerLink="users" routerLinkActive="active">Utilisateurs</a></li>

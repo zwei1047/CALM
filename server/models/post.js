@@ -7,9 +7,11 @@ var User = require('../models/user');
 
 //define the schema
 var postSchema = mongoose.Schema ({
-  patient : {type: mongoose.Schema.Types.ObjectId, ref: 'Patient'},
-  doctor : {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  text : String
+  sender : {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  receiver : {type: [mongoose.Schema.Types.ObjectId], ref: 'User'},
+  text : String,
+  Created_at: {type:Date,default:Date.now},
+  type: ['INFO','ALERT','POST','TREATMENT']
 });
 
 

@@ -19,8 +19,13 @@ export class LoginComponent implements OnInit{
   constructor(private router: Router, private authentication: AuthenticationService){}
 
   ngOnInit() {
-
+    console.log("start");
+      console.log(document.getElementById('modal'));
   }
+
+    ngOnDestroy() {
+        console.log("destroy");
+    }
 
   // signin the new user if signup successfully
   login(){

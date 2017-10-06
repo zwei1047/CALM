@@ -1,0 +1,8 @@
+<div class="jumbotron text-center">
+  <div *ngIf="isLogged" class="container">
+    Bienvenue sur la page infrastructure
+  </div>
+  <div *ngIf="!isLogged">
+    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
+  </div>
+</div>

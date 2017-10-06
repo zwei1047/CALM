@@ -23,10 +23,12 @@ import {SettingsComponent} from "./profile/settings/settings.component";
 import { CalendarComponent } from './medical-file/calendar/calendar.component';
 import { ReminderComponent } from './medical-file/reminder/reminder.component';
 import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
+import { BuildingSpaceComponent } from './building-space/building-space.component';
 import {DoctorSpaceService} from './shared/services/doctor-space.service';
 import { GoogleMapComponent } from './medical-file/google-map/google-map.component';
 import {AgmCoreModule} from "angular2-google-maps/core";
 import { PostsComponent } from './medical-file/posts/posts.component';
+import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { PostsComponent } from './medical-file/posts/posts.component';
     CalendarComponent,
     ReminderComponent,
     DoctorSpaceComponent,
+    BuildingSpaceComponent,
+    OrganisationSpaceComponent,
     GoogleMapComponent,
     PostsComponent
   ],

@@ -15,19 +15,23 @@ import {AppComponent} from "./app.component";
 import { MedicalFileComponent } from './medical-file/medical-file.component';
 import {SettingsComponent} from "./profile/settings/settings.component";
 import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
+import { BuildingSpaceComponent } from './building-space/building-space.component';
+import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
 
 const appRoutes: Routes = [
-  { path:'',component: HomeComponent },
-  { path:'about',component: AboutComponent },
-  { path:'contact',component: ContactComponent },
-  { path:'users',component: UsersComponent },
-  { path:'login',component: LoginComponent },
-  { path:'register', component:RegisterComponent },
-  { path:'profile', component:ProfileComponent },
-  { path:'medical-file', component:MedicalFileComponent },
-  { path:'doctor-space', component: DoctorSpaceComponent},
-  { path:'logout', component: AppComponent},
-  { path:'settings', component: SettingsComponent},
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'login' , component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'medical-file', component: MedicalFileComponent },
+  { path: 'doctor-space', component: DoctorSpaceComponent},
+  { path: 'building-space', component: BuildingSpaceComponent},
+  {path: 'organisation-space', component: OrganisationSpaceComponent},
+  { path: 'logout', component: AppComponent},
+  { path: 'settings', component: SettingsComponent},
   { path: '**', component: NotFoundComponent}
 ];
 

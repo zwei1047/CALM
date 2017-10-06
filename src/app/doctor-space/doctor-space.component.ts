@@ -12,14 +12,15 @@ import {Post} from "../shared/models/post";
 })
 export class DoctorSpaceComponent implements OnInit {
 
-  constructor(private doctorService: DoctorSpaceService, private auth: AuthenticationService) { }
-
   patients: Patient[] = [];
   submitted: boolean = false;
   post: Post;
   patient_selected: Patient;
+  isLogged: boolean;
 
+  constructor(private doctorService: DoctorSpaceService, private auth: AuthenticationService) { }
   ngOnInit() {
+    this.isLogged = this.auth.isLoggedIn();
     this.loadAllPatients();
     this.post = new Post(null);
   }
@@ -28,7 +29,7 @@ export class DoctorSpaceComponent implements OnInit {
 
     this.doctorService.getPatientFromDoctor(this.auth.currentUserId()).subscribe(patients => {
       this.patients = patients;
-      console.log("Patients :", this.patients);
+      console.log('Patients :', this.patients);
     });
   }
 
@@ -39,7 +40,7 @@ export class DoctorSpaceComponent implements OnInit {
     this.change_submit(null);
   }
 
-  change_submit(patient : Patient) {
+  change_submit(patient: Patient) {
     this.patient_selected = patient;
     this.submitted = !this.submitted;
   }

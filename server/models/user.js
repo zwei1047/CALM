@@ -13,7 +13,7 @@ var userSchema = mongoose.Schema ({
   birth_date : Date,
   email : String,
   password: String,
-  role : String,
+  role :  [String],
   profile_img : { data: Buffer, contentType: String },
   address : {type: mongoose.Schema.Types.ObjectId, ref: 'Address'}
 });
