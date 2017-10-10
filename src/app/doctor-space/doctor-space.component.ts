@@ -33,12 +33,7 @@ export class DoctorSpaceComponent implements OnInit {
     });
   }
 
-  send_post() {
-    this.post.patient = this.patient_selected;
-    this.post.doctor = this.auth.currentUserId(); // Get the user id of the doctor but not the doctor id
-    this.doctorService.send_post(this.post).subscribe(data => console.log(data));
-    this.change_submit(null);
-  }
+
 
   change_submit(patient: Patient) {
     this.patient_selected = patient;
