@@ -75,7 +75,7 @@ var UsersService = (function () {
     return UsersService;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/users.service.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.service.js.map
 
 /***/ }),
 
@@ -119,7 +119,7 @@ var DoctorSpaceService = (function () {
     return DoctorSpaceService;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/doctor-space.service.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-space.service.js.map
 
 /***/ }),
 
@@ -171,7 +171,7 @@ var MedicalFileService = (function () {
     return MedicalFileService;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/medical-file.service.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/medical-file.service.js.map
 
 /***/ }),
 
@@ -209,7 +209,7 @@ var Doctor = (function () {
     }
     return Doctor;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/doctor.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor.js.map
 
 /***/ }),
 
@@ -242,7 +242,7 @@ var Patient = (function () {
     }
     return Patient;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/patient.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/patient.js.map
 
 /***/ }),
 
@@ -346,7 +346,7 @@ var AuthenticationService = (function () {
     return AuthenticationService;
     var _a;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/authentication.service.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/authentication.service.js.map
 
 /***/ }),
 
@@ -379,7 +379,7 @@ var AboutComponent = (function () {
     ], AboutComponent);
     return AboutComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/about.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/about.js.map
 
 /***/ }),
 
@@ -452,7 +452,7 @@ var AppComponent = (function () {
     return AppComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/app.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.component.js.map
 
 /***/ }),
 
@@ -495,7 +495,7 @@ var BuildingSpaceComponent = (function () {
     return BuildingSpaceComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/building-space.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/building-space.component.js.map
 
 /***/ }),
 
@@ -528,7 +528,7 @@ var ContactComponent = (function () {
     ], ContactComponent);
     return ContactComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/contact.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/contact.js.map
 
 /***/ }),
 
@@ -588,7 +588,7 @@ var DoctorSpaceComponent = (function () {
     return DoctorSpaceComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/doctor-space.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-space.component.js.map
 
 /***/ }),
 
@@ -621,7 +621,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/home.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/home.js.map
 
 /***/ }),
 
@@ -683,7 +683,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/login.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/login.js.map
 
 /***/ }),
 
@@ -723,7 +723,7 @@ var MedicalFileComponent = (function () {
     return MedicalFileComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/medical-file.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/medical-file.component.js.map
 
 /***/ }),
 
@@ -754,7 +754,7 @@ var NotFoundComponent = (function () {
     ], NotFoundComponent);
     return NotFoundComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/not-found.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/not-found.js.map
 
 /***/ }),
 
@@ -797,7 +797,7 @@ var OrganisationSpaceComponent = (function () {
     return OrganisationSpaceComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/organisation-space.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/organisation-space.component.js.map
 
 /***/ }),
 
@@ -853,7 +853,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/profile.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/profile.component.js.map
 
 /***/ }),
 
@@ -936,7 +936,7 @@ var SettingsComponent = (function () {
     return SettingsComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/settings.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/settings.component.js.map
 
 /***/ }),
 
@@ -1024,7 +1024,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/register.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/register.component.js.map
 
 /***/ }),
 
@@ -1046,6 +1046,9 @@ var Address = (function () {
             this.city = AdressInfo.city;
             this.postal_code = AdressInfo.postal_code;
             this.country = AdressInfo.country;
+            this.latitude = AdressInfo.latitude;
+            this.longitude = AdressInfo.longitude;
+            this.precision = AdressInfo.precision;
         }
         else {
             this._id = "";
@@ -1054,11 +1057,14 @@ var Address = (function () {
             this.city = "";
             this.postal_code = 0;
             this.country = "France";
+            this.latitude = 0;
+            this.longitude = 0;
+            this.precision = false;
         }
     }
     return Address;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/address.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/address.js.map
 
 /***/ }),
 
@@ -1123,7 +1129,7 @@ var UsersComponent = (function () {
     return UsersComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/users.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.js.map
 
 /***/ }),
 
@@ -1165,7 +1171,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/main.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/main.js.map
 
 /***/ }),
 
@@ -1208,7 +1214,7 @@ var User = (function () {
     ;
     return User;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/user.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/user.js.map
 
 /***/ }),
 
@@ -1338,7 +1344,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/app.module.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.module.js.map
 
 /***/ }),
 
@@ -1394,7 +1400,7 @@ var appRoutes = [
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__["a" /* NotFoundComponent */] }
 ];
 var appRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/app.routing.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.routing.js.map
 
 /***/ }),
 
@@ -1429,7 +1435,7 @@ var CalendarComponent = (function () {
     ], CalendarComponent);
     return CalendarComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/calendar.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/calendar.component.js.map
 
 /***/ }),
 
@@ -1464,7 +1470,7 @@ var CurrentTreatmentComponent = (function () {
     ], CurrentTreatmentComponent);
     return CurrentTreatmentComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/current-treatment.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/current-treatment.component.js.map
 
 /***/ }),
 
@@ -1519,7 +1525,7 @@ var DoctorProfileComponent = (function () {
     return DoctorProfileComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/doctor-profile.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-profile.component.js.map
 
 /***/ }),
 
@@ -1556,7 +1562,7 @@ var GoogleMapComponent = (function () {
     ], GoogleMapComponent);
     return GoogleMapComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/google-map.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/google-map.component.js.map
 
 /***/ }),
 
@@ -1605,7 +1611,7 @@ var PostsComponent = (function () {
     return PostsComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/posts.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/posts.component.js.map
 
 /***/ }),
 
@@ -1640,7 +1646,7 @@ var ReminderComponent = (function () {
     ], ReminderComponent);
     return ReminderComponent;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/reminder.component.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/reminder.component.js.map
 
 /***/ }),
 
@@ -1689,7 +1695,7 @@ var Building = (function () {
     ;
     return Building;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/building.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/building.js.map
 
 /***/ }),
 
@@ -1721,7 +1727,7 @@ var Post = (function () {
     }
     return Post;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/post.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/post.js.map
 
 /***/ }),
 
@@ -1755,7 +1761,7 @@ var Service = (function () {
     }
     return Service;
 }());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/service.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/service.js.map
 
 /***/ }),
 
@@ -1771,14 +1777,14 @@ var Service = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/environment.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/environment.js.map
 
 /***/ }),
 
 /***/ 761:
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid {\n    padding: 60px 50px;\n}\n\nvideo {\n    width: 100%;\n    height: auto;\n}\n\n.video-container {\n    position: relative;\n    padding-bottom: 56.25%;\n    padding-top: 30px;\n    height: 0;\n    overflow: hidden;\n}\n\n.video-container iframe,\n.video-container object,\n.video-container embed {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n\n.video-wrapper {\n\n    width: 1200px;\n    max-width: 100%;\n}\n"
+module.exports = ".container-fluid {\r\n    padding: 60px 50px;\r\n}\r\n\r\nvideo {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.video-container {\r\n    position: relative;\r\n    padding-bottom: 56.25%;\r\n    padding-top: 30px;\r\n    height: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.video-container iframe,\r\n.video-container object,\r\n.video-container embed {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.video-wrapper {\r\n\r\n    width: 1200px;\r\n    max-width: 100%;\r\n}\r\n"
 
 /***/ }),
 
@@ -1792,7 +1798,7 @@ module.exports = "/*.active {\n  color: white !important;\n}*/\n\n.dropdown-menu
 /***/ 763:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
 
 /***/ }),
 
@@ -1820,7 +1826,7 @@ module.exports = "\n"
 /***/ 767:
 /***/ (function(module, exports) {
 
-module.exports = "input.ng-invalid.ng-touched {\n  border-left: 5px solid red;\n}\n\ninput.ng-valid.ng-touched {\n  border-left: 5px solid green;\n}\n\nform {\n  text-align: left;\n  margin-left: 10px;\n}\n\n.modal-body {\n  padding: 100px 25px;\n  position: relative;\n}\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n\n#myModalHorizontal {\n  top: 10%;\n}\n"
+module.exports = "input.ng-invalid.ng-touched {\r\n  border-left: 5px solid red;\r\n}\r\n\r\ninput.ng-valid.ng-touched {\r\n  border-left: 5px solid green;\r\n}\r\n\r\nform {\r\n  text-align: left;\r\n  margin-left: 10px;\r\n}\r\n\r\n.modal-body {\r\n  padding: 100px 25px;\r\n  position: relative;\r\n}\r\n\r\n.jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n#myModalHorizontal {\r\n  top: 10%;\r\n}\r\n"
 
 /***/ }),
 
@@ -1855,7 +1861,7 @@ module.exports = ".sebm-google-map-container {\n  height: 300px;\n}\n"
 /***/ 772:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n\r\n.class{\r\n  background:grey;\r\n  color:white;\r\n}\r\n"
 
 /***/ }),
 
@@ -1876,7 +1882,7 @@ module.exports = ".list-item {\n  text-align: left;\n}\n"
 /***/ 775:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
 
 /***/ }),
 
@@ -1897,7 +1903,7 @@ module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n
 /***/ 778:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n  max-width: 400px;\n    margin-left: auto;\n    margin-right: auto;\n}\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n  max-width: 400px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n"
 
 /***/ }),
 
@@ -1911,7 +1917,7 @@ module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n
 /***/ 780:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Container (About Section) -->\n<div id=\"about\" class=\"container-fluid\">\n    <div class=\"row\">\n        <div class=\"col-sm-8\">\n            <h2>A propos de nous</h2><br>\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\n                l'accès au soins plus facile.</h4><br>\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\n                plateforme.</p>\n            <br>\n            <div class=\"video-wrapper\">\n                <div class=\"video-container\">\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\n                            frameborder=\"0\"\n                            allowfullscreen></iframe>\n                </div>\n                <br>\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\n            </div>\n            <div class=\"col-sm-4\">\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\n            </div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<!-- Container (About Section) -->\r\n<div id=\"about\" class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-8\">\r\n            <h2>A propos de nous</h2><br>\r\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\r\n                l'accès au soins plus facile.</h4><br>\r\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\r\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\r\n                plateforme.</p>\r\n            <br>\r\n            <div class=\"video-wrapper\">\r\n                <div class=\"video-container\">\r\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\r\n                            frameborder=\"0\"\r\n                            allowfullscreen></iframe>\r\n                </div>\r\n                <br>\r\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1925,7 +1931,7 @@ module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-to
 /***/ 782:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    Bienvenue sur la page infrastructure\n  </div>\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1953,7 +1959,7 @@ module.exports = "<div class=\"jumbotron text-center\">\n  <h1>CALM</h1>\n  <p>L
 /***/ 786:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page de connexion</h2>\n\n  <!-- Button trigger modal -->\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\n    Connexion\n  </button>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n\t<!-- Modal Header -->\n\t<div class=\"modal-header\">\n          <button type=\"button\" class=\"close\"\n                  data-dismiss=\"modal\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\n            Connexion\n          </h4>\n\t</div>\n\n\t<!-- Modal Body -->\n\t<div class=\"modal-body\">\n\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\n            <div class=\"form-group\" [ngClass] = \"{\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\n\n              <label  class=\"col-sm-2 control-label\"\n                      for=\"inputEmail3\">Email</label>\n              <div class=\"col-sm-10\">\n\t\t<input type=\"email\" class=\"form-control\"\n                       id=\"inputEmail3\" placeholder=\"Email\" required\n                       [(ngModel)]=\"user.email\" name=\"email\"\n                       #email=\"ngModel\"/>\n\t\t<span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n\t\t  Email is required\n\t\t</span>\n              </div>\n            </div>\n\n            <div class=\"form-group\" [ngClass] = \"{\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\n\n              <label class=\"col-sm-2 control-label\"\n                     for=\"inputPassword3\" >Mot de passe</label>\n              <div class=\"col-sm-10\">\n\t\t<input type=\"password\" class=\"form-control\"\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\n                       [(ngModel)]=\"user.password\"\n                       #password=\"ngModel\"/>\n\t\t<span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n\t\t  Password is required\n\t\t</span>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <div class=\"col-sm-offset-2 col-sm-10\">\n\t\t<button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\n              </div>\n            </div>\n          </form>\n\t</div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h2 class=\"text-center\">Page de connexion</h2>\r\n\r\n  <!-- Button trigger modal -->\r\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\r\n    Connexion\r\n  </button>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\r\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n\t<!-- Modal Header -->\r\n\t<div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\"\r\n                  data-dismiss=\"modal\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\r\n            Connexion\r\n          </h4>\r\n\t</div>\r\n\r\n\t<!-- Modal Body -->\r\n\t<div class=\"modal-body\">\r\n\r\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\r\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\r\n\r\n              <label  class=\"col-sm-2 control-label\"\r\n                      for=\"inputEmail3\">Email</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"email\" class=\"form-control\"\r\n                       id=\"inputEmail3\" placeholder=\"Email\" required\r\n                       [(ngModel)]=\"user.email\" name=\"email\"\r\n                       #email=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\r\n\t\t  Email is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\r\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\r\n\r\n              <label class=\"col-sm-2 control-label\"\r\n                     for=\"inputPassword3\" >Mot de passe</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"password\" class=\"form-control\"\r\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\r\n                       [(ngModel)]=\"user.password\"\r\n                       #password=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\r\n\t\t  Password is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-offset-2 col-sm-10\">\r\n\t\t<button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\r\n              </div>\r\n            </div>\r\n          </form>\r\n\t</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1988,7 +1994,7 @@ module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-head
 /***/ 791:
 /***/ (function(module, exports) {
 
-module.exports = "<<div class=\"jumbotron text-center\">\n<div *ngIf=\"isLogged\">\n  <div class=\"row\">\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n      <!--Hello-->\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\n      <app-posts></app-posts>\n    </div>\n\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\n      <app-current-treatment></app-current-treatment>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\n      <div class=\"row\">\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n          <app-reminder></app-reminder>\n        </div>\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\n      <div>\n        <app-google-map></app-google-map>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"row shift-up\">\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\n      <app-calendar></app-calendar>\n\n    </div>\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\n      <app-doctor-profile></app-doctor-profile>\n    </div>\n  </div>\n\n</div>\n\n<div *ngIf=\"!isLogged\">\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n</div>\n\n</div>\n"
+module.exports = "<<div class=\"jumbotron text-center\">\r\n<div *ngIf=\"isLogged\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n      <!--Hello-->\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-posts></app-posts>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-current-treatment></app-current-treatment>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n          <app-reminder></app-reminder>\r\n        </div>\r\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <div>\r\n        <app-google-map></app-google-map>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row shift-up\">\r\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <app-calendar></app-calendar>\r\n\r\n    </div>\r\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\r\n      <app-doctor-profile></app-doctor-profile>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div *ngIf=\"!isLogged\">\r\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n</div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -2016,7 +2022,7 @@ module.exports = "<div class=\"jumbotron text-center\">\n  <h1>404 Not Found</h1
 /***/ 795:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    Bienvenue sur la page infrastructure\n  </div>\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
