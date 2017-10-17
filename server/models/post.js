@@ -11,7 +11,7 @@ var postSchema = mongoose.Schema ({
   receiver : {type: [mongoose.Schema.Types.ObjectId], ref: 'User'},
   text : String,
   Created_at: {type:Date,default:Date.now},
-  type: ['INFO','ALERT','POST','TREATMENT']
+  type: {type:String, enum:['INFO','ALERT','POST','TREATMENT']}
 });
 
 

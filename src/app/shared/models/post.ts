@@ -6,6 +6,14 @@ import {User} from './user';
 import {Address} from "./address";
 import {forEach} from "@angular/router/src/utils/collection";
 
+type TypeEnum = 'INFO' | 'ALERT' | 'POST' | 'TREATMENT';
+const TypeEnum = {
+  INFO: 'INFO' as TypeEnum,
+  ALERT: 'ALERT' as TypeEnum,
+  POST: 'POST' as TypeEnum,
+  TREATMENT: 'TREATMENT' as TypeEnum
+};
+
 
 export class Post {
   _id: string;
@@ -13,7 +21,7 @@ export class Post {
   receiver: User[];
   text: String;
   Created_at: Date;
-  type: ['INFO', 'ALERT', 'POST', 'TREATMENT'];
+  type: TypeEnum;
 
 
 
@@ -28,9 +36,8 @@ export class Post {
       this.type = postInfo.type;
 
     } else {
-      this._id = "";
       this.sender = new User(null);
-      this.text = "";
+      this.text = '';
       this.Created_at = null;
     }
   }
