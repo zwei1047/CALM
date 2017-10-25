@@ -9,6 +9,7 @@ import {ContactComponent} from "./contact/contact";
 import {AboutComponent} from "./about/about";
 import {UsersComponent} from "./users/users";
 import {LoginComponent} from "./login/login";
+import {PostComponent} from './post/post.component';
 import {NotFoundComponent} from "./not-found/not-found";
 import {appRouting} from "./app.routing";
 import { RegisterComponent } from './register/register.component';
@@ -49,6 +50,7 @@ import { OrganisationSpaceComponent } from './organisation-space/organisation-sp
     ReminderComponent,
     DoctorSpaceComponent,
     BuildingSpaceComponent,
+    PostComponent,
     OrganisationSpaceComponent,
     GoogleMapComponent,
     PostsComponent

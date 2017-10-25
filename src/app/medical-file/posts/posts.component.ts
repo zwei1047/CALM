@@ -10,18 +10,6 @@ import {Post} from "../../shared/models/post";
 export class PostsComponent implements OnInit {
 
   constructor(private medicalService : MedicalFileService) { }
-  posts: Post[] = [];
-
   ngOnInit() {
-    this.get_posts();
   }
-
-  get_posts() {
-    this.medicalService.getCurrentPatient()
-      .subscribe(patient => {
-        this.medicalService.get_posts(patient._id)
-          .subscribe(posts => {this.posts = posts});
-      });
-  }
-
 }

@@ -1,24 +1,14 @@
 import {User} from './user';
 
-type TypeEnum = 'Read' | 'Read_Write';
-const TypeEnum = {
-  Read: 'Read' as TypeEnum,
-  Read_Write: 'Read_Write' as TypeEnum
-};
-
-type SubjectEnum = 'Dossier' | 'Post' | 'Rdv';
-const SubjectEnum = {
-  Dossier: 'Dossier' as SubjectEnum,
-  Post: 'Post' as SubjectEnum,
-  Rdv: 'Rdv' as SubjectEnum
-};
+export enum TypeAutorisation {READ, READ_WRITE};
+export enum SubjectAutorisation {DOSSIER, POST, RDV};
 
 export class Autorisation {
   _id: string;
   user: User;
   observer: User;
-  type: TypeEnum;
-  subject: SubjectEnum;
+  type: TypeAutorisation;
+  subject: SubjectAutorisation;
   Created_at: Date;
   valide: Boolean;
 
@@ -33,8 +23,8 @@ export class Autorisation {
     } else {
       this.user = new User(null);
       this.observer = new User(null);
-      this.type = TypeEnum.Read;
-      this.subject = SubjectEnum.Post;
+      this.type = TypeAutorisation.READ;
+      this.subject = SubjectAutorisation.POST;
 
     }
   }

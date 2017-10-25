@@ -7,6 +7,15 @@
         <button type="button" class="btn btn-danger">Rechercher</button>
       </div>
     </div>
-<sebm-google-map [latitude]="lat" [longitude]="lng"></sebm-google-map>
+<sebm-google-map [latitude]="lat" [longitude]="lng">
+  <sebm-google-map-marker [latitude]="lat" [longitude]="lng">
+    <sebm-google-map-info-window>MARKER 1</sebm-google-map-info-window>
+  </sebm-google-map-marker>
+  <sebm-google-map-marker [latitude]="lat" [longitude]="lng-10">
+    <sebm-google-map-info-window>MARKER2
+    </sebm-google-map-info-window>
+  </sebm-google-map-marker>
+</sebm-google-map>
+
   </div>
 </div>

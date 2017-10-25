@@ -14,8 +14,5 @@ export class DoctorSpaceService {
       .map(res => res.json());
   }
 
-  send_post(post: Post) {
-    return this.http.post('https://localhost:3000/api/post',post, this.authentication.getRequestOptions())
-      .map(res => res.json());
-  }
+
 }

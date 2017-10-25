@@ -19,6 +19,7 @@ module.exports = function(passport) {
   var Patient = require('../models/patient');
   var Address = require('../models/address');
   var Post = require('../models/post');
+  var Autorisation = require('../models/autorisation');
 
   /* GET api listing. */
   router.get('/', function(req, res) {
@@ -31,6 +32,7 @@ module.exports = function(passport) {
       "<a href='/'>Return to the website</a>");
   });
 
+  //get all users
   router.get('/users', auth, function(req, res) {
     User.find({})
       .populate('address')
@@ -107,9 +109,10 @@ module.exports = function(passport) {
     }
   });
 
-  router.get('/users/:email', auth, function(req, res) {
-    if (req.params.email) {
-      User.findOne({ email: req.params.email }, function (err, docs) {
+  //get one user by his id.
+  router.get('/users/:id', auth, function(req, res) {
+    if (req.params.id) {
+      User.findOne({ _id: req.params.id }, function (err, docs) {
         res.json(docs);
       });
     }
@@ -175,18 +178,19 @@ module.exports = function(passport) {
   // Save the new post
   router.post('/post', auth, function (req, res, next) {
     var post = new Post();
-    post.patient = req.body.patient;
-    post.doctor = req.body.doctor;
+    post.sender = req.body.sender;
+    post.receiver = req.body.receiver;
     post.text = req.body.text;
+    post.type =req.body.type;
     post.save(function(err) {
+      res.json(err);
     });
 
   });
 
-  // Get the posts for a given patient
-  router.get('/post/:id', auth, function (req, res, next) {
-    Post.find({patient: req.params.id})
-      .populate('doctor')
+  // Get the posts for a given user
+  router.get('/post/:sender/:receiver', auth, function (req, res, next) {
+    Post.find({sender: req.params.sender, receiver: req.params.receiver})
       .exec(function (err, docs) {
         res.json(docs);
       });
@@ -200,6 +204,28 @@ module.exports = function(passport) {
       .exec(function (err, docs) {
         res.json(docs);
       });
+  });
+
+  //Get the autorisations for a user
+  router.get('/autorisation/:id', auth, function (req, res, next) {
+    Autorisation.find({user: req.params.id})
+      .populate('observer')
+      .exec(function (err, docs) {
+        res.json(docs);
+      });
+  });
+
+  //add an autorisation
+  router.put('/autorisation/', auth, function (req, res, next){
+    var autorisation = new Autorisation();
+    autorisation.user = req.body.user;
+    autorisation.observer = req.body.observer;
+    // a completer
+    autorisation.save(function(err){
+      if(err != null){
+        console.log(err);
+      }
+    });
   });
 
   return router;

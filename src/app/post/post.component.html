@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <div *ngIf="isLogged">
+    <!-- details -->
+    <div id="messagerie">
+      <h2>Messagerie</h2>
+      <ul id="list_users">
+        <li *ngFor="let user of usersPost" (click)="openMessenger(user)">
+          {{user.first_name}} {{user.last_name}}
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="messengerBox['display'] == 'True'" id="message">
+      <h2>{{messengerBox['name']}}</h2>
+      <ul #scrollBottom>
+        <li *ngFor="let post of messengerListPosts">
+          <div *ngIf="post.sender==me._id" style="left: 19%;">{{post.text}}<br/>
+            à {{post.Created_at}}
+          </div>
+          <div *ngIf="!(post.sender==me._id)" style="left: 1%;">{{post.text}}<br/>
+            à {{post.Created_at}}
+          </div>
+        </li>
+      </ul>
+      <input type="text" name="newPost" placeholder="Nouveau message" id="newPost" [(ngModel)]="newPostText"/>
+      <input type="submit" value="Envoyer" id="sendPost" (click)="sendPost()"/>
+    </div>
+  </div>
+
+  <div *ngIf="!isLogged">
+    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
+  </div>
+</div>
+
+
+
+
+

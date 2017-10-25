@@ -17,6 +17,7 @@ import {SettingsComponent} from "./profile/settings/settings.component";
 import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
 import { BuildingSpaceComponent } from './building-space/building-space.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+import {PostComponent} from "./post/post.component";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'doctor-space', component: DoctorSpaceComponent},
   { path: 'building-space', component: BuildingSpaceComponent},
   {path: 'organisation-space', component: OrganisationSpaceComponent},
+  { path: 'post', component: PostComponent},
   { path: 'logout', component: AppComponent},
   { path: 'settings', component: SettingsComponent},
   { path: '**', component: NotFoundComponent}

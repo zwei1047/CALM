@@ -2,7 +2,7 @@ import {Component, OnInit, ChangeDetectorRef} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from "../shared/models/user";
-import {Address} from "../shared/models/address";
+import {Address} from '../shared/models/address';
 
 @Component({
   selector: 'app-register',
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(['/profile']);
           location.reload();
         }
-      )
+      );
   }
 
   // create the new user
