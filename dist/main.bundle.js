@@ -1,81 +1,10 @@
 webpackJsonp([1,4],{
 
-/***/ 1176:
+/***/ 1178:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(563);
+module.exports = __webpack_require__(565);
 
-
-/***/ }),
-
-/***/ 120:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(461);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(28);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var UsersService = (function () {
-    function UsersService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-    }
-    // Get all users from the API
-    UsersService.prototype.getUsers = function () {
-        return this.http.get('https://localhost:3000/api/users', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.deleteUser = function (id) {
-        if (this.authentication.currentUserId() == id) {
-            this.authentication.logout();
-        }
-        return this.http.delete('https://localhost:3000/api/users/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
-    };
-    UsersService.prototype.deleteAddress = function (id) {
-        return this.http.delete('https://localhost:3000/api/addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
-    };
-    UsersService.prototype.getProfile = function () {
-        return this.http.get('https://localhost:3000/api/profile', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddressById = function (id) {
-        return this.http.get('https://localhost:3000/api/addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddresses = function () {
-        return this.http.get('https://localhost:3000/api/addresses', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getDoctors = function () {
-        return this.http.get('https://localhost:3000/api/doctors', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], UsersService);
-    return UsersService;
-    var _a, _b;
-}());
-//# sourceMappingURL=F:/CALM/src/users.service.js.map
 
 /***/ }),
 
@@ -84,8 +13,8 @@ var UsersService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -128,8 +57,8 @@ var DoctorSpaceService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicalFileService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -175,84 +104,13 @@ var MedicalFileService = (function () {
 
 /***/ }),
 
-/***/ 261:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__patient__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__building__ = __webpack_require__(690);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Doctor; });
-
-
-
-var Doctor = (function () {
-    function Doctor(DoctorInfo) {
-        if (DoctorInfo) {
-            this._id = DoctorInfo._id;
-            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](DoctorInfo.user_id);
-            this.phone = DoctorInfo.phone;
-            for (var _i = 0, _a = DoctorInfo.patients; _i < _a.length; _i++) {
-                var elt = _a[_i];
-                this.patients.push(new __WEBPACK_IMPORTED_MODULE_1__patient__["a" /* Patient */](elt));
-            }
-            for (var _b = 0, _c = DoctorInfo.infrastructure; _b < _c.length; _b++) {
-                var elt = _c[_b];
-                this.infrastructure.push(new __WEBPACK_IMPORTED_MODULE_2__building__["a" /* Building */](elt));
-            }
-        }
-        else {
-            this._id = "";
-            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.phone = "";
-        }
-    }
-    return Doctor;
-}());
-//# sourceMappingURL=F:/CALM/src/doctor.js.map
-
-/***/ }),
-
-/***/ 262:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(261);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patient; });
-
-
-var Patient = (function () {
-    function Patient(patientInfo) {
-        if (patientInfo) {
-            this._id = patientInfo._id;
-            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](patientInfo.user_id);
-            this.general_doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](patientInfo.general_doctor);
-            for (var _i = 0, _a = patientInfo.patient_followed; _i < _a.length; _i++) {
-                var elt = _a[_i];
-                this.patient_followed.push(new Patient(elt));
-            }
-        }
-        else {
-            this._id = '';
-            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.general_doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](null);
-            this.phone = '';
-        }
-    }
-    return Patient;
-}());
-//# sourceMappingURL=F:/CALM/src/patient.js.map
-
-/***/ }),
-
-/***/ 28:
+/***/ 23:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(893);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(895);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -350,6 +208,77 @@ var AuthenticationService = (function () {
 
 /***/ }),
 
+/***/ 261:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__patient__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__building__ = __webpack_require__(692);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Doctor; });
+
+
+
+var Doctor = (function () {
+    function Doctor(DoctorInfo) {
+        if (DoctorInfo) {
+            this._id = DoctorInfo._id;
+            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](DoctorInfo.user_id);
+            this.phone = DoctorInfo.phone;
+            for (var _i = 0, _a = DoctorInfo.patients; _i < _a.length; _i++) {
+                var elt = _a[_i];
+                this.patients.push(new __WEBPACK_IMPORTED_MODULE_1__patient__["a" /* Patient */](elt));
+            }
+            for (var _b = 0, _c = DoctorInfo.infrastructure; _b < _c.length; _b++) {
+                var elt = _c[_b];
+                this.infrastructure.push(new __WEBPACK_IMPORTED_MODULE_2__building__["a" /* Building */](elt));
+            }
+        }
+        else {
+            this._id = "";
+            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.phone = "";
+        }
+    }
+    return Doctor;
+}());
+//# sourceMappingURL=F:/CALM/src/doctor.js.map
+
+/***/ }),
+
+/***/ 262:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(261);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patient; });
+
+
+var Patient = (function () {
+    function Patient(patientInfo) {
+        if (patientInfo) {
+            this._id = patientInfo._id;
+            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](patientInfo.user_id);
+            this.general_doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](patientInfo.general_doctor);
+            for (var _i = 0, _a = patientInfo.patient_followed; _i < _a.length; _i++) {
+                var elt = _a[_i];
+                this.patient_followed.push(new Patient(elt));
+            }
+        }
+        else {
+            this._id = '';
+            this.user_id = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.general_doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](null);
+            this.phone = '';
+        }
+    }
+    return Patient;
+}());
+//# sourceMappingURL=F:/CALM/src/patient.js.map
+
+/***/ }),
+
 /***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -372,8 +301,8 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'about-page',
-            template: __webpack_require__(872),
-            styles: [__webpack_require__(853)]
+            template: __webpack_require__(874),
+            styles: [__webpack_require__(855)]
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
@@ -388,10 +317,10 @@ var AboutComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(93);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -444,8 +373,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(873),
-            styles: [__webpack_require__(854)]
+            template: __webpack_require__(875),
+            styles: [__webpack_require__(856)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */]) === 'function' && _c) || Object])
     ], AppComponent);
@@ -462,7 +391,7 @@ var AppComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuildingSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -487,8 +416,8 @@ var BuildingSpaceComponent = (function () {
     BuildingSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-building-space',
-            template: __webpack_require__(874),
-            styles: [__webpack_require__(855)]
+            template: __webpack_require__(876),
+            styles: [__webpack_require__(857)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], BuildingSpaceComponent);
@@ -521,8 +450,8 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'contact-page',
-            template: __webpack_require__(875),
-            styles: [__webpack_require__(856)]
+            template: __webpack_require__(877),
+            styles: [__webpack_require__(858)]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -538,8 +467,8 @@ var ContactComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(691);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(693);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -580,8 +509,8 @@ var DoctorSpaceComponent = (function () {
     DoctorSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-space',
-            template: __webpack_require__(876),
-            styles: [__webpack_require__(857)]
+            template: __webpack_require__(878),
+            styles: [__webpack_require__(859)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], DoctorSpaceComponent);
@@ -614,8 +543,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home-page',
-            template: __webpack_require__(877),
-            styles: [__webpack_require__(858)]
+            template: __webpack_require__(879),
+            styles: [__webpack_require__(860)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -630,9 +559,9 @@ var HomeComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_user__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_user__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -675,8 +604,8 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'login-page',
-            template: __webpack_require__(878),
-            styles: [__webpack_require__(859)]
+            template: __webpack_require__(880),
+            styles: [__webpack_require__(861)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], LoginComponent);
@@ -692,7 +621,7 @@ var LoginComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicalFileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -715,8 +644,8 @@ var MedicalFileComponent = (function () {
     MedicalFileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-medical-file',
-            template: __webpack_require__(883),
-            styles: [__webpack_require__(864)]
+            template: __webpack_require__(885),
+            styles: [__webpack_require__(866)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object])
     ], MedicalFileComponent);
@@ -748,7 +677,7 @@ var NotFoundComponent = (function () {
     }
     NotFoundComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__(886)
+            template: __webpack_require__(888)
         }), 
         __metadata('design:paramtypes', [])
     ], NotFoundComponent);
@@ -764,7 +693,7 @@ var NotFoundComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrganisationSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -789,8 +718,8 @@ var OrganisationSpaceComponent = (function () {
     OrganisationSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-organisation-space',
-            template: __webpack_require__(887),
-            styles: [__webpack_require__(867)]
+            template: __webpack_require__(889),
+            styles: [__webpack_require__(869)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], OrganisationSpaceComponent);
@@ -806,9 +735,9 @@ var OrganisationSpaceComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -827,7 +756,7 @@ var ProfileComponent = (function () {
     function ProfileComponent(authentication, usersService) {
         this.authentication = authentication;
         this.usersService = usersService;
-        this.image = __webpack_require__(561);
+        this.image = __webpack_require__(563);
     }
     ProfileComponent.prototype.ngOnInit = function () {
         this.isLogged = this.authentication.isLoggedIn();
@@ -845,8 +774,8 @@ var ProfileComponent = (function () {
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-profile',
-            template: __webpack_require__(888),
-            styles: [__webpack_require__(868)]
+            template: __webpack_require__(890),
+            styles: [__webpack_require__(870)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object])
     ], ProfileComponent);
@@ -862,9 +791,9 @@ var ProfileComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(183);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
@@ -928,8 +857,8 @@ var SettingsComponent = (function () {
     SettingsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-settings',
-            template: __webpack_require__(889),
-            styles: [__webpack_require__(869)]
+            template: __webpack_require__(891),
+            styles: [__webpack_require__(871)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object])
     ], SettingsComponent);
@@ -945,9 +874,9 @@ var SettingsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1016,8 +945,8 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(890),
-            styles: [__webpack_require__(870)]
+            template: __webpack_require__(892),
+            styles: [__webpack_require__(872)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], RegisterComponent);
@@ -1046,6 +975,9 @@ var Address = (function () {
             this.city = AdressInfo.city;
             this.postal_code = AdressInfo.postal_code;
             this.country = AdressInfo.country;
+            this.latitude = AdressInfo.latitude;
+            this.longitude = AdressInfo.longitude;
+            this.precision = AdressInfo.precision;
         }
         else {
             this._id = "";
@@ -1054,6 +986,9 @@ var Address = (function () {
             this.city = "";
             this.postal_code = 0;
             this.country = "France";
+            this.latitude = 0;
+            this.longitude = 0;
+            this.precision = false;
         }
     }
     return Address;
@@ -1067,8 +1002,89 @@ var Address = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(23);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSearchService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DoctorSearchService = (function () {
+    function DoctorSearchService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+    }
+    DoctorSearchService.prototype.getSearchDoctor = function (city) {
+        return this.http.get('https://localhost:3000/api/searchDoctor/' + city, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSearchService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], DoctorSearchService);
+    return DoctorSearchService;
+    var _a, _b;
+}());
+//# sourceMappingURL=F:/CALM/src/doctor-search.service.js.map
+
+/***/ }),
+
+/***/ 415:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(23);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReminderService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ReminderService = (function () {
+    function ReminderService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+    }
+    ReminderService.prototype.getRappel = function (userId) {
+        console.log(userId);
+        return this.http.get('https://localhost:3000/api/getRappels/' + userId, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    ReminderService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], ReminderService);
+    return ReminderService;
+    var _a, _b;
+}());
+//# sourceMappingURL=F:/CALM/src/reminder.service.js.map
+
+/***/ }),
+
+/***/ 416:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(118);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1114,8 +1130,8 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'users-page',
-            template: __webpack_require__(891),
-            styles: [__webpack_require__(871)],
+            template: __webpack_require__(893),
+            styles: [__webpack_require__(873)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
@@ -1127,7 +1143,7 @@ var UsersComponent = (function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1170,14 +1186,14 @@ var User = (function () {
 
 /***/ }),
 
-/***/ 561:
+/***/ 563:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgA3ADcAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+t+lGaKBQAUZoooAM0Zoo6UAFFFFACmkoooAKWkooABRRRQAtJS0lABRRS0AGaSjNFABS0lLQAlFFFABQaKM0AFFFGaAA0UGgCgAooxRQACiiigAooIooAKOtFAoAKKKKACiig0ALSUUUAFFFGKACiiigAooooADRRRQAdqKMUdBQAUYoooAKKKKACiiigAooxRQAUUYooAMUUUUALSVc0vSLzWbkQWVu88h67RwPcntXoWi/B4ACTVLs5/54239WI/pQB5jRivfbHwNoWnqBHpsLkfxTDzD+ua1E0uzjGEtIFHoIgKAPm+ivou40DTLoETafayf70K5/lXP6p8LtEvwTDHJZSHo0Lcfkc/pigDxMUvSuv8AEPwy1TRUeaAC/thzmIfOB7r/AIZrjyMcEYoAWkoooAKWkooAKBRRQAvSikooAKWkowaACiiigAooooAKKKKACig0UAFdP4N8EXPimfzGJgsEOHmxyx/ur7/yql4T8NS+J9XS2XKwr880n91f8T0Fe82NlBptpFbW0YjgjG1VHYUARaTo9nolottZwLDGOuOrH1J7mrtFFABRmijNABSZpaKADNcb4y+Hlrr8b3VmFttQxnIGFk/3vf3rsqPwoA+ary0m0+5kt7iNoZ4ztZGHINQ17T8RPBy69YteWqAahAueP+Wij+H6+n5V4tgjjoaACjNFFABS0lFABmjNFBoABQKKKACiiigAooooAXNJR2ooAKKK1PDGm/2x4gsbQjKSSjeP9kcn9AaAPX/h54fXQvD8TOmLq6AllyOR/dH4D+ddRSAYGAMAUUAL+FFJS4oAKM0fhRQAUUUYoAOlH4UUmKAFrxL4l+H10TXzLCm22uwZV9A2fmH9fxr2z8K474qaWL3ww04GZLVxID3weD/MH8KAPFs0UUUAGaKKKACiijFABRmijmgAoopaAEoooFABRRRQAV2fwntxN4sDkZ8qB3Ht0X/2auMruPhC4TxRMD/FauB/30h/pQB7HzSUtFACUtFFACc0tHSigA5o5oo7UAFFFFABWZ4mtxdeHdTiIzutpMfXacVp1S1xxFouoOei28hP/fJoA+cetFFFABRRRQAUGiigApfwpKMZoAKMUUCgAooozQACiiigAIro/h7fDT/F1gzHCSMYj/wIED9cVzlPilaCVJEJV0YMpHYjmgD6YoxVDQdVTW9HtL1OBKgJA7N0I/PNX8UAFFHejFABRRR2oAKKKKACijvRQAVzvxAvxYeEtQbOGlTyV99xwf0zXRV5b8YdaEk1ppaNnZ++l+p4Uflk/iKAPNsUYoooAMUUUdKACiiigAoxRSigApBRRQAUUCigAopaKAENFFFAHffC3xUum3jaXdPtt7hsxMx4V/T8f5167XzKCQQR1HcV658P/iAmpxx6dqMgW8X5Y5W6Sj0P+1/OgDvs0UlL/OgAzRmikoAWiiigAooqrqWpW2k2cl1dyrDCg5Zu/sPU0AQ69rcHh/S5r24PyoPlXPLt2UV8+6lqE2q3893OxaWZizEn9B7DpWz4z8XzeKr/AHYMVnGSIYT/AOhH3Nc7QAUUUUAHSgGgmigAoNFFABRR0ozQAUtJS0AJRR1ooAKO9FFABRig0GgAoGcgjg+1bfhvwhqHiebbbR7IFOHuJOEX/E+wr1jw78PdL0AJIYxd3Y6zTDOD/sr0H8/egDI+H2r+I7iOOG9snnsgAFupjscD8fvD/Oa7+kpaADFHWjqKKACiiigCrqdxc21lJJaWv2ycD5Yt4TP4mvDfGGq6zqWof8TeOS3K/cgKlUX6Dv8AWvfKq6hplpq1uYby3juIj/C4zj6elAHzdRXpHij4TvCHuNGYyIOTayH5v+Anv9DXnMsLwSNHIjRyKcMrDBB9xQA2iiigAoooNABRRRQAUCgUlAC0UUUAFFFFABRRQaACu38D/DyTXSl7fhobDOVTo0v09B70fD3wN/bswv71CLCJvlQj/XMO30HevY1UIqqoCqOAAOBQBHa2kNlAkEEaxRIMKiDAAqWikoAXFFGKKADFFHaigAooooAKKKKACuY8X+BrTxPCZFAt79R8kwH3vZvUV09FAHzfqml3OjXslrdxGKZDyD0I9R6iqnSvfPGHhK38VWGxsR3ceTDNjofQ+xrwq+sZ9Mu5bW5jMU0TbWU9qAIDQaMcUUAFBo70UAFGaKMUAFFLSUAHaiiigArc8H+GZPFGrpbjK26fPNIP4V/xPQViKpdgqjJJwABXvPgfw2PDWhxxOoF3L+8mP+16fh/jQBuWtrFZW0dvBGI4Y1Coi9ABUtFFAAaKCaKADvRRnFFABRR60ZoAKKKKACiiigAooooADXEfErwgNasDqFsmb63X5gvWRPT6jtXb5o9qAPmTpRXW/Ejwz/YOtGeFMWd0S6Y6K38S/rn8a5LtQAYoNFBoAKKKKACiiloASjpRRQB2Hwx0Eav4gFxIu63sx5h44L/wj+Z/Cva81ynw00YaV4YhkZcTXR85vofuj8ufxrq6AE7UtFFABRRRQAlLRRQAlLzRRigAooooAKKKKACiiigA70UUUAYPjbQh4g8PXEAXdOg82HHXcO348j8a8CIIJBHPpX03Xg3j/Rxovie6jRdsMp86PHo3UfnkUAc7zRRQaACjmjrQP880AFLSUUAHWrWl2TalqVrar96aRY/zOKq11nwwsftfi63YjKwI0p/LA/UigD2yGJYIkjQbURQqj0A6U+iigA6UUlLQAn40tFFACUtFFAB1ooooAKKKKACiiigAooooAKKKDQAV5x8ZNND2djfgfNG5iYj0IyP5H869HrnfiBZfb/COoKBlkQSj/gJB/lmgDwaiig0AAooozQAUUDvQKACvRfgzb7tQ1GfHKRKn5kn/ANlrzrsK9T+DCgWuqN3Lxj8g1AHpFJRmlFABRSUvpQAUUGgUAHeijvR2oAKKD3oxgUAFFAo7UAFFFB4oAKKMUZ60AFFBooAKralb/a9OuoSM+ZEyfmCKs4o60AfMhHNFS3aBLuZR0DkD86ixmgAox7UUuKAP/9k="
 
 /***/ }),
 
-/***/ 562:
+/***/ 564:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -1186,20 +1202,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 562;
+webpackEmptyContext.id = 564;
 
 
 /***/ }),
 
-/***/ 563:
+/***/ 565:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(649);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(651);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(693);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(684);
 
 
 
@@ -1212,42 +1228,44 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 682:
+/***/ 684:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(371);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(401);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact__ = __webpack_require__(403);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(416);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(406);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__not_found_not_found__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing__ = __webpack_require__(683);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__register_register_component__ = __webpack_require__(412);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_trim_value_accessor__ = __webpack_require__(679);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng_trim_value_accessor__ = __webpack_require__(681);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__medical_file_medical_file_component__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(686);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(685);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(688);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(687);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__shared_services_medical_file_service__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__profile_settings_settings_component__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__medical_file_calendar_calendar_component__ = __webpack_require__(684);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__medical_file_reminder_reminder_component__ = __webpack_require__(689);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__medical_file_calendar_calendar_component__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__medical_file_reminder_reminder_component__ = __webpack_require__(691);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__doctor_space_doctor_space_component__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__building_space_building_space_component__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__shared_services_doctor_space_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__medical_file_google_map_google_map_component__ = __webpack_require__(687);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_angular2_google_maps_core__ = __webpack_require__(696);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__medical_file_google_map_google_map_component__ = __webpack_require__(689);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_angular2_google_maps_core__ = __webpack_require__(698);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28_angular2_google_maps_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__medical_file_posts_posts_component__ = __webpack_require__(688);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__medical_file_posts_posts_component__ = __webpack_require__(690);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__organisation_space_organisation_space_component__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__shared_services_doctor_search_service__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__shared_services_reminder_service__ = __webpack_require__(415);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1258,6 +1276,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -1330,7 +1350,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */],
                 __WEBPACK_IMPORTED_MODULE_14__shared_services_authentication_service__["a" /* AuthenticationService */],
                 __WEBPACK_IMPORTED_MODULE_20__shared_services_medical_file_service__["a" /* MedicalFileService */],
-                __WEBPACK_IMPORTED_MODULE_26__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]
+                __WEBPACK_IMPORTED_MODULE_26__shared_services_doctor_space_service__["a" /* DoctorSpaceService */],
+                __WEBPACK_IMPORTED_MODULE_31__shared_services_doctor_search_service__["a" /* DoctorSearchService */],
+                __WEBPACK_IMPORTED_MODULE_32__shared_services_reminder_service__["a" /* ReminderService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         }), 
@@ -1342,14 +1364,14 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 683:
+/***/ 685:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(416);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(403);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(406);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__ = __webpack_require__(408);
@@ -1398,7 +1420,7 @@ var appRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModu
 
 /***/ }),
 
-/***/ 684:
+/***/ 686:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1422,8 +1444,8 @@ var CalendarComponent = (function () {
     CalendarComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-calendar',
-            template: __webpack_require__(879),
-            styles: [__webpack_require__(860)]
+            template: __webpack_require__(881),
+            styles: [__webpack_require__(862)]
         }), 
         __metadata('design:paramtypes', [])
     ], CalendarComponent);
@@ -1433,7 +1455,7 @@ var CalendarComponent = (function () {
 
 /***/ }),
 
-/***/ 685:
+/***/ 687:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1457,8 +1479,8 @@ var CurrentTreatmentComponent = (function () {
     CurrentTreatmentComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-current-treatment',
-            template: __webpack_require__(880),
-            styles: [__webpack_require__(861)]
+            template: __webpack_require__(882),
+            styles: [__webpack_require__(863)]
         }), 
         __metadata('design:paramtypes', [])
     ], CurrentTreatmentComponent);
@@ -1468,14 +1490,14 @@ var CurrentTreatmentComponent = (function () {
 
 /***/ }),
 
-/***/ 686:
+/***/ 688:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1494,7 +1516,7 @@ var DoctorProfileComponent = (function () {
     function DoctorProfileComponent(medicalfile, authentication) {
         this.medicalfile = medicalfile;
         this.authentication = authentication;
-        this.image = __webpack_require__(561);
+        this.image = __webpack_require__(563);
     }
     DoctorProfileComponent.prototype.ngOnInit = function () {
         this.isLogged = this.authentication.isLoggedIn();
@@ -1511,8 +1533,8 @@ var DoctorProfileComponent = (function () {
     DoctorProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-profile',
-            template: __webpack_require__(881),
-            styles: [__webpack_require__(862)]
+            template: __webpack_require__(883),
+            styles: [__webpack_require__(864)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], DoctorProfileComponent);
@@ -1523,11 +1545,12 @@ var DoctorProfileComponent = (function () {
 
 /***/ }),
 
-/***/ 687:
+/***/ 689:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__ = __webpack_require__(414);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1539,28 +1562,102 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var GoogleMapComponent = (function () {
-    function GoogleMapComponent() {
+    function GoogleMapComponent(DoctorSearch) {
+        this.DoctorSearch = DoctorSearch;
         this.lat = 50.6315144;
         this.lng = 3.056218;
+        this.zoom = 8;
+        this.response = [];
     }
+    // coordonate_list =[{'lng': 50.6315,'lat': 3.056, 'display': false,'id':0},{'lng': 50.6315,'lat': 3.156, 'display': false,'id':1}];
+    GoogleMapComponent.prototype.clikedMark = function (id) {
+        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+            var temp = _a[_i];
+            if (temp['_id'] == id) {
+                temp['isDisplay'] = true;
+            }
+            else
+                temp['isDisplay'] = false;
+        }
+    };
+    GoogleMapComponent.prototype.rechercheClick = function (searchText) {
+        if (searchText != '') {
+            this.response = [];
+            this.searchMedecins(searchText);
+            console.log(searchText);
+        }
+        else {
+            console.log('ya rien');
+        }
+    };
+    GoogleMapComponent.prototype.mapClick = function () {
+        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+            var temp = _a[_i];
+            temp['isDisplay'] = false;
+        }
+    };
+    GoogleMapComponent.prototype.searchMedecins = function (searchText) {
+        var _this = this;
+        this.DoctorSearch.getSearchDoctor(searchText).subscribe(function (pat) {
+            console.log(pat);
+            for (var i = 0; i < pat.length; i++) {
+                if (pat[i].address != null) {
+                    pat[i].isDisplay = false;
+                    _this.response.push(pat[i]);
+                }
+            }
+            _this.reSetCenter();
+        });
+    };
+    GoogleMapComponent.prototype.reSetCenter = function () {
+        var _this = this;
+        if (this.response.length != 0) {
+            this.zoom = 8;
+            var sumLng = 0;
+            var sumLat = 0;
+            for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+                var temp = _a[_i];
+                sumLng += temp['address'].longitude;
+                sumLat += temp['address'].latitude;
+            }
+            this.lng = sumLng / this.response.length + 0.1;
+            this.lat = sumLat / this.response.length + 0.1;
+            console.log(this.lng);
+            console.log(this.lat);
+            setTimeout(function () {
+                _this.zoom = 10;
+                _this.lng = _this.lng - 0.1;
+                _this.lat = _this.lat - 0.1;
+            }, 100);
+        }
+        else {
+            console.log(this.lng);
+            console.log(this.lat);
+        }
+    };
+    GoogleMapComponent.prototype.zoomChange = function () {
+        console.log("1111");
+    };
     GoogleMapComponent.prototype.ngOnInit = function () {
     };
     GoogleMapComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-google-map',
-            template: __webpack_require__(882),
-            styles: [__webpack_require__(863)]
+            template: __webpack_require__(884),
+            styles: [__webpack_require__(865)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */]) === 'function' && _a) || Object])
     ], GoogleMapComponent);
     return GoogleMapComponent;
+    var _a;
 }());
 //# sourceMappingURL=F:/CALM/src/google-map.component.js.map
 
 /***/ }),
 
-/***/ 688:
+/***/ 690:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1597,8 +1694,8 @@ var PostsComponent = (function () {
     PostsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-posts',
-            template: __webpack_require__(884),
-            styles: [__webpack_require__(865)]
+            template: __webpack_require__(886),
+            styles: [__webpack_require__(867)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object])
     ], PostsComponent);
@@ -1609,11 +1706,15 @@ var PostsComponent = (function () {
 
 /***/ }),
 
-/***/ 689:
+/***/ 691:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_reminder_service__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_authentication_service__ = __webpack_require__(23);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReminderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1625,33 +1726,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
 var ReminderComponent = (function () {
-    function ReminderComponent() {
+    function ReminderComponent(reminderService, userService, authentication) {
+        this.reminderService = reminderService;
+        this.userService = userService;
+        this.authentication = authentication;
+        this.rappeles = [];
     }
     ReminderComponent.prototype.ngOnInit = function () {
+        this.isLogged = this.authentication.isLoggedIn();
+        if (this.isLogged) {
+            this.getUser();
+        }
+    };
+    ReminderComponent.prototype.getUser = function () {
+        var _this = this;
+        this.userService.getProfile()
+            .subscribe(function (user) {
+            _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
+            console.log(_this.user);
+            _this.getRappels(_this.user._id);
+        });
+    };
+    ReminderComponent.prototype.getRappels = function (userId) {
+        var _this = this;
+        this.reminderService.getRappel(userId)
+            .subscribe(function (rappeles) {
+            _this.rappeles = rappeles;
+            console.log(_this.rappeles);
+        });
     };
     ReminderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-reminder',
-            template: __webpack_require__(885),
-            styles: [__webpack_require__(866)]
+            template: __webpack_require__(887),
+            styles: [__webpack_require__(868)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_reminder_service__["a" /* ReminderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_reminder_service__["a" /* ReminderService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _c) || Object])
     ], ReminderComponent);
     return ReminderComponent;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=F:/CALM/src/reminder.component.js.map
 
 /***/ }),
 
-/***/ 690:
+/***/ 692:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(692);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(694);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Building; });
 
 
@@ -1693,11 +1824,11 @@ var Building = (function () {
 
 /***/ }),
 
-/***/ 691:
+/***/ 693:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Post; });
 
 var Post = (function () {
@@ -1725,7 +1856,7 @@ var Post = (function () {
 
 /***/ }),
 
-/***/ 692:
+/***/ 694:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1759,7 +1890,7 @@ var Service = (function () {
 
 /***/ }),
 
-/***/ 693:
+/***/ 695:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1775,31 +1906,17 @@ var environment = {
 
 /***/ }),
 
-/***/ 853:
+/***/ 855:
 /***/ (function(module, exports) {
 
 module.exports = ".container-fluid {\r\n    padding: 60px 50px;\r\n}\r\n\r\nvideo {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.video-container {\r\n    position: relative;\r\n    padding-bottom: 56.25%;\r\n    padding-top: 30px;\r\n    height: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.video-container iframe,\r\n.video-container object,\r\n.video-container embed {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.video-wrapper {\r\n\r\n    width: 1200px;\r\n    max-width: 100%;\r\n}\r\n"
 
 /***/ }),
 
-/***/ 854:
-/***/ (function(module, exports) {
-
-module.exports = "/*.active {\r\n  color: white !important;\r\n}*/\r\n\r\n.dropdown-menu {\r\n  background-color: grey;\r\n}\r\n"
-
-/***/ }),
-
-/***/ 855:
-/***/ (function(module, exports) {
-
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
-
-/***/ }),
-
 /***/ 856:
 /***/ (function(module, exports) {
 
-module.exports = "\r\n"
+module.exports = "/*.active {\n  color: white !important;\n}*/\n\n.dropdown-menu {\n  background-color: grey;\n}\n"
 
 /***/ }),
 
@@ -1813,77 +1930,77 @@ module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\
 /***/ 858:
 /***/ (function(module, exports) {
 
-module.exports = "\r\n"
+module.exports = "\n"
 
 /***/ }),
 
 /***/ 859:
 /***/ (function(module, exports) {
 
-module.exports = "input.ng-invalid.ng-touched {\r\n  border-left: 5px solid red;\r\n}\r\n\r\ninput.ng-valid.ng-touched {\r\n  border-left: 5px solid green;\r\n}\r\n\r\nform {\r\n  text-align: left;\r\n  margin-left: 10px;\r\n}\r\n\r\n.modal-body {\r\n  padding: 100px 25px;\r\n  position: relative;\r\n}\r\n\r\n.jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n#myModalHorizontal {\r\n  top: 10%;\r\n}\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 860:
 /***/ (function(module, exports) {
 
-module.exports = ".col-xs-1 {\r\n  width: 13.33333333%;\r\n}\r\n"
+module.exports = "\n"
 
 /***/ }),
 
 /***/ 861:
 /***/ (function(module, exports) {
 
-module.exports = ".list-item {\r\n  text-align: left;\r\n}\r\n"
+module.exports = "input.ng-invalid.ng-touched {\r\n  border-left: 5px solid red;\r\n}\r\n\r\ninput.ng-valid.ng-touched {\r\n  border-left: 5px solid green;\r\n}\r\n\r\nform {\r\n  text-align: left;\r\n  margin-left: 10px;\r\n}\r\n\r\n.modal-body {\r\n  padding: 100px 25px;\r\n  position: relative;\r\n}\r\n\r\n.jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n#myModalHorizontal {\r\n  top: 10%;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 862:
 /***/ (function(module, exports) {
 
-module.exports = ".well-sm {\r\n  padding: 9px;\r\n  border-radius: 3px;\r\n  margin-right: 15px;\r\n}\r\n"
+module.exports = ".col-xs-1 {\n  width: 13.33333333%;\n}\n"
 
 /***/ }),
 
 /***/ 863:
 /***/ (function(module, exports) {
 
-module.exports = ".sebm-google-map-container {\r\n  height: 300px;\r\n}\r\n"
+module.exports = ".list-item {\n  text-align: left;\n}\n"
 
 /***/ }),
 
 /***/ 864:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n\r\n.class{\r\n  background:grey;\r\n}\r\n"
+module.exports = ".well-sm {\n  padding: 9px;\n  border-radius: 3px;\n  margin-right: 15px;\n}\n"
 
 /***/ }),
 
 /***/ 865:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".agm-map {\n  height: 300px;\n}\n"
 
 /***/ }),
 
 /***/ 866:
 /***/ (function(module, exports) {
 
-module.exports = ".list-item {\r\n  text-align: left;\r\n}\r\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n\r\n.class{\r\n  background:grey;\r\n  color:white;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 867:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 868:
 /***/ (function(module, exports) {
 
-module.exports = "body{padding-top:30px;}\r\n\r\n.glyphicon {  margin-bottom: 10px;margin-right: 10px;}\r\n\r\nsmall {\r\n  display: block;\r\n  line-height: 1.428571429;\r\n  color: #999;\r\n}\r\n\r\n\r\n.row {\r\n}\r\n\r\n[class*=\"col-\"] {\r\n\r\n  text-align: center;\r\n\r\n}\r\n\r\n\r\n.jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
+module.exports = ".list-item {\n  text-align: left;\n}\n"
 
 /***/ }),
 
@@ -1897,156 +2014,241 @@ module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\
 /***/ 870:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n  max-width: 400px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n"
+module.exports = "body{padding-top:30px;}\n\n.glyphicon {  margin-bottom: 10px;margin-right: 10px;}\n\nsmall {\n  display: block;\n  line-height: 1.428571429;\n  color: #999;\n}\n\n\n.row {\n}\n\n[class*=\"col-\"] {\n\n  text-align: center;\n\n}\n\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 871:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 872:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Container (About Section) -->\r\n<div id=\"about\" class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-8\">\r\n            <h2>A propos de nous</h2><br>\r\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\r\n                l'accès au soins plus facile.</h4><br>\r\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\r\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\r\n                plateforme.</p>\r\n            <br>\r\n            <div class=\"video-wrapper\">\r\n                <div class=\"video-container\">\r\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\r\n                            frameborder=\"0\"\r\n                            allowfullscreen></iframe>\r\n                </div>\r\n                <br>\r\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n  max-width: 400px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n"
 
 /***/ }),
 
 /***/ 873:
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\r\n    <div class=\"container\">\r\n      <div class=\"navbar-header\">\r\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\r\n          <span class=\"icon-bar\"></span>\r\n          <span class=\"icon-bar\"></span>\r\n          <span class=\"icon-bar\"></span>\r\n        </button>\r\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\r\n      </div>\r\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"medical-file\" routerLinkActive=\"active\"\r\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-folder-open\"></i> Mon dossier</a></li>\r\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\r\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace médecin</a></li>\r\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\r\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\r\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\r\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\r\n        <li><a href=\"#about\">A propos</a></li>\r\n        <li><a href=\"#contact\">Contact</a></li>\r\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\r\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\r\n            <li>\r\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\r\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\r\n                <span class=\"caret\"></span></button>\r\n              <ul class=\"dropdown-menu\">\r\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\r\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\r\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\r\n              </ul>\r\n              </div>\r\n            </li>\r\n\r\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\r\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\r\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\r\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\r\n      </ul>\r\n      </div>\r\n\r\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\r\n\r\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\r\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\r\n            <!--<span class=\"caret\"></span></button>-->\r\n          <!--<ul class=\"dropdown-menu\">-->\r\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\r\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\r\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\r\n          <!--</ul>-->\r\n        <!--</div>-->\r\n\r\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\r\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\r\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\r\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\r\n      <!--</ul>-->\r\n    </div>\r\n  </nav>\r\n</header>\r\n\r\n<main>\r\n  <router-outlet></router-outlet>\r\n</main>\r\n\r\n<footer class=\"container-fluid text-center\">\r\n  <a href=\"#myPage\" title=\"To Top\">\r\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\r\n  </a>\r\n  <p>CALM Site Copyrights</p>\r\n</footer>\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 874:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!-- Container (About Section) -->\r\n<div id=\"about\" class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-8\">\r\n            <h2>A propos de nous</h2><br>\r\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\r\n                l'accès au soins plus facile.</h4><br>\r\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\r\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\r\n                plateforme.</p>\r\n            <br>\r\n            <div class=\"video-wrapper\">\r\n                <div class=\"video-container\">\r\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\r\n                            frameborder=\"0\"\r\n                            allowfullscreen></iframe>\r\n                </div>\r\n                <br>\r\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 875:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Container (Contact Section) -->\r\n<div id=\"contact\" class=\"container-fluid bg-grey\">\r\n  <h2 class=\"text-center\">CONTACT</h2>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-5\">\r\n      <p>Contactez nous et nous vous répondrons dans les 24 heures.</p>\r\n      <p><span class=\"glyphicon glyphicon-map-marker\"></span> Lille, France</p>\r\n      <p><span class=\"glyphicon glyphicon-phone\"></span> 03.20.57.84.25</p>\r\n      <p><span class=\"glyphicon glyphicon-envelope\"></span> calmsite@hotmail.com</p>\r\n    </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-6 form-group\">\r\n          <input class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"Nom\" type=\"text\" required>\r\n        </div>\r\n        <div class=\"col-sm-6 form-group\">\r\n          <input class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" type=\"email\" required>\r\n        </div>\r\n      </div>\r\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"></textarea><br>\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-12 form-group\">\r\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\r\n        </div>\r\n      </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n        <ul class=\"nav navbar-nav navbar-right\">\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"medical-file\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-folder-open\"></i> Mon dossier</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace médecin</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\n        <li><a href=\"#about\">A propos</a></li>\n        <li><a href=\"#contact\">Contact</a></li>\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\n            <li>\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\n                <span class=\"caret\"></span></button>\n              <ul class=\"dropdown-menu\">\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\n              </ul>\n              </div>\n            </li>\n\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\n      </ul>\n      </div>\n\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\n\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\n            <!--<span class=\"caret\"></span></button>-->\n          <!--<ul class=\"dropdown-menu\">-->\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\n          <!--</ul>-->\n        <!--</div>-->\n\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\n      <!--</ul>-->\n    </div>\n  </nav>\n</header>\n\n<main>\n  <router-outlet></router-outlet>\n</main>\n\n<footer class=\"container-fluid text-center\">\n  <a href=\"#myPage\" title=\"To Top\">\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\n  </a>\n  <p>CALM Site Copyrights</p>\n</footer>\n"
 
 /***/ }),
 
 /***/ 876:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    <div class=\"row\" *ngFor=\"let patient of patients\">\r\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\r\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\r\n        <h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>\r\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\r\n\r\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\r\n\r\n      </div>\r\n    </div>\r\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\r\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\r\n    <div class=\"container\">\r\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\" [(ngModel)]=\"post.text\"></textarea><br>\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-12 form-group\">\r\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    </form>\r\n  </div>\r\n\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 877:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>CALM</h1>\r\n  <p>L'application de e-santé</p>\r\n  <form>\r\n    <div class=\"input-group\">\r\n      <input type=\"email\" class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\r\n      <div class=\"input-group-btn\">\r\n        <button type=\"button\" class=\"btn btn-danger\">Rechercher</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n<about-page></about-page>\r\n<contact-page></contact-page>\r\n"
+module.exports = "<!-- Container (Contact Section) -->\n<div id=\"contact\" class=\"container-fluid bg-grey\">\n  <h2 class=\"text-center\">CONTACT</h2>\n  <div class=\"row\">\n    <div class=\"col-sm-5\">\n      <p>Contactez nous et nous vous répondrons dans les 24 heures.</p>\n      <p><span class=\"glyphicon glyphicon-map-marker\"></span> Lille, France</p>\n      <p><span class=\"glyphicon glyphicon-phone\"></span> 03.20.57.84.25</p>\n      <p><span class=\"glyphicon glyphicon-envelope\"></span> calmsite@hotmail.com</p>\n    </div>\n      <div class=\"row\">\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"Nom\" type=\"text\" required>\n        </div>\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" type=\"email\" required>\n        </div>\n      </div>\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n        </div>\n      </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 878:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h2 class=\"text-center\">Page de connexion</h2>\r\n\r\n  <!-- Button trigger modal -->\r\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\r\n    Connexion\r\n  </button>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\r\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n\t<!-- Modal Header -->\r\n\t<div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\"\r\n                  data-dismiss=\"modal\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\r\n            Connexion\r\n          </h4>\r\n\t</div>\r\n\r\n\t<!-- Modal Body -->\r\n\t<div class=\"modal-body\">\r\n\r\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\r\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\r\n\r\n              <label  class=\"col-sm-2 control-label\"\r\n                      for=\"inputEmail3\">Email</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"email\" class=\"form-control\"\r\n                       id=\"inputEmail3\" placeholder=\"Email\" required\r\n                       [(ngModel)]=\"user.email\" name=\"email\"\r\n                       #email=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\r\n\t\t  Email is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\r\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\r\n\r\n              <label class=\"col-sm-2 control-label\"\r\n                     for=\"inputPassword3\" >Mot de passe</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"password\" class=\"form-control\"\r\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\r\n                       [(ngModel)]=\"user.password\"\r\n                       #password=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\r\n\t\t  Password is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-offset-2 col-sm-10\">\r\n\t\t<button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\r\n              </div>\r\n            </div>\r\n          </form>\r\n\t</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <div class=\"row\" *ngFor=\"let patient of patients\">\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\n        <h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\n\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\n\n      </div>\n    </div>\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\n    <div class=\"container\">\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\" [(ngModel)]=\"post.text\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n        </div>\n      </div>\n    </div>\n    </form>\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n\n\n"
 
 /***/ }),
 
 /***/ 879:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-calendar\"></i> Prendre rendez-vous</h3></div>\r\n  <div class=\"panel-body\">\r\n<div class=\"wrapper\">\r\n  <div class=\"header\">\r\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n    <p>Avril 2017</p>\r\n  </div><!-- end header -->\r\n  <div class=\"col-sm-6-offset-2 col-md-4-offset-2\">\r\n  <div class=\"calendar-body\">\r\n    <div class=\"row weekdays\">\r\n      <div class=\"col-xs-1\"><p>L</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>Ma</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>Me</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>J</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>V</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>S</p></div><!-- end col-xs-1 -->\r\n      <div class=\"col-xs-1\"><p>D</p></div><!-- end col-xs-1 -->\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"row dates\">\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">28</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">29</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">30</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">31</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>1</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>2</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>3</p></a></div>\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"row dates\">\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>4</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>5</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>6</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>7</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>8</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>9</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>10</p></a></div>\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"row dates\">\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>11</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>12</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>13</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>14</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>15</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>16</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>17</p></a></div>\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"row dates\">\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>18</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>19</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>20</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>21</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>22</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>23</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>24</p></a></div>\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"row dates\">\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>25</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>26</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>27</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>28</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>29</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>30</p></a></div>\r\n      <div class=\"col-xs-1\"><a href=\"#\"><p>31</p></a></div>\r\n    </div><!-- end row -->\r\n\r\n    <div class=\"line\"></div>\r\n\r\n    <div class=\"current-date\">Mardi 25 avril</div>\r\n  </div><!-- end calendar-body -->\r\n  </div>\r\n</div><!-- end wrapper -->\r\n</div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>CALM</h1>\n  <p>L'application de e-santé</p>\n  <form>\n    <div class=\"input-group\">\n      <input type=\"email\" class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\">Rechercher</button>\n      </div>\n    </div>\n  </form>\n</div>\n<about-page></about-page>\n<contact-page></contact-page>\n"
 
 /***/ }),
 
 /***/ 880:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\r\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-plus\"></i> Mon traitement</h3></div>\r\n      <div class=\"panel-body\">\r\n      <h4>Contre la Grippe :</h4>\r\n      <div class=\"list-item\">\r\n        <ul>\r\n          <li>Paracétamol : jusqu'à 4 g/jour pour les adultes, soit 1 à 2 comprimés (s) à 500 mg par prise, à renouveler en cas de besoin (jusqu'à 8 par jour). Espacer les prises d'au moins 4 heures.</li>\r\n          <li>Pseudoéphédrine : 5 jours maximum, voir indications sur la notice</li>\r\n          <li>Sirops antitussifs opiacés (dextrométorphane, codéine, codéthyline, etc.) : 120 mg/j</li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h2 class=\"text-center\">Page de connexion</h2>\r\n\r\n  <!-- Button trigger modal -->\r\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\r\n    Connexion\r\n  </button>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\r\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n\t<!-- Modal Header -->\r\n\t<div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\"\r\n                  data-dismiss=\"modal\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\r\n            Connexion\r\n          </h4>\r\n\t</div>\r\n\r\n\t<!-- Modal Body -->\r\n\t<div class=\"modal-body\">\r\n\r\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\r\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\r\n\r\n              <label  class=\"col-sm-2 control-label\"\r\n                      for=\"inputEmail3\">Email</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"email\" class=\"form-control\"\r\n                       id=\"inputEmail3\" placeholder=\"Email\" required\r\n                       [(ngModel)]=\"user.email\" name=\"email\"\r\n                       #email=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\r\n\t\t  Email is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\r\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\r\n\r\n              <label class=\"col-sm-2 control-label\"\r\n                     for=\"inputPassword3\" >Mot de passe</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"password\" class=\"form-control\"\r\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\r\n                       [(ngModel)]=\"user.password\"\r\n                       #password=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\r\n\t\t  Password is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-offset-2 col-sm-10\">\r\n\t\t<button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\r\n              </div>\r\n            </div>\r\n          </form>\r\n\t</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 881:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\" *ngIf=\"isLogged\">\r\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-user\"></i> Mon médecin traitant</h3></div>\r\n  <div class=\"panel-body\">\r\n  <div class=\"row\" *ngIf=\"patient\">\r\n    <div class=\"col-sm-6 col-md-4\">\r\n      <img src=\"{{image}}\"\r\n           class=\"img-rounded\" alt=\"Image Profil\"/>\r\n    </div>\r\n    <div class=\"col-sm-6 col-md-8\">\r\n      <h4>{{patient.general_doctor.user_id.first_name}} {{patient.general_doctor.user_id.last_name}}</h4>\r\n      <small><cite title=\"Cabinet\"> {{patient.general_doctor.cabinet}} <i class=\"glyphicon glyphicon-map-marker\">\r\n      </i></cite></small>\r\n      <p>\r\n        <i class=\"glyphicon glyphicon-envelope\"></i> {{patient.general_doctor.user_id.email}}\r\n        <br />\r\n        <i class=\"glyphicon glyphicon-earphone\"></i> {{patient.general_doctor.phone}}<br />\r\n      </p>\r\n      <br><button class=\"btn btn-default btn-lg\">Contacter</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n\r\n  <!--<div class=\"row\" *ngIf=\"!patient.general_doctor.user_id\">-->\r\n    <!--<div class=\"col-sm-6 col-md-4\">-->\r\n      <!--<img src=\"{{image}}\"-->\r\n           <!--class=\"img-rounded\" alt=\"Image Profil\"/>-->\r\n    <!--</div>-->\r\n    <!--<div class=\"col-sm-6 col-md-8\">-->\r\n      <!--<h3>Votre médecin traitant</h3>-->\r\n        <!--<p>Veuillez renseigner votre médecin traitant dans les paramètres de votre compte</p>-->\r\n    <!--</div>-->\r\n  <!--</div>-->\r\n<!--</div>-->\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-calendar\"></i> Prendre rendez-vous</h3></div>\n  <div class=\"panel-body\">\n<div class=\"wrapper\">\n  <div class=\"header\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n    <p>Avril 2017</p>\n  </div><!-- end header -->\n  <div class=\"col-sm-6-offset-2 col-md-4-offset-2\">\n  <div class=\"calendar-body\">\n    <div class=\"row weekdays\">\n      <div class=\"col-xs-1\"><p>L</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Ma</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Me</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>J</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>V</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>S</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>D</p></div><!-- end col-xs-1 -->\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">31</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>1</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>2</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>3</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>4</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>5</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>6</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>7</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>8</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>9</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>10</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>11</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>12</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>13</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>14</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>15</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>16</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>17</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>18</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>19</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>20</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>21</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>22</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>23</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>24</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>25</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>26</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>27</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>31</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"line\"></div>\n\n    <div class=\"current-date\">Mardi 25 avril</div>\n  </div><!-- end calendar-body -->\n  </div>\n</div><!-- end wrapper -->\n</div>\n</div>\n"
 
 /***/ }),
 
 /***/ 882:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-map-marker\"></i> Trouver le médecin le plus proche</h3></div>\r\n  <div class=\"panel-body\">\r\n    <div class=\"input-group\">\r\n      <input type=\"email\" class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\r\n      <div class=\"input-group-btn\">\r\n        <button type=\"button\" class=\"btn btn-danger\">Rechercher</button>\r\n      </div>\r\n    </div>\r\n<sebm-google-map [latitude]=\"lat\" [longitude]=\"lng\"></sebm-google-map>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-plus\"></i> Mon traitement</h3></div>\n      <div class=\"panel-body\">\n      <h4>Contre la Grippe :</h4>\n      <div class=\"list-item\">\n        <ul>\n          <li>Paracétamol : jusqu'à 4 g/jour pour les adultes, soit 1 à 2 comprimés (s) à 500 mg par prise, à renouveler en cas de besoin (jusqu'à 8 par jour). Espacer les prises d'au moins 4 heures.</li>\n          <li>Pseudoéphédrine : 5 jours maximum, voir indications sur la notice</li>\n          <li>Sirops antitussifs opiacés (dextrométorphane, codéine, codéthyline, etc.) : 120 mg/j</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n"
 
 /***/ }),
 
 /***/ 883:
 /***/ (function(module, exports) {
 
-module.exports = "<<div class=\"jumbotron text-center\">\r\n<div *ngIf=\"isLogged\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n      <!--Hello-->\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-posts></app-posts>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-current-treatment></app-current-treatment>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n          <app-reminder></app-reminder>\r\n        </div>\r\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <div>\r\n        <app-google-map></app-google-map>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row shift-up\">\r\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <app-calendar></app-calendar>\r\n\r\n    </div>\r\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\r\n      <app-doctor-profile></app-doctor-profile>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div *ngIf=\"!isLogged\">\r\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n</div>\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"panel panel-primary\" *ngIf=\"isLogged\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-user\"></i> Mon médecin traitant</h3></div>\n  <div class=\"panel-body\">\n  <div class=\"row\" *ngIf=\"patient\">\n    <div class=\"col-sm-6 col-md-4\">\n      <img src=\"{{image}}\"\n           class=\"img-rounded\" alt=\"Image Profil\"/>\n    </div>\n    <div class=\"col-sm-6 col-md-8\">\n      <h4>{{patient.general_doctor.user_id.first_name}} {{patient.general_doctor.user_id.last_name}}</h4>\n      <small><cite title=\"Cabinet\"> {{patient.general_doctor.cabinet}} <i class=\"glyphicon glyphicon-map-marker\">\n      </i></cite></small>\n      <p>\n        <i class=\"glyphicon glyphicon-envelope\"></i> {{patient.general_doctor.user_id.email}}\n        <br />\n        <i class=\"glyphicon glyphicon-earphone\"></i> {{patient.general_doctor.phone}}<br />\n      </p>\n      <br><button class=\"btn btn-default btn-lg\">Contacter</button>\n    </div>\n  </div>\n</div>\n</div>\n\n  <!--<div class=\"row\" *ngIf=\"!patient.general_doctor.user_id\">-->\n    <!--<div class=\"col-sm-6 col-md-4\">-->\n      <!--<img src=\"{{image}}\"-->\n           <!--class=\"img-rounded\" alt=\"Image Profil\"/>-->\n    <!--</div>-->\n    <!--<div class=\"col-sm-6 col-md-8\">-->\n      <!--<h3>Votre médecin traitant</h3>-->\n        <!--<p>Veuillez renseigner votre médecin traitant dans les paramètres de votre compte</p>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</div>-->\n\n\n\n"
 
 /***/ }),
 
 /***/ 884:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\r\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-comment\"></i> Mes messages</h3></div>\r\n      <div class=\"panel-body\">\r\n        <div class=\"row\" *ngFor=\"let post of posts\">\r\n          <div class=\"card card-block\">\r\n            <h4 class=\"card-title\">{{ post.doctor.first_name }} {{ post.doctor.last_name }}</h4>\r\n            <p class=\"card-text\">{{post.text}}</p>\r\n          </div>\r\n        </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-map-marker\"></i> Trouver le médecin le plus proche</h3></div>\n  <div class=\"panel-body\">\n    <div class=\"input-group\">\n      <input type=\"search\" #searchBox class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"rechercheClick(searchBox.value)\">Rechercher</button>\n      </div>\n    </div>\n\n<sebm-google-map class=\"agm-map\" [usePanning]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" (setZoom)=\"setZoom(2)\" (mapClick)=\"mapClick()\" (zoomChange)=\"zoomChange()\"  >\n  <div *ngIf=\"response.length!=0\">\n    <sebm-google-map-marker *ngFor=\"let n of response\" [latitude]=n.address.latitude [longitude]=n.address.longitude (markerClick)=\"clikedMark(n._id)\" >\n      <sebm-google-map-info-window [isOpen]=\"n.isDisplay\">\n        <div>\n          <h3>Doctor: {{n.last_name}} {{n.first_name}}</h3>\n          <p>address: {{n.address.num}},{{n.address.street_address}}</p>\n        </div>\n      </sebm-google-map-info-window>\n    </sebm-google-map-marker>\n  </div>\n</sebm-google-map>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 885:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\r\n      <div class=\"panel panel-primary\">\r\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\r\n        <div class=\"panel-body\"><ul>\r\n          <div class=\"list-item\">\r\n          <li>Tests de PAP à effectuer</li>\r\n          <li>Vaccins à administrer</li>\r\n          </div>\r\n        </ul></div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<<div class=\"jumbotron text-center\">\r\n<div *ngIf=\"isLogged\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n      <!--Hello-->\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-posts></app-posts>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-current-treatment></app-current-treatment>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n          <app-reminder></app-reminder>\r\n        </div>\r\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <div>\r\n        <app-google-map></app-google-map>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row shift-up\">\r\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <app-calendar></app-calendar>\r\n\r\n    </div>\r\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\r\n      <app-doctor-profile></app-doctor-profile>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div *ngIf=\"!isLogged\">\r\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n</div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 886:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>404 Not Found</h1>\r\n  <p>You may be lost. Follow the breadcrumbs back <a routerLink=\"/\">home</a>.</p>\r\n</div>\r\n"
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-comment\"></i> Mes messages</h3></div>\n      <div class=\"panel-body\">\n        <div class=\"row\" *ngFor=\"let post of posts\">\n          <div class=\"card card-block\">\n            <h4 class=\"card-title\">{{ post.doctor.first_name }} {{ post.doctor.last_name }}</h4>\n            <p class=\"card-text\">{{post.text}}</p>\n          </div>\n        </div>\n        </div>\n      </div>\n    </div>\n</div>\n\n"
 
 /***/ }),
 
 /***/ 887:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <li *ngFor=\"let n of rappeles\">\n            {{n}}\n          </li>\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 888:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n<h3>Page de profil</h3>\r\n\r\n<div class=\"container\" *ngIf=\"isLogged\">\r\n  <div class=\"row\" *ngIf=\"user\">\r\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\r\n      <div class=\"well well-sm\">\r\n        <div class=\"row\">\r\n          <div class=\"col-sm-6 col-md-4\">\r\n            <img src=\"{{image}}\"\r\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\r\n          </div>\r\n          <div class=\"col-sm-6 col-md-8\">\r\n            <h4>\r\n              {{user.first_name}} {{user.last_name}}</h4>\r\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\r\n            </i></cite></small>\r\n            <p>\r\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\r\n              <br />\r\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\r\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\r\n            </p>\r\n            <!-- button -->\r\n            <div class=\"btn-group\">\r\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\r\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n\r\n<!--<div class=\"form-group\" [ngClass] = \"{\r\n         'has-error': profile_img.invalid && profile_img.touched,\r\n         'has-success': profile_img.valid && profile_img.touched}\">\r\n  <label class=\"control-label\">Image de profil</label>\r\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\r\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\r\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\r\n            Image de profil requise\r\n    </span>\r\n</div>-->\r\n\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>404 Not Found</h1>\n  <p>You may be lost. Follow the breadcrumbs back <a routerLink=\"/\">home</a>.</p>\n</div>\n"
 
 /***/ }),
 
 /***/ 889:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"user\"><h2>Paramètres</h2>\r\n\r\n    <div *ngIf=\"user.role=='patient'\">\r\n      <h3>Choisissez votre médecin généraliste</h3>\r\n      <div *ngFor=\"let doctor of doctors\">\r\n        <a class=\"btn btn-default btn-lg\" routerLinkActive=\"active\" (click)=\"addDoctor(doctor)\">\r\n          {{doctor.user_id.first_name}} {{doctor.user_id.last_name}}</a>\r\n        <h5><br></h5>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 890:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h2 class=\"text-center\">Page d'inscription</h2>\r\n\r\n<div *ngIf=\"!submitted\" >\r\n  <h3>Email already exist</h3>\r\n</div>\r\n\r\n<form (ngSubmit)=\"register()\" #form=\"ngForm\">\r\n\r\n  <div class=\"form-group\"\r\n       [ngClass] = \"{\r\n         'has-error': first_name.invalid && first_name.touched,\r\n         'has-success': first_name.valid && first_name.touched}\">\r\n    <label class=\"control-label\">Prénom</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"first_name\" required\r\n           [(ngModel)]=\"user.first_name\"\r\n           #first_name=\"ngModel\">\r\n    <span class=\"help-block\" *ngIf=\"first_name.invalid && first_name.touched\">\r\n            Prénom requis\r\n        </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\"\r\n       [ngClass] = \"{\r\n         'has-error': last_name.invalid && last_name.touched,\r\n         'has-success': last_name.valid && last_name.touched}\">\r\n    <label class=\"control-label\">Nom</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"last_name\" required\r\n           [(ngModel)]=\"user.last_name\"\r\n           #last_name=\"ngModel\">\r\n    <span class=\"help-block\" *ngIf=\"last_name.invalid && last_name.touched\">\r\n            Nom requis\r\n        </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\"\r\n       [ngClass] = \"{\r\n         'has-error': email.invalid && email.touched,\r\n         'has-success': email.valid && email.touched}\">\r\n    <label class=\"control-label\">Email</label>\r\n    <input type=\"email\" class=\"form-control\" name=\"email\" required\r\n           [(ngModel)]=\"user.email\"\r\n           #email=\"ngModel\">\r\n    <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\r\n            Email requis\r\n        </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\" [ngClass] = \"{\r\n         'has-error': password.invalid && password.touched,\r\n         'has-success': password.valid && password.touched}\">\r\n    <label class=\"control-label\">Mot de passe</label>\r\n    <input type=\"password\" class=\"form-control\" name=\"password\" required\r\n           [(ngModel)]=\"user.password\"\r\n           #password=\"ngModel\">\r\n    <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\r\n            Mot de passe requis\r\n        </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\" [ngClass] = \"{\r\n         'has-error': password.invalid && password.touched,\r\n         'has-success': password.valid && password.touched}\">\r\n    <label class=\"control-label\">Date de naissance</label>\r\n    <input type=\"date\" class=\"form-control\" name=\"birth_date\" required\r\n      [(ngModel)]=\"user.birth_date\" #birth_date=\"ngModel\" max=\"2017-01-01\">\r\n    <span class=\"help-block\" *ngIf=\"birth_date.invalid && birth_date.touched\">\r\n            Date de naissance requise\r\n    </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\" [ngClass] = \"{\r\n         'has-error': role.invalid && role.touched,\r\n         'has-success': role.valid && role.touched}\">\r\n    <label class=\"control-label\">Choisissez votre profil</label>\r\n  <select name=\"role\" class=\"form-control\" required [(ngModel)]=\"user.role\" #role=\"ngModel\">\r\n    <option value=\"patient\">Patient</option>\r\n    <option value=\"medecin\">Medecin</option>\r\n    <option value=\"building\">Infrastructure</option>\r\n    <option value=\"organisation\">Organisation</option>\r\n  </select>\r\n    <span class=\"help-block\" *ngIf=\"role.invalid && role.touched\">\r\n            Profil requis\r\n    </span>\r\n  </div>\r\n\r\n  <div class=\"form-group\" [ngClass] = \"{\r\n         'has-error': country.invalid && country.touched,\r\n         'has-success': country.valid && country.touched}\">\r\n    <label class=\"control-label\">Pays</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"country\" required\r\n           [(ngModel)]=\"user.address.country\"\r\n           #country=\"ngModel\">\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label class=\"control-label\">Ville</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"city\" required\r\n           [(ngModel)]=\"user.address.city\"\r\n           #city=\"ngModel\">\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label class=\"control-label\">Rue</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"street_address\" required\r\n           [(ngModel)]=\"user.address.street_address\"\r\n           #street_adress=\"ngModel\">\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label class=\"control-label\">Numéro de rue</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"num\" required\r\n           [(ngModel)]=\"user.address.num\"\r\n           #num=\"ngModel\">\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">S'inscrire</button>\r\n  </div>\r\n\r\n</form>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n<h3>Page de profil</h3>\n\n<div class=\"container\" *ngIf=\"isLogged\">\n  <div class=\"row\" *ngIf=\"user\">\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\n      <div class=\"well well-sm\">\n        <div class=\"row\">\n          <div class=\"col-sm-6 col-md-4\">\n            <img src=\"{{image}}\"\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\n          </div>\n          <div class=\"col-sm-6 col-md-8\">\n            <h4>\n              {{user.first_name}} {{user.last_name}}</h4>\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\n            </i></cite></small>\n            <p>\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\n              <br />\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\n            </p>\n            <!-- button -->\n            <div class=\"btn-group\">\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n\n<!--<div class=\"form-group\" [ngClass] = \"{\n         'has-error': profile_img.invalid && profile_img.touched,\n         'has-success': profile_img.valid && profile_img.touched}\">\n  <label class=\"control-label\">Image de profil</label>\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\n            Image de profil requise\n    </span>\n</div>-->\n\n"
 
 /***/ }),
 
 /***/ 891:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n<h2>\r\n  Bienvenue sur la page utilisateurs\r\n</h2>\r\n<div class=\"container\">\r\n  <div class=\"row\" *ngFor=\"let user of users\">\r\n    <div class=\"card card-block\">\r\n      <h4 class=\"card-title\">{{ user.email }}</h4>\r\n      <p class=\"card-text\">{{user._id}}</p>\r\n      <a class=\"btn btn-default btn-lg\" (click)=\"buttonDelete(user)\"><i class=\"glyphicon glyphicon-trash\"></i> Delete</a>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"user\"><h2>Paramètres</h2>\n\n    <div *ngIf=\"user.role=='patient'\">\n      <h3>Choisissez votre médecin généraliste</h3>\n      <div *ngFor=\"let doctor of doctors\">\n        <a class=\"btn btn-default btn-lg\" routerLinkActive=\"active\" (click)=\"addDoctor(doctor)\">\n          {{doctor.user_id.first_name}} {{doctor.user_id.last_name}}</a>\n        <h5><br></h5>\n      </div>\n    </div>\n\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 892:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page d'inscription</h2>\n\n<div *ngIf=\"!submitted\" >\n  <h3>Email already exist</h3>\n</div>\n\n<form (ngSubmit)=\"register()\" #form=\"ngForm\">\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': first_name.invalid && first_name.touched,\n         'has-success': first_name.valid && first_name.touched}\">\n    <label class=\"control-label\">Prénom</label>\n    <input type=\"text\" class=\"form-control\" name=\"first_name\" required\n           [(ngModel)]=\"user.first_name\"\n           #first_name=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"first_name.invalid && first_name.touched\">\n            Prénom requis\n        </span>\n  </div>\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': last_name.invalid && last_name.touched,\n         'has-success': last_name.valid && last_name.touched}\">\n    <label class=\"control-label\">Nom</label>\n    <input type=\"text\" class=\"form-control\" name=\"last_name\" required\n           [(ngModel)]=\"user.last_name\"\n           #last_name=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"last_name.invalid && last_name.touched\">\n            Nom requis\n        </span>\n  </div>\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': email.invalid && email.touched,\n         'has-success': email.valid && email.touched}\">\n    <label class=\"control-label\">Email</label>\n    <input type=\"email\" class=\"form-control\" name=\"email\" required\n           [(ngModel)]=\"user.email\"\n           #email=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n            Email requis\n        </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n    <label class=\"control-label\">Mot de passe</label>\n    <input type=\"password\" class=\"form-control\" name=\"password\" required\n           [(ngModel)]=\"user.password\"\n           #password=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n            Mot de passe requis\n        </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n    <label class=\"control-label\">Date de naissance</label>\n    <input type=\"date\" class=\"form-control\" name=\"birth_date\" required\n      [(ngModel)]=\"user.birth_date\" #birth_date=\"ngModel\" max=\"2017-01-01\">\n    <span class=\"help-block\" *ngIf=\"birth_date.invalid && birth_date.touched\">\n            Date de naissance requise\n    </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': role.invalid && role.touched,\n         'has-success': role.valid && role.touched}\">\n    <label class=\"control-label\">Choisissez votre profil</label>\n  <select name=\"role\" class=\"form-control\" required [(ngModel)]=\"user.role\" #role=\"ngModel\">\n    <option value=\"patient\">Patient</option>\n    <option value=\"medecin\">Medecin</option>\n    <option value=\"building\">Infrastructure</option>\n    <option value=\"organisation\">Organisation</option>\n  </select>\n    <span class=\"help-block\" *ngIf=\"role.invalid && role.touched\">\n            Profil requis\n    </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': country.invalid && country.touched,\n         'has-success': country.valid && country.touched}\">\n    <label class=\"control-label\">Pays</label>\n    <input type=\"text\" class=\"form-control\" name=\"country\" required\n           [(ngModel)]=\"user.address.country\"\n           #country=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Ville</label>\n    <input type=\"text\" class=\"form-control\" name=\"city\" required\n           [(ngModel)]=\"user.address.city\"\n           #city=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Rue</label>\n    <input type=\"text\" class=\"form-control\" name=\"street_address\" required\n           [(ngModel)]=\"user.address.street_address\"\n           #street_adress=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Numéro de rue</label>\n    <input type=\"text\" class=\"form-control\" name=\"num\" required\n           [(ngModel)]=\"user.address.num\"\n           #num=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">S'inscrire</button>\n  </div>\n\n</form>\n</div>\n"
+
+/***/ }),
+
+/***/ 893:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n<h2>\n  Bienvenue sur la page utilisateurs\n</h2>\n<div class=\"container\">\n  <div class=\"row\" *ngFor=\"let user of users\">\n    <div class=\"card card-block\">\n      <h4 class=\"card-title\">{{ user.email }}</h4>\n      <p class=\"card-text\">{{user._id}}</p>\n      <a class=\"btn btn-default btn-lg\" (click)=\"buttonDelete(user)\"><i class=\"glyphicon glyphicon-trash\"></i> Delete</a>\n    </div>\n  </div>\n</div>\n</div>\n"
+
+/***/ }),
+
+/***/ 93:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(23);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UsersService = (function () {
+    function UsersService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+    }
+    // Get all users from the API
+    UsersService.prototype.getUsers = function () {
+        return this.http.get('https://localhost:3000/api/users', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.deleteUser = function (id) {
+        if (this.authentication.currentUserId() == id) {
+            this.authentication.logout();
+        }
+        return this.http.delete('https://localhost:3000/api/users/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
+    };
+    UsersService.prototype.deleteAddress = function (id) {
+        return this.http.delete('https://localhost:3000/api/addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
+    };
+    UsersService.prototype.getProfile = function () {
+        return this.http.get('https://localhost:3000/api/profile', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddressById = function (id) {
+        return this.http.get('https://localhost:3000/api/addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddresses = function () {
+        return this.http.get('https://localhost:3000/api/addresses', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getDoctors = function () {
+        return this.http.get('https://localhost:3000/api/doctors', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], UsersService);
+    return UsersService;
+    var _a, _b;
+}());
+//# sourceMappingURL=F:/CALM/src/users.service.js.map
 
 /***/ })
 
-},[1176]);
+},[1178]);
 //# sourceMappingURL=main.bundle.map

@@ -2,7 +2,6 @@
  * Created by Romain on 22/03/2017.
  */
 
-import * as Reminder from "mongoose";
 
 module.exports = function(passport) {
   const express = require('express');
@@ -21,7 +20,7 @@ module.exports = function(passport) {
   var Patient = require('../models/patient');
   var Address = require('../models/address');
   var Post = require('../models/post');
-
+  var Reminder = require('../models/reminder')
   /* GET api listing. */
   router.get('/', function(req, res) {
     res.send("<h1>API Home</h1> <br>" +
@@ -230,11 +229,13 @@ module.exports = function(passport) {
   });
   // Get rappels by the userID
   router.get('/getRappels/:userId', auth, function (req, res, next) {
-    Reminder.find({userId: req.param.userId})
+    console.log(req.params.userId);
+    Reminder.find({userId: req.params.userId})
       .exec(function (err, docs) {
         res.json(docs);
       });
-  }
+  });
+
   return router;
 
 };

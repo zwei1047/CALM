@@ -20,7 +20,8 @@ export class ReminderComponent implements OnInit {
     this.isLogged = this.authentication.isLoggedIn();
     if (this.isLogged) {
       this.getUser();
-      this.getRappels(this.user._id);
+      // console.log(this.user._id);
+      // this.getRappels(this.user._id);
     }
   }
 
@@ -28,12 +29,15 @@ export class ReminderComponent implements OnInit {
     this.userService.getProfile()
       .subscribe(user => {
         this.user = new User(user);
+        console.log(this.user);
+        this.getRappels(this.user._id);
       });
   }
   getRappels(userId: string ) {
     this.reminderService.getRappel(userId)
       .subscribe(rappeles => {
         this.rappeles = rappeles;
+        console.log(this.rappeles);
       });
   }
 

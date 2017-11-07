@@ -88,7 +88,7 @@ export class GoogleMapComponent implements OnInit {
     }
 
   }
-  zoomChange():void{
+  zoomChange(): void {
     console.log("1111");
   }
 
