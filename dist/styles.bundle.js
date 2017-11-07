@@ -1,6 +1,6 @@
 webpackJsonp([2,4],{
 
-/***/ 1070:
+/***/ 1174:
 /***/ (function(module, exports) {
 
 /*
@@ -253,24 +253,24 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 1074:
+/***/ 1178:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(473);
+module.exports = __webpack_require__(565);
 
 
 /***/ }),
 
-/***/ 473:
+/***/ 565:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(758);
+var content = __webpack_require__(850);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(1070)(content, {});
+var update = __webpack_require__(1174)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -288,22 +288,22 @@ if(false) {
 
 /***/ }),
 
-/***/ 758:
+/***/ 850:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(759)();
+exports = module.exports = __webpack_require__(851)();
 // imports
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n  font: 400 15px Lato, sans-serif;\n  line-height: 1.8;\n  color: #818181;\n}\nh2 {\n  font-size: 24px;\n  text-transform: uppercase;\n  color: #303030;\n  font-weight: 600;\n  margin-bottom: 30px;\n}\nh4 {\n  font-size: 19px;\n  line-height: 1.375em;\n  color: #303030;\n  font-weight: 400;\n  margin-bottom: 30px;\n}\n.jumbotron {\n  background-color: #f4511e;\n  color: #fff;\n  padding: 100px 25px;\n  font-family: Montserrat, sans-serif;\n}\n.container-fluid {\n  padding: 60px 50px;\n}\n.bg-grey {\n  background-color: #f6f6f6;\n}\n.logo-small {\n  color: #f4511e;\n  font-size: 50px;\n}\n.logo {\n  color: #f4511e;\n  font-size: 200px;\n}\n.thumbnail {\n  padding: 0 0 15px 0;\n  border: none;\n  border-radius: 0;\n}\n.thumbnail img {\n  width: 100%;\n  height: 100%;\n  margin-bottom: 10px;\n}\n.carousel-control.right, .carousel-control.left {\n  background-image: none;\n  color: #f4511e;\n}\n.carousel-indicators li {\n  border-color: #f4511e;\n}\n.carousel-indicators li.active {\n  background-color: #f4511e;\n}\n.item h4 {\n  font-size: 19px;\n  line-height: 1.375em;\n  font-weight: 400;\n  font-style: italic;\n  margin: 70px 0;\n}\n.item span {\n  font-style: normal;\n}\n.panel {\n  border: 1px solid #f4511e;\n  border-radius:0 !important;\n  transition: box-shadow 0.5s;\n}\n.panel:hover {\n  box-shadow: 5px 0px 40px rgba(0,0,0, .2);\n}\n.panel-footer .btn:hover {\n  border: 1px solid #f4511e;\n  background-color: #fff !important;\n  color: #f4511e;\n}\n.panel-heading {\n  color: #fff !important;\n  background-color: #f4511e !important;\n  padding: 25px;\n  border-bottom: 1px solid transparent;\n  border-top-left-radius: 0px;\n  border-top-right-radius: 0px;\n  border-bottom-left-radius: 0px;\n  border-bottom-right-radius: 0px;\n}\n.panel-footer {\n  background-color: white !important;\n}\n.panel-footer h3 {\n  font-size: 32px;\n}\n.panel-footer h4 {\n  color: #aaa;\n  font-size: 14px;\n}\n.panel-footer .btn {\n  margin: 15px 0;\n  background-color: #f4511e;\n  color: #fff;\n}\n.navbar {\n  margin-bottom: 0;\n  background-color: #f4511e;\n  z-index: 9999;\n  border: 0;\n  font-size: 12px !important;\n  line-height: 1.42857143 !important;\n  letter-spacing: 4px;\n  border-radius: 0;\n  font-family: Montserrat, sans-serif;\n}\n.navbar li a, .navbar .navbar-brand {\n  color: #fff !important;\n}\n.navbar-nav li a:hover, .navbar-nav li.active a {\n  color: #f4511e !important;\n  background-color: #fff !important;\n}\n.navbar-default .navbar-toggle {\n  border-color: transparent;\n  color: #fff !important;\n}\n\nfooter .glyphicon {\n  font-size: 20px;\n  margin-bottom: 20px;\n  color: #f4511e;\n}\n.slideanim {visibility:hidden;}\n.slide {\n  animation-name: slide;\n  -webkit-animation-name: slide;\n  animation-duration: 1s;\n  -webkit-animation-duration: 1s;\n  visibility: visible;\n}\n@keyframes slide {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(70%);\n            transform: translateY(70%);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n  }\n}\n@-webkit-keyframes slide {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(70%);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform: translateY(0%);\n  }\n}\n@media screen and (max-width: 768px) {\n  .col-sm-4 {\n    text-align: center;\n    margin: 25px 0;\n  }\n  .btn-lg {\n    width: 100%;\n    margin-bottom: 35px;\n  }\n}\n@media screen and (max-width: 480px) {\n  .logo {\n    font-size: 150px;\n  }\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n  font: 400 15px Lato, sans-serif;\r\n  line-height: 1.8;\r\n  color: #818181;\r\n}\r\nh2 {\r\n  font-size: 24px;\r\n  text-transform: uppercase;\r\n  color: #303030;\r\n  font-weight: 600;\r\n  margin-bottom: 30px;\r\n}\r\nh4 {\r\n  font-size: 19px;\r\n  line-height: 1.375em;\r\n  color: #303030;\r\n  font-weight: 400;\r\n  margin-bottom: 30px;\r\n}\r\n.jumbotron {\r\n  background-color: #f4511e;\r\n  color: #fff;\r\n  padding: 100px 25px;\r\n  font-family: Montserrat, sans-serif;\r\n}\r\n.container-fluid {\r\n  padding: 60px 50px;\r\n}\r\n.bg-grey {\r\n  background-color: #f6f6f6;\r\n}\r\n.logo-small {\r\n  color: #f4511e;\r\n  font-size: 50px;\r\n}\r\n.logo {\r\n  color: #f4511e;\r\n  font-size: 200px;\r\n}\r\n.thumbnail {\r\n  padding: 0 0 15px 0;\r\n  border: none;\r\n  border-radius: 0;\r\n}\r\n.thumbnail img {\r\n  width: 100%;\r\n  height: 100%;\r\n  margin-bottom: 10px;\r\n}\r\n.carousel-control.right, .carousel-control.left {\r\n  background-image: none;\r\n  color: #f4511e;\r\n}\r\n.carousel-indicators li {\r\n  border-color: #f4511e;\r\n}\r\n.carousel-indicators li.active {\r\n  background-color: #f4511e;\r\n}\r\n.item h4 {\r\n  font-size: 19px;\r\n  line-height: 1.375em;\r\n  font-weight: 400;\r\n  font-style: italic;\r\n  margin: 70px 0;\r\n}\r\n.item span {\r\n  font-style: normal;\r\n}\r\n.panel {\r\n  border: 1px solid #f4511e;\r\n  border-radius:0 !important;\r\n  transition: box-shadow 0.5s;\r\n}\r\n.panel:hover {\r\n  box-shadow: 5px 0px 40px rgba(0,0,0, .2);\r\n}\r\n.panel-footer .btn:hover {\r\n  border: 1px solid #f4511e;\r\n  background-color: #fff !important;\r\n  color: #f4511e;\r\n}\r\n.panel-heading {\r\n  color: #fff !important;\r\n  background-color: #f4511e !important;\r\n  padding: 25px;\r\n  border-bottom: 1px solid transparent;\r\n  border-top-left-radius: 0px;\r\n  border-top-right-radius: 0px;\r\n  border-bottom-left-radius: 0px;\r\n  border-bottom-right-radius: 0px;\r\n}\r\n.panel-footer {\r\n  background-color: white !important;\r\n}\r\n.panel-footer h3 {\r\n  font-size: 32px;\r\n}\r\n.panel-footer h4 {\r\n  color: #aaa;\r\n  font-size: 14px;\r\n}\r\n.panel-footer .btn {\r\n  margin: 15px 0;\r\n  background-color: #f4511e;\r\n  color: #fff;\r\n}\r\n.navbar {\r\n  margin-bottom: 0;\r\n  background-color: #f4511e;\r\n  z-index: 9999;\r\n  border: 0;\r\n  font-size: 12px !important;\r\n  line-height: 1.42857143 !important;\r\n  letter-spacing: 4px;\r\n  border-radius: 0;\r\n  font-family: Montserrat, sans-serif;\r\n}\r\n.navbar li a, .navbar .navbar-brand {\r\n  color: #fff !important;\r\n}\r\n.navbar-nav li a:hover, .navbar-nav li.active a {\r\n  color: #f4511e !important;\r\n  background-color: #fff !important;\r\n}\r\n.navbar-default .navbar-toggle {\r\n  border-color: transparent;\r\n  color: #fff !important;\r\n}\r\n\r\nfooter .glyphicon {\r\n  font-size: 20px;\r\n  margin-bottom: 20px;\r\n  color: #f4511e;\r\n}\r\n.slideanim {visibility:hidden;}\r\n.slide {\r\n  animation-name: slide;\r\n  -webkit-animation-name: slide;\r\n  animation-duration: 1s;\r\n  -webkit-animation-duration: 1s;\r\n  visibility: visible;\r\n}\r\n@keyframes slide {\r\n  0% {\r\n    opacity: 0;\r\n    -webkit-transform: translateY(70%);\r\n            transform: translateY(70%);\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n    -webkit-transform: translateY(0%);\r\n            transform: translateY(0%);\r\n  }\r\n}\r\n@-webkit-keyframes slide {\r\n  0% {\r\n    opacity: 0;\r\n    -webkit-transform: translateY(70%);\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n    -webkit-transform: translateY(0%);\r\n  }\r\n}\r\n@media screen and (max-width: 768px) {\r\n  .col-sm-4 {\r\n    text-align: center;\r\n    margin: 25px 0;\r\n  }\r\n  .btn-lg {\r\n    width: 100%;\r\n    margin-bottom: 35px;\r\n  }\r\n}\r\n@media screen and (max-width: 480px) {\r\n  .logo {\r\n    font-size: 150px;\r\n  }\r\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 759:
+/***/ 851:
 /***/ (function(module, exports) {
 
 /*
@@ -360,5 +360,5 @@ module.exports = function() {
 
 /***/ })
 
-},[1074]);
+},[1178]);
 //# sourceMappingURL=styles.bundle.map
