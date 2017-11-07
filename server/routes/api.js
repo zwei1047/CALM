@@ -2,6 +2,8 @@
  * Created by Romain on 22/03/2017.
  */
 
+import * as Reminder from "mongoose";
+
 module.exports = function(passport) {
   const express = require('express');
   const router = express.Router();
@@ -201,7 +203,38 @@ module.exports = function(passport) {
         res.json(docs);
       });
   });
+  // Get all search medecin
+  router.get('/searchDoctor/:city', auth, function (req, res, next) {
+    var tempUser = User.find({role:['patient', 'medecin']}).populate({
+      path: 'address',
+      match:  {city:req.params.city}
+    }).populate('doctor').
+    exec(function (err, docs) {
+      res.json(docs);
+    });
 
+    // var tempUser = User.find({role:['patient', 'medecin']})
+    //     .populate({
+    //       path: 'address',
+    //       match:  {city: req.params.city}
+    // }).populate('doctor')
+    // tempUser.find({city: {$ne: null}})
+    //   .exec(function (err, docs) {
+    //     if (err) {
+    //       console.log(err);
+    //       res.json(err);
+    //     } else {
+    //       res.json(docs);
+    //     }
+    // });
+  });
+  // Get rappels by the userID
+  router.get('/getRappels/:userId', auth, function (req, res, next) {
+    Reminder.find({userId: req.param.userId})
+      .exec(function (err, docs) {
+        res.json(docs);
+      });
+  }
   return router;
 
 };

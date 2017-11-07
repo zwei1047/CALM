@@ -9,7 +9,10 @@ var addressSchema = mongoose.Schema ({
   street_address : String,
   city : String,
   postal_code : Number,
-  country : String
+  country : String,
+  latitude : Number,
+  longitude : Number,
+  precision : Boolean
 });
 
 

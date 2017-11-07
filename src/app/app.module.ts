@@ -26,9 +26,11 @@ import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
 import { BuildingSpaceComponent } from './building-space/building-space.component';
 import {DoctorSpaceService} from './shared/services/doctor-space.service';
 import { GoogleMapComponent } from './medical-file/google-map/google-map.component';
-import {AgmCoreModule} from "angular2-google-maps/core";
+import {AgmCoreModule} from '@agm/core';
 import { PostsComponent } from './medical-file/posts/posts.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+import {DoctorSearchService} from "./shared/services/doctor-search.service";
+import {ReminderService} from "./shared/services/reminder.service";
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { OrganisationSpaceComponent } from './organisation-space/organisation-sp
     UsersService,
     AuthenticationService,
     MedicalFileService,
-    DoctorSpaceService
+    DoctorSpaceService,
+    DoctorSearchService,
+    ReminderService
   ],
   bootstrap: [AppComponent]
 })
