@@ -2133,7 +2133,7 @@ module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n  
 /***/ 887:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <li *ngFor=\"let n of rappeles\">\n            {{n}}\n          </li>\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <li *ngFor=\"let n of rappeles\">\n            {{n.rappel}}\n          </li>\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
