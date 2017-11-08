@@ -40,5 +40,8 @@ export class ReminderComponent implements OnInit {
         console.log(this.rappeles);
       });
   }
+  reminderDone(reminder_id: string) {
+    console.log('it has been done:' + reminder_id);
+  }
 
 }
