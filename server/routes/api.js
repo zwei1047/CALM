@@ -230,10 +230,25 @@ module.exports = function(passport) {
   // Get rappels by the userID
   router.get('/getRappels/:userId', auth, function (req, res, next) {
     console.log(req.params.userId);
-    Reminder.find({userId: req.params.userId})
+    Reminder.find({
+      userId: req.params.userId,
+      expire: 'false'})
       .exec(function (err, docs) {
         res.json(docs);
       });
+  });
+
+  router.get('/reminderDone/:reminderId', auth, function (req, res, next) {
+    console.log("i ma here");
+    Reminder.update({
+      _id: req.params.reminderId
+    },{
+      expire: 'True'
+    }).exec(function (err, docs) {
+      console.log("erro info" + err);
+      res.json(docs);
+    });
+
   });
 
   return router;

@@ -4,9 +4,12 @@
         <div class="panel-heading"><h3><i class="glyphicon glyphicon-bell"></i> Mes rappels</h3></div>
         <div class="panel-body"><ul>
           <div class="list-item">
-          <div *ngFor="let n of rappeles">
-            <li>{{n.rappel}}</li>
-            <button type="button" class="btn btn-danger" (click)="reminderDone(n._id)">déjà fait</button>
+          <div *ngFor="let n of rappeles" >
+            <div *ngIf="n.expire==false">
+              <li>{{n.rappel}}</li>
+              <button type="button" class="btn btn-danger" (click)="reminderDone(n._id)">déjà fait</button>
+            </div>
+
           </div>
           <li>Tests de PAP à effectuer</li>
           <li>Vaccins à administrer</li>

@@ -1067,6 +1067,11 @@ var ReminderService = (function () {
         return this.http.get('https://localhost:3000/api/getRappels/' + userId, this.authentication.getRequestOptions())
             .map(function (res) { return res.json(); });
     };
+    ReminderService.prototype.reminderDone = function (reminderId) {
+        console.log("i am here reminder service");
+        return this.http.get('https://localhost:3000/api/reminderDone/' + reminderId, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
     ReminderService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
@@ -1762,6 +1767,16 @@ var ReminderComponent = (function () {
     };
     ReminderComponent.prototype.reminderDone = function (reminder_id) {
         console.log('it has been done:' + reminder_id);
+        console.log(this.rappeles[0]['expire']);
+        this.reminderService.reminderDone(reminder_id).subscribe(function (info) {
+            console.log(info);
+        });
+        for (var _i = 0, _a = this.rappeles; _i < _a.length; _i++) {
+            var n = _a[_i];
+            if (n['_id'] === reminder_id) {
+                n['expire'] = true;
+            }
+        }
     };
     ReminderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2136,7 +2151,7 @@ module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n  
 /***/ 887:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <div *ngFor=\"let n of rappeles\">\n            <li>{{n.rappel}}</li>\n            <button type=\"button\" class=\"btn btn-danger\" (click)=\"reminderDone(n._id)\">déjà fait</button>\n          </div>\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <div *ngFor=\"let n of rappeles\" >\n            <div *ngIf=\"n.expire==false\">\n              <li>{{n.rappel}}</li>\n              <button type=\"button\" class=\"btn btn-danger\" (click)=\"reminderDone(n._id)\">déjà fait</button>\n            </div>\n\n          </div>\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 

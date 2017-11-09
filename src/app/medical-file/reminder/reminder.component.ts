@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ReminderService} from "../../shared/services/reminder.service";
 import {UsersService} from "../../shared/services/users.service";
 import {User} from "../../shared/models/user";
+import {Reminder} from "../../shared/models/reminder";
 import {AuthenticationService} from "../../shared/services/authentication.service";
 
 @Component({
@@ -13,7 +14,7 @@ export class ReminderComponent implements OnInit {
 
   isLogged: boolean;
   user: User;
-  rappeles: String[] = [];
+  rappeles: Reminder[] = [];
   constructor(private reminderService: ReminderService, private userService: UsersService, private authentication: AuthenticationService) { }
 
   ngOnInit() {
@@ -42,6 +43,17 @@ export class ReminderComponent implements OnInit {
   }
   reminderDone(reminder_id: string) {
     console.log('it has been done:' + reminder_id);
+    console.log(this.rappeles[0]['expire']);
+    this.reminderService.reminderDone(reminder_id).subscribe(info => {
+      console.log(info);
+    });
+    for (const n of this.rappeles) {
+      if (n['_id'] === reminder_id) {
+        n['expire'] = true;
+      }
+
+    }
+
   }
 
 }
