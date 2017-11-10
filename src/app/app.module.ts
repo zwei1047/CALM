@@ -31,6 +31,8 @@ import { PostsComponent } from './medical-file/posts/posts.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
 import {DoctorSearchService} from "./shared/services/doctor-search.service";
 import {ReminderService} from "./shared/services/reminder.service";
+import {DialogComponent} from "./medical-file/reminder/dialog.component";
+import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import {ReminderService} from "./shared/services/reminder.service";
     BuildingSpaceComponent,
     OrganisationSpaceComponent,
     GoogleMapComponent,
-    PostsComponent
+    PostsComponent,
+    DialogComponent,
+    DialogAnchorDirective,
   ],
   imports: [
     BrowserModule,

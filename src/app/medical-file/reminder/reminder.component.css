@@ -1,3 +1,6 @@
 .list-item {
   text-align: left;
 }
+[dialogAnchor] {
+  display: none;
+}
