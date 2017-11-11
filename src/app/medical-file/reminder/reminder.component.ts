@@ -15,6 +15,7 @@ import {DialogComponent} from "./dialog.component";
 })
 export class ReminderComponent implements OnInit {
 
+
   isLogged: boolean;
   user: User;
   rappeles: Reminder[] = [];
@@ -51,18 +52,24 @@ export class ReminderComponent implements OnInit {
       });
   }
   reminderDone(reminder_id: string) {
-    this.openDialogBox();
-    console.log('it has been done:' + reminder_id);
-    console.log(this.rappeles[0]['expire']);
-    this.reminderService.reminderDone(reminder_id).subscribe(info => {
-      console.log(info);
-    });
-    for (const n of this.rappeles) {
-      if (n['_id'] === reminder_id) {
-        n['expire'] = true;
-      }
+    if (confirm('vous etes sure?')) {
+      console.log('yes');
+      // this.openDialogBox();
+      console.log('it has been done:' + reminder_id);
+      console.log(this.rappeles[0]['expire']);
+      this.reminderService.reminderDone(reminder_id).subscribe(info => {
+        console.log(info);
+      });
+      for (const n of this.rappeles) {
+        if (n['_id'] === reminder_id) {
+          n['expire'] = true;
+        }
 
+      }
+    } else {
+      console.log('no');
     }
+
 
   }
 

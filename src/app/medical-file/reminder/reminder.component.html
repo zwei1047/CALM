@@ -8,7 +8,7 @@
           <div *ngFor="let n of rappeles" >
             <div *ngIf="n.expire==false">
               <li>{{n.rappel}}</li>
-              <button type="button" class="btn btn-danger" (click)="reminderDone(n._id)">déjà fait</button>
+              <button type="button" class="btn btn-danger success" (click)="reminderDone(n._id)">déjà fait</button>
             </div>
 
           </div>
@@ -19,3 +19,4 @@
     </div>
   </div>
 </div>
+
