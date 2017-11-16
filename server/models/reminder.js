@@ -7,9 +7,10 @@ var mongoose = require('mongoose');
 var reminderSchema = mongoose.Schema ({
   userId: String,
   rappel: String,
+  traitementId: String,
   date : Date,
-  expire: Boolean,
-  doctor: {type: mongoose.Schema.Types.ObjectId, ref: 'Doctor'}
+  expire: Boolean
+
 });
 
 

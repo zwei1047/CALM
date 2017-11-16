@@ -19,7 +19,7 @@ export class ReminderComponent implements OnInit {
   isLogged: boolean;
   user: User;
   rappeles: Reminder[] = [];
-
+  rappelesNum: number;
   @ViewChild(DialogAnchorDirective) dialogAnchor: DialogAnchorDirective;
   openDialogBox() {
     this.dialogAnchor.createDialog(DialogComponent);
@@ -36,6 +36,11 @@ export class ReminderComponent implements OnInit {
     }
   }
 
+  liClick(event: Event) {
+        event.stopPropagation();
+        return false;
+    }
+
   getUser() {
     this.userService.getProfile()
       .subscribe(user => {
@@ -48,6 +53,7 @@ export class ReminderComponent implements OnInit {
     this.reminderService.getRappel(userId)
       .subscribe(rappeles => {
         this.rappeles = rappeles;
+        this.rappelesNum = this.rappeles.length;
         console.log(this.rappeles);
       });
   }

@@ -250,7 +250,37 @@ module.exports = function(passport) {
     });
 
   });
+  router.put('/createFirstRappel/', auth, function (req, res, next) {
+    var treatment = req.body;
+    console.log(treatment);
+    new Reminder({
+      userId:req.body.userId,
+      rappel:req.body.info,
+      traitementId:req.body._id,
+      date:new Date(),
+      expire: false
+    }).save().then(function (content) {
+      res.json(content);
+    });
+    console.log(treatment.quantity);
+    res.json(treatment);
 
+  });
+  router.put('/createNextRappel/', auth, function (req, res, next) {
+    var treatment = req.body;
+    new Reminder({
+      userId:req.body.userId,
+      rappel:req.body.info,
+      traitementId:req.body._id,
+      date:new Date(),
+      expire: false
+    }).save().then(function (content) {
+      res.json(content);
+    });
+    console.log(treatment.quantity);
+    res.json(treatment);
+
+  });
   return router;
 
 };
