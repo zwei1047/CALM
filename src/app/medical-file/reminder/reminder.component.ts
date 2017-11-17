@@ -72,6 +72,7 @@ export class ReminderComponent implements OnInit {
         }
 
       }
+      this.rappelesNum = this.rappelesNum - 1;
     } else {
       console.log('no');
     }

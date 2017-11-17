@@ -232,7 +232,7 @@ module.exports = function(passport) {
     console.log(req.params.userId);
     Reminder.find({
       userId: req.params.userId,
-      expire: 'false'})
+      expire: 'false'}).sort({_id:-1})
       .exec(function (err, docs) {
         res.json(docs);
       });
@@ -252,20 +252,40 @@ module.exports = function(passport) {
   });
   router.put('/createFirstRappel/', auth, function (req, res, next) {
     var treatment = req.body;
+    var start = new Date();
+    start = start.toString();
+    console.log(start);
     console.log(treatment);
+    start = new Date(start);
+    var rappel = {
+      name: '',
+      quantity: '',
+      takingState: '',
+      frequence: '',
+      typeFrequence: '',
+      info: ''
+    };
+    rappel.name = req.body.name;
+    rappel.quantity = req.body.quantity;
+    rappel.takingState = req.body.takingState;
+    rappel.frequence = req.body.frequence;
+    rappel.typeFrequence = req.body.typeFrequence;
+    rappel.info = req.body.info;
+    start = start.getDate()+"-"+(start.getMonth()+1)+"-"+start.getFullYear();
+    console.log(rappel);
     new Reminder({
       userId:req.body.userId,
-      rappel:req.body.info,
+      rappel:rappel,
       traitementId:req.body._id,
-      date:new Date(),
+      date:start,
       expire: false
     }).save().then(function (content) {
       res.json(content);
     });
     console.log(treatment.quantity);
-    res.json(treatment);
 
   });
+
   router.put('/createNextRappel/', auth, function (req, res, next) {
     var treatment = req.body;
     new Reminder({

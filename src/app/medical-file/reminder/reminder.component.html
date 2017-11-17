@@ -29,9 +29,17 @@
   </button>
   <ul class="dropdown-menu">
 
-    <li *ngFor="let n of rappeles" class="clearfix" (click)="liClick($event)">
-      <div>{{n.rappel}}</div>
-      <button type="button" class="btn btn-danger success" (click)="reminderDone(n._id)">déjà fait</button>
+    <li *ngFor="let n of rappeles" class="clearfix" (click)="liClick($event)" >
+      <div *ngIf="n.expire==false">
+        <div class="displaybox">
+          {{n.rappel.name}}*{{n.rappel.quantity}}  {{n.rappel.takingState}}<br />
+          {{n.rappel.frequence}}fois par {{n.rappel.typeFrequence}} <br />
+          info:{{n.rappel.info}} <br />
+          data:{{n.date}}
+        </div>
+        <button type="button" class="btn btn-danger success" (click)="reminderDone(n._id)">déjà fait</button>
+      </div>
+
     </li>
 
   </ul>

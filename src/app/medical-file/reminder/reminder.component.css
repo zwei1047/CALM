@@ -6,6 +6,9 @@
 .dropdown-menu {
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 600px;
 
 }
 .dropdown-menu li {
@@ -16,7 +19,9 @@
 .dropdown-menu li:hover{
   background: #333399;
 }
-.dropdown-menu li div {
+.dropdown-menu li .displaybox {
+  margin-left: 10px;
+  width: 100%;
   float: left;
 }
 .dropdown-menu li button {

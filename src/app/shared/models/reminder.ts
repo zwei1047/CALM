@@ -4,7 +4,14 @@ import {Doctor} from "./doctor";
 export class Reminder {
   _id: string;
   user: User
-  rappel: string;
+  rappel: {
+    name: string,
+    quantity: string,
+    takingState: string,
+    frequence: string,
+    typeFrequence: string,
+    info: string
+  };
   date: Date;
   expire: Boolean;
   doctor: Doctor;
@@ -19,7 +26,14 @@ export class Reminder {
       this.doctor = rappelInfo.doctor;
     } else {
       this._id = '';
-      this.rappel = '';
+      this.rappel = {
+        name: '',
+        quantity: '',
+        takingState: '',
+        frequence: '',
+        typeFrequence: '',
+        info: ''
+      };
       this.expire = true;
       this.user = new User(null);
       this.doctor = new Doctor(null);

@@ -6,9 +6,16 @@ var mongoose = require('mongoose');
 //define the schema
 var reminderSchema = mongoose.Schema ({
   userId: String,
-  rappel: String,
+  rappel: {
+    name: String,
+    quantity: String,
+    takingState:String,
+    frequence: String,
+    typeFrequence: String,
+    info: String
+  },
   traitementId: String,
-  date : Date,
+  date : String,
   expire: Boolean
 
 });
