@@ -29,7 +29,7 @@
   </button>
   <ul class="dropdown-menu">
 
-    <li *ngFor="let n of rappeles" class="clearfix" (click)="liClick($event)" >
+    <li *ngFor="let n of rappeles" class="clearfix" (click)="liClick($event)" [ngClass]="{'liNonDisplay': n.expire}">
       <div *ngIf="n.expire==false">
         <div class="displaybox">
           {{n.rappel.name}}*{{n.rappel.quantity}}  {{n.rappel.takingState}}<br />

@@ -16,6 +16,10 @@
   padding-bottom:3px;
   background: #66CCFF;
 }
+
+.dropdown-menu .liNonDisplay{
+  display: none;
+}
 .dropdown-menu li:hover{
   background: #333399;
 }

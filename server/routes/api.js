@@ -301,6 +301,135 @@ module.exports = function(passport) {
     res.json(treatment);
 
   });
+  router.put('/testapi/', auth, function (req, res, next) {
+    if(createNextRappel()){
+      res.json('succeed in creating next rappel');
+    }
+    else {
+      res.json('false create next rappel');
+    }
+
+
+  });
+  function createNextRappel(){
+      // .find({})
+      // .populate('doctor')
+      // .populate('patient')
+      // .exec(function (err, docs) {
+      //   res.json(docs);
+      // });
+    var traitement = { __v: 0,
+      takingState: 'Avant-repas',
+      quantity: 10,
+      frequence: 2,
+      typeFrequence: 'jours',
+      info: 'Comprimé aspirine 500mg',
+      name: 'Aspirine',
+      start: '2017-11-21T08:54:38.000Z',
+      end: '2017-11-28T08:54:38.000Z',
+      codeCIS: '42',
+      userId: '59fdc54b9712113764f39694',
+      _id: '5a0b0936fecaf0101d591ff9' };
+
+      var rappels = traitementToRappel(traitement);
+      if(rappels != null)
+      {
+        // rappels[0].save().then(function (content) {
+        //
+        // });
+        console.log(rappels.length);
+        for( var i=0 ;i<rappels.length; i++) {
+
+          rappels[i].save().then(function (content) {
+            // res.json(content);
+          });
+
+        }
+        return true;
+      }
+      else
+      {
+        console.log('false');
+        return false;
+        // res.json("create next rappel failed");
+      }
+
+  }
+  const DATETRANSLATION = {
+    'Avant-repas':['11:00','19:00'],
+    'Pendant-repas': ['12:00','20:00'],
+    'Apres-repas': ['13:00','21:00'],
+    'A-jeun': ['7:00'],
+    'Avant-dormir': ['22:00'],
+    'Au-reveil': ['6:30']
+  };
+  function traitementToRappel(traitement){
+    var today = new Date();
+    var endday = new Date(traitement.end);
+    if(valideDate(today, endday))
+    {
+      var newRappels = [];
+      var rappel = {
+        name: '',
+        quantity: '',
+        takingState: '',
+        frequence: '',
+        typeFrequence: '',
+        info: ''
+      };
+      rappel.name = traitement.name;
+      rappel.quantity = traitement.quantity;
+      rappel.takingState = traitement.takingState;
+      rappel.frequence = traitement.frequence;
+      rappel.typeFrequence = traitement.typeFrequence;
+      rappel.info = traitement.info;
+      console.log(DATETRANSLATION[traitement.takingState][0]);
+      switch (traitement.takingState){
+        case 'Avant-repas':
+
+            for(var i = 0; i< rappel.frequence; i++)
+            {
+              let tempRappel = new Reminder({
+                userId:traitement.userId,
+                rappel:rappel,
+                traitementId:traitement._id,
+                date:DATETRANSLATION[traitement.takingState][i],
+                expire: false
+              });
+              newRappels.push(tempRappel);
+            }
+            break;
+
+      }
+      console.log(newRappels);
+      return newRappels;
+
+    }
+    else
+    {
+      return null;
+    }
+  }
+
+  function  valideDate(today, endday) {
+    var year = today.getFullYear();
+    var month = today.getMonth()+1;
+    var day = today.getDate();
+    var newToday = new Date(year, month, day);
+    var yearend = endday.getFullYear();
+    var monthend = endday.getMonth()+1;
+    var dayend = endday.getDate();
+    var newendday = new Date(yearend, monthend, dayend);
+    if(newendday.getTime() >= newToday.getTime())
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+
+  }
   return router;
 
 };
