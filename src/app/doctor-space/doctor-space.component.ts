@@ -26,14 +26,16 @@ export class DoctorSpaceComponent implements OnInit {
   }
 
   private loadAllPatients() {
-
     this.doctorService.getPatientFromDoctor(this.auth.currentUserId()).subscribe(patients => {
       this.patients = patients;
       console.log('Patients :', this.patients);
     });
   }
 
-
+  selectPatient(patient: Patient) {
+    this.patient_selected = patient;
+    localStorage.setItem('patient', JSON.stringify(patient));
+  }
 
   change_submit(patient: Patient) {
     this.patient_selected = patient;

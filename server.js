@@ -2,7 +2,7 @@
  * Created by Romain on 22/03/2017.
  */
 // Get dependencies
-const express = require('express');
+var  express = require('express');
 const path = require('path');
 const https = require('https');
 
@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var configDB = require('./server/config/database');
 var passport = require('passport');
 var flash = require('connect-flash');
-const app = express();
+var  app = express();
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -33,6 +33,9 @@ var pass = require('./server/config/passport');
 
 // Get our API routes
 const api = require('./server/routes/api')(passport);
+
+const treatment = require('./server/routes/treatment')(passport);
+
 const apiAutorisation = require('./server/routes/autorisation')(passport);
 const apiConsultation = require('./server/routes/consultation')(passport);
 const apiDisponnibilite =require('./server/routes/disponibilite')(passport);
@@ -47,8 +50,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
+
+
 // Set our api routes
 app.use('/api', api);
+app.use('/api', treatment);
+
+app.set('jsonp callback name', 'callback');
 app.use('/api', apiAutorisation);
 app.use('/api', apiConsultation);
 app.use('/api', apiDisponnibilite);

@@ -14,6 +14,7 @@ import {NotFoundComponent} from "./not-found/not-found";
 import {appRouting} from "./app.routing";
 import { RegisterComponent } from './register/register.component';
 import { AuthenticationService } from './shared/services/authentication.service';
+import { TreatmentService } from './shared/services/treatment.service';
 import { ProfileComponent } from './profile/profile.component';
 import { TrimValueAccessorModule } from 'ng-trim-value-accessor'; // Remove the trailing and the leading spaces
 import { MedicalFileComponent } from './medical-file/medical-file.component';
@@ -30,6 +31,7 @@ import { GoogleMapComponent } from './patient_rdv/google-map/google-map.componen
 import {AgmCoreModule} from "angular2-google-maps/core";
 import { PostsComponent } from './medical-file/posts/posts.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+import {PatientTreatmentComponent} from './doctor-space/patient-treatment/patient-treatment.component';
 import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
 import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
 import {RdvService} from "./shared/services/rdv.service";
@@ -52,6 +54,7 @@ import {LogService} from "./shared/services/log.service";
     MedicalFileComponent,
     DoctorProfileComponent,
     CurrentTreatmentComponent,
+    PatientTreatmentComponent,
     SettingsComponent,
     CalendarComponent,
     ReminderComponent,
@@ -79,6 +82,7 @@ import {LogService} from "./shared/services/log.service";
     AuthenticationService,
     MedicalFileService,
     DoctorSpaceService,
+    TreatmentService,
     DoctorSearchService,
     RdvService,
     AutorisationService,

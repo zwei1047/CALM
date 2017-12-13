@@ -22,10 +22,12 @@ export class PostComponent implements OnInit {
   messengerListPosts: Post[] = [];
   newPost: Post;
   newPostText: string;
+  isMessagerieOpen: boolean;
 
   constructor(private auth: AuthenticationService, private medicalService: MedicalFileService,
               private autorisationService: AutorisationService) { }
   ngOnInit() {
+    this.isMessagerieOpen = true;
     this.isLogged = this.auth.isLoggedIn();
     this.autorisation = new Autorisation(null);
     this.medicalService.getCurrentPatient()
@@ -48,6 +50,18 @@ export class PostComponent implements OnInit {
         //  });
         this.getAutorisationList(); // OK
       });
+  }
+
+  minimizeMessagerie() {
+    this.isMessagerieOpen = false;
+  }
+
+  openMessagerie() {
+    this.isMessagerieOpen = true;
+  }
+
+  deleteMessageBox() {
+    this.messengerBox = [];
   }
 
   // getUserList() {

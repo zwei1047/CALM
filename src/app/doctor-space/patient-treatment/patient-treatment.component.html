@@ -1,0 +1,302 @@
+<div class="jumbotron text-center">
+  <app-post></app-post>
+
+  <a type="button" routerLink="../doctor-space">Retour</a> <br/>
+  <h2>{{currentUser.first_name}} {{currentUser.last_name}}</h2>
+  <tr class="treatment-list">
+    <table class="table">
+      <tr>
+        <th>Substance</th>
+        <th>Nom</th>
+        <th>Début traitement</th>
+        <th>Fin traitement</th>
+        <th>Quantité</th>
+        <th>Fréquence</th>
+        <th>Type fréquence</th>
+        <th>Prise</th>
+        <th>Info</th>
+      </tr>
+      <tr *ngFor="let medic of treatments">
+        <td>
+          <div style="height: 75px; overflow:auto;">
+            <li *ngFor=" let substance of medic.substances">
+              {{substance}}
+            </li>
+          </div>
+        </td>
+
+
+        <td>
+          <select class="form-control" [(ngModel)]="medic.name" [disabled]="!isSelected(medic._id)">
+            <option [value]="medic.name">{{medic.name}}</option>
+            <option *ngFor="let c of derivateList" [ngValue]="c.denomination">{{c.denomination}}</option>
+          </select>
+        </td>
+
+
+        <td><input type="text" class="form-control" [ngModel]="medic.start | date:'yyyy-MM-dd'"
+                   (ngModelChange)="medic.start = $event" type="date" [disabled]="!isSelected(medic._id)"/></td>
+        <td><input type="text" class="form-control" [ngModel]="medic.end | date:'yyyy-MM-dd'"
+                   (ngModelChange)="medic.end = $event" type="date" [disabled]="!isSelected(medic._id)"/></td>
+        <td><input type="text" class="form-control" [(ngModel)]="medic.quantity" [disabled]="!isSelected(medic._id)">
+        </td>
+        <td><input type="text" class="form-control" [(ngModel)]="medic.frequence" [disabled]="!isSelected(medic._id)">
+        </td>
+        <td><select class="form-control" id="typeFreq" [(ngModel)]="medic.typeFrequence"
+                    [disabled]="!isSelected(medic._id)">
+          <option value="heures">Heures</option>
+          <option value="jours">Jours</option>
+          <option value="semaines">Semaines</option>
+          <option value="mois">Mois</option>
+          <option value="annees">Années</option>
+        </select></td>
+        <td><select class="form-control" id="state" [(ngModel)]="medic.takingState" [disabled]="!isSelected(medic._id)">
+          <option value="Avant-repas">Avant repas</option>
+          <option value="Pendant-repas">Pendant repas</option>
+          <option value="Apres-repas">Après repas</option>
+          <option value="A-jeun">A jeun</option>
+          <option value="Avant-dormir">Avant dormir</option>
+          <option value="Au-reveil">Au réveil</option>
+        </select></td>
+        <td><textarea class="form-control" [(ngModel)]="medic.info" [disabled]="!isSelected(medic._id)"></textarea></td>
+        <td>
+          <button class="btn btn-info btn-lg"
+                  (click)="updateSelectedTreatment(medic); getDerivateList(medic.substances[0] , medic)"
+                  [hidden]="isSelected(medic._id)">
+            Update
+          </button>
+          <button class="btn btn-info btn-lg" (click)="updateUserTreatment(medic)" [hidden]="!isSelected(medic._id)">
+            Save
+          </button>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalInfo"
+                  (click)="getTreatmentInfo(medic)">Info
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-info btn-lg" (click)="deleteMedicament(medic._id)" [hidden]="isSelected(medic._id)">
+            Delete
+          </button>
+          <button class="btn btn-info btn-lg" (click)="updateSelectedTreatment(null)" [hidden]="!isSelected(medic._id)">
+            Cancel
+          </button>
+          <button class="btn btn-info btn-lg" (click)="expiredTreatment(medic)">
+            Fin
+          </button>
+
+        </td>
+      </tr>
+    </table>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">+</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Ajout de traitement</h4>
+          </div>
+          <div class="modal-body">
+            <input type=text [(ngModel)]="search" (ngModelChange)="eventHandler($event)">
+            <table class="table">
+              <tr *ngFor="let element of searchList">
+                <button class="btn btn-info" (click)="addTreatment(element.codeCIS , element.denomination)"
+                        data-dismiss="modal">+
+                </button>
+                <td>{{element.denomination}}</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="myModalInfo" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Informations</h4>
+          </div>
+          <div class="modal-body">
+            <div *ngIf="treatmentInfo!== undefined">
+
+              <h2>{{treatmentInfo.denomination}}</h2>
+              <div *ngIf="treatmentInfo.presentation?.length > 0">
+                <label *ngIf="treatmentInfo.presentations[0].prix === null">Prix : (libre)<br/></label>
+                <label *ngIf="treatmentInfo.presentations[0].prix !== null">Prix :
+                  {{treatmentInfo.presentations[0].prix}} €<br/></label>
+              </div>
+              <div *ngIf="treatmentInfo.presentation?.length <= 0">
+                Prix : (libre)
+              </div>
+
+              {{treatmentInfo.statutAdministratifAMM}} - Date AMM : {{treatmentInfo.dateAMM}} -
+              ({{treatmentInfo.typeProcedureAMM}}) - [CIS : {{treatmentInfo.codeCIS}}] <br/>
+              Titulaires : {{treatmentInfo.titulaires}}<br/>
+              Voies d'administration :
+              <span *ngFor="let item of treatmentInfo.voiesAdministration; let isLast=last">
+                {{item}}{{isLast ? '' : ' / '}}
+              </span> <br/>
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Indications thérapeutiques</h3></div>
+                <div class="panel-body">
+                  <p [innerHTML]='treatmentInfo.indicationsTherapeutiques'></p>
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Conditions de prescriptions</h3></div>
+                <div class="panel-body">
+                  <li *ngFor="let condition of treatmentInfo.conditionsPrescriptionDelivrance">
+                    {{ condition }}
+                  </li>
+                  <p *ngIf="treatmentInfo.conditionsPrescriptionDelivrance?.length <= 0">Ce médicament ne possède pas
+                    de
+                    conditions de prescription particulières</p>
+                </div>
+              </div>
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Groupe Générique</h3></div>
+                <div class="panel-body">
+                  <div *ngIf="treatmentInfo.infosGenerique !== null">
+                    <li><b>{{treatmentInfo.denomination}}</b> - {{treatmentInfo.infosGenerique.type}}</li>
+                    <li *ngFor="let autre of treatmentInfo.infosGenerique.autresMedicamentsGroupe">
+                      <b>{{autre.denomination}}</b> - {{autre.type}}
+                    </li>
+                  </div>
+                  <p *ngIf="treatmentInfo.infosGenerique == null">Ce médicament n'appartient pas à un groupe générique
+
+                </div>
+              </div>
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Composition</h3></div>
+                <div class="panel-body">
+                  <li *ngFor="let composition of treatmentInfo.compositions[0].substancesActives">
+                    {{composition.denominationSubstance}}
+                  </li>
+                </div>
+              </div>
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Présentations</h3></div>
+                <div class="panel-body">
+                  <div *ngIf="treatmentInfo.presentation?.length > 0">
+                    <div *ngFor="let presentation of treatmentInfo.presentations">
+                      <h3>{{presentation.libelle}}</h3>
+                      {{presentation.etatCommercialisationAMM}} <br/>
+                      <div *ngIf="presentation.agrementCollectivites == true">
+                        Cette présentation est agréée aux collectivités <br/>
+                      </div>
+                      <b>Prix : {{presentation.prix}} € </b> (taux de remboursement :
+                      {{presentation.tauxRemboursement[0]}}) <br/>
+                    </div>
+                  </div>
+                  <div *ngIf="treatmentInfo.avisSMR?.length <= 0">
+                    <p>Aucune présentation n'est disponible pour ce médicament
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Service médical rendu (SMR)</h3></div>
+                <div class="panel-body">
+                  <div *ngIf="treatmentInfo.avisSMR?.length > 0">
+                    <table class="table">
+                      <tr>
+                        <th>Valeur du SMR</th>
+                        <th>Date</th>
+                        <th>Motif de l'évaluation</th>
+                        <th>Résumé de l'avis</th>
+                      </tr>
+                      <tr *ngFor="let smr of treatmentInfo.avisSMR" (click)='redirect(smr.urlHAS)'>
+                        <td>
+                          {{smr.valeurSMR}}
+                        </td>
+                        <td>
+                          {{smr.dateAvisCommissionTransparence}}
+                        </td>
+                        <td>
+                          {{smr.motifEvaluation}}
+                        </td>
+                        <td>
+                          <p [innerHTML]='smr.libelleSMR'></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div *ngIf="treatmentInfo.avisSMR?.length <= 0">
+                    <p>Aucun SMR n'est disponible pour ce médicament</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3>Amélioration du service médical rendu (ASMR)</h3></div>
+                <div class="panel-body">
+                  <div *ngIf="treatmentInfo.avisASMR?.length > 0">
+                    <table class="table">
+                      <tr>
+                        <th>Valeur du SMR</th>
+                        <th>Date</th>
+                        <th>Motif de l'évaluation</th>
+                        <th>Résumé de l'avis</th>
+                      </tr>
+                      <tr *ngFor="let smr of treatmentInfo.avisASMR" (click)='redirect(smr.urlHAS)'>
+                        <td>
+                          <label *ngIf="smr.valeurSMR =='I'">Majeure ({{smr.valeurSMR}})</label>
+                          <label *ngIf="smr.valeurSMR =='II'">Importante ({{smr.valeurSMR}})</label>
+                          <label *ngIf="smr.valeurSMR =='III'">Modérée({{smr.valeurSMR}})</label>
+                          <label *ngIf="smr.valeurSMR =='IV'">Mineure ({{smr.valeurSMR}})</label>
+                          <label *ngIf="smr.valeurSMR =='V'">Inexistante ({{smr.valeurSMR}})</label>
+                        </td>
+                        <td>
+                          {{smr.dateAvisCommissionTransparence}}
+                        </td>
+                        <td>
+                          {{smr.motifEvaluation}}
+                        </td>
+                        <td>
+                          <p [innerHTML]='smr.libelleSMR'></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div *ngIf="treatmentInfo.avisASMR?.length <= 0">
+                    <p>Aucune ASMR n'est disponible pour ce médicament</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>

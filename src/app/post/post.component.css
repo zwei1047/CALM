@@ -23,7 +23,31 @@
   text-align:center;
   overflow-y: auto;
   border-radius: 10px 0 0 10px;
+  z-index: 999;
 }
+#ouvreMessagerie{
+  position: fixed;
+  bottom: 10px;
+  right:10px;
+  width: 190px;
+  height:50px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+  background: #cedce7; /* Old browsers */
+  background: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #cedce7 0%,#596a72 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
+  color:rgb(50,50,50);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 0 4px black;
+}
+
 #message{
   position: fixed;
   bottom:0px;
@@ -35,18 +59,19 @@
   border-radius: 5px 5px 0 0;
   border:1px solid grey;
   box-shadow: 0 0 6px grey;
+  z-index: 999;
 }
 #message h2{
   border-radius: 5px 5px 0 0;
   text-align:center;
   background-color:rgb(200,200,200);
-  margin:0;
+  margin:0; padding: 0;
   padding:15px;
 }
 
 #message ul{
   list-style-type: none;
-  padding: 0;
+  padding: 0; margin:0;
   overflow-y: scroll;
   height:300px; width: 100%;
 }
@@ -65,31 +90,34 @@
   margin-bottom:5px;
   margin-top: 5px;
 }
+#inputMessage{
+  position: relative;
+  margin:0; padding: 0;
+  left:0;
+  width: 400px;
+  height: 42px;
+  box-shadow: -3px 0px 6px grey;
+  text-align: left !important;
+}
 #newPost{
-  position:relative;
   margin:0; padding:0;
-  bottom:10px;
   outline:none;
   border:none;
-  box-shadow: -3px 0px 6px grey;
-  width:90%;
-  padding:5px;
-  height:45px;
+  width:320px;
+  height:100%;
   color:grey;
 }
 #sendPost{
-  position:relative;
-  left:80%; bottom:55px;
-  width: 20%;
-  height: 45px;
-  padding:5px;
+  width: 80px;
+  height: 100%;
   border:none;
   outline:none;
   background-color: dodgerblue;
   color:white;
   font-weight: bold;
   font-size: 0.8em;
-  box-shadow: 3px 0 6px grey;
+  margin:0; padding: 0;
+  margin-left: -5px; /* correction de 5px sur la gauche : petit décalage */
 }
 
 #messagerie h2{

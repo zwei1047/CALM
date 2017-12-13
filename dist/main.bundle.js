@@ -1,9 +1,9 @@
 webpackJsonp([1,4],{
 
-/***/ 1093:
+/***/ 1098:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(484);
+module.exports = __webpack_require__(488);
 
 
 /***/ }),
@@ -12,8 +12,8 @@ module.exports = __webpack_require__(484);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patient; });
 
 
@@ -44,14 +44,16 @@ var Patient = (function () {
 
 /***/ }),
 
-/***/ 15:
+/***/ 14:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(820);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(457);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -62,6 +64,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -153,8 +156,8 @@ var AuthenticationService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AutorisationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -206,12 +209,55 @@ var AutorisationService = (function () {
 
 /***/ }),
 
-/***/ 258:
+/***/ 25:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__address__ = __webpack_require__(403);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
+
+/**
+ * Created by ISEN on 15/03/2017.
+ */
+var User = (function () {
+    function User(UserInfo) {
+        // console.log("UserInfo : ", UserInfo);
+        if (UserInfo) {
+            this._id = UserInfo._id;
+            this.first_name = UserInfo.first_name;
+            this.last_name = UserInfo.last_name;
+            this.birth_date = UserInfo.birth_date;
+            this.email = UserInfo.email;
+            this.password = UserInfo.password;
+            this.role = UserInfo.role;
+            this.profile_img = UserInfo.profile_img;
+            this.address = new __WEBPACK_IMPORTED_MODULE_0__address__["a" /* Address */](UserInfo.address);
+        }
+        else {
+            this._id = "";
+            this.first_name = "";
+            this.last_name = "";
+            this.birth_date = null;
+            this.email = "";
+            this.password = "";
+            this.role = "";
+            this.profile_img = null;
+            this.address = new __WEBPACK_IMPORTED_MODULE_0__address__["a" /* Address */](null);
+        }
+    }
+    ;
+    return User;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/user.js.map
+
+/***/ }),
+
+/***/ 259:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RdvService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -362,50 +408,75 @@ var RdvService = (function () {
 
 /***/ }),
 
-/***/ 28:
+/***/ 260:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__address__ = __webpack_require__(399);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreatmentService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
-/**
- * Created by ISEN on 15/03/2017.
- */
-var User = (function () {
-    function User(UserInfo) {
-        // console.log("UserInfo : ", UserInfo);
-        if (UserInfo) {
-            this._id = UserInfo._id;
-            this.first_name = UserInfo.first_name;
-            this.last_name = UserInfo.last_name;
-            this.birth_date = UserInfo.birth_date;
-            this.email = UserInfo.email;
-            this.password = UserInfo.password;
-            this.role = UserInfo.role;
-            this.profile_img = UserInfo.profile_img;
-            this.address = new __WEBPACK_IMPORTED_MODULE_0__address__["a" /* Address */](UserInfo.address);
-        }
-        else {
-            this._id = "";
-            this.first_name = "";
-            this.last_name = "";
-            this.birth_date = null;
-            this.email = "";
-            this.password = "";
-            this.role = "";
-            this.profile_img = null;
-            this.address = new __WEBPACK_IMPORTED_MODULE_0__address__["a" /* Address */](null);
-        }
+
+
+var TreatmentService = (function () {
+    function TreatmentService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
     }
-    ;
-    return User;
+    TreatmentService.prototype.getUserTreatment = function (id) {
+        return this.http.get('https://localhost:3000/api/treatment/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.updateUserTreatment = function (id, updatedTreatment) {
+        console.log(updatedTreatment);
+        return this.http.put('https://localhost:3000/api/updateTreatment/' + id, updatedTreatment, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.getMedicamentList = function (medicName) {
+        return this.http.get('https://localhost:3000/api/getMedicName/' + medicName, this.authentication.getRequestOptions()).map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.deleteTreatment = function (id) {
+        return this.http.delete('https://localhost:3000/api/treatment/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.addTreatment = function (id, newTreatment) {
+        return this.http.put('https://localhost:3000/api/treatment/' + id, newTreatment, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.getTreatmentInfo = function (codeCIS) {
+        return this.http.get('https://localhost:3000/api/getMedicInfo/' + codeCIS, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    TreatmentService.prototype.getRequestOptions = function () {
+        /*
+        let header: Headers = new Headers();
+        header.append('Access-Control-Request-Method', 'GET');
+        let options = new RequestOptions({headers: header});
+        return options;
+        */
+    };
+    TreatmentService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], TreatmentService);
+    return TreatmentService;
+    var _a, _b;
 }());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/user.js.map
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/treatment.service.js.map
 
 /***/ }),
 
-/***/ 383:
+/***/ 385:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -427,8 +498,8 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'about-page',
-            template: __webpack_require__(796),
-            styles: [__webpack_require__(774)]
+            template: __webpack_require__(801),
+            styles: [__webpack_require__(778)]
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
@@ -438,15 +509,15 @@ var AboutComponent = (function () {
 
 /***/ }),
 
-/***/ 384:
+/***/ 386:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(53);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -499,10 +570,10 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(797),
-            styles: [__webpack_require__(775)]
+            template: __webpack_require__(802),
+            styles: [__webpack_require__(779)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */]) === 'function' && _c) || Object])
     ], AppComponent);
     return AppComponent;
     var _a, _b, _c;
@@ -511,13 +582,13 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 385:
+/***/ 387:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuildingSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -542,8 +613,8 @@ var BuildingSpaceComponent = (function () {
     BuildingSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-building-space',
-            template: __webpack_require__(798),
-            styles: [__webpack_require__(776)]
+            template: __webpack_require__(803),
+            styles: [__webpack_require__(780)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], BuildingSpaceComponent);
@@ -554,7 +625,7 @@ var BuildingSpaceComponent = (function () {
 
 /***/ }),
 
-/***/ 386:
+/***/ 388:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -576,8 +647,8 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'contact-page',
-            template: __webpack_require__(799),
-            styles: [__webpack_require__(777)]
+            template: __webpack_require__(804),
+            styles: [__webpack_require__(781)]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -587,14 +658,14 @@ var ContactComponent = (function () {
 
 /***/ }),
 
-/***/ 387:
+/***/ 389:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(407);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -628,6 +699,10 @@ var DoctorSpaceComponent = (function () {
             console.log('Patients :', _this.patients);
         });
     };
+    DoctorSpaceComponent.prototype.selectPatient = function (patient) {
+        this.patient_selected = patient;
+        localStorage.setItem('patient', JSON.stringify(patient));
+    };
     DoctorSpaceComponent.prototype.change_submit = function (patient) {
         this.patient_selected = patient;
         this.submitted = !this.submitted;
@@ -635,8 +710,8 @@ var DoctorSpaceComponent = (function () {
     DoctorSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-space',
-            template: __webpack_require__(800),
-            styles: [__webpack_require__(778)]
+            template: __webpack_require__(805),
+            styles: [__webpack_require__(782)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], DoctorSpaceComponent);
@@ -647,21 +722,242 @@ var DoctorSpaceComponent = (function () {
 
 /***/ }),
 
-/***/ 388:
+/***/ 390:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_treatment__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(96);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientTreatmentComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var PatientTreatmentComponent = (function () {
+    function PatientTreatmentComponent(http, treatment, usersService, route, router) {
+        this.http = http;
+        this.treatment = treatment;
+        this.usersService = usersService;
+        this.route = route;
+        this.router = router;
+        this.treatments = [];
+        this.currentUser = new __WEBPACK_IMPORTED_MODULE_5__shared_models_user__["a" /* User */]({});
+    }
+    PatientTreatmentComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.newTreatment = new __WEBPACK_IMPORTED_MODULE_4__shared_models_treatment__["a" /* Treatment */]({});
+        this.route.params.subscribe(function (params) {
+            _this.userId = params['id'];
+            if (_this.userId) {
+                _this.getMedicamentList();
+                _this.usersService.getUser(_this.userId).subscribe(function (data) {
+                    _this.currentUser = data;
+                }, function (error) { return console.log(error); });
+            }
+            else {
+                console.log('404');
+            }
+        });
+    };
+    ;
+    PatientTreatmentComponent.prototype.getMedicamentList = function () {
+        var _this = this;
+        this.treatment.getUserTreatment(this.userId).subscribe(function (data) {
+            _this.treatments = data;
+            _this.treatments.forEach(function (element) {
+                this.treatment.getTreatmentInfo(element.codeCIS).subscribe(function (response) {
+                    var tmp = JSON.parse(response);
+                    if (tmp != null) {
+                        element.substances = tmp.compositions[0].substancesActives.map(function (a) { return a.denominationSubstance; });
+                    }
+                }, function (error) { return console.log(error); });
+                if (element.start != null) {
+                    element.start = new Date(element.start);
+                }
+                else {
+                    element.start = new Date();
+                }
+                if (element.end != null) {
+                    element.end = new Date(element.end);
+                }
+                else {
+                    element.start = new Date();
+                }
+                //          element.end.toLocaleDate| date:'dd/MM/yyyy'String('fr-FR');
+            }.bind(_this));
+        }, function (error) { return console.log(error); });
+    };
+    ;
+    PatientTreatmentComponent.prototype.deleteMedicament = function (id) {
+        var _this = this;
+        var result = confirm('Supprimer définitivement ?');
+        if (result) {
+            this.treatment.deleteTreatment(id).subscribe(function (data) {
+                _this.getMedicamentList();
+            }, function (error) { return console.log(error); });
+        }
+    };
+    ;
+    PatientTreatmentComponent.prototype.isSelected = function (id) {
+        if (this.selectedTreatment) {
+            if (this.selectedTreatment._id === id) {
+                return true;
+            }
+        }
+        return false;
+    };
+    PatientTreatmentComponent.prototype.updateSelectedTreatment = function (treatment) {
+        this.selectedTreatment = treatment;
+        this.clean();
+    };
+    PatientTreatmentComponent.prototype.updateUserTreatment = function (treatment) {
+        var _this = this;
+        this.treatment.updateUserTreatment(treatment._id, treatment).subscribe(function (data) {
+            _this.getMedicamentList();
+            _this.selectedTreatment = null;
+        }, function (error) { return console.log(error); });
+        this.clean();
+    };
+    PatientTreatmentComponent.prototype.expiredTreatment = function (treatment) {
+        var result = confirm('Fin du traitement ?');
+        if (result) {
+            treatment.expired = true;
+            this.updateUserTreatment(treatment);
+        }
+    };
+    PatientTreatmentComponent.prototype.addTreatment = function (codeCIS, denomination) {
+        var _this = this;
+        /* if (treatment == null || treatment.name == null || treatment.start == null
+           || treatment.typeFrequence == null || treatment.frequence == null
+           || treatment.quantity == null || treatment.end == null || treatment.takingState == null) {
+           console.log('Missing information');
+         } else {
+         */
+        var treatment = new __WEBPACK_IMPORTED_MODULE_4__shared_models_treatment__["a" /* Treatment */]({});
+        treatment.codeCIS = codeCIS;
+        treatment.name = denomination;
+        treatment.start = new Date();
+        treatment.end = null;
+        treatment.takingState = '';
+        treatment.quantity = null;
+        treatment.frequence = null;
+        treatment.typeFrequence = '';
+        treatment.expired = null;
+        treatment.info = null;
+        console.log(treatment);
+        this.treatment.addTreatment(this.userId, treatment).subscribe(function (data) {
+            _this.newTreatment = new __WEBPACK_IMPORTED_MODULE_4__shared_models_treatment__["a" /* Treatment */]({});
+            _this.getMedicamentList();
+            _this.selectedTreatment = null;
+        }, function (error) { return console.log(error); });
+        this.clean();
+    };
+    PatientTreatmentComponent.prototype.getMedicName = function (medicName) {
+        this.treatment.getMedicamentList(medicName).subscribe(function (data) {
+            var medicList = JSON.parse(data);
+        }, function (error) { return console.log(error); });
+    };
+    PatientTreatmentComponent.prototype.eventHandler = function (event) {
+        var _this = this;
+        if (event !== '') {
+            this.treatment.getMedicamentList(event).subscribe(function (data) {
+                _this.searchList = JSON.parse(data);
+            }, function (error) { return console.log(error); });
+        }
+    };
+    PatientTreatmentComponent.prototype.getTreatmentInfo = function (treatment) {
+        var _this = this;
+        this.treatment.getTreatmentInfo(treatment.codeCIS).subscribe(function (data) {
+            _this.treatmentInfo = JSON.parse(data);
+            console.log(_this.treatmentInfo);
+        }, function (error) { return console.log(error); });
+    };
+    PatientTreatmentComponent.prototype.redirect = function (url) {
+        window.open(url);
+    };
+    PatientTreatmentComponent.prototype.getDerivateList = function (substance, medic) {
+        var _this = this;
+        if (this.oldMedicName == null || this.oldMedicName == '') {
+            this.oldMedicName = medic.name;
+            var accent = [
+                /[\300-\306]/g, /[\340-\346]/g,
+                /[\310-\313]/g, /[\350-\353]/g,
+                /[\314-\317]/g, /[\354-\357]/g,
+                /[\322-\330]/g, /[\362-\370]/g,
+                /[\331-\334]/g, /[\371-\374]/g,
+                /[\321]/g, /[\361]/g,
+                /[\307]/g, /[\347]/g,
+            ];
+            var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
+            for (var i = 0; i < accent.length; i++) {
+                substance = substance.replace(accent[i], noaccent[i]);
+            }
+            if (typeof this.derivateList !== 'undefined' && this.derivateList != null && this.derivateList.length > 0) {
+                this.derivateList = [];
+            }
+            this.treatment.getMedicamentList(substance).subscribe(function (data) {
+                _this.derivateList = JSON.parse(data);
+            }, function (error) { return console.log(error); });
+        }
+    };
+    PatientTreatmentComponent.prototype.clean = function () {
+        this.oldMedicName = '';
+        this.derivateList = [];
+    };
+    PatientTreatmentComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-patient-treatment',
+            template: __webpack_require__(806),
+            styles: [__webpack_require__(783)],
+            providers: [__WEBPACK_IMPORTED_MODULE_6__shared_services_users_service__["a" /* UsersService */]],
+            inputs: [
+                'patient'
+            ]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__["a" /* TreatmentService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__["a" /* TreatmentService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_services_users_service__["a" /* UsersService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["b" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__angular_router__["b" /* ActivatedRoute */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* Router */]) === 'function' && _e) || Object])
+    ], PatientTreatmentComponent);
+    return PatientTreatmentComponent;
+    var _a, _b, _c, _d, _e;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/patient-treatment.component.js.map
+
+/***/ }),
+
+/***/ 391:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_doctor__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_disponibilite__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_util__ = __webpack_require__(1091);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_doctor__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_disponibilite__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_util__ = __webpack_require__(1096);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_util__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorRdvComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -931,8 +1227,8 @@ var DoctorRdvComponent = (function () {
     DoctorRdvComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
             selector: 'app-doctor_rdv',
-            template: __webpack_require__(801),
-            styles: [__webpack_require__(779)]
+            template: __webpack_require__(807),
+            styles: [__webpack_require__(784)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__shared_services_users_service__["a" /* UsersService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__["a" /* RdvService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__["a" /* RdvService */]) === 'function' && _e) || Object])
     ], DoctorRdvComponent);
@@ -943,7 +1239,7 @@ var DoctorRdvComponent = (function () {
 
 /***/ }),
 
-/***/ 389:
+/***/ 392:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -965,8 +1261,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home-page',
-            template: __webpack_require__(802),
-            styles: [__webpack_require__(780)]
+            template: __webpack_require__(808),
+            styles: [__webpack_require__(785)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -976,14 +1272,14 @@ var HomeComponent = (function () {
 
 /***/ }),
 
-/***/ 390:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1006,11 +1302,6 @@ var LoginComponent = (function () {
         this.submitted = false;
     }
     LoginComponent.prototype.ngOnInit = function () {
-        console.log("start");
-        console.log(document.getElementById('modal'));
-    };
-    LoginComponent.prototype.ngOnDestroy = function () {
-        console.log("destroy");
     };
     // signin the new user if signup successfully
     LoginComponent.prototype.login = function () {
@@ -1026,10 +1317,10 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'login-page',
-            template: __webpack_require__(803),
-            styles: [__webpack_require__(781)]
+            template: __webpack_require__(809),
+            styles: [__webpack_require__(786)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], LoginComponent);
     return LoginComponent;
     var _a, _b;
@@ -1038,12 +1329,84 @@ var LoginComponent = (function () {
 
 /***/ }),
 
-/***/ 391:
+/***/ 394:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(53);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentTreatmentComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var CurrentTreatmentComponent = (function () {
+    function CurrentTreatmentComponent(http, treatment, usersService) {
+        this.http = http;
+        this.treatment = treatment;
+        this.usersService = usersService;
+        this.treatments = [];
+        //this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        //console.log(this.currentUser);
+    }
+    CurrentTreatmentComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.usersService.getProfile()
+            .subscribe(function (user) {
+            _this.currentUser = new __WEBPACK_IMPORTED_MODULE_4__shared_models_user__["a" /* User */](user);
+            _this.getMedicamentList();
+        });
+    };
+    ;
+    CurrentTreatmentComponent.prototype.getMedicamentList = function () {
+        var _this = this;
+        this.treatment.getUserTreatment(this.currentUser._id).subscribe(function (data) {
+            _this.treatments = data;
+            _this.treatments.forEach(function (element) {
+                element.start = new Date(element.start);
+                element.end = new Date(element.end);
+            });
+        }, function (error) { return console.log(error); });
+    };
+    ;
+    CurrentTreatmentComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-current-treatment',
+            template: __webpack_require__(811),
+            styles: [__webpack_require__(788)],
+            providers: [__WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__["a" /* UsersService */]]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__["a" /* TreatmentService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__["a" /* TreatmentService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__["a" /* UsersService */]) === 'function' && _c) || Object])
+    ], CurrentTreatmentComponent);
+    return CurrentTreatmentComponent;
+    var _a, _b, _c;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/current-treatment.component.js.map
+
+/***/ }),
+
+/***/ 395:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicalFileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1066,8 +1429,8 @@ var MedicalFileComponent = (function () {
     MedicalFileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-medical-file',
-            template: __webpack_require__(807),
-            styles: [__webpack_require__(785)]
+            template: __webpack_require__(813),
+            styles: [__webpack_require__(790)],
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object])
     ], MedicalFileComponent);
@@ -1078,7 +1441,7 @@ var MedicalFileComponent = (function () {
 
 /***/ }),
 
-/***/ 392:
+/***/ 396:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1099,7 +1462,7 @@ var NotFoundComponent = (function () {
     }
     NotFoundComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            template: __webpack_require__(810)
+            template: __webpack_require__(816)
         }), 
         __metadata('design:paramtypes', [])
     ], NotFoundComponent);
@@ -1109,13 +1472,13 @@ var NotFoundComponent = (function () {
 
 /***/ }),
 
-/***/ 393:
+/***/ 397:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrganisationSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1140,8 +1503,8 @@ var OrganisationSpaceComponent = (function () {
     OrganisationSpaceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-organisation-space',
-            template: __webpack_require__(811),
-            styles: [__webpack_require__(788)]
+            template: __webpack_require__(817),
+            styles: [__webpack_require__(793)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], OrganisationSpaceComponent);
@@ -1152,24 +1515,24 @@ var OrganisationSpaceComponent = (function () {
 
 /***/ }),
 
-/***/ 394:
+/***/ 398:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_doctor__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_doctor__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_models_disponibilite__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_models_disponibilite__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_services_autorisation_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_models_log__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_models_log__ = __webpack_require__(615);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__ = __webpack_require__(409);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientRdvComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1381,8 +1744,8 @@ var PatientRdvComponent = (function () {
     PatientRdvComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-patient_rdv',
-            template: __webpack_require__(813),
-            styles: [__webpack_require__(790)]
+            template: __webpack_require__(819),
+            styles: [__webpack_require__(795)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__["a" /* UsersService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__["a" /* RdvService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__["a" /* RdvService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_11__shared_services_autorisation_service__["a" /* AutorisationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_11__shared_services_autorisation_service__["a" /* AutorisationService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__["a" /* LogService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__["a" /* LogService */]) === 'function' && _g) || Object])
     ], PatientRdvComponent);
@@ -1393,16 +1756,16 @@ var PatientRdvComponent = (function () {
 
 /***/ }),
 
-/***/ 395:
+/***/ 399:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_post__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_post__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__ = __webpack_require__(182);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1433,6 +1796,7 @@ var PostComponent = (function () {
     }
     PostComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.isMessagerieOpen = true;
         this.isLogged = this.auth.isLoggedIn();
         this.autorisation = new __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__["a" /* Autorisation */](null);
         this.medicalService.getCurrentPatient()
@@ -1454,6 +1818,15 @@ var PostComponent = (function () {
             //  });
             _this.getAutorisationList(); // OK
         });
+    };
+    PostComponent.prototype.minimizeMessagerie = function () {
+        this.isMessagerieOpen = false;
+    };
+    PostComponent.prototype.openMessagerie = function () {
+        this.isMessagerieOpen = true;
+    };
+    PostComponent.prototype.deleteMessageBox = function () {
+        this.messengerBox = [];
     };
     // getUserList() {
     //  this.medicalService.getCurrentPatient()
@@ -1549,8 +1922,8 @@ var PostComponent = (function () {
     PostComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-post',
-            template: __webpack_require__(814),
-            styles: [__webpack_require__(791)]
+            template: __webpack_require__(820),
+            styles: [__webpack_require__(796)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__["a" /* AutorisationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__["a" /* AutorisationService */]) === 'function' && _d) || Object])
     ], PostComponent);
@@ -1561,14 +1934,14 @@ var PostComponent = (function () {
 
 /***/ }),
 
-/***/ 396:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1587,7 +1960,7 @@ var ProfileComponent = (function () {
     function ProfileComponent(authentication, usersService) {
         this.authentication = authentication;
         this.usersService = usersService;
-        this.image = __webpack_require__(482);
+        this.image = __webpack_require__(486);
     }
     ProfileComponent.prototype.ngOnInit = function () {
         this.isLogged = this.authentication.isLoggedIn();
@@ -1600,13 +1973,14 @@ var ProfileComponent = (function () {
         this.usersService.getProfile()
             .subscribe(function (user) {
             _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
+            console.log(_this.user);
         });
     };
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-profile',
-            template: __webpack_require__(815),
-            styles: [__webpack_require__(792)]
+            template: __webpack_require__(821),
+            styles: [__webpack_require__(797)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object])
     ], ProfileComponent);
@@ -1617,19 +1991,19 @@ var ProfileComponent = (function () {
 
 /***/ }),
 
-/***/ 397:
+/***/ 401:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__ = __webpack_require__(410);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1706,6 +2080,7 @@ var SettingsComponent = (function () {
         var _this = this;
         this.medicalService.getCurrentPatient()
             .subscribe(function (patient) {
+            console.log('this patient : ', patient);
             _this.patient = new __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__["a" /* Patient */](patient);
             _this.medicalService.addGeneralDoctor(doctor, _this.patient._id)
                 .subscribe(function (data) {
@@ -1764,8 +2139,8 @@ var SettingsComponent = (function () {
     SettingsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-settings',
-            template: __webpack_require__(816),
-            styles: [__webpack_require__(793)]
+            template: __webpack_require__(822),
+            styles: [__webpack_require__(798)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */]) === 'function' && _e) || Object])
     ], SettingsComponent);
@@ -1776,14 +2151,14 @@ var SettingsComponent = (function () {
 
 /***/ }),
 
-/***/ 398:
+/***/ 402:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1852,10 +2227,10 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(817),
-            styles: [__webpack_require__(794)]
+            template: __webpack_require__(823),
+            styles: [__webpack_require__(799)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], RegisterComponent);
     return RegisterComponent;
     var _a, _b;
@@ -1864,7 +2239,7 @@ var RegisterComponent = (function () {
 
 /***/ }),
 
-/***/ 399:
+/***/ 403:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1904,11 +2279,11 @@ var Address = (function () {
 
 /***/ }),
 
-/***/ 400:
+/***/ 404:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autorisation; });
 
 var Autorisation = (function () {
@@ -1942,12 +2317,12 @@ var Autorisation = (function () {
 
 /***/ }),
 
-/***/ 401:
+/***/ 405:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Consultation; });
 
 
@@ -1973,11 +2348,11 @@ var Consultation = (function () {
 
 /***/ }),
 
-/***/ 402:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Disponnibilite; });
 
 var Disponnibilite = (function () {
@@ -2020,11 +2395,11 @@ var Disponnibilite = (function () {
 
 /***/ }),
 
-/***/ 403:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TypePost; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Post; });
 
@@ -2059,13 +2434,13 @@ var Post = (function () {
 
 /***/ }),
 
-/***/ 404:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSearchService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2099,13 +2474,13 @@ var DoctorSearchService = (function () {
 
 /***/ }),
 
-/***/ 405:
+/***/ 409:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2140,13 +2515,13 @@ var LogService = (function () {
 
 /***/ }),
 
-/***/ 406:
+/***/ 410:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2187,13 +2562,13 @@ var MailService = (function () {
 
 /***/ }),
 
-/***/ 407:
+/***/ 411:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(96);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2239,11 +2614,11 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'users-page',
-            template: __webpack_require__(818),
-            styles: [__webpack_require__(795)],
+            template: __webpack_require__(824),
+            styles: [__webpack_require__(800)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === 'function' && _b) || Object])
     ], UsersComponent);
     return UsersComponent;
     var _a, _b;
@@ -2252,14 +2627,14 @@ var UsersComponent = (function () {
 
 /***/ }),
 
-/***/ 482:
+/***/ 486:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgA3ADcAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+t+lGaKBQAUZoooAM0Zoo6UAFFFFACmkoooAKWkooABRRRQAtJS0lABRRS0AGaSjNFABS0lLQAlFFFABQaKM0AFFFGaAA0UGgCgAooxRQACiiigAooIooAKOtFAoAKKKKACiig0ALSUUUAFFFGKACiiigAooooADRRRQAdqKMUdBQAUYoooAKKKKACiiigAooxRQAUUYooAMUUUUALSVc0vSLzWbkQWVu88h67RwPcntXoWi/B4ACTVLs5/54239WI/pQB5jRivfbHwNoWnqBHpsLkfxTDzD+ua1E0uzjGEtIFHoIgKAPm+ivou40DTLoETafayf70K5/lXP6p8LtEvwTDHJZSHo0Lcfkc/pigDxMUvSuv8AEPwy1TRUeaAC/thzmIfOB7r/AIZrjyMcEYoAWkoooAKWkooAKBRRQAvSikooAKWkowaACiiigAooooAKKKKACig0UAFdP4N8EXPimfzGJgsEOHmxyx/ur7/yql4T8NS+J9XS2XKwr880n91f8T0Fe82NlBptpFbW0YjgjG1VHYUARaTo9nolottZwLDGOuOrH1J7mrtFFABRmijNABSZpaKADNcb4y+Hlrr8b3VmFttQxnIGFk/3vf3rsqPwoA+ary0m0+5kt7iNoZ4ztZGHINQ17T8RPBy69YteWqAahAueP+Wij+H6+n5V4tgjjoaACjNFFABS0lFABmjNFBoABQKKKACiiigAooooAXNJR2ooAKKK1PDGm/2x4gsbQjKSSjeP9kcn9AaAPX/h54fXQvD8TOmLq6AllyOR/dH4D+ddRSAYGAMAUUAL+FFJS4oAKM0fhRQAUUUYoAOlH4UUmKAFrxL4l+H10TXzLCm22uwZV9A2fmH9fxr2z8K474qaWL3ww04GZLVxID3weD/MH8KAPFs0UUUAGaKKKACiijFABRmijmgAoopaAEoooFABRRRQAV2fwntxN4sDkZ8qB3Ht0X/2auMruPhC4TxRMD/FauB/30h/pQB7HzSUtFACUtFFACc0tHSigA5o5oo7UAFFFFABWZ4mtxdeHdTiIzutpMfXacVp1S1xxFouoOei28hP/fJoA+cetFFFABRRRQAUGiigApfwpKMZoAKMUUCgAooozQACiiigAIro/h7fDT/F1gzHCSMYj/wIED9cVzlPilaCVJEJV0YMpHYjmgD6YoxVDQdVTW9HtL1OBKgJA7N0I/PNX8UAFFHejFABRRR2oAKKKKACijvRQAVzvxAvxYeEtQbOGlTyV99xwf0zXRV5b8YdaEk1ppaNnZ++l+p4Uflk/iKAPNsUYoooAMUUUdKACiiigAoxRSigApBRRQAUUCigAopaKAENFFFAHffC3xUum3jaXdPtt7hsxMx4V/T8f5167XzKCQQR1HcV658P/iAmpxx6dqMgW8X5Y5W6Sj0P+1/OgDvs0UlL/OgAzRmikoAWiiigAooqrqWpW2k2cl1dyrDCg5Zu/sPU0AQ69rcHh/S5r24PyoPlXPLt2UV8+6lqE2q3893OxaWZizEn9B7DpWz4z8XzeKr/AHYMVnGSIYT/AOhH3Nc7QAUUUUAHSgGgmigAoNFFABRR0ozQAUtJS0AJRR1ooAKO9FFABRig0GgAoGcgjg+1bfhvwhqHiebbbR7IFOHuJOEX/E+wr1jw78PdL0AJIYxd3Y6zTDOD/sr0H8/egDI+H2r+I7iOOG9snnsgAFupjscD8fvD/Oa7+kpaADFHWjqKKACiiigCrqdxc21lJJaWv2ycD5Yt4TP4mvDfGGq6zqWof8TeOS3K/cgKlUX6Dv8AWvfKq6hplpq1uYby3juIj/C4zj6elAHzdRXpHij4TvCHuNGYyIOTayH5v+Anv9DXnMsLwSNHIjRyKcMrDBB9xQA2iiigAoooNABRRRQAUCgUlAC0UUUAFFFFABRRQaACu38D/DyTXSl7fhobDOVTo0v09B70fD3wN/bswv71CLCJvlQj/XMO30HevY1UIqqoCqOAAOBQBHa2kNlAkEEaxRIMKiDAAqWikoAXFFGKKADFFHaigAooooAKKKKACuY8X+BrTxPCZFAt79R8kwH3vZvUV09FAHzfqml3OjXslrdxGKZDyD0I9R6iqnSvfPGHhK38VWGxsR3ceTDNjofQ+xrwq+sZ9Mu5bW5jMU0TbWU9qAIDQaMcUUAFBo70UAFGaKMUAFFLSUAHaiiigArc8H+GZPFGrpbjK26fPNIP4V/xPQViKpdgqjJJwABXvPgfw2PDWhxxOoF3L+8mP+16fh/jQBuWtrFZW0dvBGI4Y1Coi9ABUtFFAAaKCaKADvRRnFFABRR60ZoAKKKKACiiigAooooADXEfErwgNasDqFsmb63X5gvWRPT6jtXb5o9qAPmTpRXW/Ejwz/YOtGeFMWd0S6Y6K38S/rn8a5LtQAYoNFBoAKKKKACiiloASjpRRQB2Hwx0Eav4gFxIu63sx5h44L/wj+Z/Cva81ynw00YaV4YhkZcTXR85vofuj8ufxrq6AE7UtFFABRRRQAlLRRQAlLzRRigAooooAKKKKACiiigA70UUUAYPjbQh4g8PXEAXdOg82HHXcO348j8a8CIIJBHPpX03Xg3j/Rxovie6jRdsMp86PHo3UfnkUAc7zRRQaACjmjrQP880AFLSUUAHWrWl2TalqVrar96aRY/zOKq11nwwsftfi63YjKwI0p/LA/UigD2yGJYIkjQbURQqj0A6U+iigA6UUlLQAn40tFFACUtFFAB1ooooAKKKKACiiigAooooAKKKDQAV5x8ZNND2djfgfNG5iYj0IyP5H869HrnfiBZfb/COoKBlkQSj/gJB/lmgDwaiig0AAooozQAUUDvQKACvRfgzb7tQ1GfHKRKn5kn/ANlrzrsK9T+DCgWuqN3Lxj8g1AHpFJRmlFABRSUvpQAUUGgUAHeijvR2oAKKD3oxgUAFFAo7UAFFFB4oAKKMUZ60AFFBooAKralb/a9OuoSM+ZEyfmCKs4o60AfMhHNFS3aBLuZR0DkD86ixmgAox7UUuKAP/9k="
 
 /***/ }),
 
-/***/ 483:
+/***/ 487:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -2268,20 +2643,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 483;
+webpackEmptyContext.id = 487;
 
 
 /***/ }),
 
-/***/ 484:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(574);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(614);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(603);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(607);
 
 
 
@@ -2294,50 +2669,128 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 603:
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UsersService = (function () {
+    function UsersService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+        this.url = 'https://localhost:3000/api/';
+    }
+    // Get all users from the API
+    UsersService.prototype.getUsers = function () {
+        return this.http.get(this.url + 'users', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getUser = function (id) {
+        return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.deleteUser = function (id) {
+        if (this.authentication.currentUserId() === id) {
+            this.authentication.logout();
+        }
+        return this.http.delete(this.url + 'users/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
+    };
+    UsersService.prototype.deleteAddress = function (id) {
+        return this.http.delete(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
+    };
+    UsersService.prototype.getProfile = function () {
+        return this.http.get(this.url + 'profile', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddressById = function (id) {
+        return this.http.get(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddresses = function () {
+        return this.http.get(this.url + 'addresses', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getDoctors = function () {
+        return this.http.get(this.url + 'doctors', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], UsersService);
+    return UsersService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.service.js.map
+
+/***/ }),
+
+/***/ 607:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(384);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact__ = __webpack_require__(386);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(383);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__post_post_component__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__(604);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__register_register_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng_trim_value_accessor__ = __webpack_require__(600);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__medical_file_medical_file_component__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(607);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(606);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__shared_services_medical_file_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__profile_settings_settings_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__medical_file_calendar_calendar_component__ = __webpack_require__(605);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__medical_file_reminder_reminder_component__ = __webpack_require__(609);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__doctor_space_doctor_space_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__building_space_building_space_component__ = __webpack_require__(385);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__shared_services_doctor_space_service__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__patient_rdv_google_map_google_map_component__ = __webpack_require__(610);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core__ = __webpack_require__(617);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__medical_file_posts_posts_component__ = __webpack_require__(608);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__organisation_space_organisation_space_component__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__patient_rdv_patient_rdv_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__doctor_rdv_doctor_rdv_component__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__shared_services_rdv_service__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__shared_services_doctor_search_service__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__shared_services_autorisation_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__shared_services_mail_service__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__shared_services_log_service__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__post_post_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__register_register_component__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__ = __webpack_require__(604);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__ = __webpack_require__(409);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2348,6 +2801,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -2401,42 +2856,44 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__login_login__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__["a" /* NotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__medical_file_medical_file_component__["a" /* MedicalFileComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__medical_file_doctor_profile_doctor_profile_component__["a" /* DoctorProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__profile_settings_settings_component__["a" /* SettingsComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__medical_file_calendar_calendar_component__["a" /* CalendarComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__medical_file_reminder_reminder_component__["a" /* ReminderComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__building_space_building_space_component__["a" /* BuildingSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__["a" /* MedicalFileComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__["a" /* DoctorProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__["a" /* SettingsComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__["a" /* CalendarComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__["a" /* ReminderComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__["a" /* BuildingSpaceComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__post_post_component__["a" /* PostComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__patient_rdv_google_map_google_map_component__["a" /* GoogleMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__medical_file_posts_posts_component__["a" /* PostsComponent */]
+                __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__["a" /* GoogleMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__["a" /* PostsComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_13__app_routing__["a" /* appRouting */],
-                __WEBPACK_IMPORTED_MODULE_17_ng_trim_value_accessor__["a" /* TrimValueAccessorModule */],
-                __WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core__["AgmCoreModule"].forRoot({
+                __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__["a" /* TrimValueAccessorModule */],
+                __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyDVDZy1qXBBu6ctMvyYcSONy3-cs5PjYNU'
                 })
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */],
                 __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__["a" /* AuthenticationService */],
-                __WEBPACK_IMPORTED_MODULE_21__shared_services_medical_file_service__["a" /* MedicalFileService */],
-                __WEBPACK_IMPORTED_MODULE_27__shared_services_doctor_space_service__["a" /* DoctorSpaceService */],
-                __WEBPACK_IMPORTED_MODULE_35__shared_services_doctor_search_service__["a" /* DoctorSearchService */],
-                __WEBPACK_IMPORTED_MODULE_34__shared_services_rdv_service__["a" /* RdvService */],
-                __WEBPACK_IMPORTED_MODULE_36__shared_services_autorisation_service__["a" /* AutorisationService */],
-                __WEBPACK_IMPORTED_MODULE_37__shared_services_mail_service__["a" /* MailService */],
-                __WEBPACK_IMPORTED_MODULE_38__shared_services_log_service__["a" /* LogService */]
+                __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__["a" /* MedicalFileService */],
+                __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__["a" /* DoctorSpaceService */],
+                __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__["a" /* TreatmentService */],
+                __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__["a" /* DoctorSearchService */],
+                __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__["a" /* RdvService */],
+                __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__["a" /* AutorisationService */],
+                __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__["a" /* MailService */],
+                __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__["a" /* LogService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         }), 
@@ -2448,29 +2905,33 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 604:
+/***/ 608:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(383);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(386);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__register_register_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(384);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__ = __webpack_require__(385);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__post_post_component__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__patient_rdv_patient_rdv_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__doctor_rdv_doctor_rdv_component__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__register_register_component__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__post_post_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRouting; });
+
+
 
 
 
@@ -2499,11 +2960,13 @@ var appRoutes = [
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
     { path: 'medical-file', component: __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__["a" /* MedicalFileComponent */] },
     { path: 'doctor-space', component: __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */] },
+    { path: 'current-treatment', component: __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */] },
+    { path: 'patient-treatment', component: __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */] },
     { path: 'building-space', component: __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__["a" /* BuildingSpaceComponent */] },
     { path: 'organisation-space', component: __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */] },
-    { path: 'post', component: __WEBPACK_IMPORTED_MODULE_15__post_post_component__["a" /* PostComponent */] },
-    { path: 'patient_rdv', component: __WEBPACK_IMPORTED_MODULE_16__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */] },
-    { path: 'doctor_rdv', component: __WEBPACK_IMPORTED_MODULE_17__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */] },
+    { path: 'post', component: __WEBPACK_IMPORTED_MODULE_17__post_post_component__["a" /* PostComponent */] },
+    { path: 'patient_rdv', component: __WEBPACK_IMPORTED_MODULE_18__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */] },
+    { path: 'doctor_rdv', component: __WEBPACK_IMPORTED_MODULE_19__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */] },
     { path: 'logout', component: __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */] },
     { path: 'settings', component: __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__["a" /* SettingsComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__["a" /* NotFoundComponent */] }
@@ -2513,7 +2976,7 @@ var appRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModu
 
 /***/ }),
 
-/***/ 605:
+/***/ 609:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2537,8 +3000,8 @@ var CalendarComponent = (function () {
     CalendarComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-calendar',
-            template: __webpack_require__(804),
-            styles: [__webpack_require__(782)]
+            template: __webpack_require__(810),
+            styles: [__webpack_require__(787)]
         }), 
         __metadata('design:paramtypes', [])
     ], CalendarComponent);
@@ -2548,49 +3011,14 @@ var CalendarComponent = (function () {
 
 /***/ }),
 
-/***/ 606:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentTreatmentComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CurrentTreatmentComponent = (function () {
-    function CurrentTreatmentComponent() {
-    }
-    CurrentTreatmentComponent.prototype.ngOnInit = function () {
-    };
-    CurrentTreatmentComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-current-treatment',
-            template: __webpack_require__(805),
-            styles: [__webpack_require__(783)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CurrentTreatmentComponent);
-    return CurrentTreatmentComponent;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/current-treatment.component.js.map
-
-/***/ }),
-
-/***/ 607:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2609,7 +3037,7 @@ var DoctorProfileComponent = (function () {
     function DoctorProfileComponent(medicalfile, authentication) {
         this.medicalfile = medicalfile;
         this.authentication = authentication;
-        this.image = __webpack_require__(482);
+        this.image = __webpack_require__(486);
     }
     DoctorProfileComponent.prototype.ngOnInit = function () {
         this.isLogged = this.authentication.isLoggedIn();
@@ -2626,8 +3054,8 @@ var DoctorProfileComponent = (function () {
     DoctorProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-doctor-profile',
-            template: __webpack_require__(806),
-            styles: [__webpack_require__(784)]
+            template: __webpack_require__(812),
+            styles: [__webpack_require__(789)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
     ], DoctorProfileComponent);
@@ -2638,12 +3066,12 @@ var DoctorProfileComponent = (function () {
 
 /***/ }),
 
-/***/ 608:
+/***/ 611:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2665,8 +3093,8 @@ var PostsComponent = (function () {
     PostsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-posts',
-            template: __webpack_require__(808),
-            styles: [__webpack_require__(786)]
+            template: __webpack_require__(814),
+            styles: [__webpack_require__(791)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object])
     ], PostsComponent);
@@ -2677,7 +3105,7 @@ var PostsComponent = (function () {
 
 /***/ }),
 
-/***/ 609:
+/***/ 612:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2701,8 +3129,8 @@ var ReminderComponent = (function () {
     ReminderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-reminder',
-            template: __webpack_require__(809),
-            styles: [__webpack_require__(787)]
+            template: __webpack_require__(815),
+            styles: [__webpack_require__(792)]
         }), 
         __metadata('design:paramtypes', [])
     ], ReminderComponent);
@@ -2712,12 +3140,12 @@ var ReminderComponent = (function () {
 
 /***/ }),
 
-/***/ 610:
+/***/ 613:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__ = __webpack_require__(408);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2812,8 +3240,8 @@ var GoogleMapComponent = (function () {
     GoogleMapComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-google-map',
-            template: __webpack_require__(812),
-            styles: [__webpack_require__(789)]
+            template: __webpack_require__(818),
+            styles: [__webpack_require__(794)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */]) === 'function' && _a) || Object])
     ], GoogleMapComponent);
@@ -2824,14 +3252,14 @@ var GoogleMapComponent = (function () {
 
 /***/ }),
 
-/***/ 611:
+/***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(616);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Building; });
 
 
@@ -2873,11 +3301,11 @@ var Building = (function () {
 
 /***/ }),
 
-/***/ 612:
+/***/ 615:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Log; });
 
 var Log = (function () {
@@ -2907,11 +3335,11 @@ var Log = (function () {
 
 /***/ }),
 
-/***/ 613:
+/***/ 616:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Service; });
 
 var Service = (function () {
@@ -2941,7 +3369,44 @@ var Service = (function () {
 
 /***/ }),
 
-/***/ 614:
+/***/ 617:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Treatment; });
+/**
+ * Created by Pierre on 13/11/17
+ */
+var Treatment = (function () {
+    function Treatment(TreatmentInfo) {
+        if (TreatmentInfo) {
+            this._id = TreatmentInfo._id;
+            this.codeCIS = TreatmentInfo.codeCIS;
+            this.userId = TreatmentInfo.userId;
+            this.name = TreatmentInfo.name;
+            this.takingState = TreatmentInfo.takingState;
+            this.quantity = TreatmentInfo.quantity;
+            this.frequence = TreatmentInfo.frequence;
+            this.typeFrequence = TreatmentInfo.typeFrequence;
+            this.info = TreatmentInfo.info;
+            this.start = TreatmentInfo.start;
+            this.end = TreatmentInfo.end;
+            this.substances = TreatmentInfo.substances;
+        }
+        else {
+            this._id = '';
+            this.codeCIS = '';
+            this.start = null;
+            this.end = null;
+        }
+    }
+    return Treatment;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/treatment.js.map
+
+/***/ }),
+
+/***/ 618:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2957,136 +3422,108 @@ var environment = {
 
 /***/ }),
 
-/***/ 774:
-/***/ (function(module, exports) {
-
-module.exports = ".container-fluid {\r\n    padding: 60px 50px;\r\n}\r\n\r\nvideo {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.video-container {\r\n    position: relative;\r\n    padding-bottom: 56.25%;\r\n    padding-top: 30px;\r\n    height: 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.video-container iframe,\r\n.video-container object,\r\n.video-container embed {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.video-wrapper {\r\n\r\n    width: 1200px;\r\n    max-width: 100%;\r\n}\r\n"
-
-/***/ }),
-
-/***/ 775:
-/***/ (function(module, exports) {
-
-module.exports = "/*.active {\n  color: white !important;\n}*/\n\n.dropdown-menu {\n  background-color: grey;\n}\n"
-
-/***/ }),
-
-/***/ 776:
-/***/ (function(module, exports) {
-
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
-
-/***/ }),
-
-/***/ 777:
-/***/ (function(module, exports) {
-
-module.exports = "\n"
-
-/***/ }),
-
 /***/ 778:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".container-fluid {\n    padding: 60px 50px;\n}\n\nvideo {\n    width: 100%;\n    height: auto;\n}\n\n.video-container {\n    position: relative;\n    padding-bottom: 56.25%;\n    padding-top: 30px;\n    height: 0;\n    overflow: hidden;\n}\n\n.video-container iframe,\n.video-container object,\n.video-container embed {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n\n.video-wrapper {\n\n    width: 1200px;\n    max-width: 100%;\n}\n"
 
 /***/ }),
 
 /***/ 779:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n@-webkit-keyframes zoom{\r\n  from{\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    box-shadow: none;\r\n  }\r\n  to{\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n    box-shadow: 0 0 6px grey;\r\n  }\r\n}\r\n@keyframes zoom{\r\n  from{\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    box-shadow: none;\r\n  }\r\n  to{\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n    box-shadow: 0 0 6px grey;\r\n  }\r\n}\r\n\r\n#planningDoctor{\r\n  position: relative;\r\n  left:0; right:0; margin:auto;\r\n  width: 800px;\r\n}\r\n#details{\r\n  background-color: rgb(230,230,230);\r\n  border-radius: 5px;\r\n  box-shadow: 0 0 10px rgb(230,230,230);\r\n}\r\n.planningDay{\r\n  display: inline-block;\r\n  margin-left: 5px;\r\n  vertical-align: top;\r\n}\r\n.timeRdv{\r\n  background-color: rgb(70,70,70);\r\n  border-radius: 5px;\r\n  color: white;\r\n  font-weight: bold;\r\n  margin-bottom:5px;\r\n  font-size: 0.7em;\r\n  width: 80px;\r\n  overflow: hidden;\r\n  cursor: pointer;\r\n}\r\n.titleDay{\r\n  width: 80px;\r\n  font-size: 0.95em;\r\n  padding: 5px;\r\n  background-color: dodgerblue;\r\n  box-shadow: 0 0 2px grey;\r\n  border-radius:2px;\r\n  margin-bottom: 10px;\r\n  color:white;\r\n  font-weight:600;\r\n  cursor:pointer;\r\n}\r\n\r\n.buttonDay{\r\n  cursor: pointer;\r\n  background-color: #1e9055;\r\n}\r\n.buttonDay:hover{\r\n  -webkit-animation-name: zoom;\r\n          animation-name: zoom;\r\n  -webkit-animation-duration: 0.5s;\r\n          animation-duration: 0.5s;\r\n  -webkit-transform: scale(1.05);\r\n          transform: scale(1.05);\r\n  box-shadow: 0 0 6px grey;\r\n}\r\n\r\n#detailsRdv{\r\n  position: fixed;\r\n  top:50%;\r\n  -webkit-transform: translateY(-50%);\r\n          transform: translateY(-50%);\r\n  left:0; right:0; margin:auto;\r\n  width:500px;\r\n  text-align: center;\r\n  background-color: white;\r\n  border-radius: 5px;\r\n  border:1px solid black;\r\n  z-index: 6;\r\n}\r\nh2, h3, h4{\r\n  color:grey;\r\n  font-weight: bold;\r\n}\r\n#blackBack{\r\n  position: fixed;\r\n  top:0; left:0;\r\n  width: 100%;\r\n  height:100vh;\r\n  z-index: 5;\r\n  background-color: rgba(50,50,50,0.8);\r\n}\r\n"
+module.exports = "/*.active {\n  color: white !important;\n}*/\n\n.dropdown-menu {\n  background-color: grey;\n}\n"
 
 /***/ }),
 
 /***/ 780:
 /***/ (function(module, exports) {
 
-module.exports = "\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 781:
 /***/ (function(module, exports) {
 
-module.exports = "input.ng-invalid.ng-touched {\r\n  border-left: 5px solid red;\r\n}\r\n\r\ninput.ng-valid.ng-touched {\r\n  border-left: 5px solid green;\r\n}\r\n\r\nform {\r\n  text-align: left;\r\n  margin-left: 10px;\r\n}\r\n\r\n.modal-body {\r\n  padding: 100px 25px;\r\n  position: relative;\r\n}\r\n\r\n.jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n#myModalHorizontal {\r\n  top: 10%;\r\n}\r\n"
+module.exports = "\n"
 
 /***/ }),
 
 /***/ 782:
 /***/ (function(module, exports) {
 
-module.exports = ".col-xs-1 {\n  width: 13.33333333%;\n}\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n\n.modal-dialog {\n  width: 800px;\n  height: 60px;\n  position: absolute;\n  top: 20%;\n  left: 50%;\n  margin-top: -25px;\n  margin-left: -200px;\n  padding: 20px;\n}\n\n"
 
 /***/ }),
 
 /***/ 783:
 /***/ (function(module, exports) {
 
-module.exports = ".list-item {\n  text-align: left;\n}\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n\n.modal {\n  top: 50%;\n  -webkit-transform: translate(0%, -50%);\n          transform: translate(0%, -50%);\n}\n\ntextarea {\n  width: 200px;\n}\n\n[hidden] {\n  display: none;\n}\n\n\n\n.treatment-list {\n  margin-left: 1cm;\n}\n\n.table th {\n  text-align: center;\n}\n\n"
 
 /***/ }),
 
 /***/ 784:
 /***/ (function(module, exports) {
 
-module.exports = ".well-sm {\n  padding: 9px;\n  border-radius: 3px;\n  margin-right: 15px;\n}\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n@-webkit-keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n    box-shadow: 0 0 6px grey;\n  }\n}\n@keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n#planningDoctor{\n  position: relative;\n  left:0; right:0; margin:auto;\n  width: 800px;\n}\n#details{\n  background-color: rgb(230,230,230);\n  border-radius: 5px;\n  box-shadow: 0 0 10px rgb(230,230,230);\n}\n.planningDay{\n  display: inline-block;\n  margin-left: 5px;\n  vertical-align: top;\n}\n.timeRdv{\n  background-color: rgb(70,70,70);\n  border-radius: 5px;\n  color: white;\n  font-weight: bold;\n  margin-bottom:5px;\n  font-size: 0.7em;\n  width: 80px;\n  overflow: hidden;\n  cursor: pointer;\n}\n.titleDay{\n  width: 80px;\n  font-size: 0.95em;\n  padding: 5px;\n  background-color: dodgerblue;\n  box-shadow: 0 0 2px grey;\n  border-radius:2px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight:600;\n  cursor:pointer;\n}\n\n.buttonDay{\n  cursor: pointer;\n  background-color: #1e9055;\n}\n.buttonDay:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.05);\n          transform: scale(1.05);\n  box-shadow: 0 0 6px grey;\n}\n\n#detailsRdv{\n  position: fixed;\n  top:50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  left:0; right:0; margin:auto;\n  width:500px;\n  text-align: center;\n  background-color: white;\n  border-radius: 5px;\n  border:1px solid black;\n  z-index: 6;\n}\nh2, h3, h4{\n  color:grey;\n  font-weight: bold;\n}\n#blackBack{\n  position: fixed;\n  top:0; left:0;\n  width: 100%;\n  height:100vh;\n  z-index: 5;\n  background-color: rgba(50,50,50,0.8);\n}\n"
 
 /***/ }),
 
 /***/ 785:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n\r\n.class{\r\n  background:grey;\r\n  color:white;\r\n}\r\n"
+module.exports = "\n"
 
 /***/ }),
 
 /***/ 786:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "input.ng-invalid.ng-touched {\n  border-left: 5px solid red;\n}\n\ninput.ng-valid.ng-touched {\n  border-left: 5px solid green;\n}\n\nform {\n  text-align: left;\n  margin-left: 10px;\n}\n\n.modal-body {\n  padding: 100px 25px;\n  position: relative;\n}\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n\n#myModalHorizontal {\n  top: 10%;\n}\n"
 
 /***/ }),
 
 /***/ 787:
 /***/ (function(module, exports) {
 
-module.exports = ".list-item {\n  text-align: left;\n}\n"
+module.exports = ".col-xs-1 {\n  width: 13.33333333%;\n}\n"
 
 /***/ }),
 
 /***/ 788:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n"
+module.exports = ".list-item {\n  text-align: left;\n}\n\n.table th {\n  text-align: center;\n}\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 789:
 /***/ (function(module, exports) {
 
-module.exports = ".agm-map {\n  height: 300px;\n}\nh3{\n  color:dimgrey;\n  font-weight: bold;\n}\n.panel-primary{\n  border-radius: 5px !important;\n  border: 1px solid rgb(200,200,200) !important;\n}\n"
+module.exports = ".well-sm {\n  padding: 9px;\n  border-radius: 3px;\n  margin-right: 15px;\n}\n"
 
 /***/ }),
 
 /***/ 790:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n#flex_display{\r\n  padding: 0;\r\n  list-style-type: none;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-pack: distribute;\r\n      justify-content: space-around;\r\n}\r\n\r\n#listDoctors ul {\r\n  padding: 0;\r\n  list-style-type: none;\r\n}\r\n#listDoctors ul li{\r\n  width: 200px;\r\n  height:100px;\r\n  border-radius: 5px;\r\n  background-color: dodgerblue;\r\n  text-align:center;\r\n  line-height: 100px;\r\n  margin-bottom: 10px;\r\n  color:white;\r\n  font-weight: bold;\r\n}\r\n\r\n@-webkit-keyframes zoom{\r\n  from{\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    box-shadow: none;\r\n  }\r\n  to{\r\n    -webkit-transform: scale(1.01);\r\n            transform: scale(1.01);\r\n    box-shadow: 0 0 6px grey;\r\n  }\r\n}\r\n\r\n@keyframes zoom{\r\n  from{\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    box-shadow: none;\r\n  }\r\n  to{\r\n    -webkit-transform: scale(1.01);\r\n            transform: scale(1.01);\r\n    box-shadow: 0 0 6px grey;\r\n  }\r\n}\r\n\r\n#listDoctors ul li:hover, .timeRdv:hover{\r\n  -webkit-animation-name: zoom;\r\n          animation-name: zoom;\r\n  -webkit-animation-duration: 0.5s;\r\n          animation-duration: 0.5s;\r\n  -webkit-transform: scale(1.01);\r\n          transform: scale(1.01);\r\n  box-shadow: 0 0 6px grey;\r\n}\r\n\r\n#planningDoctor, #descriptionDoctor{\r\n  width: 800px;\r\n  background-color: rgb(230,230,230);\r\n  border-radius: 5px;\r\n  box-shadow: 0 0 6px rgb(100,100,100);\r\n  border:1px solid rgb(200,200,200);\r\n  margin-bottom:20px;\r\n}\r\n#details{\r\n  margin-left: 10px;\r\n}\r\n.planningDay{\r\n  display: inline-block;\r\n  margin-left: 5px;\r\n  vertical-align: top;\r\n}\r\n.timeRdv{\r\n  background-color: rgb(70,70,70);\r\n  border-radius: 5px;\r\n  color: white;\r\n  font-weight: bold;\r\n  margin-bottom:5px;\r\n  cursor: pointer;\r\n}\r\n.titleDay{\r\n  width: 80px;\r\n  font-size: 0.95em;\r\n  padding: 5px;\r\n  background-color: dodgerblue;\r\n  box-shadow: 0 0 2px grey;\r\n  border-radius:2px;\r\n  margin-bottom: 10px;\r\n  color:white;\r\n  font-weight:600;\r\n}\r\n\r\n.buttonDay{\r\n  cursor: pointer;\r\n  background-color: #1e9055;\r\n}\r\n.buttonDay:hover{\r\n  -webkit-animation-name: zoom;\r\n          animation-name: zoom;\r\n  -webkit-animation-duration: 0.5s;\r\n          animation-duration: 0.5s;\r\n  -webkit-transform: scale(1.05);\r\n          transform: scale(1.05);\r\n  box-shadow: 0 0 6px grey;\r\n}\r\n\r\n#reservationBox{\r\n  position: fixed;\r\n  top:50%;\r\n  -webkit-transform: translateY(-50%);\r\n          transform: translateY(-50%);\r\n  left:0; right:0; margin:auto;\r\n  padding: 20px;\r\n  text-align: center;\r\n  background-color: white;\r\n  border-radius: 5px;\r\n  border: 1px solid black;\r\n  box-shadow: 0 0 6px black;\r\n  z-index: 6;\r\n  width: 400px;\r\n}\r\n#blackBack{\r\n  position: fixed;\r\n  top:0; left:0;\r\n  width: 100%;\r\n  height:100vh;\r\n  z-index: 5;\r\n  background-color: rgba(50,50,50,0.8);\r\n}\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n\n\n.class{\n  background:grey;\n  color:white;\n}\n"
 
 /***/ }),
 
 /***/ 791:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n#messagerie{\r\n  position: fixed;\r\n  top: 70px;\r\n  right: 0;\r\n  height: calc(100vh - 100px);\r\n  width: 200px;\r\n  /*background-color: rgb(70, 70, 70);*/\r\n\r\n  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */\r\n  background: #cedce7; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\r\n  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\r\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */\r\n\r\n\r\n  box-shadow: -2px 0 6px rgb(50,50,50);\r\n  text-align:center;\r\n  overflow-y: auto;\r\n  border-radius: 10px 0 0 10px;\r\n}\r\n#message{\r\n  position: fixed;\r\n  bottom:0px;\r\n  right:250px;\r\n  width: 400px;\r\n  height:400px;\r\n  background-color: rgb(230,230,230);\r\n  overflow: hidden;\r\n  border-radius: 5px 5px 0 0;\r\n  border:1px solid grey;\r\n  box-shadow: 0 0 6px grey;\r\n}\r\n#message h2{\r\n  border-radius: 5px 5px 0 0;\r\n  text-align:center;\r\n  background-color:rgb(200,200,200);\r\n  margin:0;\r\n  padding:15px;\r\n}\r\n\r\n#message ul{\r\n  list-style-type: none;\r\n  padding: 0;\r\n  overflow-y: scroll;\r\n  height:300px; width: 100%;\r\n}\r\n#message ul li{\r\n  width: 100%;\r\n}\r\n#message ul li div{\r\n  position:relative;\r\n  width:80%;\r\n  background-color: dodgerblue;\r\n  border-radius: 10px;\r\n  box-shadow: 0 0 6px 1px grey;\r\n  color:white;\r\n  padding:5px;\r\n  text-align:center;\r\n  margin-bottom:5px;\r\n  margin-top: 5px;\r\n}\r\n#newPost{\r\n  position:relative;\r\n  margin:0; padding:0;\r\n  bottom:10px;\r\n  outline:none;\r\n  border:none;\r\n  box-shadow: -3px 0px 6px grey;\r\n  width:90%;\r\n  padding:5px;\r\n  height:45px;\r\n  color:grey;\r\n}\r\n#sendPost{\r\n  position:relative;\r\n  left:80%; bottom:55px;\r\n  width: 20%;\r\n  height: 45px;\r\n  padding:5px;\r\n  border:none;\r\n  outline:none;\r\n  background-color: dodgerblue;\r\n  color:white;\r\n  font-weight: bold;\r\n  font-size: 0.8em;\r\n  box-shadow: 3px 0 6px grey;\r\n}\r\n\r\n#messagerie h2{\r\n  position:relative;\r\n  left:0; right:0; margin:auto;\r\n  text-align: center;\r\n  width:90%;\r\n  color:black;\r\n  background-color: white;\r\n  border-radius: 5px;\r\n  padding:10px;\r\n  border:1px solid black;\r\n  box-shadow: 0 0 4px rgb(200,200,200);\r\n  font-size: 0.95em;\r\n  margin-top:20px; margin-bottom:20px;\r\n}\r\n\r\n#list_users{\r\n  padding: 0;\r\n  margin:0;\r\n  list-style-type: none;\r\n  width: 100%;\r\n}\r\n#list_users li{\r\n  position:relative;\r\n  left:0; right:0; margin:auto;\r\n  width: 90%;\r\n  border:1px solid grey;\r\n  box-shadow: 0 0 4px grey;\r\n  border-radius: 3px;\r\n  text-align:center;\r\n  color:grey;\r\n  cursor: pointer;\r\n  background-color: white;\r\n}\r\n@-webkit-keyframes liHover{\r\n  from{\r\n    color:grey;\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    background-color: white;\r\n  }\r\n  to{\r\n    background-color: rgb(50,50,50);\r\n    color:white;\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n  }\r\n}\r\n@keyframes liHover{\r\n  from{\r\n    color:grey;\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    background-color: white;\r\n  }\r\n  to{\r\n    background-color: rgb(50,50,50);\r\n    color:white;\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n  }\r\n}\r\n@-webkit-keyframes liNotHover {\r\n  from{\r\n    background-color: rgb(50,50,50);\r\n    color:white;\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n  }\r\n  to{\r\n    color:grey;\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    background-color: white;\r\n  }\r\n\r\n}\r\n@keyframes liNotHover {\r\n  from{\r\n    background-color: rgb(50,50,50);\r\n    color:white;\r\n    -webkit-transform: scale(1.05);\r\n            transform: scale(1.05);\r\n  }\r\n  to{\r\n    color:grey;\r\n    -webkit-transform: scale(1);\r\n            transform: scale(1);\r\n    background-color: white;\r\n  }\r\n\r\n}\r\n\r\n#list_users li:hover{\r\n  -webkit-animation-name: liHover;\r\n          animation-name: liHover;\r\n  -webkit-animation-duration: 0.5s;\r\n          animation-duration: 0.5s;\r\n  background-color: rgb(50,50,50);\r\n  color:white;\r\n  -webkit-transform: scale(1.05);\r\n          transform: scale(1.05);\r\n}\r\n#list_users li:not(:hover){\r\n  -webkit-animation-name: liNotHover;\r\n          animation-name: liNotHover;\r\n  -webkit-animation-duration: 0.5s;\r\n          animation-duration: 0.5s;\r\n  background-color: white;\r\n}\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 792:
 /***/ (function(module, exports) {
 
-module.exports = "body{padding-top:30px;}\n\n.glyphicon {  margin-bottom: 10px;margin-right: 10px;}\n\nsmall {\n  display: block;\n  line-height: 1.428571429;\n  color: #999;\n}\n\n\n.row {\n}\n\n[class*=\"col-\"] {\n\n  text-align: center;\n\n}\n\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".list-item {\n  text-align: left;\n}\n"
 
 /***/ }),
 
@@ -3100,122 +3537,192 @@ module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n
 /***/ 794:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\r\n  background-color: white;\r\n  color: black;\r\n  max-width: 400px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n"
+module.exports = ".agm-map {\n  height: 300px;\n}\nh3{\n  color:dimgrey;\n  font-weight: bold;\n}\n.panel-primary{\n  border-radius: 5px !important;\n  border: 1px solid rgb(200,200,200) !important;\n}\n"
 
 /***/ }),
 
 /***/ 795:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n#flex_display{\n  padding: 0;\n  list-style-type: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n\n#listDoctors ul {\n  padding: 0;\n  list-style-type: none;\n}\n#listDoctors ul li{\n  width: 200px;\n  height:100px;\n  border-radius: 5px;\n  background-color: dodgerblue;\n  text-align:center;\n  line-height: 100px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight: bold;\n}\n\n@-webkit-keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n@keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n#listDoctors ul li:hover, .timeRdv:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.01);\n          transform: scale(1.01);\n  box-shadow: 0 0 6px grey;\n}\n\n#planningDoctor, #descriptionDoctor{\n  width: 800px;\n  background-color: rgb(230,230,230);\n  border-radius: 5px;\n  box-shadow: 0 0 6px rgb(100,100,100);\n  border:1px solid rgb(200,200,200);\n  margin-bottom:20px;\n}\n#details{\n  margin-left: 10px;\n}\n.planningDay{\n  display: inline-block;\n  margin-left: 5px;\n  vertical-align: top;\n}\n.timeRdv{\n  background-color: rgb(70,70,70);\n  border-radius: 5px;\n  color: white;\n  font-weight: bold;\n  margin-bottom:5px;\n  cursor: pointer;\n}\n.titleDay{\n  width: 80px;\n  font-size: 0.95em;\n  padding: 5px;\n  background-color: dodgerblue;\n  box-shadow: 0 0 2px grey;\n  border-radius:2px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight:600;\n}\n\n.buttonDay{\n  cursor: pointer;\n  background-color: #1e9055;\n}\n.buttonDay:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.05);\n          transform: scale(1.05);\n  box-shadow: 0 0 6px grey;\n}\n\n#reservationBox{\n  position: fixed;\n  top:50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  left:0; right:0; margin:auto;\n  padding: 20px;\n  text-align: center;\n  background-color: white;\n  border-radius: 5px;\n  border: 1px solid black;\n  box-shadow: 0 0 6px black;\n  z-index: 6;\n  width: 400px;\n}\n#blackBack{\n  position: fixed;\n  top:0; left:0;\n  width: 100%;\n  height:100vh;\n  z-index: 5;\n  background-color: rgba(50,50,50,0.8);\n}\n"
 
 /***/ }),
 
 /***/ 796:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Container (About Section) -->\r\n<div id=\"about\" class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-8\">\r\n            <h2>A propos de nous</h2><br>\r\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\r\n                l'accès au soins plus facile.</h4><br>\r\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\r\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\r\n                plateforme.</p>\r\n            <br>\r\n            <div class=\"video-wrapper\">\r\n                <div class=\"video-container\">\r\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\r\n                            frameborder=\"0\"\r\n                            allowfullscreen></iframe>\r\n                </div>\r\n                <br>\r\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n\n#messagerie{\n  position: fixed;\n  top: 70px;\n  right: 0;\n  height: calc(100vh - 100px);\n  width: 200px;\n  /*background-color: rgb(70, 70, 70);*/\n\n  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */\n  background: #cedce7; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\n  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */\n\n\n  box-shadow: -2px 0 6px rgb(50,50,50);\n  text-align:center;\n  overflow-y: auto;\n  border-radius: 10px 0 0 10px;\n  z-index: 999;\n}\n#ouvreMessagerie{\n  position: fixed;\n  bottom: 10px;\n  right:10px;\n  width: 190px;\n  height:50px;\n  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */\n  background: #cedce7; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\n  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */\n\n  color:rgb(50,50,50);\n  font-weight: bold;\n  border-radius: 5px;\n  cursor: pointer;\n\n  text-align: center;\n  line-height: 50px;\n  box-shadow: 0 0 4px black;\n}\n\n#message{\n  position: fixed;\n  bottom:0px;\n  right:250px;\n  width: 400px;\n  height:400px;\n  background-color: rgb(230,230,230);\n  overflow: hidden;\n  border-radius: 5px 5px 0 0;\n  border:1px solid grey;\n  box-shadow: 0 0 6px grey;\n  z-index: 999;\n}\n#message h2{\n  border-radius: 5px 5px 0 0;\n  text-align:center;\n  background-color:rgb(200,200,200);\n  margin:0; padding: 0;\n  padding:15px;\n}\n\n#message ul{\n  list-style-type: none;\n  padding: 0; margin:0;\n  overflow-y: scroll;\n  height:300px; width: 100%;\n}\n#message ul li{\n  width: 100%;\n}\n#message ul li div{\n  position:relative;\n  width:80%;\n  background-color: dodgerblue;\n  border-radius: 10px;\n  box-shadow: 0 0 6px 1px grey;\n  color:white;\n  padding:5px;\n  text-align:center;\n  margin-bottom:5px;\n  margin-top: 5px;\n}\n#inputMessage{\n  position: relative;\n  margin:0; padding: 0;\n  left:0;\n  width: 400px;\n  height: 42px;\n  box-shadow: -3px 0px 6px grey;\n  text-align: left !important;\n}\n#newPost{\n  margin:0; padding:0;\n  outline:none;\n  border:none;\n  width:320px;\n  height:100%;\n  color:grey;\n}\n#sendPost{\n  width: 80px;\n  height: 100%;\n  border:none;\n  outline:none;\n  background-color: dodgerblue;\n  color:white;\n  font-weight: bold;\n  font-size: 0.8em;\n  margin:0; padding: 0;\n  margin-left: -5px; /* correction de 5px sur la gauche : petit décalage */\n}\n\n#messagerie h2{\n  position:relative;\n  left:0; right:0; margin:auto;\n  text-align: center;\n  width:90%;\n  color:black;\n  background-color: white;\n  border-radius: 5px;\n  padding:10px;\n  border:1px solid black;\n  box-shadow: 0 0 4px rgb(200,200,200);\n  font-size: 0.95em;\n  margin-top:20px; margin-bottom:20px;\n}\n\n#list_users{\n  padding: 0;\n  margin:0;\n  list-style-type: none;\n  width: 100%;\n}\n#list_users li{\n  position:relative;\n  left:0; right:0; margin:auto;\n  width: 90%;\n  border:1px solid grey;\n  box-shadow: 0 0 4px grey;\n  border-radius: 3px;\n  text-align:center;\n  color:grey;\n  cursor: pointer;\n  background-color: white;\n}\n@-webkit-keyframes liHover{\n  from{\n    color:grey;\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    background-color: white;\n  }\n  to{\n    background-color: rgb(50,50,50);\n    color:white;\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n}\n@keyframes liHover{\n  from{\n    color:grey;\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    background-color: white;\n  }\n  to{\n    background-color: rgb(50,50,50);\n    color:white;\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n}\n@-webkit-keyframes liNotHover {\n  from{\n    background-color: rgb(50,50,50);\n    color:white;\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n  to{\n    color:grey;\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    background-color: white;\n  }\n\n}\n@keyframes liNotHover {\n  from{\n    background-color: rgb(50,50,50);\n    color:white;\n    -webkit-transform: scale(1.05);\n            transform: scale(1.05);\n  }\n  to{\n    color:grey;\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    background-color: white;\n  }\n\n}\n\n#list_users li:hover{\n  -webkit-animation-name: liHover;\n          animation-name: liHover;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  background-color: rgb(50,50,50);\n  color:white;\n  -webkit-transform: scale(1.05);\n          transform: scale(1.05);\n}\n#list_users li:not(:hover){\n  -webkit-animation-name: liNotHover;\n          animation-name: liNotHover;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  background-color: white;\n}\n"
 
 /***/ }),
 
 /***/ 797:
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n        <ul class=\"nav navbar-nav navbar-right\">\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"medical-file\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-folder-open\"></i> Mon dossier</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace médecin</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\n        <li><a href=\"#about\">A propos</a></li>\n        <li><a href=\"#contact\">Contact</a></li>\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\n            <li>\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\n                <span class=\"caret\"></span></button>\n              <ul class=\"dropdown-menu\">\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\n              </ul>\n              </div>\n            </li>\n\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\n      </ul>\n      </div>\n\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\n\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\n            <!--<span class=\"caret\"></span></button>-->\n          <!--<ul class=\"dropdown-menu\">-->\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\n          <!--</ul>-->\n        <!--</div>-->\n\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\n      <!--</ul>-->\n    </div>\n  </nav>\n</header>\n\n<main>\n  <router-outlet></router-outlet>\n</main>\n\n<footer class=\"container-fluid text-center\">\n  <a href=\"#myPage\" title=\"To Top\">\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\n  </a>\n  <p>CALM Site Copyrights</p>\n</footer>\n"
+module.exports = "body{padding-top:30px;}\n\n.glyphicon {  margin-bottom: 10px;margin-right: 10px;}\n\nsmall {\n  display: block;\n  line-height: 1.428571429;\n  color: #999;\n}\n\n\n.row {\n}\n\n[class*=\"col-\"] {\n\n  text-align: center;\n\n}\n\n\n.jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 798:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 799:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Container (Contact Section) -->\n<div id=\"contact\" class=\"container-fluid bg-grey\">\n  <h2 class=\"text-center\">CONTACT</h2>\n  <div class=\"row\">\n    <div class=\"col-sm-5\">\n      <p>Contactez nous et nous vous répondrons dans les 24 heures.</p>\n      <p><span class=\"glyphicon glyphicon-map-marker\"></span> Lille, France</p>\n      <p><span class=\"glyphicon glyphicon-phone\"></span> 03.20.57.84.25</p>\n      <p><span class=\"glyphicon glyphicon-envelope\"></span> calmsite@hotmail.com</p>\n    </div>\n      <div class=\"row\">\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"Nom\" type=\"text\" required>\n        </div>\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" type=\"email\" required>\n        </div>\n      </div>\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n        </div>\n      </div>\n  </div>\n</div>\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n  max-width: 400px;\n    margin-left: auto;\n    margin-right: auto;\n}\n"
 
 /***/ }),
 
 /***/ 800:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <div class=\"row\" *ngFor=\"let patient of patients\">\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\n        <h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\n\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\n\n      </div>\n    </div>\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\n    <div class=\"container\">\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\" [(ngModel)]=\"post.text\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n        </div>\n      </div>\n    </div>\n    </form>\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n\n\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n"
 
 /***/ }),
 
 /***/ 801:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    <h2>Gérer mes rendez-vous et disponibilités</h2>\r\n\r\n    <div id=\"planningDoctor\">\r\n\r\n      <div class=\"planningDay\">\r\n        <div class=\"titleDay buttonDay\" (click)=\"beforeDay()\">\r\n          Précédent\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"planningDay\" *ngFor=\"let day of planningDays\">\r\n        <div class=\"titleDay\" (click)=\"changeStateOfDay(day['numJour'], day['mois'], day['an'])\">\r\n          {{day['jour']}}<br/>\r\n          {{day['date']}}\r\n        </div>\r\n        <div class=\"timeRdv\" *ngFor=\"let time of day['time']; let i = index\">\r\n          <div *ngIf=\"day['type'][i] == 'libre'\" style=\"background-color: #1e9055 !important;\" (click)=\"changeState(day['numJour'], day['mois'], day['an'],time)\">\r\n            {{time}}\r\n          </div>\r\n          <div *ngIf=\"day['type'][i] == 'occupe'\" style=\"background-color: rgb(200,200,200) !important;\" (click)=\"changeState(day['numJour'], day['mois'], day['an'],time)\">\r\n            {{time}}\r\n          </div>\r\n          <div *ngIf=\"day['type'][i] == 'rdv'\" style=\"background-color: #f4511e !important;\" (click)=\"openDetailsRdv(day['complement'][i], day['motif'][i])\">\r\n            {{time}}<br/>\r\n            {{day['complement'][i].first_name}} {{day['complement'][i].last_name}}\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"planningDay\">\r\n        <div class=\"titleDay buttonDay\" (click)=\"afterDay()\">\r\n          Suivant\r\n        </div>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div *ngIf=\"detailsRdv['visible']\" id=\"detailsRdv\">\r\n      <h3>Details du rendez-vous</h3>\r\n      {{detailsRdv['user'].first_name}} {{detailsRdv['user'].last_name}}<br/>\r\n      Mail: {{detailsRdv['user'].email}}<br/>\r\n      Adresse: {{detailsRdv['user'].address.num}} {{detailsRdv['user'].address.street_address}} {{detailsRdv['user'].address.city}}<br/>\r\n      Motif du rendez-vous: {{detailsRdv['motif']}}\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div *ngIf=\"detailsRdv['visible']\" id=\"blackBack\" (click)=\"closeDetailsRdv()\"></div>\r\n"
+module.exports = "<!-- Container (About Section) -->\n<div id=\"about\" class=\"container-fluid\">\n    <div class=\"row\">\n        <div class=\"col-sm-8\">\n            <h2>A propos de nous</h2><br>\n            <h4>Nous sommes une jeune start-up dont le but est de centraliser les données de la santé afin de rendre\n                l'accès au soins plus facile.</h4><br>\n            <p>Cette plateforme est en cours de développement, elle sera bientôt disponible. Il sera alors possible de\n                prendre rendez-vous avec votre médecin ou encore de rechercher un spécialiste directement sur la\n                plateforme.</p>\n            <br>\n            <div class=\"video-wrapper\">\n                <div class=\"video-container\">\n                    <iframe width=\"100%\" height=\"800\" src=\"https://www.youtube.com/embed/KXdNGiiHTjk\"\n                            frameborder=\"0\"\n                            allowfullscreen></iframe>\n                </div>\n                <br>\n                <button class=\"btn btn-default btn-lg\">En savoir plus</button>\n            </div>\n            <div class=\"col-sm-4\">\n                <span class=\"glyphicon glyphicon-signal logo\"></span>\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 802:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>CALM</h1>\n  <p>L'application de e-santé</p>\n  <form>\n    <div class=\"input-group\">\n      <input type=\"email\" class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\">Rechercher</button>\n      </div>\n    </div>\n  </form>\n</div>\n<about-page></about-page>\n<contact-page></contact-page>\n"
+module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n        <ul class=\"nav navbar-nav navbar-right\">\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"medical-file\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-folder-open\"></i> Mon dossier</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace médecin</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\n        <li><a href=\"#about\">A propos</a></li>\n        <li><a href=\"#contact\">Contact</a></li>\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\n            <li>\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\n                <span class=\"caret\"></span></button>\n              <ul class=\"dropdown-menu\">\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\n              </ul>\n              </div>\n            </li>\n\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\n      </ul>\n      </div>\n\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\n\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\n            <!--<span class=\"caret\"></span></button>-->\n          <!--<ul class=\"dropdown-menu\">-->\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\n          <!--</ul>-->\n        <!--</div>-->\n\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\n      <!--</ul>-->\n    </div>\n  </nav>\n</header>\n\n<main>\n  <router-outlet></router-outlet>\n</main>\n\n<footer class=\"container-fluid text-center\">\n  <a href=\"#myPage\" title=\"To Top\">\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\n  </a>\n  <p>CALM Site Copyrights</p>\n</footer>\n"
 
 /***/ }),
 
 /***/ 803:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h2 class=\"text-center\">Page de connexion</h2>\r\n\r\n  <!-- Button trigger modal -->\r\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\r\n    Connexion\r\n  </button>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\r\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n\t<!-- Modal Header -->\r\n\t<div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\"\r\n                  data-dismiss=\"modal\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\r\n            Connexion\r\n          </h4>\r\n\t</div>\r\n\r\n\t<!-- Modal Body -->\r\n\t<div class=\"modal-body\">\r\n\r\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\r\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\r\n\r\n              <label  class=\"col-sm-2 control-label\"\r\n                      for=\"inputEmail3\">Email</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"email\" class=\"form-control\"\r\n                       id=\"inputEmail3\" placeholder=\"Email\" required\r\n                       [(ngModel)]=\"user.email\" name=\"email\"\r\n                       #email=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\r\n\t\t  Email is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group\" [ngClass] = \"{\r\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\r\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\r\n\r\n              <label class=\"col-sm-2 control-label\"\r\n                     for=\"inputPassword3\" >Mot de passe</label>\r\n              <div class=\"col-sm-10\">\r\n\t\t<input type=\"password\" class=\"form-control\"\r\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\r\n                       [(ngModel)]=\"user.password\"\r\n                       #password=\"ngModel\"/>\r\n\t\t<span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\r\n\t\t  Password is required\r\n\t\t</span>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-offset-2 col-sm-10\">\r\n\t\t<button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\r\n              </div>\r\n            </div>\r\n          </form>\r\n\t</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    Bienvenue sur la page infrastructure\n  </div>\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 804:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-calendar\"></i> Prendre rendez-vous</h3></div>\n  <div class=\"panel-body\">\n<div class=\"wrapper\">\n  <div class=\"header\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n    <p>Avril 2017</p>\n  </div><!-- end header -->\n  <div class=\"col-sm-6-offset-2 col-md-4-offset-2\">\n  <div class=\"calendar-body\">\n    <div class=\"row weekdays\">\n      <div class=\"col-xs-1\"><p>L</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Ma</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Me</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>J</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>V</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>S</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>D</p></div><!-- end col-xs-1 -->\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">31</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>1</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>2</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>3</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>4</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>5</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>6</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>7</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>8</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>9</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>10</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>11</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>12</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>13</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>14</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>15</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>16</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>17</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>18</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>19</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>20</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>21</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>22</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>23</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>24</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>25</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>26</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>27</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>31</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"line\"></div>\n\n    <div class=\"current-date\">Mardi 25 avril</div>\n  </div><!-- end calendar-body -->\n  </div>\n</div><!-- end wrapper -->\n</div>\n</div>\n"
+module.exports = "<!-- Container (Contact Section) -->\n<div id=\"contact\" class=\"container-fluid bg-grey\">\n  <h2 class=\"text-center\">CONTACT</h2>\n  <div class=\"row\">\n    <div class=\"col-sm-5\">\n      <p>Contactez nous et nous vous répondrons dans les 24 heures.</p>\n      <p><span class=\"glyphicon glyphicon-map-marker\"></span> Lille, France</p>\n      <p><span class=\"glyphicon glyphicon-phone\"></span> 03.20.57.84.25</p>\n      <p><span class=\"glyphicon glyphicon-envelope\"></span> calmsite@hotmail.com</p>\n    </div>\n      <div class=\"row\">\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"Nom\" type=\"text\" required>\n        </div>\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" type=\"email\" required>\n        </div>\n      </div>\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n        </div>\n      </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 805:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-plus\"></i> Mon traitement</h3></div>\n      <div class=\"panel-body\">\n      <h4>Contre la Grippe :</h4>\n      <div class=\"list-item\">\n        <ul>\n          <li>Paracétamol : jusqu'à 4 g/jour pour les adultes, soit 1 à 2 comprimés (s) à 500 mg par prise, à renouveler en cas de besoin (jusqu'à 8 par jour). Espacer les prises d'au moins 4 heures.</li>\n          <li>Pseudoéphédrine : 5 jours maximum, voir indications sur la notice</li>\n          <li>Sirops antitussifs opiacés (dextrométorphane, codéine, codéthyline, etc.) : 120 mg/j</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <div class=\"row\" *ngFor=\"let patient of patients\">\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\n        <!--<h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>-->\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\n\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\n        <a type=\"button\" [routerLink]=\"['/patient-treatment' , {'id' : patient.user_id._id}]\">Traitement</a>\n      </div>\n    </div>\n\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\n      <div class=\"container\">\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"\n                [(ngModel)]=\"post.text\"></textarea><br>\n        <div class=\"row\">\n          <div class=\"col-sm-12 form-group\">\n            <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n          </div>\n        </div>\n      </div>\n    </form>\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n\n\n"
 
 /***/ }),
 
 /***/ 806:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\" *ngIf=\"isLogged\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-user\"></i> Mon médecin traitant</h3></div>\n  <div class=\"panel-body\">\n  <div class=\"row\" *ngIf=\"patient\">\n    <div class=\"col-sm-6 col-md-4\">\n      <img src=\"{{image}}\"\n           class=\"img-rounded\" alt=\"Image Profil\"/>\n    </div>\n    <div class=\"col-sm-6 col-md-8\">\n      <h4>{{patient.general_doctor.user_id.first_name}} {{patient.general_doctor.user_id.last_name}}</h4>\n      <small><cite title=\"Cabinet\"> {{patient.general_doctor.cabinet}} <i class=\"glyphicon glyphicon-map-marker\">\n      </i></cite></small>\n      <p>\n        <i class=\"glyphicon glyphicon-envelope\"></i> {{patient.general_doctor.user_id.email}}\n        <br />\n        <i class=\"glyphicon glyphicon-earphone\"></i> {{patient.general_doctor.phone}}<br />\n      </p>\n      <br><button class=\"btn btn-default btn-lg\">Contacter</button>\n    </div>\n  </div>\n</div>\n</div>\n\n  <!--<div class=\"row\" *ngIf=\"!patient.general_doctor.user_id\">-->\n    <!--<div class=\"col-sm-6 col-md-4\">-->\n      <!--<img src=\"{{image}}\"-->\n           <!--class=\"img-rounded\" alt=\"Image Profil\"/>-->\n    <!--</div>-->\n    <!--<div class=\"col-sm-6 col-md-8\">-->\n      <!--<h3>Votre médecin traitant</h3>-->\n        <!--<p>Veuillez renseigner votre médecin traitant dans les paramètres de votre compte</p>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</div>-->\n\n\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <a type=\"button\" routerLink=\"../doctor-space\">Retour</a> <br/>\n  <h2>{{currentUser.first_name}} {{currentUser.last_name}}</h2>\n  <tr class=\"treatment-list\">\n    <table class=\"table\">\n      <tr>\n        <th>Substance</th>\n        <th>Nom</th>\n        <th>Début traitement</th>\n        <th>Fin traitement</th>\n        <th>Quantité</th>\n        <th>Fréquence</th>\n        <th>Type fréquence</th>\n        <th>Prise</th>\n        <th>Info</th>\n      </tr>\n      <tr *ngFor=\"let medic of treatments\">\n        <td>\n          <div style=\"height: 75px; overflow:auto;\">\n            <li *ngFor=\" let substance of medic.substances\">\n              {{substance}}\n            </li>\n          </div>\n        </td>\n\n\n        <td>\n          <select class=\"form-control\" [(ngModel)]=\"medic.name\" [disabled]=\"!isSelected(medic._id)\">\n            <option [value]=\"medic.name\">{{medic.name}}</option>\n            <option *ngFor=\"let c of derivateList\" [ngValue]=\"c.denomination\">{{c.denomination}}</option>\n          </select>\n        </td>\n\n\n        <td><input type=\"text\" class=\"form-control\" [ngModel]=\"medic.start | date:'yyyy-MM-dd'\"\n                   (ngModelChange)=\"medic.start = $event\" type=\"date\" [disabled]=\"!isSelected(medic._id)\"/></td>\n        <td><input type=\"text\" class=\"form-control\" [ngModel]=\"medic.end | date:'yyyy-MM-dd'\"\n                   (ngModelChange)=\"medic.end = $event\" type=\"date\" [disabled]=\"!isSelected(medic._id)\"/></td>\n        <td><input type=\"text\" class=\"form-control\" [(ngModel)]=\"medic.quantity\" [disabled]=\"!isSelected(medic._id)\">\n        </td>\n        <td><input type=\"text\" class=\"form-control\" [(ngModel)]=\"medic.frequence\" [disabled]=\"!isSelected(medic._id)\">\n        </td>\n        <td><select class=\"form-control\" id=\"typeFreq\" [(ngModel)]=\"medic.typeFrequence\"\n                    [disabled]=\"!isSelected(medic._id)\">\n          <option value=\"heures\">Heures</option>\n          <option value=\"jours\">Jours</option>\n          <option value=\"semaines\">Semaines</option>\n          <option value=\"mois\">Mois</option>\n          <option value=\"annees\">Années</option>\n        </select></td>\n        <td><select class=\"form-control\" id=\"state\" [(ngModel)]=\"medic.takingState\" [disabled]=\"!isSelected(medic._id)\">\n          <option value=\"Avant-repas\">Avant repas</option>\n          <option value=\"Pendant-repas\">Pendant repas</option>\n          <option value=\"Apres-repas\">Après repas</option>\n          <option value=\"A-jeun\">A jeun</option>\n          <option value=\"Avant-dormir\">Avant dormir</option>\n          <option value=\"Au-reveil\">Au réveil</option>\n        </select></td>\n        <td><textarea class=\"form-control\" [(ngModel)]=\"medic.info\" [disabled]=\"!isSelected(medic._id)\"></textarea></td>\n        <td>\n          <button class=\"btn btn-info btn-lg\"\n                  (click)=\"updateSelectedTreatment(medic); getDerivateList(medic.substances[0] , medic)\"\n                  [hidden]=\"isSelected(medic._id)\">\n            Update\n          </button>\n          <button class=\"btn btn-info btn-lg\" (click)=\"updateUserTreatment(medic)\" [hidden]=\"!isSelected(medic._id)\">\n            Save\n          </button>\n          <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModalInfo\"\n                  (click)=\"getTreatmentInfo(medic)\">Info\n          </button>\n        </td>\n        <td>\n          <button class=\"btn btn-info btn-lg\" (click)=\"deleteMedicament(medic._id)\" [hidden]=\"isSelected(medic._id)\">\n            Delete\n          </button>\n          <button class=\"btn btn-info btn-lg\" (click)=\"updateSelectedTreatment(null)\" [hidden]=\"!isSelected(medic._id)\">\n            Cancel\n          </button>\n          <button class=\"btn btn-info btn-lg\" (click)=\"expiredTreatment(medic)\">\n            Fin\n          </button>\n\n        </td>\n      </tr>\n    </table>\n\n    <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">+</button>\n\n    <!-- Modal -->\n    <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">\n      <div class=\"modal-dialog modal-lg\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            <h4 class=\"modal-title\">Ajout de traitement</h4>\n          </div>\n          <div class=\"modal-body\">\n            <input type=text [(ngModel)]=\"search\" (ngModelChange)=\"eventHandler($event)\">\n            <table class=\"table\">\n              <tr *ngFor=\"let element of searchList\">\n                <button class=\"btn btn-info\" (click)=\"addTreatment(element.codeCIS , element.denomination)\"\n                        data-dismiss=\"modal\">+\n                </button>\n                <td>{{element.denomination}}</td>\n              </tr>\n            </table>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n\n    <!-- Modal -->\n    <div id=\"myModalInfo\" class=\"modal fade\" role=\"dialog\">\n      <div class=\"modal-dialog modal-lg\">\n\n        <!-- Modal content-->\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            <h4 class=\"modal-title\">Informations</h4>\n          </div>\n          <div class=\"modal-body\">\n            <div *ngIf=\"treatmentInfo!== undefined\">\n\n              <h2>{{treatmentInfo.denomination}}</h2>\n              <div *ngIf=\"treatmentInfo.presentation?.length > 0\">\n                <label *ngIf=\"treatmentInfo.presentations[0].prix === null\">Prix : (libre)<br/></label>\n                <label *ngIf=\"treatmentInfo.presentations[0].prix !== null\">Prix :\n                  {{treatmentInfo.presentations[0].prix}} €<br/></label>\n              </div>\n              <div *ngIf=\"treatmentInfo.presentation?.length <= 0\">\n                Prix : (libre)\n              </div>\n\n              {{treatmentInfo.statutAdministratifAMM}} - Date AMM : {{treatmentInfo.dateAMM}} -\n              ({{treatmentInfo.typeProcedureAMM}}) - [CIS : {{treatmentInfo.codeCIS}}] <br/>\n              Titulaires : {{treatmentInfo.titulaires}}<br/>\n              Voies d'administration :\n              <span *ngFor=\"let item of treatmentInfo.voiesAdministration; let isLast=last\">\n                {{item}}{{isLast ? '' : ' / '}}\n              </span> <br/>\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Indications thérapeutiques</h3></div>\n                <div class=\"panel-body\">\n                  <p [innerHTML]='treatmentInfo.indicationsTherapeutiques'></p>\n                </div>\n              </div>\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Conditions de prescriptions</h3></div>\n                <div class=\"panel-body\">\n                  <li *ngFor=\"let condition of treatmentInfo.conditionsPrescriptionDelivrance\">\n                    {{ condition }}\n                  </li>\n                  <p *ngIf=\"treatmentInfo.conditionsPrescriptionDelivrance?.length <= 0\">Ce médicament ne possède pas\n                    de\n                    conditions de prescription particulières</p>\n                </div>\n              </div>\n\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Groupe Générique</h3></div>\n                <div class=\"panel-body\">\n                  <div *ngIf=\"treatmentInfo.infosGenerique !== null\">\n                    <li><b>{{treatmentInfo.denomination}}</b> - {{treatmentInfo.infosGenerique.type}}</li>\n                    <li *ngFor=\"let autre of treatmentInfo.infosGenerique.autresMedicamentsGroupe\">\n                      <b>{{autre.denomination}}</b> - {{autre.type}}\n                    </li>\n                  </div>\n                  <p *ngIf=\"treatmentInfo.infosGenerique == null\">Ce médicament n'appartient pas à un groupe générique\n\n                </div>\n              </div>\n\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Composition</h3></div>\n                <div class=\"panel-body\">\n                  <li *ngFor=\"let composition of treatmentInfo.compositions[0].substancesActives\">\n                    {{composition.denominationSubstance}}\n                  </li>\n                </div>\n              </div>\n\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Présentations</h3></div>\n                <div class=\"panel-body\">\n                  <div *ngIf=\"treatmentInfo.presentation?.length > 0\">\n                    <div *ngFor=\"let presentation of treatmentInfo.presentations\">\n                      <h3>{{presentation.libelle}}</h3>\n                      {{presentation.etatCommercialisationAMM}} <br/>\n                      <div *ngIf=\"presentation.agrementCollectivites == true\">\n                        Cette présentation est agréée aux collectivités <br/>\n                      </div>\n                      <b>Prix : {{presentation.prix}} € </b> (taux de remboursement :\n                      {{presentation.tauxRemboursement[0]}}) <br/>\n                    </div>\n                  </div>\n                  <div *ngIf=\"treatmentInfo.avisSMR?.length <= 0\">\n                    <p>Aucune présentation n'est disponible pour ce médicament\n                    </p>\n                  </div>\n                </div>\n              </div>\n\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Service médical rendu (SMR)</h3></div>\n                <div class=\"panel-body\">\n                  <div *ngIf=\"treatmentInfo.avisSMR?.length > 0\">\n                    <table class=\"table\">\n                      <tr>\n                        <th>Valeur du SMR</th>\n                        <th>Date</th>\n                        <th>Motif de l'évaluation</th>\n                        <th>Résumé de l'avis</th>\n                      </tr>\n                      <tr *ngFor=\"let smr of treatmentInfo.avisSMR\" (click)='redirect(smr.urlHAS)'>\n                        <td>\n                          {{smr.valeurSMR}}\n                        </td>\n                        <td>\n                          {{smr.dateAvisCommissionTransparence}}\n                        </td>\n                        <td>\n                          {{smr.motifEvaluation}}\n                        </td>\n                        <td>\n                          <p [innerHTML]='smr.libelleSMR'></p>\n                        </td>\n                      </tr>\n                    </table>\n                  </div>\n                  <div *ngIf=\"treatmentInfo.avisSMR?.length <= 0\">\n                    <p>Aucun SMR n'est disponible pour ce médicament</p>\n                  </div>\n                </div>\n              </div>\n\n\n              <div class=\"panel panel-info\">\n                <div class=\"panel-heading\"><h3>Amélioration du service médical rendu (ASMR)</h3></div>\n                <div class=\"panel-body\">\n                  <div *ngIf=\"treatmentInfo.avisASMR?.length > 0\">\n                    <table class=\"table\">\n                      <tr>\n                        <th>Valeur du SMR</th>\n                        <th>Date</th>\n                        <th>Motif de l'évaluation</th>\n                        <th>Résumé de l'avis</th>\n                      </tr>\n                      <tr *ngFor=\"let smr of treatmentInfo.avisASMR\" (click)='redirect(smr.urlHAS)'>\n                        <td>\n                          <label *ngIf=\"smr.valeurSMR =='I'\">Majeure ({{smr.valeurSMR}})</label>\n                          <label *ngIf=\"smr.valeurSMR =='II'\">Importante ({{smr.valeurSMR}})</label>\n                          <label *ngIf=\"smr.valeurSMR =='III'\">Modérée({{smr.valeurSMR}})</label>\n                          <label *ngIf=\"smr.valeurSMR =='IV'\">Mineure ({{smr.valeurSMR}})</label>\n                          <label *ngIf=\"smr.valeurSMR =='V'\">Inexistante ({{smr.valeurSMR}})</label>\n                        </td>\n                        <td>\n                          {{smr.dateAvisCommissionTransparence}}\n                        </td>\n                        <td>\n                          {{smr.motifEvaluation}}\n                        </td>\n                        <td>\n                          <p [innerHTML]='smr.libelleSMR'></p>\n                        </td>\n                      </tr>\n                    </table>\n                  </div>\n                  <div *ngIf=\"treatmentInfo.avisASMR?.length <= 0\">\n                    <p>Aucune ASMR n'est disponible pour ce médicament</p>\n                  </div>\n                </div>\n              </div>\n\n            </div>\n\n            <div class=\"modal-footer\">\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
 /***/ 807:
 /***/ (function(module, exports) {
 
-module.exports = "<<div class=\"jumbotron text-center\">\r\n<div *ngIf=\"isLogged\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n      <!--Hello-->\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-posts></app-posts>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\r\n      <app-current-treatment></app-current-treatment>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n          <app-reminder></app-reminder>\r\n        </div>\r\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <div>\r\n        <app-google-map></app-google-map>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row shift-up\">\r\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\r\n      <app-calendar></app-calendar>\r\n\r\n    </div>\r\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\r\n      <app-doctor-profile></app-doctor-profile>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n\r\n<div *ngIf=\"!isLogged\">\r\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n</div>\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <h2>Gérer mes rendez-vous et disponibilités</h2>\n\n    <div id=\"planningDoctor\">\n\n      <div class=\"planningDay\">\n        <div class=\"titleDay buttonDay\" (click)=\"beforeDay()\">\n          Précédent\n        </div>\n      </div>\n\n      <div class=\"planningDay\" *ngFor=\"let day of planningDays\">\n        <div class=\"titleDay\" (click)=\"changeStateOfDay(day['numJour'], day['mois'], day['an'])\">\n          {{day['jour']}}<br/>\n          {{day['date']}}\n        </div>\n        <div class=\"timeRdv\" *ngFor=\"let time of day['time']; let i = index\">\n          <div *ngIf=\"day['type'][i] == 'libre'\" style=\"background-color: #1e9055 !important;\" (click)=\"changeState(day['numJour'], day['mois'], day['an'],time)\">\n            {{time}}\n          </div>\n          <div *ngIf=\"day['type'][i] == 'occupe'\" style=\"background-color: rgb(200,200,200) !important;\" (click)=\"changeState(day['numJour'], day['mois'], day['an'],time)\">\n            {{time}}\n          </div>\n          <div *ngIf=\"day['type'][i] == 'rdv'\" style=\"background-color: #f4511e !important;\" (click)=\"openDetailsRdv(day['complement'][i], day['motif'][i])\">\n            {{time}}<br/>\n            {{day['complement'][i].first_name}} {{day['complement'][i].last_name}}\n          </div>\n        </div>\n      </div>\n\n      <div class=\"planningDay\">\n        <div class=\"titleDay buttonDay\" (click)=\"afterDay()\">\n          Suivant\n        </div>\n      </div>\n\n    </div>\n\n    <div *ngIf=\"detailsRdv['visible']\" id=\"detailsRdv\">\n      <h3>Details du rendez-vous</h3>\n      {{detailsRdv['user'].first_name}} {{detailsRdv['user'].last_name}}<br/>\n      Mail: {{detailsRdv['user'].email}}<br/>\n      Adresse: {{detailsRdv['user'].address.num}} {{detailsRdv['user'].address.street_address}} {{detailsRdv['user'].address.city}}<br/>\n      Motif du rendez-vous: {{detailsRdv['motif']}}\n    </div>\n\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n\n</div>\n\n<div *ngIf=\"detailsRdv['visible']\" id=\"blackBack\" (click)=\"closeDetailsRdv()\"></div>\n"
 
 /***/ }),
 
 /***/ 808:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-comment\"></i> Mes messages</h3></div>\n      <div class=\"panel-body\">\n        <div class=\"row\" *ngFor=\"let post of posts\">\n          <div class=\"card card-block\">\n            <h4 class=\"card-title\">{{ post.doctor.first_name }} {{ post.doctor.last_name }}</h4>\n            <p class=\"card-text\">{{post.text}}</p>\n          </div>\n        </div>\n        </div>\n      </div>\n    </div>\n</div>\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>CALM</h1>\n  <p>L'application de e-santé</p>\n  <form>\n    <div class=\"input-group\">\n      <input type=\"email\" class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\">Rechercher</button>\n      </div>\n    </div>\n  </form>\n</div>\n<about-page></about-page>\n<contact-page></contact-page>\n"
 
 /***/ }),
 
 /***/ 809:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page de connexion</h2>\n\n  <!-- Button trigger modal -->\n  <button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModalHorizontal\">\n    Connexion\n  </button>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModalHorizontal\" tabindex=\"-1\" role=\"dialog\"\n       aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n        <!-- Modal Header -->\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\"\n                  data-dismiss=\"modal\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n          <h4 class=\"modal-title\" id=\"myModalLabel\">\n            Connexion\n          </h4>\n        </div>\n\n        <!-- Modal Body -->\n        <div class=\"modal-body\">\n\n          <form (ngSubmit)=\"login()\" *ngIf=\"!submitted\" #form=\"ngForm\" class=\"form-horizontal\" role=\"form\">\n            <div class=\"form-group\" [ngClass]=\"{\n\t\t\t\t\t\t 'has-error': email.invalid && email.touched,\n\t\t\t\t\t\t 'has-success': email.valid && email.touched}\">\n\n              <label class=\"col-sm-2 control-label\"\n                     for=\"inputEmail3\">Email</label>\n              <div class=\"col-sm-10\">\n                <input type=\"email\" class=\"form-control\"\n                       id=\"inputEmail3\" placeholder=\"Email\" required\n                       [(ngModel)]=\"user.email\" name=\"email\"\n                       #email=\"ngModel\"/>\n                <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n\t\t  Email is required\n\t\t</span>\n              </div>\n            </div>\n\n            <div class=\"form-group\" [ngClass]=\"{\n\t\t\t\t\t\t 'has-error': password.invalid && password.touched,\n\t\t\t\t\t\t 'has-success': password.valid && password.touched}\">\n\n              <label class=\"col-sm-2 control-label\"\n                     for=\"inputPassword3\">Mot de passe</label>\n              <div class=\"col-sm-10\">\n                <input type=\"password\" class=\"form-control\"\n                       id=\"inputPassword3\" placeholder=\"Mot de passe\" name=\"password\" required\n                       [(ngModel)]=\"user.password\"\n                       #password=\"ngModel\"/>\n                <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n\t\t  Password is required\n\t\t</span>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <div class=\"col-sm-offset-2 col-sm-10\">\n                <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">Connexion</button>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 810:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-calendar\"></i> Prendre rendez-vous</h3></div>\n  <div class=\"panel-body\">\n<div class=\"wrapper\">\n  <div class=\"header\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n    <p>Avril 2017</p>\n  </div><!-- end header -->\n  <div class=\"col-sm-6-offset-2 col-md-4-offset-2\">\n  <div class=\"calendar-body\">\n    <div class=\"row weekdays\">\n      <div class=\"col-xs-1\"><p>L</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Ma</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>Me</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>J</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>V</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>S</p></div><!-- end col-xs-1 -->\n      <div class=\"col-xs-1\"><p>D</p></div><!-- end col-xs-1 -->\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p class=\"inactive\">31</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>1</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>2</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>3</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>4</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>5</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>6</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>7</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>8</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>9</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>10</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>11</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>12</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>13</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>14</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>15</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>16</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>17</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>18</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>19</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>20</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>21</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>22</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>23</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>24</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"row dates\">\n      <div class=\"col-xs-1\"><a href=\"#\"><p>25</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>26</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>27</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>28</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>29</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>30</p></a></div>\n      <div class=\"col-xs-1\"><a href=\"#\"><p>31</p></a></div>\n    </div><!-- end row -->\n\n    <div class=\"line\"></div>\n\n    <div class=\"current-date\">Mardi 25 avril</div>\n  </div><!-- end calendar-body -->\n  </div>\n</div><!-- end wrapper -->\n</div>\n</div>\n"
+
+/***/ }),
+
+/***/ 811:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <a type=\"button\" routerLink=\"../medical-file\">Retour</a> <br/>\n  <div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-plus\"></i> Mon traitement</h3></div>\n      <div class=\"panel-body\">\n        <!--\n        <h4>Contre la Grippe :</h4>\n        <div class=\"list-item\">\n          <ul>\n            <li>Paracétamol : jusqu'à 4 g/jour pour les adultes, soit 1 à 2 comprimés (s) à 500 mg par prise, à\n              renouveler en cas de besoin (jusqu'à 8 par jour). Espacer les prises d'au moins 4 heures.\n            </li>\n            <li>Pseudoéphédrine : 5 jours maximum, voir indications sur la notice</li>\n            <li>Sirops antitussifs opiacés (dextrométorphane, codéine, codéthyline, etc.) : 120 mg/j</li>\n          </ul>\n\n\n          <div class=\"row\" *ngFor=\"let medic of treatments\">\n            <div class=\"card card-block\">\n              <h3>{{medic.name}}</h3>\n              {{medic.quantity}} dose tous les {{medic.frequence}} {{medic.typeFrequence}}, à prendre {{medic.takingState}}<br/>\n              {{medic.info}}<br/>\n              Début traitement : {{medic.start.toLocaleDateString('fr-FR')}}<br/>\n              Fin traitement : {{medic.end.toLocaleDateString('fr-FR')}}<br/>\n            </div>\n          </div>\n  -->\n        <table class=\"table\">\n          <tr>\n            <th>Nom</th>\n            <th>Début traitement</th>\n            <th>Fin traitement</th>\n            <th>Quantité</th>\n            <th>Fréquence</th>\n            <th>Type fréquence</th>\n            <th>Prise</th>\n            <th>Info</th>\n          </tr>\n          <tr *ngFor=\"let medic of treatments\">\n            <td>{{medic.name}}</td>\n            <td>{{medic.start.toLocaleDateString('fr-FR')}}</td>\n            <td>{{medic.end.toLocaleDateString('fr-FR')}}</td>\n            <td>{{medic.quantity}}</td>\n            <td>{{medic.frequence}}</td>\n            <td>{{medic.typeFrequence}}</td>\n            <td>{{medic.takingState}}</td>\n            <td>{{medic.info}}</td>\n          </tr>\n        </table>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ 812:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-primary\" *ngIf=\"isLogged\">\n  <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-user\"></i> Mon médecin traitant</h3></div>\n  <div class=\"panel-body\">\n  <div class=\"row\" *ngIf=\"patient\">\n    <div class=\"col-sm-6 col-md-4\">\n      <img src=\"{{image}}\"\n           class=\"img-rounded\" alt=\"Image Profil\"/>\n    </div>\n    <div class=\"col-sm-6 col-md-8\">\n      <h4>{{patient.general_doctor.user_id.first_name}} {{patient.general_doctor.user_id.last_name}}</h4>\n      <small><cite title=\"Cabinet\"> {{patient.general_doctor.cabinet}} <i class=\"glyphicon glyphicon-map-marker\">\n      </i></cite></small>\n      <p>\n        <i class=\"glyphicon glyphicon-envelope\"></i> {{patient.general_doctor.user_id.email}}\n        <br />\n        <i class=\"glyphicon glyphicon-earphone\"></i> {{patient.general_doctor.phone}}<br />\n      </p>\n      <br><button class=\"btn btn-default btn-lg\">Contacter</button>\n    </div>\n  </div>\n</div>\n</div>\n\n  <!--<div class=\"row\" *ngIf=\"!patient.general_doctor.user_id\">-->\n    <!--<div class=\"col-sm-6 col-md-4\">-->\n      <!--<img src=\"{{image}}\"-->\n           <!--class=\"img-rounded\" alt=\"Image Profil\"/>-->\n    <!--</div>-->\n    <!--<div class=\"col-sm-6 col-md-8\">-->\n      <!--<h3>Votre médecin traitant</h3>-->\n        <!--<p>Veuillez renseigner votre médecin traitant dans les paramètres de votre compte</p>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</div>-->\n\n\n\n"
+
+/***/ }),
+
+/***/ 813:
+/***/ (function(module, exports) {
+
+module.exports = "<<div class=\"jumbotron text-center\">\n<div *ngIf=\"isLogged\">\n  <div class=\"row\">\n    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n      <!--Hello-->\n    </div>\n  </div>\n\n  <button>Message</button>\n  <button [routerLink]=\"['/current-treatment']\">Traitement</button>\n\n  <br/>\n  <button>Rendez-vous</button>\n  <button>Médecin traitant</button>\n\n  <div class=\"row\">\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\n      <app-posts></app-posts>\n    </div>\n\n    <div class=\"col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12\">\n      <!--<app-current-treatment></app-current-treatment>-->\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-xs-12\">\n      <div class=\"row\">\n        <div class=\"col-xlg-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n          <app-reminder></app-reminder>\n        </div>\n        <div class=\"col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-xs-12\">\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\n      <div>\n        <app-google-map></app-google-map>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"row shift-up\">\n    <div class=\"col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-xs-12\">\n      <app-calendar></app-calendar>\n\n    </div>\n    <div class=\"col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-xs-12\" >\n      <app-doctor-profile></app-doctor-profile>\n    </div>\n  </div>\n\n</div>\n\n<div *ngIf=\"!isLogged\">\n  <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n</div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ 814:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-comment\"></i> Mes messages</h3></div>\n      <div class=\"panel-body\">\n        <div class=\"row\" *ngFor=\"let post of posts\">\n          <div class=\"card card-block\">\n            <h4 class=\"card-title\">{{ post.doctor.first_name }} {{ post.doctor.last_name }}</h4>\n            <p class=\"card-text\">{{post.text}}</p>\n          </div>\n        </div>\n        </div>\n      </div>\n    </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ 815:
+/***/ (function(module, exports) {
+
 module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12 col-md-12 col-xs-12\">\n      <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\"><h3><i class=\"glyphicon glyphicon-bell\"></i> Mes rappels</h3></div>\n        <div class=\"panel-body\"><ul>\n          <div class=\"list-item\">\n          <li>Tests de PAP à effectuer</li>\n          <li>Vaccins à administrer</li>\n          </div>\n        </ul></div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 81:
+/***/ 816:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>404 Not Found</h1>\n  <p>You may be lost. Follow the breadcrumbs back <a routerLink=\"/\">home</a>.</p>\n</div>\n"
+
+/***/ }),
+
+/***/ 817:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\" class=\"container\">\n    Bienvenue sur la page infrastructure\n  </div>\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 818:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-primary\">\n  <h3> Trouver le médecin le plus proche</h3>\n  <div class=\"panel-body\">\n    <div class=\"input-group\">\n      <input type=\"search\" #searchBox class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"rechercheClick(searchBox.value)\">Rechercher</button>\n      </div>\n    </div>\n\n<sebm-google-map class=\"agm-map\" [usePanning]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" (setZoom)=\"setZoom(2)\" (mapClick)=\"mapClick()\" (zoomChange)=\"zoomChange()\"  >\n  <div *ngIf=\"response.length!=0\">\n    <sebm-google-map-marker *ngFor=\"let n of response\" [latitude]=n.address.latitude [longitude]=n.address.longitude (markerClick)=\"clikedMark(n._id)\" >\n      <sebm-google-map-info-window [isOpen]=\"n.isDisplay\">\n        <div>\n          <h3>Doctor: {{n.last_name}} {{n.first_name}}</h3>\n          <p>address: {{n.address.num}},{{n.address.street_address}}</p>\n        </div>\n      </sebm-google-map-info-window>\n    </sebm-google-map-marker>\n  </div>\n</sebm-google-map>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 819:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <h2>Prendre rendez-vous</h2>\n\n    <div id=\"flex_display\">\n      <div id=\"listDoctors\">\n        <ul>\n          <li *ngFor=\"let doctor of myDoctors\" (click)=\"openDetails(doctor._id)\">\n            {{doctor.first_name}} {{doctor.last_name}}\n          </li>\n        </ul>\n      </div>\n\n      <div id=\"details\">\n        <div *ngIf=\"doctorDetails\" id=\"descriptionDoctor\">\n          <h3>Description</h3>\n          {{doctorDetails['description']}}\n        </div>\n\n\n\n        <div *ngIf=\"doctorDetails\" id=\"planningDoctor\">\n          <h3>Planning</h3>\n\n          <div class=\"planningDay\">\n            <div class=\"titleDay buttonDay\" (click)=\"beforeDay()\">\n              Précédent\n            </div>\n          </div>\n\n          <div class=\"planningDay\" *ngFor=\"let day of planningDays\">\n            <div class=\"titleDay\">\n              {{day['jour']}}<br/>\n              {{day['date']}}\n            </div>\n            <div class=\"timeRdv\" *ngFor=\"let time of day['time']\" (click)=\"openReservationBox(day['numJour'],day['mois'], day['an'], time)\">\n              {{time}}\n            </div>\n          </div>\n\n          <div class=\"planningDay\">\n            <div class=\"titleDay buttonDay\" (click)=\"afterDay()\">\n              Suivant\n            </div>\n          </div>\n\n        </div>\n        <div *ngIf=\"!doctorDetails\" id=\"googleMap\">\n          <app-google-map></app-google-map>\n        </div>\n\n        <div *ngIf=\"reservationBox['open'] == 'true'\" id=\"reservationBox\">\n          <h3>Prendre un rendez-vous</h3>\n          <p>Le {{reservationBox['jour']}}/{{reservationBox['mois']}}/{{reservationBox['an']}} à {{reservationBox['time']}}</p>\n          <input type=\"text\" name=\"motif\" [(ngModel)]=\"motif\" placeholder=\"Motif de la consultation\"/><br/>\n          <button (click)=\"reserver()\">Valider</button>\n        </div>\n\n      </div>\n    </div>\n\n  </div>\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n<div *ngIf=\"reservationBox['open'] == 'true'\" id=\"blackBack\" (click)=\"closeReservationBox()\"></div>\n"
+
+/***/ }),
+
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__building__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__building__ = __webpack_require__(614);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Doctor; });
 
 
@@ -3253,76 +3760,48 @@ var Doctor = (function () {
 
 /***/ }),
 
-/***/ 810:
+/***/ 820:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>404 Not Found</h1>\n  <p>You may be lost. Follow the breadcrumbs back <a routerLink=\"/\">home</a>.</p>\n</div>\n"
+module.exports = "<div class=\"jumbotron\">\n  <div *ngIf=\"isLogged\">\n    <!-- details -->\n    <div id=\"messagerie\" *ngIf=\"isMessagerieOpen\">\n      <h2>Messagerie</h2>\n      <button (click)=\"minimizeMessagerie()\">Minimize messagerie</button>\n      <ul id=\"list_users\">\n        <li *ngFor=\"let user of usersPost\" (click)=\"openMessenger(user)\">\n          {{user.first_name}} {{user.last_name}}\n        </li>\n      </ul>\n    </div>\n\n    <div id=\"ouvreMessagerie\" (click)=\"openMessagerie()\" *ngIf=\"!isMessagerieOpen\">\n      Rétablir messagerie\n    </div>\n\n    <div *ngIf=\"messengerBox['display'] == 'True'\" id=\"message\">\n      <h2>{{messengerBox['name']}}  <button (click)=\"deleteMessageBox()\">X</button></h2>\n      <ul>\n        <li *ngFor=\"let post of messengerListPosts\">\n          <div *ngIf=\"post.sender==me._id\" style=\"left: 19%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n          <div *ngIf=\"!(post.sender==me._id)\" style=\"left: 1%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n        </li>\n      </ul>\n      <div id=\"inputMessage\">\n        <input type=\"text\" name=\"newPost\" placeholder=\"Nouveau message\" id=\"newPost\" [(ngModel)]=\"newPostText\"/>\n        <input type=\"submit\" value=\"Envoyer\" id=\"sendPost\" (click)=\"sendPost()\"/>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n"
 
 /***/ }),
 
-/***/ 811:
+/***/ 821:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    Bienvenue sur la page infrastructure\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n<h3>Page de profil</h3>\n\n<app-post></app-post>\n\n<div class=\"container\" *ngIf=\"isLogged\">\n  <div class=\"row\" *ngIf=\"user\">\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\n      <div class=\"well well-sm\">\n        <div class=\"row\">\n          <div class=\"col-sm-6 col-md-4\">\n            <img src=\"{{image}}\"\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\n          </div>\n          <div class=\"col-sm-6 col-md-8\">\n            <h4>\n              {{user.first_name}} {{user.last_name}}</h4>\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\n            </i></cite></small>\n            <p>\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\n              <br />\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\n            </p>\n            <!-- button -->\n            <div class=\"btn-group\">\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n\n<!--<div class=\"form-group\" [ngClass] = \"{\n         'has-error': profile_img.invalid && profile_img.touched,\n         'has-success': profile_img.valid && profile_img.touched}\">\n  <label class=\"control-label\">Image de profil</label>\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\n            Image de profil requise\n    </span>\n</div>-->\n\n"
 
 /***/ }),
 
-/***/ 812:
+/***/ 822:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n  <h3> Trouver le médecin le plus proche</h3>\n  <div class=\"panel-body\">\n    <div class=\"input-group\">\n      <input type=\"search\" #searchBox class=\"form-control\" size=\"50\" placeholder=\"Rechercher un médecin\" required>\n      <div class=\"input-group-btn\">\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"rechercheClick(searchBox.value)\">Rechercher</button>\n      </div>\n    </div>\n\n<sebm-google-map class=\"agm-map\" [usePanning]=\"true\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\" (setZoom)=\"setZoom(2)\" (mapClick)=\"mapClick()\" (zoomChange)=\"zoomChange()\"  >\n  <div *ngIf=\"response.length!=0\">\n    <sebm-google-map-marker *ngFor=\"let n of response\" [latitude]=n.address.latitude [longitude]=n.address.longitude (markerClick)=\"clikedMark(n._id)\" >\n      <sebm-google-map-info-window [isOpen]=\"n.isDisplay\">\n        <div>\n          <h3>Doctor: {{n.last_name}} {{n.first_name}}</h3>\n          <p>address: {{n.address.num}},{{n.address.street_address}}</p>\n        </div>\n      </sebm-google-map-info-window>\n    </sebm-google-map-marker>\n  </div>\n</sebm-google-map>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\n\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\">\n    <h2>Paramètres</h2>\n\n    <div *ngIf=\"user.role[1]=='patient' || user.role[1]=='medecin'\">\n      <h3>Choisissez votre médecin généraliste</h3>\n      <div *ngFor=\"let doctor of doctors\">\n        <a class=\"btn btn-default btn-lg\" routerLinkActive=\"active\" (click)=\"addDoctor(doctor)\">\n          {{doctor.user_id.first_name}} {{doctor.user_id.last_name}}</a>\n        <h5><br></h5>\n      </div>\n\n      <h3>Gestion des autorisations</h3>\n      <button (click)=\"openAddAutorisation()\">Ajouter</button>\n      <div *ngIf=\"addAutorisationForm['show']\">\n          <!-- system de recherche d'un utilisateur a mettre en place -->\n          <input type=\"email\" placeholder=\"Adresse email de l'utilisateur\" [(ngModel)]=\"addAutorisationForm['email']\" required/><br/>\n          <label for=\"subject\">Element concerné par l'aurisation :</label><br/>\n          <select name=\"subject\" id=\"subject\" [(ngModel)]=\"addAutorisationForm['subject']\">\n            <option value=\"POST\" selected>Message</option>\n            <option value=\"DOSSIER\">Accès dossier médical</option>\n            <option value=\"RDV\" >Prise de rendez-vous</option>\n          </select><br/>\n          <label for=\"type\">Type d'autorisation : </label><br/>\n          <select id=\"type\" name=\"type\" [(ngModel)]=\"addAutorisationForm['type']\">\n            <option value=\"READ\" selected>Lecture</option>\n            <option value=\"READ_WRITE\">Lecture & Modification</option>\n          </select><br/>\n          <button (click)=\"addNewAutorisation()\">Ajouter</button>\n      </div>\n      <table>\n        <tr>\n          <td>Role</td>\n          <td>Prénom</td>\n          <td>Nom</td>\n          <td>Autorisations</td>\n          <td>Gestion</td>\n        </tr>\n          <tr *ngFor=\"let autorisation of autorisations\">\n            <td>{{autorisation.observer.role[1]}}</td>\n            <td>{{autorisation.observer.first_name}}</td>\n            <td>{{autorisation.observer.last_name}}</td>\n            <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n            <td>\n              <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n            </td>\n          </tr>\n      </table>\n\n      <button (click)=\"sendTestMail()\">Send test mail</button>\n\n      <h2>Send perso mail : </h2>\n      <form>\n        <input type=\"email\" [(ngModel)]=\"to\" placeholder=\"to ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <input type=\"text\" [(ngModel)]=\"subject\" placeholder=\"subject ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <input type=\"text\" [(ngModel)]=\"text\" placeholder=\"text ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <button (click)=\"sendPersoMail(to, subject, text)\">Envoyer</button>\n      </form>\n    </div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 813:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <div *ngIf=\"isLogged\" class=\"container\">\r\n    <h2>Prendre rendez-vous</h2>\r\n\r\n    <div id=\"flex_display\">\r\n      <div id=\"listDoctors\">\r\n        <ul>\r\n          <li *ngFor=\"let doctor of myDoctors\" (click)=\"openDetails(doctor._id)\">\r\n            {{doctor.first_name}} {{doctor.last_name}}\r\n          </li>\r\n        </ul>\r\n      </div>\r\n\r\n      <div id=\"details\">\r\n        <div *ngIf=\"doctorDetails\" id=\"descriptionDoctor\">\r\n          <h3>Description</h3>\r\n          {{doctorDetails['description']}}\r\n        </div>\r\n\r\n\r\n\r\n        <div *ngIf=\"doctorDetails\" id=\"planningDoctor\">\r\n          <h3>Planning</h3>\r\n\r\n          <div class=\"planningDay\">\r\n            <div class=\"titleDay buttonDay\" (click)=\"beforeDay()\">\r\n              Précédent\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"planningDay\" *ngFor=\"let day of planningDays\">\r\n            <div class=\"titleDay\">\r\n              {{day['jour']}}<br/>\r\n              {{day['date']}}\r\n            </div>\r\n            <div class=\"timeRdv\" *ngFor=\"let time of day['time']\" (click)=\"openReservationBox(day['numJour'],day['mois'], day['an'], time)\">\r\n              {{time}}\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"planningDay\">\r\n            <div class=\"titleDay buttonDay\" (click)=\"afterDay()\">\r\n              Suivant\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n        <div *ngIf=\"!doctorDetails\" id=\"googleMap\">\r\n          <app-google-map></app-google-map>\r\n        </div>\r\n\r\n        <div *ngIf=\"reservationBox['open'] == 'true'\" id=\"reservationBox\">\r\n          <h3>Prendre un rendez-vous</h3>\r\n          <p>Le {{reservationBox['jour']}}/{{reservationBox['mois']}}/{{reservationBox['an']}} à {{reservationBox['time']}}</p>\r\n          <input type=\"text\" name=\"motif\" [(ngModel)]=\"motif\" placeholder=\"Motif de la consultation\"/><br/>\r\n          <button (click)=\"reserver()\">Valider</button>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"reservationBox['open'] == 'true'\" id=\"blackBack\" (click)=\"closeReservationBox()\"></div>\r\n"
-
-/***/ }),
-
-/***/ 814:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"jumbotron\">\r\n  <div *ngIf=\"isLogged\">\r\n    <!-- details -->\r\n    <div id=\"messagerie\">\r\n      <h2>Messagerie</h2>\r\n      <ul id=\"list_users\">\r\n        <li *ngFor=\"let user of usersPost\" (click)=\"openMessenger(user)\">\r\n          {{user.first_name}} {{user.last_name}}\r\n        </li>\r\n      </ul>\r\n    </div>\r\n\r\n    <div *ngIf=\"messengerBox['display'] == 'True'\" id=\"message\">\r\n      <h2>{{messengerBox['name']}}</h2>\r\n      <ul #scrollBottom>\r\n        <li *ngFor=\"let post of messengerListPosts\">\r\n          <div *ngIf=\"post.sender==me._id\" style=\"left: 19%;\">{{post.text}}<br/>\r\n            à {{post.Created_at}}\r\n          </div>\r\n          <div *ngIf=\"!(post.sender==me._id)\" style=\"left: 1%;\">{{post.text}}<br/>\r\n            à {{post.Created_at}}\r\n          </div>\r\n        </li>\r\n      </ul>\r\n      <input type=\"text\" name=\"newPost\" placeholder=\"Nouveau message\" id=\"newPost\" [(ngModel)]=\"newPostText\"/>\r\n      <input type=\"submit\" value=\"Envoyer\" id=\"sendPost\" (click)=\"sendPost()\"/>\r\n    </div>\r\n  </div>\r\n\r\n  <div *ngIf=\"!isLogged\">\r\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n"
-
-/***/ }),
-
-/***/ 815:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"jumbotron text-center\">\n<h3>Page de profil</h3>\n\n<div class=\"container\" *ngIf=\"isLogged\">\n  <div class=\"row\" *ngIf=\"user\">\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\n      <div class=\"well well-sm\">\n        <div class=\"row\">\n          <div class=\"col-sm-6 col-md-4\">\n            <img src=\"{{image}}\"\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\n          </div>\n          <div class=\"col-sm-6 col-md-8\">\n            <h4>\n              {{user.first_name}} {{user.last_name}}</h4>\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\n            </i></cite></small>\n            <p>\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\n              <br />\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\n            </p>\n            <!-- button -->\n            <div class=\"btn-group\">\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n\n<!--<div class=\"form-group\" [ngClass] = \"{\n         'has-error': profile_img.invalid && profile_img.touched,\n         'has-success': profile_img.valid && profile_img.touched}\">\n  <label class=\"control-label\">Image de profil</label>\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\n            Image de profil requise\n    </span>\n</div>-->\n\n"
-
-/***/ }),
-
-/***/ 816:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"jumbotron text-center\">\n  <div *ngIf=\"isLogged\">\n    <h2>Paramètres</h2>\n\n    <div *ngIf=\"user.role[1]=='patient' || user.role[1]=='medecin'\">\n      <h3>Choisissez votre médecin généraliste</h3>\n      <div *ngFor=\"let doctor of doctors\">\n        <a class=\"btn btn-default btn-lg\" routerLinkActive=\"active\" (click)=\"addDoctor(doctor)\">\n          {{doctor.user_id.first_name}} {{doctor.user_id.last_name}}</a>\n        <h5><br></h5>\n      </div>\n\n      <h3>Gestion des autorisations</h3>\n      <button (click)=\"openAddAutorisation()\">Ajouter</button>\n      <div *ngIf=\"addAutorisationForm['show']\">\n          <!-- system de recherche d'un utilisateur a mettre en place -->\n          <input type=\"email\" placeholder=\"Adresse email de l'utilisateur\" [(ngModel)]=\"addAutorisationForm['email']\" required/><br/>\n          <label for=\"subject\">Element concerné par l'aurisation :</label><br/>\n          <select name=\"subject\" id=\"subject\" [(ngModel)]=\"addAutorisationForm['subject']\">\n            <option value=\"POST\" selected>Message</option>\n            <option value=\"DOSSIER\">Accès dossier médical</option>\n            <option value=\"RDV\" >Prise de rendez-vous</option>\n          </select><br/>\n          <label for=\"type\">Type d'autorisation : </label><br/>\n          <select id=\"type\" name=\"type\" [(ngModel)]=\"addAutorisationForm['type']\">\n            <option value=\"READ\" selected>Lecture</option>\n            <option value=\"READ_WRITE\">Lecture & Modification</option>\n          </select><br/>\n          <button (click)=\"addNewAutorisation()\">Ajouter</button>\n      </div>\n      <table>\n        <tr>\n          <td>Role</td>\n          <td>Prénom</td>\n          <td>Nom</td>\n          <td>Autorisations</td>\n          <td>Gestion</td>\n        </tr>\n          <tr *ngFor=\"let autorisation of autorisations\">\n            <td>{{autorisation.observer.role[1]}}</td>\n            <td>{{autorisation.observer.first_name}}</td>\n            <td>{{autorisation.observer.last_name}}</td>\n            <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n            <td>\n              <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n            </td>\n          </tr>\n      </table>\n\n      <button (click)=\"sendTestMail()\">Send test mail</button>\n\n      <h2>Send perso mail : </h2>\n      <form>\n        <input type=\"email\" [(ngModel)]=\"to\" placeholder=\"to ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <input type=\"text\" [(ngModel)]=\"subject\" placeholder=\"subject ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <input type=\"text\" [(ngModel)]=\"text\" placeholder=\"text ?\" [ngModelOptions]=\"{standalone: true}\"/><br/>\n        <button (click)=\"sendPersoMail(to, subject, text)\">Envoyer</button>\n      </form>\n    </div>\n\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ 817:
+/***/ 823:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page d'inscription</h2>\n\n<div *ngIf=\"!submitted\" >\n  <h3>Email already exist</h3>\n</div>\n\n<form (ngSubmit)=\"register()\" #form=\"ngForm\">\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': first_name.invalid && first_name.touched,\n         'has-success': first_name.valid && first_name.touched}\">\n    <label class=\"control-label\">Prénom</label>\n    <input type=\"text\" class=\"form-control\" name=\"first_name\" required\n           [(ngModel)]=\"user.first_name\"\n           #first_name=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"first_name.invalid && first_name.touched\">\n            Prénom requis\n        </span>\n  </div>\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': last_name.invalid && last_name.touched,\n         'has-success': last_name.valid && last_name.touched}\">\n    <label class=\"control-label\">Nom</label>\n    <input type=\"text\" class=\"form-control\" name=\"last_name\" required\n           [(ngModel)]=\"user.last_name\"\n           #last_name=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"last_name.invalid && last_name.touched\">\n            Nom requis\n        </span>\n  </div>\n\n  <div class=\"form-group\"\n       [ngClass] = \"{\n         'has-error': email.invalid && email.touched,\n         'has-success': email.valid && email.touched}\">\n    <label class=\"control-label\">Email</label>\n    <input type=\"email\" class=\"form-control\" name=\"email\" required\n           [(ngModel)]=\"user.email\"\n           #email=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n            Email requis\n        </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n    <label class=\"control-label\">Mot de passe</label>\n    <input type=\"password\" class=\"form-control\" name=\"password\" required\n           [(ngModel)]=\"user.password\"\n           #password=\"ngModel\">\n    <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n            Mot de passe requis\n        </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n    <label class=\"control-label\">Date de naissance</label>\n    <input type=\"date\" class=\"form-control\" name=\"birth_date\" required\n      [(ngModel)]=\"user.birth_date\" #birth_date=\"ngModel\" max=\"2017-01-01\">\n    <span class=\"help-block\" *ngIf=\"birth_date.invalid && birth_date.touched\">\n            Date de naissance requise\n    </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': role.invalid && role.touched,\n         'has-success': role.valid && role.touched}\">\n    <label class=\"control-label\">Choisissez votre profil</label>\n  <select name=\"role\" class=\"form-control\" required [(ngModel)]=\"user.role\" #role=\"ngModel\">\n    <option value=\"patient\">Patient</option>\n    <option value=\"medecin\">Medecin</option>\n    <option value=\"building\">Infrastructure</option>\n    <option value=\"organisation\">Organisation</option>\n  </select>\n    <span class=\"help-block\" *ngIf=\"role.invalid && role.touched\">\n            Profil requis\n    </span>\n  </div>\n\n  <div class=\"form-group\" [ngClass] = \"{\n         'has-error': country.invalid && country.touched,\n         'has-success': country.valid && country.touched}\">\n    <label class=\"control-label\">Pays</label>\n    <input type=\"text\" class=\"form-control\" name=\"country\" required\n           [(ngModel)]=\"user.address.country\"\n           #country=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Ville</label>\n    <input type=\"text\" class=\"form-control\" name=\"city\" required\n           [(ngModel)]=\"user.address.city\"\n           #city=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Rue</label>\n    <input type=\"text\" class=\"form-control\" name=\"street_address\" required\n           [(ngModel)]=\"user.address.street_address\"\n           #street_adress=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"control-label\">Numéro de rue</label>\n    <input type=\"text\" class=\"form-control\" name=\"num\" required\n           [(ngModel)]=\"user.address.num\"\n           #num=\"ngModel\">\n  </div>\n\n  <div class=\"form-group\">\n    <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">S'inscrire</button>\n  </div>\n\n</form>\n</div>\n"
 
 /***/ }),
 
-/***/ 818:
+/***/ 824:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"jumbotron text-center\">\n<h2>\n  Bienvenue sur la page utilisateurs\n</h2>\n<div class=\"container\">\n  <div class=\"row\" *ngFor=\"let user of users\">\n    <div class=\"card card-block\">\n      <h4 class=\"card-title\">{{ user.email }}</h4>\n      <p class=\"card-text\">{{user._id}}</p>\n      <a class=\"btn btn-default btn-lg\" (click)=\"buttonDelete(user)\"><i class=\"glyphicon glyphicon-trash\"></i> Delete</a>\n    </div>\n  </div>\n</div>\n</div>\n"
 
 /***/ }),
 
-/***/ 82:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicalFileService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3355,6 +3834,7 @@ var MedicalFileService = (function () {
             .map(function (res) { return res.json(); });
     };
     MedicalFileService.prototype.addGeneralDoctor = function (doctor, id) {
+        console.log('id of the patient: ', id);
         return this.http.put(this.url + 'patient/' + id, doctor, this.authentication.getRequestOptions())
             .map(function (res) { return res; });
     };
@@ -3377,85 +3857,13 @@ var MedicalFileService = (function () {
 
 /***/ }),
 
-/***/ 83:
+/***/ 98:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(454);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(15);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var UsersService = (function () {
-    function UsersService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-        this.url = 'https://localhost:3000/api/';
-    }
-    // Get all users from the API
-    UsersService.prototype.getUsers = function () {
-        return this.http.get(this.url + 'users', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.deleteUser = function (id) {
-        if (this.authentication.currentUserId() === id) {
-            this.authentication.logout();
-        }
-        return this.http.delete(this.url + 'users/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
-    };
-    UsersService.prototype.deleteAddress = function (id) {
-        return this.http.delete(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
-    };
-    UsersService.prototype.getProfile = function () {
-        return this.http.get(this.url + 'profile', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddressById = function (id) {
-        return this.http.get(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddresses = function () {
-        return this.http.get(this.url + 'addresses', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getDoctors = function () {
-        return this.http.get(this.url + 'doctors', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], UsersService);
-    return UsersService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.service.js.map
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3533,5 +3941,5 @@ var DoctorSpaceService = (function () {
 
 /***/ })
 
-},[1093]);
+},[1098]);
 //# sourceMappingURL=main.bundle.map

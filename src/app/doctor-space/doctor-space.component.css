@@ -2,3 +2,15 @@
   background-color: white;
   color: black;
 }
+
+.modal-dialog {
+  width: 800px;
+  height: 60px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -200px;
+  padding: 20px;
+}
+

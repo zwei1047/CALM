@@ -1,8 +1,9 @@
 <div class="jumbotron">
   <div *ngIf="isLogged">
     <!-- details -->
-    <div id="messagerie">
+    <div id="messagerie" *ngIf="isMessagerieOpen">
       <h2>Messagerie</h2>
+      <button (click)="minimizeMessagerie()">Minimize messagerie</button>
       <ul id="list_users">
         <li *ngFor="let user of usersPost" (click)="openMessenger(user)">
           {{user.first_name}} {{user.last_name}}
@@ -10,9 +11,13 @@
       </ul>
     </div>
 
+    <div id="ouvreMessagerie" (click)="openMessagerie()" *ngIf="!isMessagerieOpen">
+      Rétablir messagerie
+    </div>
+
     <div *ngIf="messengerBox['display'] == 'True'" id="message">
-      <h2>{{messengerBox['name']}}</h2>
-      <ul #scrollBottom>
+      <h2>{{messengerBox['name']}}  <button (click)="deleteMessageBox()">X</button></h2>
+      <ul>
         <li *ngFor="let post of messengerListPosts">
           <div *ngIf="post.sender==me._id" style="left: 19%;">{{post.text}}<br/>
             à {{post.Created_at}}
@@ -22,13 +27,11 @@
           </div>
         </li>
       </ul>
-      <input type="text" name="newPost" placeholder="Nouveau message" id="newPost" [(ngModel)]="newPostText"/>
-      <input type="submit" value="Envoyer" id="sendPost" (click)="sendPost()"/>
+      <div id="inputMessage">
+        <input type="text" name="newPost" placeholder="Nouveau message" id="newPost" [(ngModel)]="newPostText"/>
+        <input type="submit" value="Envoyer" id="sendPost" (click)="sendPost()"/>
+      </div>
     </div>
-  </div>
-
-  <div *ngIf="!isLogged">
-    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
   </div>
 </div>
 

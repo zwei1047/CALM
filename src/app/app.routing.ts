@@ -17,6 +17,8 @@ import {SettingsComponent} from "./profile/settings/settings.component";
 import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
 import { BuildingSpaceComponent } from './building-space/building-space.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+import {PatientTreatmentComponent} from './doctor-space/patient-treatment/patient-treatment.component';
+import {CurrentTreatmentComponent} from './medical-file/current-treatment/current-treatment.component';
 import {PostComponent} from "./post/post.component";
 import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
 import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
@@ -32,9 +34,10 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'medical-file', component: MedicalFileComponent },
   { path: 'doctor-space', component: DoctorSpaceComponent},
+  { path: 'current-treatment', component: CurrentTreatmentComponent},
+  { path: 'patient-treatment', component: PatientTreatmentComponent},
   { path: 'building-space', component: BuildingSpaceComponent},
   { path: 'organisation-space', component: OrganisationSpaceComponent},
-  { path: 'post', component: PostComponent},
   { path: 'patient_rdv', component: PatientRdvComponent},
   { path: 'doctor_rdv', component: DoctorRdvComponent},
   { path: 'logout', component: AppComponent},

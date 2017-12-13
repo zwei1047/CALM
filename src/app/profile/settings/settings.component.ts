@@ -78,6 +78,7 @@ export class SettingsComponent implements OnInit {
   addDoctor(doctor: Doctor) {
     this.medicalService.getCurrentPatient()
       .subscribe(patient => {
+        console.log('this patient : ', patient);
         this.patient = new Patient(patient);
         this.medicalService.addGeneralDoctor(doctor, this.patient._id)
           .subscribe(data => {

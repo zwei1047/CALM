@@ -1,0 +1,28 @@
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+
+.modal {
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+textarea {
+  width: 200px;
+}
+
+[hidden] {
+  display: none;
+}
+
+
+
+.treatment-list {
+  margin-left: 1cm;
+}
+
+.table th {
+  text-align: center;
+}
+

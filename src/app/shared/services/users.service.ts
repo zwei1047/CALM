@@ -23,6 +23,11 @@ export class UsersService {
       .map(res => res.json());
   }
 
+  getUser(id: string) {
+    return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
+ 
   deleteUser(id: string): Observable<void> {
     if (this.authentication.currentUserId() === id) {
       this.authentication.logout();

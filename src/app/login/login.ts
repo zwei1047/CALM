@@ -3,7 +3,7 @@
  */
 import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {Router} from '@angular/router';
-import {User} from "../shared/models/user";
+import {User} from '../shared/models/user';
 import {AuthenticationService} from '../shared/services/authentication.service';
 
 
@@ -19,13 +19,9 @@ export class LoginComponent implements OnInit{
   constructor(private router: Router, private authentication: AuthenticationService){}
 
   ngOnInit() {
-    console.log("start");
-      console.log(document.getElementById('modal'));
+
   }
 
-    ngOnDestroy() {
-        console.log("destroy");
-    }
 
   // signin the new user if signup successfully
   login(){
