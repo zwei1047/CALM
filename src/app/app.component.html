@@ -1,3 +1,4 @@
+<app-reminder></app-reminder>
 <header>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -49,6 +50,9 @@
               </ul>
               </div>
             </li>
+          <li *ngIf="isLogged">
+            <alert-info [user]="user||null" class="dropdown"></alert-info>
+          </li>
 
           <li><a *ngIf="!isLogged" routerLink="register" routerLinkActive="active">
             <span class="glyphicon glyphicon-user"></span> Inscription</a></li>

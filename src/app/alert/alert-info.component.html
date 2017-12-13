@@ -1,0 +1,19 @@
+<li id="infoSign">
+  <button type="button" class="btn btn-default btn-lg" aria-label="Left Align" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="badge">{{alertNumber}}</span>
+  </button>
+  <ul class="dropdown-menu" id="alertTable">
+    <li *ngFor="let n of demands" class="clearfix" (click)="liClick($event)" [ngClass]="{'liConfirm': n.confirm}">
+        <div class="displaybox">
+           user:{{n.user.first_name}} {{n.user.last_name}}<br />
+           user Mail:{{n.user.email}} <br />
+           demande autorisation:{{n.subject}} <br />
+           autorisation type: {{n.type}}<br />
+           data:{{n.Created_at.toLocaleString()}}
+        </div>
+        <button type="button" class="btn btn-danger success" [ngClass]="{'buttonConfirm': n.confirm}" (click)="nonAutoriserClick(n._id)">non autoriser</button>
+        <button type="button" class="btn btn-danger success" [ngClass]="{'buttonConfirm': n.confirm}" (click)="autoriserClick(n._id)">autoriser</button>
+
+    </li>
+  </ul>
+</li>

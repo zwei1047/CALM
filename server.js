@@ -35,13 +35,14 @@ var pass = require('./server/config/passport');
 const api = require('./server/routes/api')(passport);
 
 const treatment = require('./server/routes/treatment')(passport);
-
 const apiAutorisation = require('./server/routes/autorisation')(passport);
 const apiConsultation = require('./server/routes/consultation')(passport);
 const apiDisponnibilite =require('./server/routes/disponibilite')(passport);
 const apiPost = require('./server/routes/post')(passport);
 const apiMail = require('./server/routes/mail')(passport);
 const apiLog = require('./server/routes/log')(passport);
+const autorisation = require('./server/routes/autorisation')(passport);
+
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -56,13 +57,13 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/api', api);
 app.use('/api', treatment);
 
-app.set('jsonp callback name', 'callback');
 app.use('/api', apiAutorisation);
 app.use('/api', apiConsultation);
 app.use('/api', apiDisponnibilite);
 app.use('/api', apiPost);
 app.use('/api', apiMail);
 app.use('/api', apiLog);
+app.use('/api',autorisation);
 
 // Catch all other routes and return the index file
 app.get('*', function(req, res) {

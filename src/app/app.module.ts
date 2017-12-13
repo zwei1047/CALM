@@ -40,6 +40,11 @@ import {AutorisationService} from "./shared/services/autorisation.service";
 import {MailService} from "./shared/services/mail.service";
 import {LogService} from "./shared/services/log.service";
 
+import {ReminderService} from "./shared/services/reminder.service";
+import {DialogComponent} from "./medical-file/reminder/dialog.component";
+import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
+import {AlertInfoComponent} from "./alert/alert-info.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +70,10 @@ import {LogService} from "./shared/services/log.service";
     DoctorRdvComponent,
     OrganisationSpaceComponent,
     GoogleMapComponent,
-    PostsComponent
+    PostsComponent,
+    DialogComponent,
+    DialogAnchorDirective,
+    AlertInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -85,9 +93,10 @@ import {LogService} from "./shared/services/log.service";
     TreatmentService,
     DoctorSearchService,
     RdvService,
-    AutorisationService,
     MailService,
-    LogService
+    LogService,
+    ReminderService,
+    AutorisationService
   ],
   bootstrap: [AppComponent]
 })

@@ -11,6 +11,7 @@ export class Autorisation {
   subject: string;
   Created_at: Date;
   valide: Boolean;
+  confirm: Boolean;
 
   constructor(autorisationInfo: any) {
     if (autorisationInfo) {
@@ -25,13 +26,14 @@ export class Autorisation {
       }
       this.Created_at = autorisationInfo.Created_at;
       this.valide = autorisationInfo.valide;
+      this.confirm = autorisationInfo.confirm;
     } else {
       this.user = new User(null);
       this.observer = new User(null);
       this.type = 'READ';
       this.subject = 'POST';
-      this.valide = true;
-
+      this.valide = false;
+      this.confirm = false;
     }
   }
 }

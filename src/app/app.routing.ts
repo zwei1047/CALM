@@ -22,7 +22,6 @@ import {CurrentTreatmentComponent} from './medical-file/current-treatment/curren
 import {PostComponent} from "./post/post.component";
 import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
 import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
-import {GoogleMapComponent} from "./medical-file/google-map/google-map.component";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
