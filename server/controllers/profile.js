@@ -2,7 +2,8 @@
  * Created by Romain on 06/04/2017.
  */
 var mongoose = require('mongoose');
-var User = mongoose.model('User');
+//var User = mongoose.model('User');
+var User = require('../models/user');
 var Address = mongoose.model('Address');
 
 module.exports.profileRead = function(req, res) {
@@ -15,7 +16,7 @@ module.exports.profileRead = function(req, res) {
     // Otherwise continue
     User
       .findById(req.payload._id)
-      .populate('address')
+      .populate({path: 'address'})
       .exec(function(err, user) {
         res.json(user);
       });

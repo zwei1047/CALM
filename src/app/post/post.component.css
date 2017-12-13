@@ -1,12 +1,28 @@
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+
 #messagerie{
   position: fixed;
-  top: 50px;
+  top: 70px;
   right: 0;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   width: 200px;
-  background-color: rgb(240,240,240);
-  box-shadow: -2px 0 4px grey;
+  /*background-color: rgb(70, 70, 70);*/
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+  background: #cedce7; /* Old browsers */
+  background: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #cedce7 0%,#596a72 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
+
+  box-shadow: -2px 0 6px rgb(50,50,50);
   text-align:center;
+  overflow-y: auto;
+  border-radius: 10px 0 0 10px;
 }
 #message{
   position: fixed;
@@ -81,10 +97,13 @@
   left:0; right:0; margin:auto;
   text-align: center;
   width:90%;
-  color:rgb(240,240,240);
-  background-color: rgb(50,50,50);
-  border-radius: 3px;
-  box-shadow: 0 0 4px rgb(50,50,50);
+  color:black;
+  background-color: white;
+  border-radius: 5px;
+  padding:10px;
+  border:1px solid black;
+  box-shadow: 0 0 4px rgb(200,200,200);
+  font-size: 0.95em;
   margin-top:20px; margin-bottom:20px;
 }
 
@@ -103,29 +122,31 @@
   border-radius: 3px;
   text-align:center;
   color:grey;
+  cursor: pointer;
+  background-color: white;
 }
 @keyframes liHover{
   from{
     color:grey;
     transform: scale(1);
-    background-color: rgb(240,240,240);
+    background-color: white;
   }
   to{
     background-color: rgb(50,50,50);
     color:white;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 @keyframes liNotHover {
   from{
     background-color: rgb(50,50,50);
     color:white;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   to{
     color:grey;
     transform: scale(1);
-    background-color: rgb(240,240,240);
+    background-color: white;
   }
 
 }
@@ -135,9 +156,10 @@
   animation-duration: 0.5s;
   background-color: rgb(50,50,50);
   color:white;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 #list_users li:not(:hover){
   animation-name: liNotHover;
   animation-duration: 0.5s;
+  background-color: white;
 }

@@ -1,0 +1,89 @@
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+@keyframes zoom{
+  from{
+    transform: scale(1);
+    box-shadow: none;
+  }
+  to{
+    transform: scale(1.05);
+    box-shadow: 0 0 6px grey;
+  }
+}
+
+#planningDoctor{
+  position: relative;
+  left:0; right:0; margin:auto;
+  width: 800px;
+}
+#details{
+  background-color: rgb(230,230,230);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(230,230,230);
+}
+.planningDay{
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.timeRdv{
+  background-color: rgb(70,70,70);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom:5px;
+  font-size: 0.7em;
+  width: 80px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.titleDay{
+  width: 80px;
+  font-size: 0.95em;
+  padding: 5px;
+  background-color: dodgerblue;
+  box-shadow: 0 0 2px grey;
+  border-radius:2px;
+  margin-bottom: 10px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.buttonDay{
+  cursor: pointer;
+  background-color: #1e9055;
+}
+.buttonDay:hover{
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  transform: scale(1.05);
+  box-shadow: 0 0 6px grey;
+}
+
+#detailsRdv{
+  position: fixed;
+  top:50%;
+  transform: translateY(-50%);
+  left:0; right:0; margin:auto;
+  width:500px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border:1px solid black;
+  z-index: 6;
+}
+h2, h3, h4{
+  color:grey;
+  font-weight: bold;
+}
+#blackBack{
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  height:100vh;
+  z-index: 5;
+  background-color: rgba(50,50,50,0.8);
+}

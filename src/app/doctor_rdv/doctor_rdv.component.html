@@ -1,0 +1,57 @@
+<div class="jumbotron text-center">
+
+  <div *ngIf="isLogged" class="container">
+    <h2>Gérer mes rendez-vous et disponibilités</h2>
+
+    <div id="planningDoctor">
+
+      <div class="planningDay">
+        <div class="titleDay buttonDay" (click)="beforeDay()">
+          Précédent
+        </div>
+      </div>
+
+      <div class="planningDay" *ngFor="let day of planningDays">
+        <div class="titleDay" (click)="changeStateOfDay(day['numJour'], day['mois'], day['an'])">
+          {{day['jour']}}<br/>
+          {{day['date']}}
+        </div>
+        <div class="timeRdv" *ngFor="let time of day['time']; let i = index">
+          <div *ngIf="day['type'][i] == 'libre'" style="background-color: #1e9055 !important;" (click)="changeState(day['numJour'], day['mois'], day['an'],time)">
+            {{time}}
+          </div>
+          <div *ngIf="day['type'][i] == 'occupe'" style="background-color: rgb(200,200,200) !important;" (click)="changeState(day['numJour'], day['mois'], day['an'],time)">
+            {{time}}
+          </div>
+          <div *ngIf="day['type'][i] == 'rdv'" style="background-color: #f4511e !important;" (click)="openDetailsRdv(day['complement'][i], day['motif'][i])">
+            {{time}}<br/>
+            {{day['complement'][i].first_name}} {{day['complement'][i].last_name}}
+          </div>
+        </div>
+      </div>
+
+      <div class="planningDay">
+        <div class="titleDay buttonDay" (click)="afterDay()">
+          Suivant
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="detailsRdv['visible']" id="detailsRdv">
+      <h3>Details du rendez-vous</h3>
+      {{detailsRdv['user'].first_name}} {{detailsRdv['user'].last_name}}<br/>
+      Mail: {{detailsRdv['user'].email}}<br/>
+      Adresse: {{detailsRdv['user'].address.num}} {{detailsRdv['user'].address.street_address}} {{detailsRdv['user'].address.city}}<br/>
+      Motif du rendez-vous: {{detailsRdv['motif']}}
+    </div>
+
+  </div>
+
+  <div *ngIf="!isLogged">
+    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
+  </div>
+
+</div>
+
+<div *ngIf="detailsRdv['visible']" id="blackBack" (click)="closeDetailsRdv()"></div>

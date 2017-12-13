@@ -17,6 +17,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session = require('express-session');
 
+
 // Connect to database
 mongoose.connect(configDB.url);
 
@@ -32,6 +33,12 @@ var pass = require('./server/config/passport');
 
 // Get our API routes
 const api = require('./server/routes/api')(passport);
+const apiAutorisation = require('./server/routes/autorisation')(passport);
+const apiConsultation = require('./server/routes/consultation')(passport);
+const apiDisponnibilite =require('./server/routes/disponibilite')(passport);
+const apiPost = require('./server/routes/post')(passport);
+const apiMail = require('./server/routes/mail')(passport);
+const apiLog = require('./server/routes/log')(passport);
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -42,6 +49,12 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
 app.use('/api', api);
+app.use('/api', apiAutorisation);
+app.use('/api', apiConsultation);
+app.use('/api', apiDisponnibilite);
+app.use('/api', apiPost);
+app.use('/api', apiMail);
+app.use('/api', apiLog);
 
 // Catch all other routes and return the index file
 app.get('*', function(req, res) {

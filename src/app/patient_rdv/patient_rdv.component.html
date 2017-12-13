@@ -1,0 +1,68 @@
+<div class="jumbotron text-center">
+  <div *ngIf="isLogged" class="container">
+    <h2>Prendre rendez-vous</h2>
+
+    <div id="flex_display">
+      <div id="listDoctors">
+        <ul>
+          <li *ngFor="let doctor of myDoctors" (click)="openDetails(doctor._id)">
+            {{doctor.first_name}} {{doctor.last_name}}
+          </li>
+        </ul>
+      </div>
+
+      <div id="details">
+        <div *ngIf="doctorDetails" id="descriptionDoctor">
+          <h3>Description</h3>
+          {{doctorDetails['description']}}
+        </div>
+
+
+
+        <div *ngIf="doctorDetails" id="planningDoctor">
+          <h3>Planning</h3>
+
+          <div class="planningDay">
+            <div class="titleDay buttonDay" (click)="beforeDay()">
+              Précédent
+            </div>
+          </div>
+
+          <div class="planningDay" *ngFor="let day of planningDays">
+            <div class="titleDay">
+              {{day['jour']}}<br/>
+              {{day['date']}}
+            </div>
+            <div class="timeRdv" *ngFor="let time of day['time']" (click)="openReservationBox(day['numJour'],day['mois'], day['an'], time)">
+              {{time}}
+            </div>
+          </div>
+
+          <div class="planningDay">
+            <div class="titleDay buttonDay" (click)="afterDay()">
+              Suivant
+            </div>
+          </div>
+
+        </div>
+        <div *ngIf="!doctorDetails" id="googleMap">
+          <app-google-map></app-google-map>
+        </div>
+
+        <div *ngIf="reservationBox['open'] == 'true'" id="reservationBox">
+          <h3>Prendre un rendez-vous</h3>
+          <p>Le {{reservationBox['jour']}}/{{reservationBox['mois']}}/{{reservationBox['an']}} à {{reservationBox['time']}}</p>
+          <input type="text" name="motif" [(ngModel)]="motif" placeholder="Motif de la consultation"/><br/>
+          <button (click)="reserver()">Valider</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="!isLogged">
+    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>
+  </div>
+</div>
+
+<div *ngIf="reservationBox['open'] == 'true'" id="blackBack" (click)="closeReservationBox()"></div>

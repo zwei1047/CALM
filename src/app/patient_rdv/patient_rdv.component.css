@@ -1,0 +1,115 @@
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+#flex_display{
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#listDoctors ul {
+  padding: 0;
+  list-style-type: none;
+}
+#listDoctors ul li{
+  width: 200px;
+  height:100px;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  text-align:center;
+  line-height: 100px;
+  margin-bottom: 10px;
+  color:white;
+  font-weight: bold;
+}
+
+@keyframes zoom{
+  from{
+    transform: scale(1);
+    box-shadow: none;
+  }
+  to{
+    transform: scale(1.01);
+    box-shadow: 0 0 6px grey;
+  }
+}
+
+#listDoctors ul li:hover, .timeRdv:hover{
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  transform: scale(1.01);
+  box-shadow: 0 0 6px grey;
+}
+
+#planningDoctor, #descriptionDoctor{
+  width: 800px;
+  background-color: rgb(230,230,230);
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgb(100,100,100);
+  border:1px solid rgb(200,200,200);
+  margin-bottom:20px;
+}
+#details{
+  margin-left: 10px;
+}
+.planningDay{
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.timeRdv{
+  background-color: rgb(70,70,70);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom:5px;
+  cursor: pointer;
+}
+.titleDay{
+  width: 80px;
+  font-size: 0.95em;
+  padding: 5px;
+  background-color: dodgerblue;
+  box-shadow: 0 0 2px grey;
+  border-radius:2px;
+  margin-bottom: 10px;
+  color:white;
+  font-weight:600;
+}
+
+.buttonDay{
+  cursor: pointer;
+  background-color: #1e9055;
+}
+.buttonDay:hover{
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  transform: scale(1.05);
+  box-shadow: 0 0 6px grey;
+}
+
+#reservationBox{
+  position: fixed;
+  top:50%;
+  transform: translateY(-50%);
+  left:0; right:0; margin:auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 0 6px black;
+  z-index: 6;
+  width: 400px;
+}
+#blackBack{
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  height:100vh;
+  z-index: 5;
+  background-color: rgba(50,50,50,0.8);
+}

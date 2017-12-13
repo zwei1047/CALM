@@ -26,10 +26,17 @@ import { ReminderComponent } from './medical-file/reminder/reminder.component';
 import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
 import { BuildingSpaceComponent } from './building-space/building-space.component';
 import {DoctorSpaceService} from './shared/services/doctor-space.service';
-import { GoogleMapComponent } from './medical-file/google-map/google-map.component';
+import { GoogleMapComponent } from './patient_rdv/google-map/google-map.component';
 import {AgmCoreModule} from "angular2-google-maps/core";
 import { PostsComponent } from './medical-file/posts/posts.component';
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
+import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
+import {RdvService} from "./shared/services/rdv.service";
+import {DoctorSearchService} from "./shared/services/doctor-search.service";
+import {AutorisationService} from "./shared/services/autorisation.service";
+import {MailService} from "./shared/services/mail.service";
+import {LogService} from "./shared/services/log.service";
 
 @NgModule({
   declarations: [
@@ -51,6 +58,8 @@ import { OrganisationSpaceComponent } from './organisation-space/organisation-sp
     DoctorSpaceComponent,
     BuildingSpaceComponent,
     PostComponent,
+    PatientRdvComponent,
+    DoctorRdvComponent,
     OrganisationSpaceComponent,
     GoogleMapComponent,
     PostsComponent
@@ -69,7 +78,12 @@ import { OrganisationSpaceComponent } from './organisation-space/organisation-sp
     UsersService,
     AuthenticationService,
     MedicalFileService,
-    DoctorSpaceService
+    DoctorSpaceService,
+    DoctorSearchService,
+    RdvService,
+    AutorisationService,
+    MailService,
+    LogService
   ],
   bootstrap: [AppComponent]
 })

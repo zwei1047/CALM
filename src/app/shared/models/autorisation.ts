@@ -1,14 +1,14 @@
 import {User} from './user';
 
-export enum TypeAutorisation {READ, READ_WRITE};
-export enum SubjectAutorisation {DOSSIER, POST, RDV};
 
 export class Autorisation {
   _id: string;
   user: User;
   observer: User;
-  type: TypeAutorisation;
-  subject: SubjectAutorisation;
+  private subjectList: string[] = ['POST', 'DOSSIER', 'RDV'];
+  type: string;
+  private typeList: string[] = ['READ', 'READ_WRITE'];
+  subject: string;
   Created_at: Date;
   valide: Boolean;
 
@@ -16,15 +16,21 @@ export class Autorisation {
     if (autorisationInfo) {
       this.user = new User(autorisationInfo.user);
       this.observer = new User(autorisationInfo.observer);
-      this.type = autorisationInfo.type;
-      this.subject = autorisationInfo.subject;
+      if (autorisationInfo.type && autorisationInfo.subject) {
+        if (this.typeList.indexOf(autorisationInfo.type) !== -1 && this.subjectList.indexOf(autorisationInfo.subject) !== -1) {
+          console.log('type & subject valid');
+          this.type = autorisationInfo.type;
+          this.subject = autorisationInfo.subject;
+        }
+      }
       this.Created_at = autorisationInfo.Created_at;
       this.valide = autorisationInfo.valide;
     } else {
       this.user = new User(null);
       this.observer = new User(null);
-      this.type = TypeAutorisation.READ;
-      this.subject = SubjectAutorisation.POST;
+      this.type = 'READ';
+      this.subject = 'POST';
+      this.valide = true;
 
     }
   }

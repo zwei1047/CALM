@@ -1,0 +1,11 @@
+.agm-map {
+  height: 300px;
+}
+h3{
+  color:dimgrey;
+  font-weight: bold;
+}
+.panel-primary{
+  border-radius: 5px !important;
+  border: 1px solid rgb(200,200,200) !important;
+}

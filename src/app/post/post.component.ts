@@ -5,6 +5,7 @@ import {User} from "../shared/models/user";
 import {Autorisation} from "../shared/models/autorisation";
 import {Post, TypePost} from "../shared/models/post";
 import { FormsModule } from '@angular/forms';
+import {AutorisationService} from "../shared/services/autorisation.service";
 
 @Component({
   selector: 'app-post',
@@ -22,7 +23,8 @@ export class PostComponent implements OnInit {
   newPost: Post;
   newPostText: string;
 
-  constructor(private auth: AuthenticationService, private medicalService: MedicalFileService) { }
+  constructor(private auth: AuthenticationService, private medicalService: MedicalFileService,
+              private autorisationService: AutorisationService) { }
   ngOnInit() {
     this.isLogged = this.auth.isLoggedIn();
     this.autorisation = new Autorisation(null);
@@ -58,7 +60,7 @@ export class PostComponent implements OnInit {
 
   // Get a list of all the users who can communicate with the patient connected.
   getAutorisationList() {
-    this.medicalService.getPostAutorisation(this.me._id)
+    this.autorisationService.getPostAutorisation(this.me._id)
       .subscribe( autorisations => {
         // on cree une liste d'users a partir des autorisation
         for (const aut of autorisations) {
@@ -68,6 +70,7 @@ export class PostComponent implements OnInit {
               add = false;
             }
           }
+          //if (add && aut.observer.role[1] === 'medecin') {
           if (add) {
             this.usersPost.push(aut.observer);
           }
@@ -80,9 +83,9 @@ export class PostComponent implements OnInit {
     this.messengerBox['name'] = user.first_name + ' ' + user.last_name;
     this.messengerBox['display'] = 'True';
     this.messengerBox['id'] = user._id;
-    this.medicalService.get_posts(this.me._id, user._id)
+    this.medicalService.getPosts(this.me._id, user._id)
       .subscribe( postsRequest => {
-        this.medicalService.get_posts(user._id, this.me._id)
+        this.medicalService.getPosts(user._id, this.me._id)
           .subscribe( postsResponse => {
             this.messengerListPosts = postsResponse;
             for (let i = 0; i < postsRequest.length; i++) {

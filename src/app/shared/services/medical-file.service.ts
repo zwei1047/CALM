@@ -10,51 +10,38 @@ import {Post} from "../models/post";
 
 @Injectable()
 export class MedicalFileService {
+  url: string;
 
-  constructor(private http: Http, private authentication: AuthenticationService) { }
+  constructor(private http: Http, private authentication: AuthenticationService) {
+    this.url = 'https://localhost:3000/api/';
+  }
 
 
   getCurrentPatient() {
-    return this.http.get('https://localhost:3000/api/patients/' + this.authentication.currentUserId(), this.authentication.getRequestOptions())
+    return this.http.get(this.url + 'patients/' + this.authentication.currentUserId(), this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
-  //getUserByEmail(email:String) {
-  //  return this.http.get('https://localhost:3000/api/users/' +email, this.authentication.getRequestOptions())
-  //    .map(res => res.json());
-  //}
+  getUserByEmail(email: string) {
+    return this.http.get(this.url + 'users/byEmail/' + email, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
   getUserById(id: string) {
-    return this.http.get('https://localhost:3000/api/users/' + id, this.authentication.getRequestOptions())
+    return this.http.get(this.url + 'users/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   addGeneralDoctor(doctor: Doctor, id: string) {
-    return this.http.put('https://localhost:3000/api/patient/' + id, doctor, this.authentication.getRequestOptions())
+    return this.http.put(this.url + 'patient/' + id, doctor, this.authentication.getRequestOptions())
       .map(res => res);
   }
 
-  get_posts(sender_id: string, receiver_id: string) {
-    return this.http.get('https://localhost:3000/api/post/' + sender_id + '/' + receiver_id, this.authentication.getRequestOptions())
+  getPosts(sender_id: string, receiver_id: string) {
+    return this.http.get(this.url + 'post/' + sender_id + '/' + receiver_id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
   addPost(post: Post) {
-    return this.http.post('https://localhost:3000/api/post', post, this.authentication.getRequestOptions())
-      .map(res => res.json());
+    return this.http.post(this.url + 'post', post, this.authentication.getRequestOptions())
+      .map(res => res);
   }
-
-  getUserList(user_id: string) {
-    return this.http.get('https://localhost:3000/api/autorisation/' + user_id, this.authentication.getRequestOptions())
-      .map(res => res.json());
-  }
-  addAutorisation(autorisation: Autorisation) {
-    console.log('trying to add an autorisation ... ');
-    return this.http.put('https://localhost:3000/api/autorisation/', autorisation, this.authentication.getRequestOptions())
-      .map(res => res.json());
-  }
-  getPostAutorisation(user_id: String) {
-    // trier pour avoir que les types = post
-    return this.http.get('https://localhost:3000/api/autorisation/'+user_id, this.authentication.getRequestOptions())
-      .map(res => res.json());
-  }
-
 }
