@@ -1,0 +1,33 @@
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home';
+import { AboutComponent } from './about/about';
+import { UsersComponent } from './users/users';
+import { ContactComponent } from './contact/contact';
+import { LoginComponent } from './login/login';
+import { NotFoundComponent } from './not-found/not-found';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AppComponent } from "./app.component";
+import { MedicalFileComponent } from './medical-file/medical-file.component';
+import { SettingsComponent } from "./profile/settings/settings.component";
+import { DoctorSpaceComponent } from './doctor-space/doctor-space.component';
+import { BuildingSpaceComponent } from './building-space/building-space.component';
+import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
+var appRoutes = [
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'users', component: UsersComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: 'medical-file', component: MedicalFileComponent },
+    { path: 'doctor-space', component: DoctorSpaceComponent },
+    { path: 'building-space', component: BuildingSpaceComponent },
+    { path: 'organisation-space', component: OrganisationSpaceComponent },
+    { path: 'logout', component: AppComponent },
+    { path: 'settings', component: SettingsComponent },
+    { path: '**', component: NotFoundComponent }
+];
+export var appRouting = RouterModule.forRoot(appRoutes);
+//# sourceMappingURL=F:/CALM/src/src/app/app.routing.js.map

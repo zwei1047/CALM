@@ -33,6 +33,8 @@ import {DoctorSearchService} from "./shared/services/doctor-search.service";
 import {ReminderService} from "./shared/services/reminder.service";
 import {DialogComponent} from "./medical-file/reminder/dialog.component";
 import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
+import {AutorisationService} from "./shared/services/autorisation.service";
+import {AlertInfoComponent} from "./alert/alert-info.component";
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.direct
     PostsComponent,
     DialogComponent,
     DialogAnchorDirective,
+    AlertInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,8 @@ import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.direct
     MedicalFileService,
     DoctorSpaceService,
     DoctorSearchService,
-    ReminderService
+    ReminderService,
+    AutorisationService
   ],
   bootstrap: [AppComponent]
 })

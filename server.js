@@ -32,7 +32,7 @@ var pass = require('./server/config/passport');
 
 // Get our API routes
 const api = require('./server/routes/api')(passport);
-
+const autorisation = require('./server/routes/autorisation')(passport);
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
 app.use('/api', api);
+app.use('/api',autorisation);
 
 // Catch all other routes and return the index file
 app.get('*', function(req, res) {

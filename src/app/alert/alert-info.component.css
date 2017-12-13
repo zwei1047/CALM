@@ -1,0 +1,26 @@
+#infoSign .badge {
+  background: red;
+}
+#alertTable {
+  width: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 600px;
+  background-color: white;
+}
+#alertTable li {
+  color: #000000 !important;
+}
+
+.dropdown-menu li {
+  border-top:1px solid black;
+  padding-bottom:3px;
+  opacity: 0.7;
+}
+
+.dropdown-menu .liConfirm{
+  opacity: 1;
+}
+.dropdown-menu .buttonConfirm{
+  display: none;
+}
