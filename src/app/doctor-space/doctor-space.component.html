@@ -2,6 +2,9 @@
   <app-post></app-post>
 
   <div *ngIf="isLogged" class="container">
+
+    <a type="button" [routerLink]="['/doctor_rdv']">Gérer mes disponibilités</a><br/>
+
     <div class="row" *ngFor="let patient of patients">
       <div class="card card-block" *ngIf="patient.general_doctor">
         <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->

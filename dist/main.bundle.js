@@ -3,7 +3,7 @@ webpackJsonp([1,4],{
 /***/ 1098:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(488);
+module.exports = __webpack_require__(487);
 
 
 /***/ }),
@@ -50,9 +50,9 @@ var Patient = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(456);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(456);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -213,7 +213,7 @@ var AutorisationService = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__address__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__address__ = __webpack_require__(402);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
 
 /**
@@ -665,7 +665,7 @@ var ContactComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(406);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -954,8 +954,8 @@ var PatientTreatmentComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_doctor__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_disponibilite__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_disponibilite__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_util__ = __webpack_require__(1096);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_util__);
@@ -1526,13 +1526,13 @@ var OrganisationSpaceComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_user__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_models_disponibilite__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_models_disponibilite__ = __webpack_require__(405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_services_autorisation_service__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_models_log__ = __webpack_require__(615);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__ = __webpack_require__(408);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientRdvComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1762,10 +1762,1325 @@ var PatientRdvComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ProfileComponent = (function () {
+    function ProfileComponent(authentication, usersService) {
+        this.authentication = authentication;
+        this.usersService = usersService;
+        this.image = __webpack_require__(485);
+    }
+    ProfileComponent.prototype.ngOnInit = function () {
+        this.isLogged = this.authentication.isLoggedIn();
+        if (this.isLogged) {
+            this.getProfile();
+        }
+    };
+    ProfileComponent.prototype.getProfile = function () {
+        var _this = this;
+        this.usersService.getProfile()
+            .subscribe(function (user) {
+            _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
+            console.log(_this.user);
+        });
+    };
+    ProfileComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-profile',
+            template: __webpack_require__(821),
+            styles: [__webpack_require__(797)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object])
+    ], ProfileComponent);
+    return ProfileComponent;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/profile.component.js.map
+
+/***/ }),
+
+/***/ 400:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__ = __webpack_require__(409);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var SettingsComponent = (function () {
+    function SettingsComponent(authentication, usersService, medicalService, autorisationService, mailService) {
+        this.authentication = authentication;
+        this.usersService = usersService;
+        this.medicalService = medicalService;
+        this.autorisationService = autorisationService;
+        this.mailService = mailService;
+        this.doctors = [];
+        this.autorisations = [];
+        this.addAutorisationForm = [];
+    }
+    SettingsComponent.prototype.ngOnInit = function () {
+        this.patient = new __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__["a" /* Patient */](null);
+        this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](null);
+        this.loadAllDoctors();
+        this.isLogged = this.authentication.isLoggedIn();
+        if (this.isLogged) {
+            this.getInformations();
+        }
+    };
+    SettingsComponent.prototype.sendTestMail = function () {
+        console.log('sending test email ... ');
+        this.mailService.sendTestMail()
+            .subscribe(function (response) {
+            console.log(response);
+        });
+    };
+    SettingsComponent.prototype.sendPersoMail = function (to, subject, text) {
+        console.log('sending test email ... ');
+        this.mailService.sendMail(to, subject, text)
+            .subscribe(function (resp) {
+            console.log(resp);
+        });
+    };
+    SettingsComponent.prototype.getInformations = function () {
+        var _this = this;
+        this.usersService.getProfile()
+            .subscribe(function (user) {
+            _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
+            _this.autorisationService.getAutorisations(_this.user._id)
+                .subscribe(function (autorisations) {
+                _this.autorisations = autorisations;
+            });
+        });
+    };
+    SettingsComponent.prototype.loadAllDoctors = function () {
+        var _this = this;
+        this.usersService.getDoctors().subscribe(function (doctors) {
+            _this.doctors = doctors;
+            // for(let i=0; i<doctors.length; i++){
+            // }
+        });
+    };
+    SettingsComponent.prototype.addDoctor = function (doctor) {
+        var _this = this;
+        this.medicalService.getCurrentPatient()
+            .subscribe(function (patient) {
+            console.log('this patient : ', patient);
+            _this.patient = new __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__["a" /* Patient */](patient);
+            _this.medicalService.addGeneralDoctor(doctor, _this.patient._id)
+                .subscribe(function (data) {
+                console.log("Doctor changed : ", data);
+            });
+        });
+    };
+    SettingsComponent.prototype.openAddAutorisation = function () {
+        this.addAutorisationForm['show'] = true;
+    };
+    SettingsComponent.prototype.addNewAutorisation = function () {
+        var _this = this;
+        console.log('we will add a new autorisation');
+        this.newAutorisation = new __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__["a" /* Autorisation */](null);
+        this.medicalService.getUserByEmail(this.addAutorisationForm['email'])
+            .subscribe(function (observer) {
+            if (observer) {
+                _this.newAutorisation.user = _this.user;
+                _this.newAutorisation.observer = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](observer);
+                _this.newAutorisation.subject = _this.addAutorisationForm['subject'];
+                _this.newAutorisation.type = _this.addAutorisationForm['type'];
+                console.log(_this.newAutorisation);
+                _this.autorisationService.addAutorisation(_this.newAutorisation)
+                    .subscribe(function (res) {
+                    if (res) {
+                        console.log(res);
+                    }
+                    // if autorisation is about post, we add the inverse of this
+                    if (_this.newAutorisation.subject === 'POST') {
+                        _this.newAutorisation.observer = _this.user;
+                        _this.newAutorisation.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](observer);
+                        _this.autorisationService.addAutorisation(_this.newAutorisation)
+                            .subscribe(function (res) {
+                            if (res) {
+                                console.log(res);
+                            }
+                            _this.getInformations(); // update
+                        });
+                    }
+                    else {
+                        _this.getInformations(); // update
+                    }
+                });
+            }
+        });
+    };
+    SettingsComponent.prototype.deleteAutorisation = function (aut_id) {
+        var _this = this;
+        console.log('delete this id : ' + aut_id);
+        this.autorisationService.deleteAutorisation(aut_id)
+            .subscribe(function (resp) {
+            console.log(resp);
+            _this.getInformations(); // update
+        });
+    };
+    SettingsComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-settings',
+            template: __webpack_require__(822),
+            styles: [__webpack_require__(798)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */]) === 'function' && _e) || Object])
+    ], SettingsComponent);
+    return SettingsComponent;
+    var _a, _b, _c, _d, _e;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/settings.component.js.map
+
+/***/ }),
+
+/***/ 401:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var RegisterComponent = (function () {
+    //private base64textString:string;
+    function RegisterComponent(router, authentication) {
+        this.router = router;
+        this.authentication = authentication;
+        this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](null);
+        this.submitted = true;
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    /*handleFileSelect(evt){
+      var files = evt.target.files;
+      var file = files[0];
+  
+      if (files && file) {
+        var reader = new FileReader();
+        reader.onload =this._handleReaderLoaded.bind(this);
+        reader.readAsBinaryString(file);
+        console.log(file);
+      }
+    }
+  
+    _handleReaderLoaded(readerEvt) {
+      var binaryString = readerEvt.target.result;
+      this.base64textString= btoa(binaryString);
+    }*/
+    // signin the new user if signup successfully
+    RegisterComponent.prototype.login = function (email, password) {
+        var _this = this;
+        this.user.password = password;
+        this.user.email = email;
+        this.authentication.login(this.user)
+            .subscribe(function (res) {
+            _this.submitted = true;
+            _this.authentication.saveToken(res.token);
+            _this.router.navigate(['/profile']);
+            location.reload();
+        });
+    };
+    // create the new user
+    RegisterComponent.prototype.register = function () {
+        var _this = this;
+        this.authentication.register(this.user)
+            .subscribe(function (res) {
+            _this.submitted = true;
+            _this.login(_this.user.email, _this.user.password);
+            _this.router.navigate(['/profile']);
+            location.reload();
+        });
+        this.submitted = false;
+    };
+    RegisterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-register',
+            template: __webpack_require__(823),
+            styles: [__webpack_require__(799)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], RegisterComponent);
+    return RegisterComponent;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/register.component.js.map
+
+/***/ }),
+
+/***/ 402:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Address; });
+/**
+ * Created by ISEN on 11/04/2017.
+ */
+var Address = (function () {
+    function Address(AdressInfo) {
+        // console.log("AdressInfo : ", AdressInfo);
+        if (AdressInfo) {
+            this._id = AdressInfo._id;
+            this.num = AdressInfo.num;
+            this.street_address = AdressInfo.street_address;
+            this.city = AdressInfo.city;
+            this.postal_code = AdressInfo.postal_code;
+            this.country = AdressInfo.country;
+            this.latitude = AdressInfo.latitude;
+            this.longitude = AdressInfo.longitude;
+            this.precision = AdressInfo.precision;
+        }
+        else {
+            this._id = "";
+            this.num = 0;
+            this.street_address = "";
+            this.city = "";
+            this.postal_code = 0;
+            this.country = "France";
+            this.latitude = 0;
+            this.longitude = 0;
+            this.precision = false;
+        }
+    }
+    return Address;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/address.js.map
+
+/***/ }),
+
+/***/ 403:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autorisation; });
+
+var Autorisation = (function () {
+    function Autorisation(autorisationInfo) {
+        this.subjectList = ['POST', 'DOSSIER', 'RDV'];
+        this.typeList = ['READ', 'READ_WRITE'];
+        if (autorisationInfo) {
+            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.user);
+            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.observer);
+            if (autorisationInfo.type && autorisationInfo.subject) {
+                if (this.typeList.indexOf(autorisationInfo.type) !== -1 && this.subjectList.indexOf(autorisationInfo.subject) !== -1) {
+                    console.log('type & subject valid');
+                    this.type = autorisationInfo.type;
+                    this.subject = autorisationInfo.subject;
+                }
+            }
+            this.Created_at = autorisationInfo.Created_at;
+            this.valide = autorisationInfo.valide;
+        }
+        else {
+            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.type = 'READ';
+            this.subject = 'POST';
+            this.valide = true;
+        }
+    }
+    return Autorisation;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/autorisation.js.map
+
+/***/ }),
+
+/***/ 404:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__patient__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Consultation; });
+
+
+var Consultation = (function () {
+    function Consultation(consultationInfo) {
+        if (consultationInfo) {
+            this._id = consultationInfo._id;
+            this.doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](consultationInfo.doctor);
+            this.patient = new __WEBPACK_IMPORTED_MODULE_0__patient__["a" /* Patient */](consultationInfo.patient);
+            this.date = consultationInfo.date;
+            this.motif = consultationInfo.motif;
+        }
+        else {
+            this.doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](null);
+            this.patient = new __WEBPACK_IMPORTED_MODULE_0__patient__["a" /* Patient */](null);
+            this.date = null;
+            this.motif = '';
+        }
+    }
+    return Consultation;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/consultation.js.map
+
+/***/ }),
+
+/***/ 405:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(82);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Disponnibilite; });
+
+var Disponnibilite = (function () {
+    function Disponnibilite(consultationInfo) {
+        this.disponnibilite = [];
+        if (consultationInfo) {
+            this._id = consultationInfo._id;
+            this.jour = consultationInfo.jour;
+            this.mois = consultationInfo.mois;
+            this.an = consultationInfo.an;
+            this.doctor = new __WEBPACK_IMPORTED_MODULE_0__doctor__["a" /* Doctor */](consultationInfo.doctor);
+            if (consultationInfo.disponnibilite) {
+                for (var _i = 0, _a = consultationInfo.disponnibilite; _i < _a.length; _i++) {
+                    var date = _a[_i];
+                    this.disponnibilite.push(date);
+                }
+            }
+        }
+        else {
+            this.doctor = new __WEBPACK_IMPORTED_MODULE_0__doctor__["a" /* Doctor */](null);
+        }
+    }
+    Disponnibilite.prototype.fullDisponnibilite = function (an, mois, jour) {
+        var hours = 8;
+        var minutes = 0;
+        this.disponnibilite = [];
+        while (hours < 20) {
+            var currentDate = new Date(an, mois - 1, jour, hours, minutes, 0);
+            this.disponnibilite.push(currentDate);
+            minutes += 30;
+            if (minutes === 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+    };
+    return Disponnibilite;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/disponibilite.js.map
+
+/***/ }),
+
+/***/ 406:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TypePost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Post; });
+
+var TypePost;
+(function (TypePost) {
+    TypePost[TypePost["INFO"] = 'INFO'] = "INFO";
+    TypePost[TypePost["ALERT"] = 'ALERT'] = "ALERT";
+    TypePost[TypePost["POST"] = 'POST'] = "POST";
+    TypePost[TypePost["TREATMENT"] = 'TREATMENT'] = "TREATMENT";
+})(TypePost || (TypePost = {}));
+;
+var Post = (function () {
+    // lle type de post ne fonctionne pas
+    function Post(postInfo) {
+        if (postInfo) {
+            this._id = postInfo._id;
+            this.sender = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](postInfo.sender);
+            this.receiver = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](postInfo.receiver);
+            this.text = postInfo.text;
+            this.type = postInfo.type;
+        }
+        else {
+            this.sender = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.receiver = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.text = '';
+            this.Created_at = null;
+        }
+    }
+    return Post;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/post.js.map
+
+/***/ }),
+
+/***/ 407:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSearchService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DoctorSearchService = (function () {
+    function DoctorSearchService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+    }
+    DoctorSearchService.prototype.getSearchDoctor = function (city) {
+        return this.http.get('https://localhost:3000/api/searchDoctor/' + city, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSearchService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], DoctorSearchService);
+    return DoctorSearchService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-search.service.js.map
+
+/***/ }),
+
+/***/ 408:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var LogService = (function () {
+    function LogService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+        this.url = 'https://localhost:3000/api/';
+    }
+    LogService.prototype.addLog = function (log) {
+        return this.http.post(this.url + 'log/', log, this.authentication.getRequestOptions())
+            .map(function (res) { return res; });
+    };
+    LogService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], LogService);
+    return LogService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/log.service.js.map
+
+/***/ }),
+
+/***/ 409:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MailService = (function () {
+    function MailService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+        this.url = 'https://localhost:3000/api/';
+    }
+    MailService.prototype.sendTestMail = function () {
+        console.log('From mailService : we call the API to send the mail.');
+        return this.http.post(this.url + 'mail/test/', 'var useless', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    MailService.prototype.sendMail = function (to, subject, text) {
+        console.log('From mailService : sending a mail.');
+        return this.http.post(this.url + 'mail/', { to: to, subject: subject, text: text }, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    MailService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], MailService);
+    return MailService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/mail.service.js.map
+
+/***/ }),
+
+/***/ 410:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(96);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UsersComponent = (function () {
+    function UsersComponent(usersService, router) {
+        this.usersService = usersService;
+        this.router = router;
+        this.users = [];
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    }
+    UsersComponent.prototype.ngOnInit = function () {
+        this.loadAllUsers();
+    };
+    UsersComponent.prototype.deleteUser = function (id) {
+        this.usersService.deleteUser(id)
+            .subscribe(function (data) { });
+    };
+    UsersComponent.prototype.deleteAddress = function (id) {
+        this.usersService.deleteAddress(id)
+            .subscribe(function (data) {
+            console.log(data);
+        });
+    };
+    UsersComponent.prototype.buttonDelete = function (user) {
+        this.deleteAddress(user.address._id);
+        this.deleteUser(user._id);
+        this.loadAllUsers();
+    };
+    UsersComponent.prototype.loadAllUsers = function () {
+        var _this = this;
+        this.usersService.getUsers().subscribe(function (users) { _this.users = users; });
+    };
+    UsersComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'users-page',
+            template: __webpack_require__(824),
+            styles: [__webpack_require__(800)],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === 'function' && _b) || Object])
+    ], UsersComponent);
+    return UsersComponent;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.js.map
+
+/***/ }),
+
+/***/ 485:
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ 486:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 486;
+
+
+/***/ }),
+
+/***/ 487:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(606);
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/main.js.map
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UsersService = (function () {
+    function UsersService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+        this.url = 'https://localhost:3000/api/';
+    }
+    // Get all users from the API
+    UsersService.prototype.getUsers = function () {
+        return this.http.get(this.url + 'users', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getUser = function (id) {
+        return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.deleteUser = function (id) {
+        if (this.authentication.currentUserId() === id) {
+            this.authentication.logout();
+        }
+        return this.http.delete(this.url + 'users/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
+    };
+    UsersService.prototype.deleteAddress = function (id) {
+        return this.http.delete(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
+    };
+    UsersService.prototype.getProfile = function () {
+        return this.http.get(this.url + 'profile', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddressById = function (id) {
+        return this.http.get(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getAddresses = function () {
+        return this.http.get(this.url + 'addresses', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService.prototype.getDoctors = function () {
+        return this.http.get(this.url + 'doctors', this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    UsersService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], UsersService);
+    return UsersService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.service.js.map
+
+/***/ }),
+
+/***/ 606:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__post_post_component__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__(607);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__register_register_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__ = __webpack_require__(603);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__ = __webpack_require__(408);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__home_home__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__contact_contact__["a" /* ContactComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__about_about__["a" /* AboutComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__users_users__["a" /* UsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__login_login__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__["a" /* NotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__["a" /* MedicalFileComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__["a" /* DoctorProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__["a" /* SettingsComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__["a" /* CalendarComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__["a" /* ReminderComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__["a" /* BuildingSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__post_post_component__["a" /* PostComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__["a" /* GoogleMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__["a" /* PostsComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_13__app_routing__["a" /* appRouting */],
+                __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__["a" /* TrimValueAccessorModule */],
+                __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyDVDZy1qXBBu6ctMvyYcSONy3-cs5PjYNU'
+                })
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */],
+                __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__["a" /* AuthenticationService */],
+                __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__["a" /* MedicalFileService */],
+                __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__["a" /* DoctorSpaceService */],
+                __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__["a" /* TreatmentService */],
+                __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__["a" /* DoctorSearchService */],
+                __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__["a" /* RdvService */],
+                __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__["a" /* AutorisationService */],
+                __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__["a" /* MailService */],
+                __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__["a" /* LogService */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppModule);
+    return AppModule;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.module.js.map
+
+/***/ }),
+
+/***/ 607:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__register_register_component__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__ = __webpack_require__(397);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRouting; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var appRoutes = [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_1__home_home__["a" /* HomeComponent */] },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutComponent */] },
+    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_4__contact_contact__["a" /* ContactComponent */] },
+    { path: 'users', component: __WEBPACK_IMPORTED_MODULE_3__users_users__["a" /* UsersComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_7__register_register_component__["a" /* RegisterComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
+    { path: 'medical-file', component: __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__["a" /* MedicalFileComponent */] },
+    { path: 'doctor-space', component: __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */] },
+    { path: 'current-treatment', component: __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */] },
+    { path: 'patient-treatment', component: __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */] },
+    { path: 'building-space', component: __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__["a" /* BuildingSpaceComponent */] },
+    { path: 'organisation-space', component: __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */] },
+    { path: 'patient_rdv', component: __WEBPACK_IMPORTED_MODULE_17__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */] },
+    { path: 'doctor_rdv', component: __WEBPACK_IMPORTED_MODULE_18__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */] },
+    { path: 'logout', component: __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */] },
+    { path: 'settings', component: __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__["a" /* SettingsComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__["a" /* NotFoundComponent */] }
+];
+var appRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.routing.js.map
+
+/***/ }),
+
+/***/ 608:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CalendarComponent = (function () {
+    function CalendarComponent() {
+    }
+    CalendarComponent.prototype.ngOnInit = function () {
+    };
+    CalendarComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-calendar',
+            template: __webpack_require__(810),
+            styles: [__webpack_require__(787)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CalendarComponent);
+    return CalendarComponent;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/calendar.component.js.map
+
+/***/ }),
+
+/***/ 609:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(14);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProfileComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DoctorProfileComponent = (function () {
+    function DoctorProfileComponent(medicalfile, authentication) {
+        this.medicalfile = medicalfile;
+        this.authentication = authentication;
+        this.image = __webpack_require__(485);
+    }
+    DoctorProfileComponent.prototype.ngOnInit = function () {
+        this.isLogged = this.authentication.isLoggedIn();
+        if (this.isLogged) {
+            this.getPatient();
+        }
+    };
+    DoctorProfileComponent.prototype.getPatient = function () {
+        var _this = this;
+        this.medicalfile.getCurrentPatient().subscribe(function (pat) {
+            _this.patient = new __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__["a" /* Patient */](pat);
+        });
+    };
+    DoctorProfileComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-doctor-profile',
+            template: __webpack_require__(812),
+            styles: [__webpack_require__(789)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], DoctorProfileComponent);
+    return DoctorProfileComponent;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-profile.component.js.map
+
+/***/ }),
+
+/***/ 610:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PostsComponent = (function () {
+    function PostsComponent(medicalService) {
+        this.medicalService = medicalService;
+    }
+    PostsComponent.prototype.ngOnInit = function () {
+    };
+    PostsComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-posts',
+            template: __webpack_require__(814),
+            styles: [__webpack_require__(791)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object])
+    ], PostsComponent);
+    return PostsComponent;
+    var _a;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/posts.component.js.map
+
+/***/ }),
+
+/***/ 611:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReminderComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ReminderComponent = (function () {
+    function ReminderComponent() {
+    }
+    ReminderComponent.prototype.ngOnInit = function () {
+    };
+    ReminderComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-reminder',
+            template: __webpack_require__(815),
+            styles: [__webpack_require__(792)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ReminderComponent);
+    return ReminderComponent;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/reminder.component.js.map
+
+/***/ }),
+
+/***/ 612:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__ = __webpack_require__(407);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GoogleMapComponent = (function () {
+    // coordonate_list =[{'lng': 50.6315,'lat': 3.056, 'display': false,'id':0},{'lng': 50.6315,'lat': 3.156, 'display': false,'id':1}];
+    function GoogleMapComponent(DoctorSearch) {
+        this.DoctorSearch = DoctorSearch;
+        this.lat = 50.6315144;
+        this.lng = 3.056218;
+        this.zoom = 8;
+        this.response = [];
+    }
+    GoogleMapComponent.prototype.clikedMark = function (id) {
+        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+            var temp = _a[_i];
+            if (temp['_id'] == id) {
+                temp['isDisplay'] = true;
+            }
+            else
+                temp['isDisplay'] = false;
+        }
+    };
+    GoogleMapComponent.prototype.rechercheClick = function (searchText) {
+        if (searchText != '') {
+            this.response = [];
+            this.searchMedecins(searchText);
+            console.log(searchText);
+        }
+        else {
+            console.log('ya rien');
+        }
+    };
+    GoogleMapComponent.prototype.mapClick = function () {
+        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+            var temp = _a[_i];
+            temp['isDisplay'] = false;
+        }
+    };
+    GoogleMapComponent.prototype.searchMedecins = function (searchText) {
+        var _this = this;
+        this.DoctorSearch.getSearchDoctor(searchText).subscribe(function (pat) {
+            console.log(pat);
+            for (var i = 0; i < pat.length; i++) {
+                if (pat[i].address != null) {
+                    pat[i].isDisplay = false;
+                    _this.response.push(pat[i]);
+                }
+            }
+            _this.reSetCenter();
+        });
+    };
+    GoogleMapComponent.prototype.reSetCenter = function () {
+        var _this = this;
+        if (this.response.length != 0) {
+            this.zoom = 8;
+            var sumLng = 0;
+            var sumLat = 0;
+            for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
+                var temp = _a[_i];
+                sumLng += temp['address'].longitude;
+                sumLat += temp['address'].latitude;
+            }
+            this.lng = sumLng / this.response.length + 0.1;
+            this.lat = sumLat / this.response.length + 0.1;
+            console.log(this.lng);
+            console.log(this.lat);
+            setTimeout(function () {
+                _this.zoom = 10;
+                _this.lng = _this.lng - 0.1;
+                _this.lat = _this.lat - 0.1;
+            }, 100);
+        }
+        else {
+            console.log(this.lng);
+            console.log(this.lat);
+        }
+    };
+    GoogleMapComponent.prototype.zoomChange = function () {
+        console.log("1111");
+    };
+    GoogleMapComponent.prototype.ngOnInit = function () {
+    };
+    GoogleMapComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-google-map',
+            template: __webpack_require__(818),
+            styles: [__webpack_require__(794)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */]) === 'function' && _a) || Object])
+    ], GoogleMapComponent);
+    return GoogleMapComponent;
+    var _a;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/google-map.component.js.map
+
+/***/ }),
+
+/***/ 613:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_post__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_post__ = __webpack_require__(406);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__ = __webpack_require__(182);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1934,1331 +3249,13 @@ var PostComponent = (function () {
 
 /***/ }),
 
-/***/ 400:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ProfileComponent = (function () {
-    function ProfileComponent(authentication, usersService) {
-        this.authentication = authentication;
-        this.usersService = usersService;
-        this.image = __webpack_require__(486);
-    }
-    ProfileComponent.prototype.ngOnInit = function () {
-        this.isLogged = this.authentication.isLoggedIn();
-        if (this.isLogged) {
-            this.getProfile();
-        }
-    };
-    ProfileComponent.prototype.getProfile = function () {
-        var _this = this;
-        this.usersService.getProfile()
-            .subscribe(function (user) {
-            _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
-            console.log(_this.user);
-        });
-    };
-    ProfileComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-profile',
-            template: __webpack_require__(821),
-            styles: [__webpack_require__(797)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object])
-    ], ProfileComponent);
-    return ProfileComponent;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/profile.component.js.map
-
-/***/ }),
-
-/***/ 401:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__ = __webpack_require__(410);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-var SettingsComponent = (function () {
-    function SettingsComponent(authentication, usersService, medicalService, autorisationService, mailService) {
-        this.authentication = authentication;
-        this.usersService = usersService;
-        this.medicalService = medicalService;
-        this.autorisationService = autorisationService;
-        this.mailService = mailService;
-        this.doctors = [];
-        this.autorisations = [];
-        this.addAutorisationForm = [];
-    }
-    SettingsComponent.prototype.ngOnInit = function () {
-        this.patient = new __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__["a" /* Patient */](null);
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](null);
-        this.loadAllDoctors();
-        this.isLogged = this.authentication.isLoggedIn();
-        if (this.isLogged) {
-            this.getInformations();
-        }
-    };
-    SettingsComponent.prototype.sendTestMail = function () {
-        console.log('sending test email ... ');
-        this.mailService.sendTestMail()
-            .subscribe(function (response) {
-            console.log(response);
-        });
-    };
-    SettingsComponent.prototype.sendPersoMail = function (to, subject, text) {
-        console.log('sending test email ... ');
-        this.mailService.sendMail(to, subject, text)
-            .subscribe(function (resp) {
-            console.log(resp);
-        });
-    };
-    SettingsComponent.prototype.getInformations = function () {
-        var _this = this;
-        this.usersService.getProfile()
-            .subscribe(function (user) {
-            _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
-            _this.autorisationService.getAutorisations(_this.user._id)
-                .subscribe(function (autorisations) {
-                _this.autorisations = autorisations;
-            });
-        });
-    };
-    SettingsComponent.prototype.loadAllDoctors = function () {
-        var _this = this;
-        this.usersService.getDoctors().subscribe(function (doctors) {
-            _this.doctors = doctors;
-            // for(let i=0; i<doctors.length; i++){
-            // }
-        });
-    };
-    SettingsComponent.prototype.addDoctor = function (doctor) {
-        var _this = this;
-        this.medicalService.getCurrentPatient()
-            .subscribe(function (patient) {
-            console.log('this patient : ', patient);
-            _this.patient = new __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__["a" /* Patient */](patient);
-            _this.medicalService.addGeneralDoctor(doctor, _this.patient._id)
-                .subscribe(function (data) {
-                console.log("Doctor changed : ", data);
-            });
-        });
-    };
-    SettingsComponent.prototype.openAddAutorisation = function () {
-        this.addAutorisationForm['show'] = true;
-    };
-    SettingsComponent.prototype.addNewAutorisation = function () {
-        var _this = this;
-        console.log('we will add a new autorisation');
-        this.newAutorisation = new __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__["a" /* Autorisation */](null);
-        this.medicalService.getUserByEmail(this.addAutorisationForm['email'])
-            .subscribe(function (observer) {
-            if (observer) {
-                _this.newAutorisation.user = _this.user;
-                _this.newAutorisation.observer = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](observer);
-                _this.newAutorisation.subject = _this.addAutorisationForm['subject'];
-                _this.newAutorisation.type = _this.addAutorisationForm['type'];
-                console.log(_this.newAutorisation);
-                _this.autorisationService.addAutorisation(_this.newAutorisation)
-                    .subscribe(function (res) {
-                    if (res) {
-                        console.log(res);
-                    }
-                    // if autorisation is about post, we add the inverse of this
-                    if (_this.newAutorisation.subject === 'POST') {
-                        _this.newAutorisation.observer = _this.user;
-                        _this.newAutorisation.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](observer);
-                        _this.autorisationService.addAutorisation(_this.newAutorisation)
-                            .subscribe(function (res) {
-                            if (res) {
-                                console.log(res);
-                            }
-                            _this.getInformations(); // update
-                        });
-                    }
-                    else {
-                        _this.getInformations(); // update
-                    }
-                });
-            }
-        });
-    };
-    SettingsComponent.prototype.deleteAutorisation = function (aut_id) {
-        var _this = this;
-        console.log('delete this id : ' + aut_id);
-        this.autorisationService.deleteAutorisation(aut_id)
-            .subscribe(function (resp) {
-            console.log(resp);
-            _this.getInformations(); // update
-        });
-    };
-    SettingsComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-settings',
-            template: __webpack_require__(822),
-            styles: [__webpack_require__(798)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__["a" /* AutorisationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__["a" /* MailService */]) === 'function' && _e) || Object])
-    ], SettingsComponent);
-    return SettingsComponent;
-    var _a, _b, _c, _d, _e;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/settings.component.js.map
-
-/***/ }),
-
-/***/ 402:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(25);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var RegisterComponent = (function () {
-    //private base64textString:string;
-    function RegisterComponent(router, authentication) {
-        this.router = router;
-        this.authentication = authentication;
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](null);
-        this.submitted = true;
-    }
-    RegisterComponent.prototype.ngOnInit = function () {
-    };
-    /*handleFileSelect(evt){
-      var files = evt.target.files;
-      var file = files[0];
-  
-      if (files && file) {
-        var reader = new FileReader();
-        reader.onload =this._handleReaderLoaded.bind(this);
-        reader.readAsBinaryString(file);
-        console.log(file);
-      }
-    }
-  
-    _handleReaderLoaded(readerEvt) {
-      var binaryString = readerEvt.target.result;
-      this.base64textString= btoa(binaryString);
-    }*/
-    // signin the new user if signup successfully
-    RegisterComponent.prototype.login = function (email, password) {
-        var _this = this;
-        this.user.password = password;
-        this.user.email = email;
-        this.authentication.login(this.user)
-            .subscribe(function (res) {
-            _this.submitted = true;
-            _this.authentication.saveToken(res.token);
-            _this.router.navigate(['/profile']);
-            location.reload();
-        });
-    };
-    // create the new user
-    RegisterComponent.prototype.register = function () {
-        var _this = this;
-        this.authentication.register(this.user)
-            .subscribe(function (res) {
-            _this.submitted = true;
-            _this.login(_this.user.email, _this.user.password);
-            _this.router.navigate(['/profile']);
-            location.reload();
-        });
-        this.submitted = false;
-    };
-    RegisterComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-register',
-            template: __webpack_require__(823),
-            styles: [__webpack_require__(799)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], RegisterComponent);
-    return RegisterComponent;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/register.component.js.map
-
-/***/ }),
-
-/***/ 403:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Address; });
-/**
- * Created by ISEN on 11/04/2017.
- */
-var Address = (function () {
-    function Address(AdressInfo) {
-        // console.log("AdressInfo : ", AdressInfo);
-        if (AdressInfo) {
-            this._id = AdressInfo._id;
-            this.num = AdressInfo.num;
-            this.street_address = AdressInfo.street_address;
-            this.city = AdressInfo.city;
-            this.postal_code = AdressInfo.postal_code;
-            this.country = AdressInfo.country;
-            this.latitude = AdressInfo.latitude;
-            this.longitude = AdressInfo.longitude;
-            this.precision = AdressInfo.precision;
-        }
-        else {
-            this._id = "";
-            this.num = 0;
-            this.street_address = "";
-            this.city = "";
-            this.postal_code = 0;
-            this.country = "France";
-            this.latitude = 0;
-            this.longitude = 0;
-            this.precision = false;
-        }
-    }
-    return Address;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/address.js.map
-
-/***/ }),
-
-/***/ 404:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autorisation; });
-
-var Autorisation = (function () {
-    function Autorisation(autorisationInfo) {
-        this.subjectList = ['POST', 'DOSSIER', 'RDV'];
-        this.typeList = ['READ', 'READ_WRITE'];
-        if (autorisationInfo) {
-            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.user);
-            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.observer);
-            if (autorisationInfo.type && autorisationInfo.subject) {
-                if (this.typeList.indexOf(autorisationInfo.type) !== -1 && this.subjectList.indexOf(autorisationInfo.subject) !== -1) {
-                    console.log('type & subject valid');
-                    this.type = autorisationInfo.type;
-                    this.subject = autorisationInfo.subject;
-                }
-            }
-            this.Created_at = autorisationInfo.Created_at;
-            this.valide = autorisationInfo.valide;
-        }
-        else {
-            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.type = 'READ';
-            this.subject = 'POST';
-            this.valide = true;
-        }
-    }
-    return Autorisation;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/autorisation.js.map
-
-/***/ }),
-
-/***/ 405:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Consultation; });
-
-
-var Consultation = (function () {
-    function Consultation(consultationInfo) {
-        if (consultationInfo) {
-            this._id = consultationInfo._id;
-            this.doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](consultationInfo.doctor);
-            this.patient = new __WEBPACK_IMPORTED_MODULE_0__patient__["a" /* Patient */](consultationInfo.patient);
-            this.date = consultationInfo.date;
-            this.motif = consultationInfo.motif;
-        }
-        else {
-            this.doctor = new __WEBPACK_IMPORTED_MODULE_1__doctor__["a" /* Doctor */](null);
-            this.patient = new __WEBPACK_IMPORTED_MODULE_0__patient__["a" /* Patient */](null);
-            this.date = null;
-            this.motif = '';
-        }
-    }
-    return Consultation;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/consultation.js.map
-
-/***/ }),
-
-/***/ 406:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(82);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Disponnibilite; });
-
-var Disponnibilite = (function () {
-    function Disponnibilite(consultationInfo) {
-        this.disponnibilite = [];
-        if (consultationInfo) {
-            this._id = consultationInfo._id;
-            this.jour = consultationInfo.jour;
-            this.mois = consultationInfo.mois;
-            this.an = consultationInfo.an;
-            this.doctor = new __WEBPACK_IMPORTED_MODULE_0__doctor__["a" /* Doctor */](consultationInfo.doctor);
-            if (consultationInfo.disponnibilite) {
-                for (var _i = 0, _a = consultationInfo.disponnibilite; _i < _a.length; _i++) {
-                    var date = _a[_i];
-                    this.disponnibilite.push(date);
-                }
-            }
-        }
-        else {
-            this.doctor = new __WEBPACK_IMPORTED_MODULE_0__doctor__["a" /* Doctor */](null);
-        }
-    }
-    Disponnibilite.prototype.fullDisponnibilite = function (an, mois, jour) {
-        var hours = 8;
-        var minutes = 0;
-        this.disponnibilite = [];
-        while (hours < 20) {
-            var currentDate = new Date(an, mois - 1, jour, hours, minutes, 0);
-            this.disponnibilite.push(currentDate);
-            minutes += 30;
-            if (minutes === 60) {
-                minutes = 0;
-                hours++;
-            }
-        }
-    };
-    return Disponnibilite;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/disponibilite.js.map
-
-/***/ }),
-
-/***/ 407:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TypePost; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Post; });
-
-var TypePost;
-(function (TypePost) {
-    TypePost[TypePost["INFO"] = 'INFO'] = "INFO";
-    TypePost[TypePost["ALERT"] = 'ALERT'] = "ALERT";
-    TypePost[TypePost["POST"] = 'POST'] = "POST";
-    TypePost[TypePost["TREATMENT"] = 'TREATMENT'] = "TREATMENT";
-})(TypePost || (TypePost = {}));
-;
-var Post = (function () {
-    // lle type de post ne fonctionne pas
-    function Post(postInfo) {
-        if (postInfo) {
-            this._id = postInfo._id;
-            this.sender = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](postInfo.sender);
-            this.receiver = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](postInfo.receiver);
-            this.text = postInfo.text;
-            this.type = postInfo.type;
-        }
-        else {
-            this.sender = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.receiver = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.text = '';
-            this.Created_at = null;
-        }
-    }
-    return Post;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/post.js.map
-
-/***/ }),
-
-/***/ 408:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSearchService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var DoctorSearchService = (function () {
-    function DoctorSearchService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-    }
-    DoctorSearchService.prototype.getSearchDoctor = function (city) {
-        return this.http.get('https://localhost:3000/api/searchDoctor/' + city, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSearchService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], DoctorSearchService);
-    return DoctorSearchService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-search.service.js.map
-
-/***/ }),
-
-/***/ 409:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var LogService = (function () {
-    function LogService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-        this.url = 'https://localhost:3000/api/';
-    }
-    LogService.prototype.addLog = function (log) {
-        return this.http.post(this.url + 'log/', log, this.authentication.getRequestOptions())
-            .map(function (res) { return res; });
-    };
-    LogService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], LogService);
-    return LogService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/log.service.js.map
-
-/***/ }),
-
-/***/ 410:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var MailService = (function () {
-    function MailService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-        this.url = 'https://localhost:3000/api/';
-    }
-    MailService.prototype.sendTestMail = function () {
-        console.log('From mailService : we call the API to send the mail.');
-        return this.http.post(this.url + 'mail/test/', 'var useless', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    MailService.prototype.sendMail = function (to, subject, text) {
-        console.log('From mailService : sending a mail.');
-        return this.http.post(this.url + 'mail/', { to: to, subject: subject, text: text }, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    MailService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], MailService);
-    return MailService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/mail.service.js.map
-
-/***/ }),
-
-/***/ 411:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(96);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var UsersComponent = (function () {
-    function UsersComponent(usersService, router) {
-        this.usersService = usersService;
-        this.router = router;
-        this.users = [];
-        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    }
-    UsersComponent.prototype.ngOnInit = function () {
-        this.loadAllUsers();
-    };
-    UsersComponent.prototype.deleteUser = function (id) {
-        this.usersService.deleteUser(id)
-            .subscribe(function (data) { });
-    };
-    UsersComponent.prototype.deleteAddress = function (id) {
-        this.usersService.deleteAddress(id)
-            .subscribe(function (data) {
-            console.log(data);
-        });
-    };
-    UsersComponent.prototype.buttonDelete = function (user) {
-        this.deleteAddress(user.address._id);
-        this.deleteUser(user._id);
-        this.loadAllUsers();
-    };
-    UsersComponent.prototype.loadAllUsers = function () {
-        var _this = this;
-        this.usersService.getUsers().subscribe(function (users) { _this.users = users; });
-    };
-    UsersComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'users-page',
-            template: __webpack_require__(824),
-            styles: [__webpack_require__(800)],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__["a" /* UsersService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]) === 'function' && _b) || Object])
-    ], UsersComponent);
-    return UsersComponent;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.js.map
-
-/***/ }),
-
-/***/ 486:
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
-/***/ 487:
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 487;
-
-
-/***/ }),
-
-/***/ 488:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(618);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(607);
-
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
-}
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/main.js.map
-
-/***/ }),
-
-/***/ 53:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(14);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var UsersService = (function () {
-    function UsersService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-        this.url = 'https://localhost:3000/api/';
-    }
-    // Get all users from the API
-    UsersService.prototype.getUsers = function () {
-        return this.http.get(this.url + 'users', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getUser = function (id) {
-        return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.deleteUser = function (id) {
-        if (this.authentication.currentUserId() === id) {
-            this.authentication.logout();
-        }
-        return this.http.delete(this.url + 'users/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete user code : " + res); });
-    };
-    UsersService.prototype.deleteAddress = function (id) {
-        return this.http.delete(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return console.log("Users Service : delete address code : " + res); });
-    };
-    UsersService.prototype.getProfile = function () {
-        return this.http.get(this.url + 'profile', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddressById = function (id) {
-        return this.http.get(this.url + 'addresses/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getAddresses = function () {
-        return this.http.get(this.url + 'addresses', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService.prototype.getDoctors = function () {
-        return this.http.get(this.url + 'doctors', this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    UsersService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], UsersService);
-    return UsersService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/users.service.js.map
-
-/***/ }),
-
-/***/ 607:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(386);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(385);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_users__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__post_post_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__(608);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__register_register_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__ = __webpack_require__(604);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__ = __webpack_require__(610);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__ = __webpack_require__(609);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__ = __webpack_require__(613);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__ = __webpack_require__(621);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__ = __webpack_require__(611);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__ = __webpack_require__(409);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__home_home__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__contact_contact__["a" /* ContactComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__about_about__["a" /* AboutComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__users_users__["a" /* UsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__login_login__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__not_found_not_found__["a" /* NotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__medical_file_medical_file_component__["a" /* MedicalFileComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__medical_file_doctor_profile_doctor_profile_component__["a" /* DoctorProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__profile_settings_settings_component__["a" /* SettingsComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__medical_file_calendar_calendar_component__["a" /* CalendarComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__medical_file_reminder_reminder_component__["a" /* ReminderComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__building_space_building_space_component__["a" /* BuildingSpaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__post_post_component__["a" /* PostComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__patient_rdv_google_map_google_map_component__["a" /* GoogleMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__medical_file_posts_posts_component__["a" /* PostsComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_13__app_routing__["a" /* appRouting */],
-                __WEBPACK_IMPORTED_MODULE_18_ng_trim_value_accessor__["a" /* TrimValueAccessorModule */],
-                __WEBPACK_IMPORTED_MODULE_30_angular2_google_maps_core__["AgmCoreModule"].forRoot({
-                    apiKey: 'AIzaSyDVDZy1qXBBu6ctMvyYcSONy3-cs5PjYNU'
-                })
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_4__shared_services_users_service__["a" /* UsersService */],
-                __WEBPACK_IMPORTED_MODULE_15__shared_services_authentication_service__["a" /* AuthenticationService */],
-                __WEBPACK_IMPORTED_MODULE_22__shared_services_medical_file_service__["a" /* MedicalFileService */],
-                __WEBPACK_IMPORTED_MODULE_28__shared_services_doctor_space_service__["a" /* DoctorSpaceService */],
-                __WEBPACK_IMPORTED_MODULE_16__shared_services_treatment_service__["a" /* TreatmentService */],
-                __WEBPACK_IMPORTED_MODULE_37__shared_services_doctor_search_service__["a" /* DoctorSearchService */],
-                __WEBPACK_IMPORTED_MODULE_36__shared_services_rdv_service__["a" /* RdvService */],
-                __WEBPACK_IMPORTED_MODULE_38__shared_services_autorisation_service__["a" /* AutorisationService */],
-                __WEBPACK_IMPORTED_MODULE_39__shared_services_mail_service__["a" /* MailService */],
-                __WEBPACK_IMPORTED_MODULE_40__shared_services_log_service__["a" /* LogService */]
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.module.js.map
-
-/***/ }),
-
-/***/ 608:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(385);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_users__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(388);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__register_register_component__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(386);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__ = __webpack_require__(389);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__ = __webpack_require__(397);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__ = __webpack_require__(394);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__post_post_component__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__patient_rdv_patient_rdv_component__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__doctor_rdv_doctor_rdv_component__ = __webpack_require__(391);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRouting; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_1__home_home__["a" /* HomeComponent */] },
-    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutComponent */] },
-    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_4__contact_contact__["a" /* ContactComponent */] },
-    { path: 'users', component: __WEBPACK_IMPORTED_MODULE_3__users_users__["a" /* UsersComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginComponent */] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_7__register_register_component__["a" /* RegisterComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
-    { path: 'medical-file', component: __WEBPACK_IMPORTED_MODULE_10__medical_file_medical_file_component__["a" /* MedicalFileComponent */] },
-    { path: 'doctor-space', component: __WEBPACK_IMPORTED_MODULE_12__doctor_space_doctor_space_component__["a" /* DoctorSpaceComponent */] },
-    { path: 'current-treatment', component: __WEBPACK_IMPORTED_MODULE_16__medical_file_current_treatment_current_treatment_component__["a" /* CurrentTreatmentComponent */] },
-    { path: 'patient-treatment', component: __WEBPACK_IMPORTED_MODULE_15__doctor_space_patient_treatment_patient_treatment_component__["a" /* PatientTreatmentComponent */] },
-    { path: 'building-space', component: __WEBPACK_IMPORTED_MODULE_13__building_space_building_space_component__["a" /* BuildingSpaceComponent */] },
-    { path: 'organisation-space', component: __WEBPACK_IMPORTED_MODULE_14__organisation_space_organisation_space_component__["a" /* OrganisationSpaceComponent */] },
-    { path: 'post', component: __WEBPACK_IMPORTED_MODULE_17__post_post_component__["a" /* PostComponent */] },
-    { path: 'patient_rdv', component: __WEBPACK_IMPORTED_MODULE_18__patient_rdv_patient_rdv_component__["a" /* PatientRdvComponent */] },
-    { path: 'doctor_rdv', component: __WEBPACK_IMPORTED_MODULE_19__doctor_rdv_doctor_rdv_component__["a" /* DoctorRdvComponent */] },
-    { path: 'logout', component: __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */] },
-    { path: 'settings', component: __WEBPACK_IMPORTED_MODULE_11__profile_settings_settings_component__["a" /* SettingsComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__not_found_not_found__["a" /* NotFoundComponent */] }
-];
-var appRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/app.routing.js.map
-
-/***/ }),
-
-/***/ 609:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CalendarComponent = (function () {
-    function CalendarComponent() {
-    }
-    CalendarComponent.prototype.ngOnInit = function () {
-    };
-    CalendarComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-calendar',
-            template: __webpack_require__(810),
-            styles: [__webpack_require__(787)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CalendarComponent);
-    return CalendarComponent;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/calendar.component.js.map
-
-/***/ }),
-
-/***/ 610:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProfileComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var DoctorProfileComponent = (function () {
-    function DoctorProfileComponent(medicalfile, authentication) {
-        this.medicalfile = medicalfile;
-        this.authentication = authentication;
-        this.image = __webpack_require__(486);
-    }
-    DoctorProfileComponent.prototype.ngOnInit = function () {
-        this.isLogged = this.authentication.isLoggedIn();
-        if (this.isLogged) {
-            this.getPatient();
-        }
-    };
-    DoctorProfileComponent.prototype.getPatient = function () {
-        var _this = this;
-        this.medicalfile.getCurrentPatient().subscribe(function (pat) {
-            _this.patient = new __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__["a" /* Patient */](pat);
-        });
-    };
-    DoctorProfileComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-doctor-profile',
-            template: __webpack_require__(812),
-            styles: [__webpack_require__(789)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], DoctorProfileComponent);
-    return DoctorProfileComponent;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-profile.component.js.map
-
-/***/ }),
-
-/***/ 611:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(83);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostsComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PostsComponent = (function () {
-    function PostsComponent(medicalService) {
-        this.medicalService = medicalService;
-    }
-    PostsComponent.prototype.ngOnInit = function () {
-    };
-    PostsComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-posts',
-            template: __webpack_require__(814),
-            styles: [__webpack_require__(791)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__["a" /* MedicalFileService */]) === 'function' && _a) || Object])
-    ], PostsComponent);
-    return PostsComponent;
-    var _a;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/posts.component.js.map
-
-/***/ }),
-
-/***/ 612:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReminderComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ReminderComponent = (function () {
-    function ReminderComponent() {
-    }
-    ReminderComponent.prototype.ngOnInit = function () {
-    };
-    ReminderComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-reminder',
-            template: __webpack_require__(815),
-            styles: [__webpack_require__(792)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ReminderComponent);
-    return ReminderComponent;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/reminder.component.js.map
-
-/***/ }),
-
-/***/ 613:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__ = __webpack_require__(408);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var GoogleMapComponent = (function () {
-    // coordonate_list =[{'lng': 50.6315,'lat': 3.056, 'display': false,'id':0},{'lng': 50.6315,'lat': 3.156, 'display': false,'id':1}];
-    function GoogleMapComponent(DoctorSearch) {
-        this.DoctorSearch = DoctorSearch;
-        this.lat = 50.6315144;
-        this.lng = 3.056218;
-        this.zoom = 8;
-        this.response = [];
-    }
-    GoogleMapComponent.prototype.clikedMark = function (id) {
-        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
-            var temp = _a[_i];
-            if (temp['_id'] == id) {
-                temp['isDisplay'] = true;
-            }
-            else
-                temp['isDisplay'] = false;
-        }
-    };
-    GoogleMapComponent.prototype.rechercheClick = function (searchText) {
-        if (searchText != '') {
-            this.response = [];
-            this.searchMedecins(searchText);
-            console.log(searchText);
-        }
-        else {
-            console.log('ya rien');
-        }
-    };
-    GoogleMapComponent.prototype.mapClick = function () {
-        for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
-            var temp = _a[_i];
-            temp['isDisplay'] = false;
-        }
-    };
-    GoogleMapComponent.prototype.searchMedecins = function (searchText) {
-        var _this = this;
-        this.DoctorSearch.getSearchDoctor(searchText).subscribe(function (pat) {
-            console.log(pat);
-            for (var i = 0; i < pat.length; i++) {
-                if (pat[i].address != null) {
-                    pat[i].isDisplay = false;
-                    _this.response.push(pat[i]);
-                }
-            }
-            _this.reSetCenter();
-        });
-    };
-    GoogleMapComponent.prototype.reSetCenter = function () {
-        var _this = this;
-        if (this.response.length != 0) {
-            this.zoom = 8;
-            var sumLng = 0;
-            var sumLat = 0;
-            for (var _i = 0, _a = this.response; _i < _a.length; _i++) {
-                var temp = _a[_i];
-                sumLng += temp['address'].longitude;
-                sumLat += temp['address'].latitude;
-            }
-            this.lng = sumLng / this.response.length + 0.1;
-            this.lat = sumLat / this.response.length + 0.1;
-            console.log(this.lng);
-            console.log(this.lat);
-            setTimeout(function () {
-                _this.zoom = 10;
-                _this.lng = _this.lng - 0.1;
-                _this.lat = _this.lat - 0.1;
-            }, 100);
-        }
-        else {
-            console.log(this.lng);
-            console.log(this.lat);
-        }
-    };
-    GoogleMapComponent.prototype.zoomChange = function () {
-        console.log("1111");
-    };
-    GoogleMapComponent.prototype.ngOnInit = function () {
-    };
-    GoogleMapComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-google-map',
-            template: __webpack_require__(818),
-            styles: [__webpack_require__(794)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_search_service__["a" /* DoctorSearchService */]) === 'function' && _a) || Object])
-    ], GoogleMapComponent);
-    return GoogleMapComponent;
-    var _a;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/google-map.component.js.map
-
-/***/ }),
-
 /***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(616);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Building; });
 
@@ -3544,7 +3541,7 @@ module.exports = ".agm-map {\n  height: 300px;\n}\nh3{\n  color:dimgrey;\n  font
 /***/ 795:
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n#flex_display{\n  padding: 0;\n  list-style-type: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n\n#listDoctors ul {\n  padding: 0;\n  list-style-type: none;\n}\n#listDoctors ul li{\n  width: 200px;\n  height:100px;\n  border-radius: 5px;\n  background-color: dodgerblue;\n  text-align:center;\n  line-height: 100px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight: bold;\n}\n\n@-webkit-keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n@keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n#listDoctors ul li:hover, .timeRdv:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.01);\n          transform: scale(1.01);\n  box-shadow: 0 0 6px grey;\n}\n\n#planningDoctor, #descriptionDoctor{\n  width: 800px;\n  background-color: rgb(230,230,230);\n  border-radius: 5px;\n  box-shadow: 0 0 6px rgb(100,100,100);\n  border:1px solid rgb(200,200,200);\n  margin-bottom:20px;\n}\n#details{\n  margin-left: 10px;\n}\n.planningDay{\n  display: inline-block;\n  margin-left: 5px;\n  vertical-align: top;\n}\n.timeRdv{\n  background-color: rgb(70,70,70);\n  border-radius: 5px;\n  color: white;\n  font-weight: bold;\n  margin-bottom:5px;\n  cursor: pointer;\n}\n.titleDay{\n  width: 80px;\n  font-size: 0.95em;\n  padding: 5px;\n  background-color: dodgerblue;\n  box-shadow: 0 0 2px grey;\n  border-radius:2px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight:600;\n}\n\n.buttonDay{\n  cursor: pointer;\n  background-color: #1e9055;\n}\n.buttonDay:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.05);\n          transform: scale(1.05);\n  box-shadow: 0 0 6px grey;\n}\n\n#reservationBox{\n  position: fixed;\n  top:50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  left:0; right:0; margin:auto;\n  padding: 20px;\n  text-align: center;\n  background-color: white;\n  border-radius: 5px;\n  border: 1px solid black;\n  box-shadow: 0 0 6px black;\n  z-index: 6;\n  width: 400px;\n}\n#blackBack{\n  position: fixed;\n  top:0; left:0;\n  width: 100%;\n  height:100vh;\n  z-index: 5;\n  background-color: rgba(50,50,50,0.8);\n}\n"
+module.exports = ".jumbotron {\n  background-color: white;\n  color: black;\n}\n#flex_display{\n  padding: 0;\n  list-style-type: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n\n#listDoctors ul {\n  padding: 0;\n  list-style-type: none;\n}\n#listDoctors ul li{\n  width: 200px;\n  height:100px;\n  border-radius: 5px;\n  background-color: dodgerblue;\n  text-align:center;\n  line-height: 100px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight: bold;\n  cursor: pointer;\n}\n\n@-webkit-keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n@keyframes zoom{\n  from{\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    box-shadow: none;\n  }\n  to{\n    -webkit-transform: scale(1.01);\n            transform: scale(1.01);\n    box-shadow: 0 0 6px grey;\n  }\n}\n\n#listDoctors ul li:hover, .timeRdv:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.01);\n          transform: scale(1.01);\n  box-shadow: 0 0 6px grey;\n}\n\n#planningDoctor, #descriptionDoctor{\n  width: 800px;\n  background-color: rgb(230,230,230);\n  border-radius: 5px;\n  box-shadow: 0 0 6px rgb(100,100,100);\n  border:1px solid rgb(200,200,200);\n  margin-bottom:20px;\n}\n#details{\n  margin-left: 10px;\n}\n.planningDay{\n  display: inline-block;\n  margin-left: 5px;\n  vertical-align: top;\n}\n.timeRdv{\n  background-color: rgb(70,70,70);\n  border-radius: 5px;\n  color: white;\n  font-weight: bold;\n  margin-bottom:5px;\n  cursor: pointer;\n}\n.titleDay{\n  width: 80px;\n  font-size: 0.95em;\n  padding: 5px;\n  background-color: dodgerblue;\n  box-shadow: 0 0 2px grey;\n  border-radius:2px;\n  margin-bottom: 10px;\n  color:white;\n  font-weight:600;\n}\n\n.buttonDay{\n  cursor: pointer;\n  background-color: #1e9055;\n}\n.buttonDay:hover{\n  -webkit-animation-name: zoom;\n          animation-name: zoom;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n  -webkit-transform: scale(1.05);\n          transform: scale(1.05);\n  box-shadow: 0 0 6px grey;\n}\n\n#reservationBox{\n  position: fixed;\n  top:50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  left:0; right:0; margin:auto;\n  padding: 20px;\n  text-align: center;\n  background-color: white;\n  border-radius: 5px;\n  border: 1px solid black;\n  box-shadow: 0 0 6px black;\n  z-index: 6;\n  width: 400px;\n}\n#blackBack{\n  position: fixed;\n  top:0; left:0;\n  width: 100%;\n  height:100vh;\n  z-index: 5;\n  background-color: rgba(50,50,50,0.8);\n}\n"
 
 /***/ }),
 
@@ -3593,7 +3590,7 @@ module.exports = "<!-- Container (About Section) -->\n<div id=\"about\" class=\"
 /***/ 802:
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n        <ul class=\"nav navbar-nav navbar-right\">\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"medical-file\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-folder-open\"></i> Mon dossier</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace médecin</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\n        <li><a href=\"#about\">A propos</a></li>\n        <li><a href=\"#contact\">Contact</a></li>\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\n            <li>\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\n                <span class=\"caret\"></span></button>\n              <ul class=\"dropdown-menu\">\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\n              </ul>\n              </div>\n            </li>\n\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\n      </ul>\n      </div>\n\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\n\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\n            <!--<span class=\"caret\"></span></button>-->\n          <!--<ul class=\"dropdown-menu\">-->\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\n          <!--</ul>-->\n        <!--</div>-->\n\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\n      <!--</ul>-->\n    </div>\n  </nav>\n</header>\n\n<main>\n  <router-outlet></router-outlet>\n</main>\n\n<footer class=\"container-fluid text-center\">\n  <a href=\"#myPage\" title=\"To Top\">\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\n  </a>\n  <p>CALM Site Copyrights</p>\n</footer>\n"
+module.exports = "<header>\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a routerLink=\"/\" class=\"navbar-brand\"><i class=\"glyphicon glyphicon-apple\"></i>CALM</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n        <ul class=\"nav navbar-nav navbar-right\">\n\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"current-treatment\"\n               routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">\n          <i class=\"glyphicon glyphicon-folder-open\"></i> Mes traitements\n        </a></li>\n\n        <li><a *ngIf=\"isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')\" routerLink=\"patient_rdv\"\n               routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">\n          Prendre rendez-vous\n        </a></li>\n\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'medecin')\" routerLink=\"doctor-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace pro</a></li>\n\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'building')\" routerLink=\"building-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace infrastructure</a></li>\n\n        <li><a *ngIf=\"isLogged && (user.role[1] == 'organisation')\" routerLink=\"organisation-space\" routerLinkActive=\"active\"\n               [routerLinkActiveOptions]=\"{exact:true}\"><i class=\"glyphicon glyphicon-briefcase\"></i> Espace organisation</a></li>\n\n        <li><a href=\"#about\">A propos</a></li>\n\n        <li><a href=\"#contact\">Contact</a></li>\n\n        <li><a routerLink=\"users\" routerLinkActive=\"active\">Utilisateurs</a></li>\n\n        <!--<li><a href=\"https://localhost:3000/api\">API</a></li>-->\n            <li>\n              <div *ngIf=\"isLogged\" class=\"dropdown\">\n              <button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}\n                <span class=\"caret\"></span></button>\n              <ul class=\"dropdown-menu\">\n                <li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>\n                <li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>\n                <li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>\n              </ul>\n              </div>\n            </li>\n\n          <li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>\n          <li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">\n            <span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>\n      </ul>\n      </div>\n\n      <!--<ul class=\"nav navbar-nav navbar-right\">-->\n\n        <!--<div *ngIf=\"isLogged\" class=\"dropdown\">-->\n          <!--<button class=\"btn btn-default btn-lg\" type=\"button\" data-toggle=\"dropdown\" *ngIf=\"user\">{{user.first_name}}-->\n            <!--<span class=\"caret\"></span></button>-->\n          <!--<ul class=\"dropdown-menu\">-->\n            <!--<li><a routerLink=\"profile\" routerLinkActive=\"active\"> Profil</a></li>-->\n            <!--<li><a routerLink=\"settings\" routerLinkActive=\"active\"> Paramètres</a></li>-->\n            <!--<li><a routerLinkActive=\"active\" (click)=\"logout()\"> Deconnexion</a></li>-->\n          <!--</ul>-->\n        <!--</div>-->\n\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"register\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-user\"></span> Inscription</a></li>-->\n        <!--<li><a *ngIf=\"!isLogged\" routerLink=\"login\" routerLinkActive=\"active\">-->\n          <!--<span class=\"glyphicon glyphicon-log-in\"></span> Connexion</a></li>-->\n      <!--</ul>-->\n    </div>\n  </nav>\n</header>\n\n<main>\n  <router-outlet></router-outlet>\n</main>\n\n<footer class=\"container-fluid text-center\">\n  <a href=\"#myPage\" title=\"To Top\">\n    <span class=\"glyphicon glyphicon-chevron-up\"></span>\n  </a>\n  <p>CALM Site Copyrights</p>\n</footer>\n"
 
 /***/ }),
 
@@ -3614,7 +3611,7 @@ module.exports = "<!-- Container (Contact Section) -->\n<div id=\"contact\" clas
 /***/ 805:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\" class=\"container\">\n    <div class=\"row\" *ngFor=\"let patient of patients\">\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\n        <!--<h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>-->\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\n\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\n        <a type=\"button\" [routerLink]=\"['/patient-treatment' , {'id' : patient.user_id._id}]\">Traitement</a>\n      </div>\n    </div>\n\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\n      <div class=\"container\">\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"\n                [(ngModel)]=\"post.text\"></textarea><br>\n        <div class=\"row\">\n          <div class=\"col-sm-12 form-group\">\n            <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n          </div>\n        </div>\n      </div>\n    </form>\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>\n\n  <div *ngIf=\"isLogged\" class=\"container\">\n\n    <a type=\"button\" [routerLink]=\"['/doctor_rdv']\">Gérer mes disponibilités</a><br/>\n\n    <div class=\"row\" *ngFor=\"let patient of patients\">\n      <div class=\"card card-block\" *ngIf=\"patient.general_doctor\">\n        <!--Trick to display only the patients from the current doctor. Should NOT be made this way.-->\n        <!--<h4 class=\"card-title\">{{ patient.user_id.first_name}} {{patient.user_id.last_name}}</h4>-->\n        <p class=\"card-text\">{{patient.user_id.email}}</p>\n\n        <a class=\"btn btn-default btn-lg\" (click)=\"change_submit(patient)\">Envoyer un message</a>\n        <a type=\"button\" [routerLink]=\"['/patient-treatment' , {'id' : patient.user_id._id}]\">Traitement</a>\n      </div>\n    </div>\n\n    <form (ngSubmit)=\"send_post()\" *ngIf=\"submitted\" #form=\"ngForm\" role=\"form\">\n      <p><br><br>Laissez votre message pour {{patient_selected.user_id.first_name}}</p>\n      <div class=\"container\">\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Commentaire\" rows=\"5\"\n                [(ngModel)]=\"post.text\"></textarea><br>\n        <div class=\"row\">\n          <div class=\"col-sm-12 form-group\">\n            <button class=\"btn btn-default pull-right\" type=\"submit\">Envoyer</button>\n          </div>\n        </div>\n      </div>\n    </form>\n  </div>\n\n  <div *ngIf=\"!isLogged\">\n    <h1>Accès non autorisé, veuillez vous connecter pour accéder à cette page !</h1>\n  </div>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -3763,7 +3760,7 @@ var Doctor = (function () {
 /***/ 820:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron\">\n  <div *ngIf=\"isLogged\">\n    <!-- details -->\n    <div id=\"messagerie\" *ngIf=\"isMessagerieOpen\">\n      <h2>Messagerie</h2>\n      <button (click)=\"minimizeMessagerie()\">Minimize messagerie</button>\n      <ul id=\"list_users\">\n        <li *ngFor=\"let user of usersPost\" (click)=\"openMessenger(user)\">\n          {{user.first_name}} {{user.last_name}}\n        </li>\n      </ul>\n    </div>\n\n    <div id=\"ouvreMessagerie\" (click)=\"openMessagerie()\" *ngIf=\"!isMessagerieOpen\">\n      Rétablir messagerie\n    </div>\n\n    <div *ngIf=\"messengerBox['display'] == 'True'\" id=\"message\">\n      <h2>{{messengerBox['name']}}  <button (click)=\"deleteMessageBox()\">X</button></h2>\n      <ul>\n        <li *ngFor=\"let post of messengerListPosts\">\n          <div *ngIf=\"post.sender==me._id\" style=\"left: 19%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n          <div *ngIf=\"!(post.sender==me._id)\" style=\"left: 1%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n        </li>\n      </ul>\n      <div id=\"inputMessage\">\n        <input type=\"text\" name=\"newPost\" placeholder=\"Nouveau message\" id=\"newPost\" [(ngModel)]=\"newPostText\"/>\n        <input type=\"submit\" value=\"Envoyer\" id=\"sendPost\" (click)=\"sendPost()\"/>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n\n"
+module.exports = " <div *ngIf=\"isLogged\">\n    <!-- details -->\n    <div id=\"messagerie\" *ngIf=\"isMessagerieOpen\">\n      <h2>Messagerie</h2>\n      <button (click)=\"minimizeMessagerie()\">Minimize messagerie</button>\n      <ul id=\"list_users\">\n        <li *ngFor=\"let user of usersPost\" (click)=\"openMessenger(user)\">\n          {{user.first_name}} {{user.last_name}}\n        </li>\n      </ul>\n    </div>\n\n    <div id=\"ouvreMessagerie\" (click)=\"openMessagerie()\" *ngIf=\"!isMessagerieOpen\">\n      Rétablir messagerie\n    </div>\n\n    <div *ngIf=\"messengerBox['display'] == 'True'\" id=\"message\">\n      <h2>{{messengerBox['name']}}  <button (click)=\"deleteMessageBox()\">X</button></h2>\n      <ul>\n        <li *ngFor=\"let post of messengerListPosts\">\n          <div *ngIf=\"post.sender==me._id\" style=\"left: 19%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n          <div *ngIf=\"!(post.sender==me._id)\" style=\"left: 1%;\">{{post.text}}<br/>\n            à {{post.Created_at}}\n          </div>\n        </li>\n      </ul>\n      <div id=\"inputMessage\">\n        <input type=\"text\" name=\"newPost\" placeholder=\"Nouveau message\" id=\"newPost\" [(ngModel)]=\"newPostText\"/>\n        <input type=\"submit\" value=\"Envoyer\" id=\"sendPost\" (click)=\"sendPost()\"/>\n      </div>\n    </div>\n </div>\n\n\n\n\n\n"
 
 /***/ }),
 
