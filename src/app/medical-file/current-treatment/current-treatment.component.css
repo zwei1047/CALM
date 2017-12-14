@@ -10,3 +10,12 @@
   background-color: white;
   color: black;
 }
+
+@media (min-width: 768px) {
+  .modal-xl {
+    top: 15%;
+    width: 90%;
+    max-width:1200px;
+  }
+}
+
