@@ -133,7 +133,7 @@
             <div *ngIf="treatmentInfo!== undefined">
 
               <h2>{{treatmentInfo.denomination}}</h2>
-              <div *ngIf="treatmentInfo.presentation?.length > 0">
+              <div *ngIf="treatmentInfo.presentations?.length > 0">
                 <label *ngIf="treatmentInfo.presentations[0].prix === null">Prix : (libre)<br/></label>
                 <label *ngIf="treatmentInfo.presentations[0].prix !== null">Prix :
                   {{treatmentInfo.presentations[0].prix}} €<br/></label>
