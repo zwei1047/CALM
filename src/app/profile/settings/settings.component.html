@@ -1,5 +1,4 @@
 <div class="jumbotron text-center">
-
   <app-post></app-post>
 
   <div *ngIf="isLogged">
@@ -16,20 +15,21 @@
       <h3>Gestion des autorisations</h3>
       <button (click)="openAddAutorisation()">Ajouter</button>
       <div *ngIf="addAutorisationForm['show']">
-          <!-- system de recherche d'un utilisateur a mettre en place -->
-          <input type="email" placeholder="Adresse email de l'utilisateur" [(ngModel)]="addAutorisationForm['email']" required/><br/>
-          <label for="subject">Element concerné par l'aurisation :</label><br/>
-          <select name="subject" id="subject" [(ngModel)]="addAutorisationForm['subject']">
-            <option value="POST" selected>Message</option>
-            <option value="DOSSIER">Accès dossier médical</option>
-            <option value="RDV" >Prise de rendez-vous</option>
-          </select><br/>
-          <label for="type">Type d'autorisation : </label><br/>
-          <select id="type" name="type" [(ngModel)]="addAutorisationForm['type']">
-            <option value="READ" selected>Lecture</option>
-            <option value="READ_WRITE">Lecture & Modification</option>
-          </select><br/>
-          <button (click)="addNewAutorisation()">Ajouter</button>
+        <!-- system de recherche d'un utilisateur a mettre en place -->
+        <input type="email" placeholder="Adresse email de l'utilisateur" [(ngModel)]="addAutorisationForm['email']"
+               required/><br/>
+        <label for="subject">Element concerné par l'aurisation :</label><br/>
+        <select name="subject" id="subject" [(ngModel)]="addAutorisationForm['subject']">
+          <option value="POST" selected>Message</option>
+          <option value="DOSSIER">Accès dossier médical</option>
+          <option value="RDV">Prise de rendez-vous</option>
+        </select><br/>
+        <label for="type">Type d'autorisation : </label><br/>
+        <select id="type" name="type" [(ngModel)]="addAutorisationForm['type']">
+          <option value="READ" selected>Lecture</option>
+          <option value="READ_WRITE">Lecture & Modification</option>
+        </select><br/>
+        <button (click)="addNewAutorisation()">Ajouter</button>
       </div>
       <table>
         <tr>
@@ -39,15 +39,15 @@
           <td>Autorisations</td>
           <td>Gestion</td>
         </tr>
-          <tr *ngFor="let autorisation of autorisations">
-            <td>{{autorisation.observer.role[1]}}</td>
-            <td>{{autorisation.observer.first_name}}</td>
-            <td>{{autorisation.observer.last_name}}</td>
-            <td>{{autorisation.subject}} => {{autorisation.type}}</td>
-            <td>
-              <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
-            </td>
-          </tr>
+        <tr *ngFor="let autorisation of autorisations">
+          <td>{{autorisation.observer.role[1]}}</td>
+          <td>{{autorisation.observer.first_name}}</td>
+          <td>{{autorisation.observer.last_name}}</td>
+          <td>{{autorisation.subject}} => {{autorisation.type}}</td>
+          <td>
+            <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
+          </td>
+        </tr>
       </table>
 
       <button (click)="sendTestMail()">Send test mail</button>

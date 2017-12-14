@@ -47,6 +47,19 @@ module.exports = function(passport) {
       });
   });
 
+//get the demande of autorisation
+  router.get('/autorisation/demand/:id', auth, function (req, res, next) {
+    Autorisation.find({observer: req.params.id, confirm: false})
+      .populate('user')
+      .exec(function (err, docs) {
+        if(!err && docs) {
+          res.json(docs);
+        } else {
+          res.json(err);
+        }
+      });
+  });
+
   //add an autorisation
   router.put('/autorisation/', auth, function (req, res, next){
     var autorisation = new Autorisation();
@@ -74,6 +87,31 @@ module.exports = function(passport) {
       } else {
         res.sendStatus(200);
       }
+    });
+  });
+
+
+  router.get('/autorisation/refuse/:demand_id', auth, function (req, res, next){
+    Autorisation.update({
+      _id: req.params.demand_id
+    },{
+      confirm: 'True',
+      valid: 'False'
+    }).exec(function (err, docs) {
+      console.log("erro info" + err);
+      res.json(docs);
+    });
+  });
+
+  router.get('/autorisation/accept/:demand_id', auth, function (req, res, next){
+    Autorisation.update({
+      _id: req.params.demand_id
+    },{
+      confirm: 'True',
+      valid: 'True'
+    }).exec(function (err, docs) {
+      console.log("erro info" + err);
+      res.json(docs);
     });
   });
 

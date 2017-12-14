@@ -11,7 +11,7 @@ import {JsonpModule} from '@angular/http';
 export class MedicalFileComponent implements OnInit {
 
   constructor(private authentication: AuthenticationService ) { }
-  isLogged : boolean;
+  isLogged: boolean;
 
   ngOnInit() {
     this.isLogged = this.authentication.isLoggedIn();

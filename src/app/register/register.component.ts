@@ -12,6 +12,10 @@ import {Address} from '../shared/models/address';
 export class RegisterComponent implements OnInit {
   user = new User(null);
   submitted: boolean = true;
+
+  lat: number = 50.6315144;
+  lng: number = 3.056218;
+  zoom: number = 8;
   //private base64textString:string;
 
   constructor(private router: Router, private authentication: AuthenticationService) { }

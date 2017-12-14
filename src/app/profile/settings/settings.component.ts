@@ -11,6 +11,7 @@ import {MailService} from "../../shared/services/mail.service";
 import {Log} from "../../shared/models/log";
 import {Http} from "@angular/http";
 
+
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -28,6 +29,7 @@ export class SettingsComponent implements OnInit {
   constructor(private authentication: AuthenticationService, private usersService: UsersService,
     private medicalService: MedicalFileService, private autorisationService: AutorisationService,
               private mailService: MailService) { }
+
 
 
   ngOnInit() {
@@ -55,6 +57,7 @@ export class SettingsComponent implements OnInit {
         console.log(resp);
       });
   }
+
 
   public getInformations() {
     this.usersService.getProfile()
@@ -110,6 +113,7 @@ export class SettingsComponent implements OnInit {
               }
               // if autorisation is about post, we add the inverse of this
               if (this.newAutorisation.subject === 'POST') {
+                console.log('inverse user et observer???');
                 this.newAutorisation.observer = this.user;
                 this.newAutorisation.user = new User(observer);
                 this.autorisationService.addAutorisation(this.newAutorisation)

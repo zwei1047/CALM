@@ -31,9 +31,24 @@ export class AutorisationService {
     return this.http.get(this.url + 'autorisation/' + user_id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
+
+  getAutorisationDemands(user_id: string) {
+    return this.http.get(this.url + 'autorisation/demand/' + user_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
   deleteAutorisation(id: string) {
     return this.http.delete(this.url + 'autorisation/' + id, this.authentication.getRequestOptions())
       .map(res => res);
+  }
+
+  acceptAutorisation(demand_id: string) {
+    return this.http.get(this.url + 'autorisation/accept/' + demand_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
+
+  refuseAutorisation(demand_id: string) {
+    return this.http.get(this.url + 'autorisation/refuse/' + demand_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
   }
 
 }
