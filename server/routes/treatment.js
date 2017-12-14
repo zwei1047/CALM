@@ -2,6 +2,7 @@
  * Created by Neko on 21/11/2017
  */
 
+
 module.exports = function (passport) {
   const express = require('express');
   const router = express.Router();
@@ -10,9 +11,41 @@ module.exports = function (passport) {
     secret: 'CALM_SECRET',
     userProperty: 'payload'
   });
-
+  var Reminder = require('../models/reminder');
   var Treatment = require('../models/treatment');
+  function createFirstRappel(treatment) {
+    var start = new Date();
+    start = start.toString();
+    console.log(start);
+    console.log(treatment);
+    start = new Date(start);
+    var rappel = {
+      name: '',
+      quantity: '',
+      takingState: '',
+      frequence: '',
+      typeFrequence: '',
+      info: ''
+    };
+    rappel.name = treatment.name;
+    rappel.quantity = treatment.quantity;
+    rappel.takingState = treatment.takingState;
+    rappel.frequence = treatment.frequence;
+    rappel.typeFrequence = treatment.typeFrequence;
+    rappel.info = treatment.info;
+    start = start.getDate() + "-" + (start.getMonth() + 1) + "-" + start.getFullYear();
+    console.log(rappel);
+    new Reminder({
+      userId: treatment.userId,
+      rappel: rappel,
+      traitementId: treatment._id,
+      date: start,
+      expire: false
+    }).save().then(function (content) {
+      res.json(treatment);
+    });
 
+  }
   //get Treatment for a specific patient
   router.get('/treatment/:id', auth, function (req, res) {
     Treatment
@@ -40,6 +73,7 @@ module.exports = function (passport) {
     treatment.save(function (err, response) {
       if (err) res.json(err);
       res.json(response);
+      createFirstRappel(response);
     });
   });
 

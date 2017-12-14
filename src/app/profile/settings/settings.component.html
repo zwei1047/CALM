@@ -14,6 +14,9 @@
 
       <h3>Gestion des autorisations</h3>
       <button (click)="openAddAutorisation()">Ajouter</button>
+      <button><a  routerLink="gestion-observer" routerLinkActive="active">Gestion Observer</a></button>
+      <button><a  routerLink="gestion-supervisor" routerLinkActive="active">Gestion Supervisor</a></button>
+      <br />
       <div *ngIf="addAutorisationForm['show']">
         <!-- system de recherche d'un utilisateur a mettre en place -->
         <input type="email" placeholder="Adresse email de l'utilisateur" [(ngModel)]="addAutorisationForm['email']"
@@ -31,24 +34,7 @@
         </select><br/>
         <button (click)="addNewAutorisation()">Ajouter</button>
       </div>
-      <table>
-        <tr>
-          <td>Role</td>
-          <td>Prénom</td>
-          <td>Nom</td>
-          <td>Autorisations</td>
-          <td>Gestion</td>
-        </tr>
-        <tr *ngFor="let autorisation of autorisations">
-          <td>{{autorisation.observer.role[1]}}</td>
-          <td>{{autorisation.observer.first_name}}</td>
-          <td>{{autorisation.observer.last_name}}</td>
-          <td>{{autorisation.subject}} => {{autorisation.type}}</td>
-          <td>
-            <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
-          </td>
-        </tr>
-      </table>
+
 
       <button (click)="sendTestMail()">Send test mail</button>
 

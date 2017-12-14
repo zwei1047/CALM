@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from "../../../shared/services/authentication.service";
-import {AutorisationService} from "../../../shared/services/autorisation.service";
 import {User} from "../../../shared/models/user";
+import {AutorisationService} from "../../../shared/services/autorisation.service";
 import {UsersService} from "../../../shared/services/users.service";
 
 @Component({
-  selector: 'app-gestion-observer',
-  templateUrl: './gestion-observer.component.html',
-  styleUrls: ['./gestion-observer.component.css']
+  selector: 'app-gestion-supervisor',
+  templateUrl: './gestion-supervisor.component.html',
+  styleUrls: ['./gestion-supervisor.component.css']
 })
-export class GestionObserverComponent implements OnInit {
+export class GestionSupervisorComponent implements OnInit {
 
   autorisations: any[] = [];
-  autorisationValide: any[] = [];
   user: User;
   isLogged: boolean; // if user is logged or not
   constructor(private authentication: AuthenticationService, private autorisationService: AutorisationService, private usersService: UsersService) { }
@@ -29,19 +28,14 @@ export class GestionObserverComponent implements OnInit {
     this.usersService.getProfile()
       .subscribe(user => {
         this.user = new User(user);
-        this.getObserver(this.user._id);
+        this.getSupervisor(this.user._id);
       });
   }
-  getObserver(userId: string) {
-    this.autorisationService.getObserver(userId)
+  getSupervisor(userId: string) {
+    this.autorisationService.getSupervisor(userId)
       .subscribe(autorisations => {
         this.autorisations = autorisations ;
         console.log(this.autorisations);
-        for( var i = 0; i < this.autorisations.length; i++) {
-          if (this.autorisations[i].confirm && this.autorisations[i].valide) {
-            this.autorisationValide.push(this.autorisations[i]);
-          }
-        }
       });
   }
 }

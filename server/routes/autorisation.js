@@ -96,7 +96,7 @@ module.exports = function(passport) {
       _id: req.params.demand_id
     },{
       confirm: 'True',
-      valid: 'False'
+      valide: 'False'
     }).exec(function (err, docs) {
       console.log("erro info" + err);
       res.json(docs);
@@ -108,12 +108,33 @@ module.exports = function(passport) {
       _id: req.params.demand_id
     },{
       confirm: 'True',
-      valid: 'True'
+      valide: 'True'
     }).exec(function (err, docs) {
       console.log("erro info" + err);
       res.json(docs);
     });
   });
+  router.get('/autorisation/getObserver/:user_id', auth, function (req, res, next){
+    console.log(req.params.user_id);
+    Autorisation.find({
+      user: req.params.user_id
+    }).populate('observer')
+     .exec(function (err, docs) {
+      console.log("erro info" + err);
+      res.json(docs);
+    });
+  });
+  router.get('/autorisation/getSupervisor/:user_id', auth, function (req, res, next){
+    console.log(req.params.user_id);
+    Autorisation.find({
+      observer: req.params.user_id
+    }).populate('user')
+      .exec(function (err, docs) {
+        console.log("erro info" + err);
+        res.json(docs);
+      });
+  });
+
 
 
   return router;

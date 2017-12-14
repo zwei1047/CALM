@@ -44,6 +44,8 @@ import {ReminderService} from "./shared/services/reminder.service";
 import {DialogComponent} from "./medical-file/reminder/dialog.component";
 import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
 import {AlertInfoComponent} from "./alert/alert-info.component";
+import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
+import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import {AlertInfoComponent} from "./alert/alert-info.component";
     PostsComponent,
     DialogComponent,
     DialogAnchorDirective,
-    AlertInfoComponent
+    AlertInfoComponent,
+    GestionSupervisorComponent,
+    GestionObserverComponent
   ],
   imports: [
     BrowserModule,

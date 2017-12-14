@@ -19,7 +19,7 @@ module.exports = function (passport) {
   var Patient = require('../models/patient');
   var Address = require('../models/address');
   var Post = require('../models/post');
-  var Reminder = require('../models/reminder')
+  var Reminder = require('../models/reminder');
 
   /* GET api listing. */
   router.get('/', function (req, res) {
@@ -253,6 +253,7 @@ module.exports = function (passport) {
     });
 
   });
+
 
   router.put('/createFirstRappel/', auth, function (req, res, next) {
     var treatment = req.body;

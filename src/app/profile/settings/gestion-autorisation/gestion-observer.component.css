@@ -1,0 +1,25 @@
+.jumbotron {
+  background-color: white;
+  color: black;
+}
+.waitConfirm {
+  background-color: yellow;
+}
+.signalColorRefuse {
+  display: inline-block;
+  width:100px;
+  height:30px;
+  background-color: red;
+}
+.signalColorValid {
+  display: inline-block;
+  width:100px;
+  height:30px;
+  background-color: green;
+}
+.signalColorWait {
+  display: inline-block;
+  width:100px;
+  height:30px;
+  background-color: yellow;
+}

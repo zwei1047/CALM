@@ -1,0 +1,24 @@
+<div class="jumbotron text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">Gestion supervisor Panel</div>
+    <table border="1" class="table">
+      <tr>
+        <td>Role</td>
+        <td>Prénom</td>
+        <td>Nom</td>
+        <td>Autorisations</td>
+        <td>Gestion</td>
+      </tr>
+      <tr *ngFor="let autorisation of autorisations" >
+        <td>{{autorisation.user.role[1]}}</td>
+        <td>{{autorisation.user.first_name}}</td>
+        <td>{{autorisation.user.last_name}}</td>
+        <td>{{autorisation.subject}} => {{autorisation.type}}</td>
+        <td>
+          <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
