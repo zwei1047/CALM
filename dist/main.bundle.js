@@ -2198,7 +2198,7 @@ var RegisterComponent = (function () {
             _this.submitted = true;
             _this.authentication.saveToken(res.token);
             // envoi mail de confirmation
-            var confText = "Bonjour, \nVotre inscription a bien été prise en compte, nous vous remercions de votre confiance.\n" +
+            var confText = "Bonjour, \n\nVotre inscription a bien été prise en compte, nous vous remercions de votre confiance.\n" +
                 "Prenez votre premier rendez-vous grâce à CALM ! \n\n Cordialement, \n\n CALM";
             _this.mailService.sendMail(_this.user.email, "[CALM] Confirmation d'inscription", confText)
                 .subscribe(function (resp) {
