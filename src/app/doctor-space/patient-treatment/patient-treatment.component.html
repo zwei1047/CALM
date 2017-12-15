@@ -120,8 +120,7 @@
       </div>
     </div>
 
-
-    <!-- Modal -->
+    
     <div id="myModalInfo" class="modal fade" role="dialog">
       <div class="modal-dialog modal-xl">
 
@@ -207,11 +206,20 @@
                       <div *ngIf="presentation.agrementCollectivites == true">
                         Cette présentation est agréée aux collectivités <br/>
                       </div>
-                      <b>Prix : {{presentation.prix}} € </b> (taux de remboursement :
-                      {{presentation.tauxRemboursement[0]}}) <br/>
+                      <b *ngIf="presentation.prix != null">Prix : {{presentation.prix}} € </b>
+                      <b *ngIf="presentation.prix == null">Prix libre</b>
+                      -
+                      <span *ngIf="presentation.tauxRemboursement?.length > 0">(taux de remboursement :
+                        {{presentation.tauxRemboursement[0]}})
+                      </span>
+
+                      <span *ngIf="presentation.tauxRemboursement?.length <= 0">
+                        Médicament non-remboursable
+                      </span>
+                      <br/>
                     </div>
                   </div>
-                  <div *ngIf="treatmentInfo.avisSMR?.length <= 0">
+                  <div *ngIf="treatmentInfo.presentations?.length <= 0">
                     <p>Aucune présentation n'est disponible pour ce médicament
                     </p>
                   </div>
@@ -320,6 +328,7 @@
         </div>
       </div>
     </div>
+
 
 </div>
 

@@ -86,4 +86,8 @@ export class CurrentTreatmentComponent implements OnInit {
       );
     }
   };
+
+  redirect(url: string) {
+    window.open(url);
+  }
 }
