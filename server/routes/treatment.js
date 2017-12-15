@@ -78,6 +78,7 @@ module.exports = function (passport) {
   });
 
   router.put('/updateTreatment/:id', auth, function (req, res, next) {
+    console.log("update treatment "+req.params.id);
     Treatment.findByIdAndUpdate(req.params.id, {
       $set: {
         name: req.body.name,
@@ -94,7 +95,32 @@ module.exports = function (passport) {
         res.json(err)
       }
       if (response) {
-        res.json(response);
+        var start1 = new Date();
+        start1 = start1.toString();
+        start1 = new Date(start1);
+        var rappel = {
+          name: '',
+          quantity: '',
+          takingState: '',
+          frequence: '',
+          typeFrequence: '',
+          info: ''
+        };
+        rappel.name = response.name;
+        rappel.quantity = response.quantity;
+        rappel.takingState = response.takingState;
+        rappel.frequence = response.frequence;
+        rappel.typeFrequence = response.typeFrequence;
+        rappel.info = response.info;
+        start1 = start1.getDate() + "-" + (start1.getMonth() + 1) + "-" + start1.getFullYear();
+        Reminder.update({
+          traitementId:req.params.id
+        }, {
+          rappel: rappel
+        }).exec(function (err, docs) {
+          console.log("erro info" + err);
+          res.json(docs);
+        });
       }
     });
   });

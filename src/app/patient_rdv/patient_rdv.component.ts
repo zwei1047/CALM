@@ -78,7 +78,7 @@ export class PatientRdvComponent implements OnInit {
       .subscribe( myPatient => {
         this.doctorService.getDoctorByUserId(this.doctorDetails['id'])
           .subscribe( myDoctor => {
-            consultation.doctor = new Doctor(myDoctor[0]);
+            consultation.doctor = new Doctor(myDoctor[0].user_id);
             consultation.patient = new Patient(myPatient[0]);
             consultation.motif = this.motif;
             consultation.date = new Date(an, mois - 1, jour, heure, minute, 0);
