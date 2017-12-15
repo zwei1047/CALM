@@ -1,6 +1,6 @@
 webpackJsonp([2,4],{
 
-/***/ 1100:
+/***/ 1098:
 /***/ (function(module, exports) {
 
 /*
@@ -253,7 +253,7 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 1106:
+/***/ 1104:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(492);
@@ -270,7 +270,7 @@ module.exports = __webpack_require__(492);
 var content = __webpack_require__(779);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(1100)(content, {});
+var update = __webpack_require__(1098)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -360,5 +360,5 @@ module.exports = function() {
 
 /***/ })
 
-},[1106]);
+},[1104]);
 //# sourceMappingURL=styles.bundle.map

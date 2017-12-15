@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from "../shared/models/user";
 import {Address} from '../shared/models/address';
+import {GooglemapsService} from "../shared/services/googlemaps.service";
 
 @Component({
   selector: 'app-register',
@@ -16,9 +17,11 @@ export class RegisterComponent implements OnInit {
   lat: number = 50.6315144;
   lng: number = 3.056218;
   zoom: number = 8;
+  numberFetchAddressTry: number = 0;
   //private base64textString:string;
 
-  constructor(private router: Router, private authentication: AuthenticationService) { }
+  constructor(private router: Router, private authentication: AuthenticationService,
+              private googlemapsService: GooglemapsService) { }
 
   ngOnInit() {
   }
@@ -40,8 +43,26 @@ export class RegisterComponent implements OnInit {
     this.base64textString= btoa(binaryString);
   }*/
 
+
+  displayAddress() {
+    if (this.numberFetchAddressTry < 8 && this.numberFetchAddressTry > 5) {
+      console.log('fetch the coord of the address');
+      const add = this.user.address.num.toString() + this.user.address.street_address + this.user.address.city;
+      this.googlemapsService.convertAddresstoCode(add)
+        .subscribe( resp => {
+          console.log(resp);
+          console.log(resp.results[0].geometry.location);
+          this.user.address.latitude = resp.results[0].geometry.location.lat;
+          this.user.address.longitude = resp.results[0].geometry.location.lng;
+          // on cree un marker
+          console.log(this.user);
+        });
+    }
+    this.numberFetchAddressTry ++;
+  }
+
   // signin the new user if signup successfully
-  login(email: string, password: string){
+  login(email: string, password: string) {
     this.user.password = password;
     this.user.email = email;
     this.authentication.login(this.user)

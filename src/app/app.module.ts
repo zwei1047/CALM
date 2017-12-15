@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/home";
 import {ContactComponent} from "./contact/contact";
 import {AboutComponent} from "./about/about";
-import {UsersComponent} from "./users/users";
 import {LoginComponent} from "./login/login";
 import {PostComponent} from './post/post.component';
 import {NotFoundComponent} from "./not-found/not-found";
@@ -44,6 +43,7 @@ import {ReminderService} from "./shared/services/reminder.service";
 import {DialogComponent} from "./medical-file/reminder/dialog.component";
 import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
 import {AlertInfoComponent} from "./alert/alert-info.component";
+import {GooglemapsService} from "./shared/services/googlemaps.service";
 
 @NgModule({
   declarations: [
@@ -51,7 +51,6 @@ import {AlertInfoComponent} from "./alert/alert-info.component";
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    UsersComponent,
     LoginComponent,
     NotFoundComponent,
     RegisterComponent,
@@ -96,7 +95,8 @@ import {AlertInfoComponent} from "./alert/alert-info.component";
     MailService,
     LogService,
     ReminderService,
-    AutorisationService
+    AutorisationService,
+    GooglemapsService
   ],
   bootstrap: [AppComponent]
 })
