@@ -4,6 +4,7 @@ import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from "../shared/models/user";
 import {Address} from '../shared/models/address';
 import {GooglemapsService} from "../shared/services/googlemaps.service";
+import {MailService} from "../shared/services/mail.service";
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,8 @@ export class RegisterComponent implements OnInit {
   //private base64textString:string;
 
   constructor(private router: Router, private authentication: AuthenticationService,
-              private googlemapsService: GooglemapsService) { }
+              private googlemapsService: GooglemapsService,
+              private mailService: MailService) { }
 
   ngOnInit() {
   }
@@ -70,10 +72,18 @@ export class RegisterComponent implements OnInit {
         res => {
           this.submitted = true;
           this.authentication.saveToken(res.token);
-          this.router.navigate(['/profile']);
-          location.reload();
-        }
-      );
+
+          // envoi mail de confirmation
+          const confText = "Bonjour, \n\nVotre inscription a bien été prise en compte, nous vous remercions de votre confiance.\n" +
+            "Prenez votre premier rendez-vous grâce à CALM ! \n\n Cordialement, \n\n CALM";
+          this.mailService.sendMail(this.user.email, "[CALM] Confirmation d'inscription", confText)
+            .subscribe( resp => {
+              console.log(resp);
+              this.login(this.user.email, this.user.password);
+              this.router.navigate(['/profile']);
+              location.reload();
+            });
+        });
   }
 
   // create the new user
@@ -85,8 +95,7 @@ export class RegisterComponent implements OnInit {
           this.login(this.user.email, this.user.password);
           this.router.navigate(['/profile']);
           location.reload();
-        }
-      );
+        });
     this.submitted = false;
   }
 }
