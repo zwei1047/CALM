@@ -19,11 +19,13 @@ export class CurrentTreatmentComponent implements OnInit {
   currentUser: User;
   treatments: Treatment[] = [];
   start: Date;
+  searchList: {}[];
+  treatmentInfo: {};
+  interaction: {}[];
 
-  constructor(private http: Http, private treatment: TreatmentService , private usersService: UsersService) {
+  constructor(private http: Http, private treatment: TreatmentService, private usersService: UsersService) {
 
-    //this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    //console.log(this.currentUser);
+
   }
 
   ngOnInit() {
@@ -40,21 +42,48 @@ export class CurrentTreatmentComponent implements OnInit {
       data => {
         this.treatments = data;
         this.treatments.forEach(function (element) {
-          element.start = new Date(element.start);
-          element.end = new Date(element.end);
-        });
+          this.treatment.getTreatmentInfo(element.codeCIS).subscribe(response => {
+              const tmp = JSON.parse(response);
+              if (tmp != null) {
+
+                element.substances = tmp.compositions[0].substancesActives.map(a => a.denominationSubstance);
+              }
+            },
+            error => console.log(error));
+          if (element.start != null) {
+            element.start = new Date(element.start);
+          } else {
+            element.start = new Date();
+          }
+          if (element.end != null) {
+            element.end = new Date(element.end);
+          } else {
+            element.start = new Date();
+          }
+        }.bind(this));
+        this.getInteraction(this.treatments.map(a => a.codeCIS));
       },
       error => console.log(error)
     );
   };
-/*
-  updateUserTreatment() {
-    this.treatment.updateUserTreatment('5a09837f7927e54946f28178', 'test').subscribe(
-      data => {
-        this.treatments = data;
-        console.log(data);
+
+  getTreatmentInfo(treatment: Treatment) {
+    this.treatment.getTreatmentInfo(treatment.codeCIS).subscribe(data => {
+        this.treatmentInfo = JSON.parse(data);
+        console.log(this.treatmentInfo);
       },
-      error => console.log(error)
-    );
-  };*/
+      error => console.log(error));
+  }
+
+  getInteraction(ids: {}[]) {
+    if (ids.length > 0) {
+      this.treatment.getTreatmentInteraction(ids.join('|')).subscribe(
+        data => {
+          this.interaction = JSON.parse(data);
+
+        },
+        error => console.log(error)
+      );
+    }
+  };
 }

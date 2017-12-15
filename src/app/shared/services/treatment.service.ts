@@ -40,13 +40,9 @@ export class TreatmentService {
       .map(res => res.json());
   }
 
-  getRequestOptions() {
-    /*
-    let header: Headers = new Headers();
-    header.append('Access-Control-Request-Method', 'GET');
-    let options = new RequestOptions({headers: header});
-    return options;
-    */
+  getTreatmentInteraction(ids: string): Observable<any> {
+    return this.http.get('https://localhost:3000/api/getMedicInteraction/' + ids, this.authentication.getRequestOptions())
+      .map(res => res.json());
   }
 
 }

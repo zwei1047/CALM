@@ -130,6 +130,12 @@ module.exports = function (passport) {
     //res.json('https://open-medicaments.fr/api/v1/medicaments?query=doliprane');
   });
 
+  router.get('/getMedicInteraction/:ids', auth, function (req, res, next) {
+    var request = require('request');
+    request('https://open-medicaments.fr/api/v1/interactions/?ids='+ req.params.ids, function (error, response, body) {
+      res.json(body);
+    })
+  });
 
 
   return router;
