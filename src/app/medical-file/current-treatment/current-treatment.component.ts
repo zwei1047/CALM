@@ -40,7 +40,6 @@ export class CurrentTreatmentComponent implements OnInit {
   getMedicamentList() {
     this.treatment.getUserTreatment(this.currentUser._id).subscribe(
       data => {
-        console.log(data);
         this.treatments = data;
         this.treatments.forEach(function (element) {
           this.treatment.getTreatmentInfo(element.codeCIS).subscribe(response => {
@@ -81,6 +80,7 @@ export class CurrentTreatmentComponent implements OnInit {
       this.treatment.getTreatmentInteraction(ids.join('|')).subscribe(
         data => {
           this.interaction = JSON.parse(data);
+
         },
         error => console.log(error)
       );
