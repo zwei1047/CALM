@@ -5,6 +5,9 @@ import {DoctorSearchService} from "../../shared/services/doctor-search.service";
 import {UsersService} from "../../shared/services/users.service";
 import {User} from "../../shared/models/user";
 import {GooglemapsService} from "../../shared/services/googlemaps.service";
+import {Autorisation} from "../../shared/models/autorisation";
+import {AutorisationService} from "../../shared/services/autorisation.service";
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-google-map',
   templateUrl: './google-map.component.html',
@@ -21,7 +24,9 @@ export class GoogleMapComponent implements OnInit {
 
   constructor(private doctorSearch: DoctorSearchService,
               private userService: UsersService,
-              private googlemapsService: GooglemapsService) {
+              private googlemapsService: GooglemapsService,
+              private autorisationService: AutorisationService,
+              private router: Router) {
     this.rayon = 10;
   }
 
@@ -37,7 +42,7 @@ export class GoogleMapComponent implements OnInit {
         temp['isDisplay'] = false;
     }
   }
-  rechercheClick(searchText: string) :void{
+  rechercheClick(searchText: string) : void {
     if(searchText != '')
     {
       this.response=[];
@@ -56,9 +61,26 @@ export class GoogleMapComponent implements OnInit {
     }
   }
 
-  searchMedecins(searchText: string): void {
 
-    // de base : proche du lieu d'habitation
+  newDoctorRdv(user_doctor: User) {
+    // ajout autorisation RDV
+    let autorisation = new Autorisation(null);
+    autorisation.user = new User(this.me);
+    autorisation.observer = new User(user_doctor);
+    autorisation.subject = 'RDV';
+    autorisation.type = 'READ_WRITE';
+    autorisation.valide = true;
+    autorisation.confirm = true;
+    this.autorisationService.addAutorisation(autorisation)
+      .subscribe( resp => {
+        console.log(resp);
+        // on redirige vers la page de reservation de rendez vous du docteur
+        this.router.navigate(['/patient_rdv/', autorisation.observer._id]);
+        location.reload();
+      });
+  }
+
+  searchMedecins(searchText: string): void {
 
     this.doctorSearch.getAllUserDoctor()
       .subscribe( usersDoctor => {
@@ -100,8 +122,8 @@ export class GoogleMapComponent implements OnInit {
   }
 
   reSetCenter(): void {
-    var _this = this;
-    if(this.response.length != 0)
+    let _this = this;
+    if(this.response.length !== 0)
     {
       this.zoom = 8;
       let sumLng = 0 ;

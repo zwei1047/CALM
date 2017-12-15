@@ -35,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'building-space', component: BuildingSpaceComponent},
   { path: 'organisation-space', component: OrganisationSpaceComponent},
   { path: 'patient_rdv', component: PatientRdvComponent},
+  { path: 'patient_rdv/:doctor_id', component: PatientRdvComponent},
   { path: 'doctor_rdv', component: DoctorRdvComponent},
   { path: 'logout', component: AppComponent},
   { path: 'settings', component: SettingsComponent},

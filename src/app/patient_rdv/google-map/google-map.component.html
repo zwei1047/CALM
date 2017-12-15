@@ -16,6 +16,7 @@
         <div>
           <h3>Doctor: {{n.last_name}} {{n.first_name}}</h3>
           <p>address: {{n.address.num}},{{n.address.street_address}}</p>
+          <button (click)="newDoctorRdv(n)">Prendez rendez-vous</button>
         </div>
       </sebm-google-map-info-window>
     </sebm-google-map-marker>
