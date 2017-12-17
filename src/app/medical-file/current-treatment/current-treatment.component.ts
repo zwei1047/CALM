@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import {Treatment} from '../../shared/models/treatment';
 import {User} from '../../shared/models/user';
 import {UsersService} from '../../shared/services/users.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({
@@ -16,29 +17,46 @@ import {UsersService} from '../../shared/services/users.service';
   providers: [UsersService]
 })
 export class CurrentTreatmentComponent implements OnInit {
+  userId: string;
   currentUser: User;
+  selectedUser: User;
   treatments: Treatment[] = [];
   start: Date;
   searchList: {}[];
   treatmentInfo: {};
   interaction: {}[];
 
-  constructor(private http: Http, private treatment: TreatmentService, private usersService: UsersService) {
+  constructor(private http: Http, private treatment: TreatmentService, private usersService: UsersService, private route: ActivatedRoute,) {
 
 
   }
 
   ngOnInit() {
-    this.usersService.getProfile()
-      .subscribe(user => {
-        this.currentUser = new User(user);
+    this.route.params.subscribe((params: Params) => {
+      this.userId = params['id'];
+      if (this.userId) {
         this.getMedicamentList();
-      });
+        this.usersService.getUser(this.userId).subscribe(
+          data => {
+            this.selectedUser = data;
+            this.usersService.getProfile()
+              .subscribe(user => {
+                this.currentUser = new User(user);
+                this.getMedicamentList();
+              });
+          },
+          error => console.log(error)
+        );
+      } else {
+        console.log('404');
+      }
+    });
+
 
   };
 
   getMedicamentList() {
-    this.treatment.getUserTreatment(this.currentUser._id).subscribe(
+    this.treatment.getUserTreatment(this.userId).subscribe(
       data => {
         this.treatments = data;
         this.treatments.forEach(function (element) {

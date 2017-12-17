@@ -1,7 +1,12 @@
 <div class="jumbotron text-center">
   <app-post></app-post>
 
-  <a type="button" routerLink="../medical-file">Retour</a> <br/>
+
+  <div *ngIf="currentUser != null && userId != null">
+    <a *ngIf="currentUser._id == userId" type="button" routerLink="../medical-file">Retour</a>
+    <a *ngIf="currentUser._id != userId" type="button" routerLink="../settings/gestion-observer">Retour</a>
+  </div>
+  <br/>
   <div class="panel panel-primary">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-xs-12">
