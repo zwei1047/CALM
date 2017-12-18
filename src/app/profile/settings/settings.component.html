@@ -35,6 +35,24 @@
         <button (click)="addNewAutorisation()">Ajouter</button>
       </div>
 
+      <table>
+        <tr>
+          <td>Role</td>
+          <td>Prénom</td>
+          <td>Nom</td>
+          <td>Autorisations</td>
+          <td>Gestion</td>
+        </tr>
+        <tr *ngFor="let autorisation of autorisations">
+          <td>{{autorisation.observer.role[1]}}</td>
+          <td>{{autorisation.observer.first_name}}</td>
+          <td>{{autorisation.observer.last_name}}</td>
+          <td>{{autorisation.subject}} => {{autorisation.type}}</td>
+          <td>
+            <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
+          </td>
+        </tr>
+      </table>
 
       <button (click)="sendTestMail()">Send test mail</button>
 

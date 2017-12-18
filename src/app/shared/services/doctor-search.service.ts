@@ -6,12 +6,15 @@ import {AuthenticationService} from "./authentication.service";
 
 @Injectable()
 export class DoctorSearchService {
+  url: string;
 
-  constructor(private http: Http, private authentication: AuthenticationService) { }
+  constructor(private http: Http, private authentication: AuthenticationService) {
+    this.url = 'https://localhost:3000/api/';
+  }
 
-  getSearchDoctor(city: string) {
-    return this.http.get('https://localhost:3000/api/searchDoctor/'+city, this.authentication.getRequestOptions())
-      .map(res => res.json());
+  getAllUserDoctor() {
+    return this.http.get(this.url + 'users/doctor', this.authentication.getRequestOptions())
+      .map( res =>  res.json());
   }
 
 

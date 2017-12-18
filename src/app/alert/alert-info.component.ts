@@ -8,6 +8,7 @@ import {RdvService} from "../shared/services/rdv.service";
 import {DoctorSpaceService} from "../shared/services/doctor-space.service";
 
 
+
 @Component({
   selector: 'alert-info',
   templateUrl: 'alert-info.component.html',
@@ -22,14 +23,16 @@ export class AlertInfoComponent implements OnInit {
   demands: Autorisation[] = [];
   treatments: any[] = [];
   consultations: any[] = [];
+
   ngOnInit() {
     console.log("start");
-    var _this = this;
+    let _this = this;
     setTimeout(function(){
       console.log("hello");
       _this.getAutorisationDemands();
       _this.getTreatments();
       _this.getConsultations();
+
     }, 1000);
       }
   getAutorisationDemands() {

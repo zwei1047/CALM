@@ -3,6 +3,8 @@ import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from "../shared/models/user";
 import {Address} from '../shared/models/address';
+import {GooglemapsService} from "../shared/services/googlemaps.service";
+import {MailService} from "../shared/services/mail.service";
 
 @Component({
   selector: 'app-register',
@@ -16,9 +18,13 @@ export class RegisterComponent implements OnInit {
   lat: number = 50.6315144;
   lng: number = 3.056218;
   zoom: number = 8;
+  numberFetchAddressTry: number = 0;
+
   //private base64textString:string;
 
-  constructor(private router: Router, private authentication: AuthenticationService) { }
+  constructor(private router: Router, private authentication: AuthenticationService,
+              private googlemapsService: GooglemapsService,
+              private mailService: MailService) { }
 
   ngOnInit() {
   }
@@ -40,8 +46,26 @@ export class RegisterComponent implements OnInit {
     this.base64textString= btoa(binaryString);
   }*/
 
+
+  displayAddress() {
+    if (this.numberFetchAddressTry < 8 && this.numberFetchAddressTry > 5) {
+      console.log('fetch the coord of the address');
+      const add = this.user.address.num.toString() + this.user.address.street_address + this.user.address.city;
+      this.googlemapsService.convertAddresstoCode(add)
+        .subscribe( resp => {
+          console.log(resp);
+          console.log(resp.results[0].geometry.location);
+          this.user.address.latitude = resp.results[0].geometry.location.lat;
+          this.user.address.longitude = resp.results[0].geometry.location.lng;
+          // on cree un marker
+          console.log(this.user);
+        });
+    }
+    this.numberFetchAddressTry ++;
+  }
+
   // signin the new user if signup successfully
-  login(email: string, password: string){
+  login(email: string, password: string) {
     this.user.password = password;
     this.user.email = email;
     this.authentication.login(this.user)
@@ -49,10 +73,18 @@ export class RegisterComponent implements OnInit {
         res => {
           this.submitted = true;
           this.authentication.saveToken(res.token);
-          this.router.navigate(['/profile']);
-          location.reload();
-        }
-      );
+
+          // envoi mail de confirmation
+          const confText = "Bonjour, \n\nVotre inscription a bien été prise en compte, nous vous remercions de votre confiance.\n" +
+            "Prenez votre premier rendez-vous grâce à CALM ! \n\n Cordialement, \n\n CALM";
+          this.mailService.sendMail(this.user.email, "[CALM] Confirmation d'inscription", confText)
+            .subscribe( resp => {
+              console.log(resp);
+              this.login(this.user.email, this.user.password);
+              this.router.navigate(['/profile']);
+              location.reload();
+            });
+        });
   }
 
   // create the new user
@@ -64,8 +96,7 @@ export class RegisterComponent implements OnInit {
           this.login(this.user.email, this.user.password);
           this.router.navigate(['/profile']);
           location.reload();
-        }
-      );
+        });
     this.submitted = false;
   }
 }

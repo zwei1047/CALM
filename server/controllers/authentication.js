@@ -22,6 +22,8 @@ module.exports.register = function(req, res) {
   address.city = req.body.address.city;
   address.street_address = req.body.address.street_address;
   address.num = req.body.address.num;
+  address.latitude = req.body.address.latitude;
+  address.longitude = req.body.address.longitude;
 
   //Create address
   address.save(function(err) {

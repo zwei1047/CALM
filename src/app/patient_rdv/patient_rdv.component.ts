@@ -12,6 +12,7 @@ import {RdvService} from "../shared/services/rdv.service";
 import {AutorisationService} from "../shared/services/autorisation.service";
 import {Log} from "../shared/models/log";
 import {LogService} from "../shared/services/log.service";
+import {ActivatedRoute, ActivatedRouteSnapshot, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-patient_rdv',
@@ -33,12 +34,34 @@ export class PatientRdvComponent implements OnInit {
               private userService: UsersService,
               private rdvService: RdvService,
               private autorisationService: AutorisationService,
-              private logService: LogService) { }
+              private logService: LogService,
+              private router: Router,
+              private route: ActivatedRoute) { }
   ngOnInit() {
     this.isLogged = this.auth.isLoggedIn();
     this.fetchInformations();
     this.thisDate = new Date();
     this.reservationBox['open'] = 'false';
+
+    // on recupere le parametre passé s'il existe
+    try {
+      this.route.params.subscribe( resp => {
+        const id = resp['doctor_id'];
+        if (id) {
+          this.openDetails(resp['doctor_id']);
+        }
+      });
+    } catch (e) {
+    }
+  }
+
+
+  // pour url du type : https://...../page/VALUE
+  // renvoi VALUE
+  getParameterByName(url) {
+    const pars = url.split('/');
+    const id = pars.pop();
+    return id;
   }
 
   afterDay() {

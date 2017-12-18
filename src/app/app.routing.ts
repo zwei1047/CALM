@@ -5,7 +5,6 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
-import { UsersComponent } from './users/users';
 import { ContactComponent } from './contact/contact';
 import { LoginComponent } from './login/login';
 import { NotFoundComponent } from './not-found/not-found'
@@ -19,17 +18,16 @@ import { BuildingSpaceComponent } from './building-space/building-space.componen
 import { OrganisationSpaceComponent } from './organisation-space/organisation-space.component';
 import {PatientTreatmentComponent} from './doctor-space/patient-treatment/patient-treatment.component';
 import {CurrentTreatmentComponent} from './medical-file/current-treatment/current-treatment.component';
-import {PostComponent} from "./post/post.component";
 import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
 import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
 import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
 import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
 
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'users', component: UsersComponent },
   { path: 'login' , component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
@@ -40,6 +38,7 @@ const appRoutes: Routes = [
   { path: 'building-space', component: BuildingSpaceComponent},
   { path: 'organisation-space', component: OrganisationSpaceComponent},
   { path: 'patient_rdv', component: PatientRdvComponent},
+  { path: 'patient_rdv/:doctor_id', component: PatientRdvComponent},
   { path: 'doctor_rdv', component: DoctorRdvComponent},
   { path: 'logout', component: AppComponent},
   { path: 'settings', component: SettingsComponent},

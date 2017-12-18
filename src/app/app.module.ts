@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/home";
 import {ContactComponent} from "./contact/contact";
 import {AboutComponent} from "./about/about";
-import {UsersComponent} from "./users/users";
 import {LoginComponent} from "./login/login";
 import {PostComponent} from './post/post.component';
 import {NotFoundComponent} from "./not-found/not-found";
@@ -46,6 +45,7 @@ import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.direct
 import {AlertInfoComponent} from "./alert/alert-info.component";
 import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
 import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
+import {GooglemapsService} from "./shared/services/googlemaps.service";
 
 @NgModule({
   declarations: [
@@ -53,7 +53,6 @@ import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    UsersComponent,
     LoginComponent,
     NotFoundComponent,
     RegisterComponent,
@@ -78,6 +77,7 @@ import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/
     AlertInfoComponent,
     GestionSupervisorComponent,
     GestionObserverComponent
+
   ],
   imports: [
     BrowserModule,
@@ -100,7 +100,8 @@ import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/
     MailService,
     LogService,
     ReminderService,
-    AutorisationService
+    AutorisationService,
+    GooglemapsService
   ],
   bootstrap: [AppComponent]
 })

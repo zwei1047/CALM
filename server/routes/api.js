@@ -58,6 +58,18 @@ module.exports = function (passport) {
       });
   });
 
+  router.get('/users/doctor', auth, function (req, res) {
+    User.find({role: ['patient','medecin']})
+      .populate('address')
+      .exec(function(err, docs) {
+        if(err){
+          res.json(err);
+        } else {
+          res.json(docs);
+        }
+      });
+  });
+
   router.get('/patients', auth, function (req, res) {
     Patient.find({})
       .populate('user_id')
@@ -253,7 +265,6 @@ module.exports = function (passport) {
     });
 
   });
-
 
   router.put('/createFirstRappel/', auth, function (req, res, next) {
     var treatment = req.body;
