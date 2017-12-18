@@ -126,9 +126,10 @@ module.exports = function (passport) {
         start1 = start1.getDate() + "-" + (start1.getMonth()+ 1) + "-" + start1.getFullYear();
         Reminder.update({
           traitementId:req.params.id,
-          time: DATETRANSLATION[rappel.takingState],
-          date: start1,
+
         }, {
+          time: DATETRANSLATION[rappel.takingState][0],
+          date: start1,
           rappel: rappel
         }).exec(function (err, docs) {
           console.log("erro info" + err);
