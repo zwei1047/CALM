@@ -16,6 +16,7 @@ var reminderSchema = mongoose.Schema ({
   },
   traitementId: String,
   date : String,
+  time : String,
   expire: Boolean
 
 });

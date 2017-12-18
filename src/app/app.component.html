@@ -12,7 +12,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-
+<!--
           <li><a
             *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
             [routerLink]="['/current-treatment' , {'id' : user._id}]"
@@ -39,13 +39,13 @@
                  routerLinkActive="active"
                  [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
             organisation</a></li>
-
+-->
           <li><a href="#about">A propos</a></li>
 
 
           <li><a href="#contact">Contact</a></li>
 
-          <li><a routerLink="users" routerLinkActive="active">Utilisateurs</a></li>
+<!--          <li><a routerLink="users" routerLinkActive="active">Utilisateurs</a></li>-->
 
           <!--<li><a href="https://localhost:3000/api">API</a></li>-->
           <li>
@@ -57,7 +57,7 @@
               <ul class="dropdown-menu">
                 <li><a
                   *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
-                  routerLink="current-treatment"
+                  [routerLink]="['/current-treatment' , {'id' : user._id}]"
                   routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                   <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
                 </a></li>

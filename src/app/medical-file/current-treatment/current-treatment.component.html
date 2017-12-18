@@ -5,6 +5,8 @@
   <div *ngIf="currentUser != null && userId != null">
     <a *ngIf="currentUser._id == userId" type="button" routerLink="../medical-file">Retour</a>
     <a *ngIf="currentUser._id != userId" type="button" routerLink="../settings/gestion-observer">Retour</a>
+    <br/>
+    <h2 *ngIf="selectedUser != null">{{selectedUser.first_name}} {{selectedUser.last_name}}</h2>
   </div>
   <br/>
   <div class="panel panel-primary">

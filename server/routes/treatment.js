@@ -11,9 +11,18 @@ module.exports = function (passport) {
     secret: 'CALM_SECRET',
     userProperty: 'payload'
   });
+  const DATETRANSLATION = {
+    'Avant-repas': ['11:00', '19:00'],
+    'Pendant-repas': ['12:00', '20:00'],
+    'Apres-repas': ['13:00', '21:00'],
+    'A-jeun': ['7:00'],
+    'Avant-dormir': ['22:00'],
+    'Au-reveil': ['6:30']
+  };
   var Reminder = require('../models/reminder');
   var Treatment = require('../models/treatment');
-  function createFirstRappel(treatment) {
+
+  function createFirstRappel(treatment, res) {
     var start = new Date();
     start = start.toString();
     console.log(start);
@@ -34,22 +43,23 @@ module.exports = function (passport) {
     rappel.typeFrequence = treatment.typeFrequence;
     rappel.info = treatment.info;
     start = start.getDate() + "-" + (start.getMonth() + 1) + "-" + start.getFullYear();
-    console.log(rappel);
     new Reminder({
       userId: treatment.userId,
       rappel: rappel,
       traitementId: treatment._id,
+      time: DATETRANSLATION[treatment.takingState],
       date: start,
       expire: false
     }).save().then(function (content) {
-      res.json(treatment);
+      res.json(content);
     });
 
   }
+
   //get Treatment for a specific patient
   router.get('/treatment/:id', auth, function (req, res) {
     Treatment
-      .find({userId: req.params.id , expired:false})
+      .find({userId: req.params.id, expired: false})
       .exec(function (err, docs) {
         res.json(docs);
       });
@@ -71,14 +81,17 @@ module.exports = function (passport) {
     treatment.expired = false;
 
     treatment.save(function (err, response) {
-      if (err) res.json(err);
-      res.json(response);
-      createFirstRappel(response);
+      if (err) {
+        console.log('update traitement failed');
+        res.json(err);
+      }
+      console.log('going to create first rappel');
+      createFirstRappel(response, res);
     });
   });
 
   router.put('/updateTreatment/:id', auth, function (req, res, next) {
-    console.log("update treatment "+req.params.id);
+    console.log("update treatment " + req.params.id);
     Treatment.findByIdAndUpdate(req.params.id, {
       $set: {
         name: req.body.name,
@@ -114,8 +127,10 @@ module.exports = function (passport) {
         rappel.info = response.info;
         start1 = start1.getDate() + "-" + (start1.getMonth() + 1) + "-" + start1.getFullYear();
         Reminder.update({
-          traitementId:req.params.id
+          traitementId: req.params.id,
         }, {
+          time: DATETRANSLATION[rappel.takingState][0],
+          date: start1,
           rappel: rappel
         }).exec(function (err, docs) {
           console.log("erro info" + err);
@@ -147,7 +162,7 @@ module.exports = function (passport) {
 
   router.get('/getMedicInfo/:codeCIS', auth, function (req, res, next) {
     var request = require('request');
-    request('https://open-medicaments.fr/api/v1/medicaments/'+ req.params.codeCIS, function (error, response, body) {
+    request('https://open-medicaments.fr/api/v1/medicaments/' + req.params.codeCIS, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         res.json(body);
       }
@@ -158,7 +173,7 @@ module.exports = function (passport) {
 
   router.get('/getMedicInteraction/:ids', auth, function (req, res, next) {
     var request = require('request');
-    request('https://open-medicaments.fr/api/v1/interactions/?ids='+ req.params.ids, function (error, response, body) {
+    request('https://open-medicaments.fr/api/v1/interactions/?ids=' + req.params.ids, function (error, response, body) {
       res.json(body);
     })
   });

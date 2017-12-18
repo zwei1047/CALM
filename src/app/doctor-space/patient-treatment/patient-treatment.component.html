@@ -2,7 +2,7 @@
   <app-post></app-post>
 
   <a type="button" routerLink="../doctor-space">Retour</a> <br/>
-  <h2>{{currentUser.first_name}} {{currentUser.last_name}}</h2>
+  <h2 *ngIf="currentUser != null">{{currentUser.first_name}} {{currentUser.last_name}}</h2>
   <tr class="treatment-list">
     <table class="table">
       <tr>
