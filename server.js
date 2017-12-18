@@ -42,7 +42,7 @@ const apiPost = require('./server/routes/post')(passport);
 const apiMail = require('./server/routes/mail')(passport);
 const apiLog = require('./server/routes/log')(passport);
 const autorisation = require('./server/routes/autorisation')(passport);
-
+const rappel = require('./server/routes/rappel')(passport);
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -64,6 +64,7 @@ app.use('/api', apiPost);
 app.use('/api', apiMail);
 app.use('/api', apiLog);
 app.use('/api',autorisation);
+app.use('/api',rappel);
 
 // Catch all other routes and return the index file
 app.get('*', function(req, res) {

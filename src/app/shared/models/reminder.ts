@@ -3,7 +3,7 @@ import {Doctor} from "./doctor";
 
 export class Reminder {
   _id: string;
-  user: User
+  user: User;
   rappel: {
     name: string,
     quantity: string,
@@ -15,6 +15,7 @@ export class Reminder {
   date: Date;
   expire: Boolean;
   doctor: Doctor;
+  time: Date;
 
   constructor(rappelInfo: any) {
     if (rappelInfo) {
@@ -22,6 +23,7 @@ export class Reminder {
       this.user = rappelInfo.user;
       this.rappel = rappelInfo.rappel;
       this.date = rappelInfo.date;
+      this.time = rappelInfo.time;
       this.expire = rappelInfo.expire;
       this.doctor = rappelInfo.doctor;
     } else {

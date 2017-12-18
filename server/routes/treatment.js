@@ -11,9 +11,17 @@ module.exports = function (passport) {
     secret: 'CALM_SECRET',
     userProperty: 'payload'
   });
+  const DATETRANSLATION = {
+    'Avant-repas': ['11:00', '19:00'],
+    'Pendant-repas': ['12:00', '20:00'],
+    'Apres-repas': ['13:00', '21:00'],
+    'A-jeun': ['7:00'],
+    'Avant-dormir': ['22:00'],
+    'Au-reveil': ['6:30']
+  };
   var Reminder = require('../models/reminder');
   var Treatment = require('../models/treatment');
-  function createFirstRappel(treatment) {
+  function createFirstRappel(treatment, res) {
     var start = new Date();
     start = start.toString();
     console.log(start);
@@ -34,16 +42,16 @@ module.exports = function (passport) {
     rappel.typeFrequence = treatment.typeFrequence;
     rappel.info = treatment.info;
     start = start.getDate() + "-" + (start.getMonth() + 1) + "-" + start.getFullYear();
-    console.log(rappel);
-    new Reminder({
-      userId: treatment.userId,
-      rappel: rappel,
-      traitementId: treatment._id,
-      date: start,
-      expire: false
-    }).save().then(function (content) {
-      res.json(treatment);
-    });
+      new Reminder({
+        userId: treatment.userId,
+        rappel: rappel,
+        traitementId: treatment._id,
+        time: DATETRANSLATION[treatment.takingState],
+        date: start,
+        expire: false
+      }).save().then(function (content) {
+        res.json(content);
+      });
 
   }
   //get Treatment for a specific patient
@@ -71,9 +79,12 @@ module.exports = function (passport) {
     treatment.expired = false;
 
     treatment.save(function (err, response) {
-      if (err) res.json(err);
-      res.json(response);
-      createFirstRappel(response);
+      if (err) {
+        console.log('update traitement failed');
+        res.json(err);
+      }
+      console.log('going to create first rappel');
+      createFirstRappel(response,res);
     });
   });
 
@@ -112,9 +123,11 @@ module.exports = function (passport) {
         rappel.frequence = response.frequence;
         rappel.typeFrequence = response.typeFrequence;
         rappel.info = response.info;
-        start1 = start1.getDate() + "-" + (start1.getMonth() + 1) + "-" + start1.getFullYear();
+        start1 = start1.getDate() + "-" + (start1.getMonth()+ 1) + "-" + start1.getFullYear();
         Reminder.update({
-          traitementId:req.params.id
+          traitementId:req.params.id,
+          time: DATETRANSLATION[rappel.takingState],
+          date: start1,
         }, {
           rappel: rappel
         }).exec(function (err, docs) {
