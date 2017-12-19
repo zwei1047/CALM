@@ -64,47 +64,47 @@ export class DoctorRdvComponent implements OnInit {
 
   changeStateOfDay(jour: number, mois: number, an: number) {
     this.doctorService.getDisponnibiliteOfThisDay(new Date(an, mois - 1, jour, 12, 0, 0), this.meDoctor._id)
-      .subscribe( dispos => {
+      .subscribe(dispos => {
         let myDispo = new Disponnibilite(null);
         let modify = false;
-          if (dispos[0]) {
-            myDispo = new Disponnibilite(dispos[0]);
-            modify = true;
-          } else {
-            myDispo.jour = jour;
-            myDispo.mois = mois;
-            myDispo.an = an;
-          }
-          myDispo.doctor = this.meDoctor;
-          myDispo.fullDisponnibilite(an, mois, jour);
+        if (dispos[0]) {
+          myDispo = new Disponnibilite(dispos[0]);
+          modify = true;
+        } else {
+          myDispo.jour = jour;
+          myDispo.mois = mois;
+          myDispo.an = an;
+        }
+        myDispo.doctor = this.meDoctor;
+        myDispo.fullDisponnibilite(an, mois, jour);
 
-          // on enleve les horaires correspondants à des rdv
-          this.doctorService.getConsultations(this.meDoctor._id)
-            .subscribe( consultations => {
-              for (const consultation of consultations) {
-                const myConsultation = new Consultation(consultation);
-                const currentDate = new Date(myConsultation.date);
-                const indexOfDate = this.rdvService.findIndexOfDate(myDispo.disponnibilite, currentDate);
-                const dateInConsul = this.rdvService.timeInDispo(currentDate.getHours() + ':' + this.rdvService.formatageMinute(currentDate.getMinutes()), myDispo);
-                if (dateInConsul !== null && indexOfDate !== -1) {
-                  myDispo.disponnibilite.splice(indexOfDate, 1);
-                }
+        // on enleve les horaires correspondants à des rdv
+        this.doctorService.getConsultations(this.meDoctor._id)
+          .subscribe(consultations => {
+            for (const consultation of consultations) {
+              const myConsultation = new Consultation(consultation);
+              const currentDate = new Date(myConsultation.date);
+              const indexOfDate = this.rdvService.findIndexOfDate(myDispo.disponnibilite, currentDate);
+              const dateInConsul = this.rdvService.timeInDispo(currentDate.getHours() + ':' + this.rdvService.formatageMinute(currentDate.getMinutes()), myDispo);
+              if (dateInConsul !== null && indexOfDate !== -1) {
+                myDispo.disponnibilite.splice(indexOfDate, 1);
               }
-              if (!modify) {
-                this.doctorService.addDisponnibilite(myDispo)
-                  .subscribe( resp => {
-                    console.log(resp);
-                    this.fetchInformation();
-                  });
-              } else {
-                this.doctorService.modifyDisponnibilite(myDispo)
-                  .subscribe( resp => {
-                    console.log(resp);
-                    this.fetchInformation();
-                  });
-              }
+            }
+            if (!modify) {
+              this.doctorService.addDisponnibilite(myDispo)
+                .subscribe(resp => {
+                  console.log(resp);
+                  this.fetchInformation();
+                });
+            } else {
+              this.doctorService.modifyDisponnibilite(myDispo)
+                .subscribe(resp => {
+                  console.log(resp);
+                  this.fetchInformation();
+                });
+            }
 
-            });
+          });
       });
   }
 
@@ -117,14 +117,14 @@ export class DoctorRdvComponent implements OnInit {
     let hourTime = +timeTab[0];
 
     this.doctorService.getConsultationOfThisDay(this.meDoctor._id, new Date(an, mois - 1, jour, hourTime, minuteTime, 0))
-      .subscribe( consultationThisTime => {
+      .subscribe(consultationThisTime => {
         if (consultationThisTime === null) {
           // on ne change rien
         } else {
           // on peut changer
           console.log('change state : ' + time + ' date : ' + (new Date(an, mois - 1, jour, 12, 0, 0)).toLocaleString());
           this.doctorService.getDisponnibiliteOfThisDay(new Date(an, mois - 1, jour, 12, 0, 0), this.meDoctor._id)
-            .subscribe( dispos => {
+            .subscribe(dispos => {
               let dispo = dispos[0];
               if (dispo) {
                 let myDispo = new Disponnibilite(dispo);
@@ -139,11 +139,11 @@ export class DoctorRdvComponent implements OnInit {
                   let myHour = +timeTab[0];
                   let myMinute = +timeTab[1];
 
-                  let myNewDate = new Date(an, mois - 1, jour, myHour, myMinute, 0 );
+                  let myNewDate = new Date(an, mois - 1, jour, myHour, myMinute, 0);
                   myDispo.disponnibilite.push(myNewDate);
                 }
                 this.doctorService.modifyDisponnibilite(myDispo)
-                  .subscribe( resp => {
+                  .subscribe(resp => {
                     console.log(resp);
                     this.fetchInformation();
                   });
@@ -160,7 +160,7 @@ export class DoctorRdvComponent implements OnInit {
                 const myMinute = +timeTab[1];
                 myNewDispo.disponnibilite.push(new Date(an, (mois - 1), jour, myHour, myMinute, 0));
                 this.doctorService.addDisponnibilite(myNewDispo)
-                  .subscribe( resp => {
+                  .subscribe(resp => {
                     console.log(resp);
                     this.fetchInformation();
                   });
@@ -168,8 +168,6 @@ export class DoctorRdvComponent implements OnInit {
             });
         }
       });
-
-
 
 
   }
@@ -213,6 +211,7 @@ export class DoctorRdvComponent implements OnInit {
       const rdvOfMyDay = this.rdvService.searchRdv(this.consultations, dateUsed.getDate(), dateUsed.getMonth() + 1, dateUsed.getFullYear());
       if (rdvOfMyDay) {
         for (const rdv of rdvOfMyDay) {
+          console.log(new Consultation(rdv));
           const myDate = new Date(rdv.date);
           const minutesString = this.rdvService.formatageMinute(myDate.getMinutes());
           this.planningDays[i]['time'].push(myDate.getHours() + ':' + minutesString);
@@ -221,7 +220,7 @@ export class DoctorRdvComponent implements OnInit {
           this.planningDays[i]['complement'].push(rdv.patient.user_id);
           if (!isNullOrUndefined(rdv.motif)) {
             this.planningDays[i]['motif'].push(rdv.motif);
-          }else {
+          } else {
             this.planningDays[i]['motif'].push('');
           }
 
@@ -234,7 +233,7 @@ export class DoctorRdvComponent implements OnInit {
       let minutesString = '';
       while ((this.planningDays[i]['time'].length) < 24) {
         minutesString = this.rdvService.formatageMinute(thisMinute);
-        if (!this.rdvService.isInTab(this.planningDays[i]['time'], thisHour.toString() + ':' + minutesString)){
+        if (!this.rdvService.isInTab(this.planningDays[i]['time'], thisHour.toString() + ':' + minutesString)) {
           this.planningDays[i]['time'].push(thisHour.toString() + ':' + minutesString);
           this.planningDays[i]['type'].push('occupe');
           this.planningDays[i]['complement'].push('');
@@ -255,18 +254,18 @@ export class DoctorRdvComponent implements OnInit {
     this.disponnibilites = [];
 
     this.userService.getProfile()
-      .subscribe( user => {
+      .subscribe(user => {
         this.meUser = new User(user);
         this.doctorService.getDoctorByUserId(this.meUser._id)
-          .subscribe( doctor => {
+          .subscribe(doctor => {
             this.meDoctor = new Doctor(doctor[0]);
             this.doctorService.getConsultations(this.meDoctor._id)
-              .subscribe( consultations => {
+              .subscribe(consultations => {
                 for (const consult of consultations) {
                   this.consultations.push(new Consultation(consult));
                 }
                 this.doctorService.getDisponnibiliteOf(this.meDoctor._id)
-                  .subscribe( disponnibilites => {
+                  .subscribe(disponnibilites => {
                     for (const dispo of disponnibilites) {
                       this.disponnibilites.push(new Disponnibilite(dispo));
                     }

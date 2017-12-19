@@ -32,7 +32,9 @@ export class PatientTreatmentComponent implements OnInit {
   treatmentInfo: {};
   derivateList: {}[];
   codeCIS: string;
+  name: string;
   oldMedicName: string;
+  interaction: {}[];
 
   constructor(private http: Http, private treatment: TreatmentService, private usersService: UsersService,
               private route: ActivatedRoute, private router: Router) {
@@ -72,19 +74,17 @@ export class PatientTreatmentComponent implements OnInit {
             error => console.log(error));
           if (element.start != null) {
             element.start = new Date(element.start);
-          }
-          else {
+          } else {
             element.start = new Date();
           }
           if (element.end != null) {
             element.end = new Date(element.end);
-          }
-          else {
+          } else {
             element.start = new Date();
           }
-
 //          element.end.toLocaleDate| date:'dd/MM/yyyy'String('fr-FR');
         }.bind(this));
+        this.getInteraction(this.treatments.map(a => a.codeCIS));
       },
       error => console.log(error)
     );
@@ -117,6 +117,11 @@ export class PatientTreatmentComponent implements OnInit {
   }
 
   updateUserTreatment(treatment: Treatment) {
+    if (this.name != null && this.codeCIS != null) {
+      //console.log('1');
+      treatment.codeCIS = this.codeCIS;
+      treatment.name = this.name;
+    }
     this.treatment.updateUserTreatment(treatment._id, treatment).subscribe(
       data => {
         this.getMedicamentList();
@@ -130,7 +135,7 @@ export class PatientTreatmentComponent implements OnInit {
   expiredTreatment(treatment: Treatment) {
     const result = confirm('Fin du traitement ?');
     if (result) {
-      treatment.expired = true
+      treatment.expired = true;
       this.updateUserTreatment(treatment);
     }
   }
@@ -144,7 +149,7 @@ export class PatientTreatmentComponent implements OnInit {
      */
     const treatment = new Treatment({});
     treatment.codeCIS = codeCIS;
-    treatment.name = denomination
+    treatment.name = denomination;
     treatment.start = new Date();
     treatment.end = null;
     treatment.takingState = '';
@@ -153,6 +158,7 @@ export class PatientTreatmentComponent implements OnInit {
     treatment.typeFrequence = '';
     treatment.expired = null;
     treatment.info = null;
+
     console.log(treatment);
     this.treatment.addTreatment(this.userId, treatment).subscribe(
       data => {
@@ -190,15 +196,46 @@ export class PatientTreatmentComponent implements OnInit {
       error => console.log(error));
   }
 
+  changeCIS(event) {
+    console.log(event);
+    this.codeCIS = event.codeCIS;
+    this.name = event.denomination;
+  }
+
   redirect(url: string) {
     window.open(url);
-
   }
 
 
   getDerivateList(substance: string, medic: Treatment) {
     if (this.oldMedicName == null || this.oldMedicName == '') {
       this.oldMedicName = medic.name;
+
+      substance = this.removeAccent(substance);
+
+      if (typeof this.derivateList !== 'undefined' && this.derivateList != null && this.derivateList.length > 0) {
+        this.derivateList = [];
+      }
+      this.treatment.getMedicamentList(substance).subscribe(data => {
+          this.derivateList = JSON.parse(data);
+
+        },
+        error => console.log(error));
+    }
+  }
+
+  clean() {
+    this.oldMedicName = '';
+    this.derivateList = [];
+    this.codeCIS = null;
+    this.name = null;
+    this.searchList = [];
+  }
+
+  removeAccent(string: string) {
+    if (string == null) {
+      return null;
+    }
       const accent = [
         /[\300-\306]/g, /[\340-\346]/g, // A, a
         /[\310-\313]/g, /[\350-\353]/g, // E, e
@@ -209,37 +246,22 @@ export class PatientTreatmentComponent implements OnInit {
         /[\307]/g, /[\347]/g, // C, c
       ];
       const noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
-
+      let result = string;
       for (let i = 0; i < accent.length; i++) {
-        substance = substance.replace(accent[i], noaccent[i]);
+        result = result.replace(accent[i], noaccent[i]);
       }
+      return result;
 
-
-      if (typeof this.derivateList !== 'undefined' && this.derivateList != null && this.derivateList.length > 0) {
-        this.derivateList = [];
-      }
-      this.treatment.getMedicamentList(substance).subscribe(data => {
-          this.derivateList = JSON.parse(data);
-
-        },
-        error => console.log(error))
-    }
   }
 
-  clean() {
-    this.oldMedicName = '';
-    this.derivateList = [];
-  }
-
-  /*
-    updateUserTreatment() {
-      this.treatment.updateUserTreatment('5a09837f7927e54946f28178', 'test').subscribe(
+  getInteraction(ids: {}[]) {
+    if (ids.length > 0) {
+      this.treatment.getTreatmentInteraction(ids.join('|')).subscribe(
         data => {
-          this.treatments = data;
-          console.log(data);
+          this.interaction = JSON.parse(data);
         },
         error => console.log(error)
       );
-    };
-    */
+    }
+  };
 }

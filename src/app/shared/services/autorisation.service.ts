@@ -10,7 +10,7 @@ export class AutorisationService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'https://localhost:3000/api/';
+    this.url = 'https://192.168.43.60:3000/api/';
   }
 
   addAutorisation(autorisation: Autorisation) {
@@ -50,5 +50,14 @@ export class AutorisationService {
     return this.http.get(this.url + 'autorisation/refuse/' + demand_id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
+  getObserver(user_id: string) {
+    return this.http.get(this.url + 'autorisation/getObserver/' + user_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
+  getSupervisor(user_id: string) {
+    return this.http.get(this.url + 'autorisation/getSupervisor/' + user_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
+
 
 }

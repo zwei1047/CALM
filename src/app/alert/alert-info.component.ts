@@ -3,6 +3,10 @@ import {Autorisation} from "../shared/models/autorisation";
 import {AutorisationService} from "../shared/services/autorisation.service";
 import {User} from "../shared/models/user";
 import {setInterval} from "timers";
+import {TreatmentService} from "../shared/services/treatment.service";
+import {RdvService} from "../shared/services/rdv.service";
+import {DoctorSpaceService} from "../shared/services/doctor-space.service";
+
 
 
 @Component({
@@ -17,12 +21,18 @@ export class AlertInfoComponent implements OnInit {
   alertNumber: number;
   user: User;
   demands: Autorisation[] = [];
+  treatments: any[] = [];
+  consultations: any[] = [];
+
   ngOnInit() {
-    console.log("start");
-    var _this = this;
+    //console.log("start");
+    let _this = this;
     setTimeout(function(){
-      console.log("hello");
+      //console.log("hello");
       _this.getAutorisationDemands();
+      _this.getTreatments();
+      _this.getConsultations();
+
     }, 1000);
       }
   getAutorisationDemands() {
@@ -54,9 +64,9 @@ export class AlertInfoComponent implements OnInit {
   }
   autoriserClick (demand_id: string) {
     if (confirm('vous etes sure?')) {
-      console.log('yes');
+      //console.log('yes');
       this.autorisationService.acceptAutorisation(demand_id).subscribe(info => {
-        console.log(info);
+        //console.log(info);
       });
       for (const n of this.demands) {
         if (n['_id'] === demand_id) {
@@ -66,15 +76,15 @@ export class AlertInfoComponent implements OnInit {
       }
       this.alertNumber = this.alertNumber - 1;
     } else {
-      console.log('no');
+      //console.log('no');
     }
 
   }
   nonAutoriserClick (demand_id) {
     if (confirm('vous etes sure?')) {
-      console.log('yes');
+      //console.log('yes');
       // this.openDialogBox();
-      console.log('it has been done:' + demand_id);
+      //console.log('it has been done:' + demand_id);
       this.autorisationService.refuseAutorisation(demand_id).subscribe(info => {
         console.log(info);
       });
@@ -90,8 +100,27 @@ export class AlertInfoComponent implements OnInit {
     }
 
   }
+  getTreatments() {
+    this.treatmentService.getUserTreatment(this.user._id)
+      .subscribe(treatments => {
+        this.treatments = treatments;
+        this.alertNumber = this.alertNumber + this.treatments.length;
+      });
+  }
 
-  constructor(private autorisationService: AutorisationService){
+  getConsultations() {
+    if (this.user.role[1] === 'medecin') {
+      console.log(this.user._id);
+      this.doctorSpace.getConsultations(this.user._id)
+        .subscribe(consultations => {
+          this.consultations = consultations;
+          this.alertNumber = this.alertNumber + this.consultations.length;
+        });
+    }
+  }
+
+
+  constructor(private autorisationService: AutorisationService, private treatmentService: TreatmentService, private doctorSpace: DoctorSpaceService) {
 
   }
 

@@ -43,6 +43,8 @@ import {ReminderService} from "./shared/services/reminder.service";
 import {DialogComponent} from "./medical-file/reminder/dialog.component";
 import {DialogAnchorDirective} from "./medical-file/reminder/dialoganchor.directive";
 import {AlertInfoComponent} from "./alert/alert-info.component";
+import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
+import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
 import {GooglemapsService} from "./shared/services/googlemaps.service";
 
 @NgModule({
@@ -72,7 +74,10 @@ import {GooglemapsService} from "./shared/services/googlemaps.service";
     PostsComponent,
     DialogComponent,
     DialogAnchorDirective,
-    AlertInfoComponent
+    AlertInfoComponent,
+    GestionSupervisorComponent,
+    GestionObserverComponent
+
   ],
   imports: [
     BrowserModule,

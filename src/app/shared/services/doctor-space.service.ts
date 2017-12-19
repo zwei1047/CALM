@@ -11,7 +11,7 @@ export class DoctorSpaceService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'https://localhost:3000/api/';
+    this.url = 'https://192.168.43.60:3000/api/';
   }
 
   getPatientFromDoctor(id: string) {
@@ -24,7 +24,7 @@ export class DoctorSpaceService {
       .map(res => res.json());
   }
   getConsultationOfThisDay(doctor_id: string, date: Date) {
-    console.log('trying to get consultation of a particular date time');
+    //console.log('trying to get consultation of a particular date time');
     const myFormatDate = date.getDate()+':'+(date.getMonth()+1)+':'+date.getFullYear()+':'+date.getHours()+':'+date.getMinutes();
     return this.http.get(this.url + 'consultation/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
       .map(res => res.json());

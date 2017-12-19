@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   lng: number = 3.056218;
   zoom: number = 8;
   numberFetchAddressTry: number = 0;
+
   //private base64textString:string;
 
   constructor(private router: Router, private authentication: AuthenticationService,

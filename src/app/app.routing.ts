@@ -20,6 +20,9 @@ import {PatientTreatmentComponent} from './doctor-space/patient-treatment/patien
 import {CurrentTreatmentComponent} from './medical-file/current-treatment/current-treatment.component';
 import {PatientRdvComponent} from "./patient_rdv/patient_rdv.component";
 import {DoctorRdvComponent} from "./doctor_rdv/doctor_rdv.component";
+import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
+import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,7 +42,10 @@ const appRoutes: Routes = [
   { path: 'doctor_rdv', component: DoctorRdvComponent},
   { path: 'logout', component: AppComponent},
   { path: 'settings', component: SettingsComponent},
+  { path: 'settings/gestion-observer', component: GestionObserverComponent},
+  { path: 'settings/gestion-supervisor', component: GestionSupervisorComponent},
   { path: '**', component: NotFoundComponent}
+
 ];
 
 export const appRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -12,6 +12,28 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var  app = express();
 
+
+// Add headers
+app.use(function (req, res, next) {
+
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
+
+
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
@@ -42,7 +64,7 @@ const apiPost = require('./server/routes/post')(passport);
 const apiMail = require('./server/routes/mail')(passport);
 const apiLog = require('./server/routes/log')(passport);
 const autorisation = require('./server/routes/autorisation')(passport);
-
+const rappel = require('./server/routes/rappel')(passport);
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -64,6 +86,7 @@ app.use('/api', apiPost);
 app.use('/api', apiMail);
 app.use('/api', apiLog);
 app.use('/api',autorisation);
+app.use('/api',rappel);
 
 // Catch all other routes and return the index file
 app.get('*', function(req, res) {

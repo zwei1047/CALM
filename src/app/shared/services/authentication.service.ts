@@ -5,8 +5,11 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class AuthenticationService {
+  url: string;
 
-  constructor(private http: Http) {}
+  constructor(private http: Http) {
+    this.url = 'https://192.168.43.60:3000/api/';
+  }
 
   // save the token in localStorage and change the navbar state
   saveToken(token: string): void {
@@ -63,7 +66,7 @@ export class AuthenticationService {
   };
 
   register(user): Observable<any> {
-    return this.http.post('https://localhost:3000/api/register', user)
+    return this.http.post(this.url + 'register', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
@@ -71,7 +74,7 @@ export class AuthenticationService {
   }
 
   login(user): Observable<any> {
-    return this.http.post('https://localhost:3000/api/login', user)
+    return this.http.post(this.url + 'login', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());

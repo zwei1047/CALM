@@ -121,7 +121,6 @@ export class PostComponent implements OnInit {
               taille--;
             }
             console.log(this.messengerListPosts);
-            this.scrollToBottom();
           });
       });
   }
@@ -143,12 +142,4 @@ export class PostComponent implements OnInit {
       });
   }
 
-  // ne fonctionne pas
-  scrollToBottom(): void {
-    try {
-      this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
-    } catch (err) {
-      console.log(err);
-    }
-  }
 }

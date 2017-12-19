@@ -14,11 +14,14 @@
 
       <h3>Gestion des autorisations</h3>
       <button (click)="openAddAutorisation()">Ajouter</button>
+      <button><a  routerLink="gestion-observer" routerLinkActive="active">Gestion Observateur</a></button>
+      <button><a  routerLink="gestion-supervisor" routerLinkActive="active">Gestion Superviseur</a></button>
+      <br />
       <div *ngIf="addAutorisationForm['show']">
         <!-- system de recherche d'un utilisateur a mettre en place -->
         <input type="email" placeholder="Adresse email de l'utilisateur" [(ngModel)]="addAutorisationForm['email']"
                required/><br/>
-        <label for="subject">Element concerné par l'aurisation :</label><br/>
+        <label for="subject">Element concerné par l'autorisation :</label><br/>
         <select name="subject" id="subject" [(ngModel)]="addAutorisationForm['subject']">
           <option value="POST" selected>Message</option>
           <option value="DOSSIER">Accès dossier médical</option>
@@ -26,11 +29,13 @@
         </select><br/>
         <label for="type">Type d'autorisation : </label><br/>
         <select id="type" name="type" [(ngModel)]="addAutorisationForm['type']">
-          <option value="READ" selected>Lecture</option>
-          <option value="READ_WRITE">Lecture & Modification</option>
+          <option value="READ" selected>Lire</option>
+          <option value="READ_WRITE">Lire & Modification</option>
         </select><br/>
         <button (click)="addNewAutorisation()">Ajouter</button>
       </div>
+
+      <!--
       <table>
         <tr>
           <td>Role</td>
@@ -49,10 +54,11 @@
           </td>
         </tr>
       </table>
+      -->
 
-      <button (click)="sendTestMail()">Send test mail</button>
+      <button (click)="sendTestMail()">Envoi mail</button>
 
-      <h2>Send perso mail : </h2>
+      <h2>Envoi mail personnel: </h2>
       <form>
         <input type="email" [(ngModel)]="to" placeholder="to ?" [ngModelOptions]="{standalone: true}"/><br/>
         <input type="text" [(ngModel)]="subject" placeholder="subject ?" [ngModelOptions]="{standalone: true}"/><br/>

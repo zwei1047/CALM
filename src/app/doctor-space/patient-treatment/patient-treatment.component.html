@@ -2,7 +2,7 @@
   <app-post></app-post>
 
   <a type="button" routerLink="../doctor-space">Retour</a> <br/>
-  <h2>{{currentUser.first_name}} {{currentUser.last_name}}</h2>
+  <h2 *ngIf="currentUser != null">{{currentUser.first_name}} {{currentUser.last_name}}</h2>
   <tr class="treatment-list">
     <table class="table">
       <tr>
@@ -27,9 +27,10 @@
 
 
         <td>
-          <select class="form-control" [(ngModel)]="medic.name" [disabled]="!isSelected(medic._id)">
+          <select class="form-control" [(ngModel)]="medic.name" [disabled]="!isSelected(medic._id)"
+                  (ngModelChange)="changeCIS($event)">
             <option [value]="medic.name">{{medic.name}}</option>
-            <option *ngFor="let c of derivateList" [ngValue]="c.denomination">{{c.denomination}}</option>
+            <option *ngFor="let c of derivateList" [ngValue]="c">{{c.denomination}}</option>
           </select>
         </td>
 
@@ -88,10 +89,11 @@
     </table>
 
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">+</button>
+    <br/>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-xl">
 
         <!-- Modal content-->
         <div class="modal-content">
@@ -119,9 +121,8 @@
     </div>
 
 
-    <!-- Modal -->
     <div id="myModalInfo" class="modal fade" role="dialog">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-xl">
 
         <!-- Modal content-->
         <div class="modal-content">
@@ -133,7 +134,7 @@
             <div *ngIf="treatmentInfo!== undefined">
 
               <h2>{{treatmentInfo.denomination}}</h2>
-              <div *ngIf="treatmentInfo.presentation?.length > 0">
+              <div *ngIf="treatmentInfo.presentations?.length > 0">
                 <label *ngIf="treatmentInfo.presentations[0].prix === null">Prix : (libre)<br/></label>
                 <label *ngIf="treatmentInfo.presentations[0].prix !== null">Prix :
                   {{treatmentInfo.presentations[0].prix}} €<br/></label>
@@ -198,18 +199,27 @@
               <div class="panel panel-info">
                 <div class="panel-heading"><h3>Présentations</h3></div>
                 <div class="panel-body">
-                  <div *ngIf="treatmentInfo.presentation?.length > 0">
+                  <div *ngIf="treatmentInfo.presentations?.length > 0">
                     <div *ngFor="let presentation of treatmentInfo.presentations">
                       <h3>{{presentation.libelle}}</h3>
                       {{presentation.etatCommercialisationAMM}} <br/>
                       <div *ngIf="presentation.agrementCollectivites == true">
                         Cette présentation est agréée aux collectivités <br/>
                       </div>
-                      <b>Prix : {{presentation.prix}} € </b> (taux de remboursement :
-                      {{presentation.tauxRemboursement[0]}}) <br/>
+                      <b *ngIf="presentation.prix != null">Prix : {{presentation.prix}} € </b>
+                      <b *ngIf="presentation.prix == null">Prix libre</b>
+                      -
+                      <span *ngIf="presentation.tauxRemboursement?.length > 0">(taux de remboursement :
+                        {{presentation.tauxRemboursement[0]}})
+                      </span>
+
+                      <span *ngIf="presentation.tauxRemboursement?.length <= 0">
+                        Médicament non-remboursable
+                      </span>
+                      <br/>
                     </div>
                   </div>
-                  <div *ngIf="treatmentInfo.avisSMR?.length <= 0">
+                  <div *ngIf="treatmentInfo.presentations?.length <= 0">
                     <p>Aucune présentation n'est disponible pour ce médicament
                     </p>
                   </div>
@@ -298,5 +308,27 @@
 
       </div>
     </div>
+    <br/>
+
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3>Interactions médicamenteuses</h3></div>
+      <div class="panel-body">
+
+        <div *ngFor="let i of interaction">
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <h4>{{i.nomMedicament1}} et {{i.nomMedicament2}}</h4>
+              <p [innerHTML]='i.description'></p>
+              <div class="alert alert-danger">
+                <p><strong>{{i.type}}</strong></p>
+                <p [innerHTML]="i.conseil"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 </div>
+
