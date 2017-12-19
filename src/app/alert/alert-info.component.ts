@@ -25,10 +25,10 @@ export class AlertInfoComponent implements OnInit {
   consultations: any[] = [];
 
   ngOnInit() {
-    console.log("start");
+    //console.log("start");
     let _this = this;
     setTimeout(function(){
-      console.log("hello");
+      //console.log("hello");
       _this.getAutorisationDemands();
       _this.getTreatments();
       _this.getConsultations();
@@ -64,9 +64,9 @@ export class AlertInfoComponent implements OnInit {
   }
   autoriserClick (demand_id: string) {
     if (confirm('vous etes sure?')) {
-      console.log('yes');
+      //console.log('yes');
       this.autorisationService.acceptAutorisation(demand_id).subscribe(info => {
-        console.log(info);
+        //console.log(info);
       });
       for (const n of this.demands) {
         if (n['_id'] === demand_id) {
@@ -76,15 +76,15 @@ export class AlertInfoComponent implements OnInit {
       }
       this.alertNumber = this.alertNumber - 1;
     } else {
-      console.log('no');
+      //console.log('no');
     }
 
   }
   nonAutoriserClick (demand_id) {
     if (confirm('vous etes sure?')) {
-      console.log('yes');
+      //console.log('yes');
       // this.openDialogBox();
-      console.log('it has been done:' + demand_id);
+      //console.log('it has been done:' + demand_id);
       this.autorisationService.refuseAutorisation(demand_id).subscribe(info => {
         console.log(info);
       });

@@ -25,7 +25,7 @@ module.exports = function (passport) {
   };
 // Get rappels by the userID
 router.get('/getRappels/:userId', auth, function (req, res, next) {
-  console.log(req.params.userId);
+  //console.log(req.params.userId);
   Reminder.find({
     userId: req.params.userId,
     expire: 'false'
@@ -37,7 +37,7 @@ router.get('/getRappels/:userId', auth, function (req, res, next) {
 });
 
 router.get('/reminderDone/:reminderId', auth, function (req, res, next) {
-  console.log("i ma here");
+  //console.log("i ma here");
   Reminder.update({
     _id: req.params.reminderId
   }, {
@@ -57,11 +57,11 @@ router.get('/reminderDone/:reminderId', auth, function (req, res, next) {
           res.json('reminder done failed');
         }
         else {
-          console.log('going to create next rappel');
-          console.log(docs);
-          console.log(docs[0]);
+          //console.log('going to create next rappel');
+          //console.log(docs);
+          //console.log(docs[0]);
           createNextRappel(docs[0]);
-          console.log('after create next rappel');
+          //console.log('after create next rappel');
           res.json('create new rappel');
         }
 
@@ -79,8 +79,8 @@ router.put('/createFirstRappel/', auth, function (req, res, next) {
   var treatment = req.body;
   var start = new Date();
   start = start.toString();
-  console.log(start);
-  console.log(treatment);
+  //console.log(start);
+  //console.log(treatment);
   start = new Date(start);
   var rappel = {
     name: '',
@@ -97,7 +97,7 @@ router.put('/createFirstRappel/', auth, function (req, res, next) {
   rappel.typeFrequence = req.body.typeFrequence;
   rappel.info = req.body.info;
   start = start.getDate() + "-" + (start.getMonth() + 1) + "-" + start.getFullYear();
-  console.log(rappel);
+  //console.log(rappel);
   new Reminder({
     userId: req.body.userId,
     rappel: rappel,
@@ -107,7 +107,7 @@ router.put('/createFirstRappel/', auth, function (req, res, next) {
   }).save().then(function (content) {
     res.json(content);
   });
-  console.log(treatment.quantity);
+  //console.log(treatment.quantity);
 
 });
 
@@ -122,7 +122,7 @@ router.put('/createNextRappel/', auth, function (req, res, next) {
   }).save().then(function (content) {
     res.json(content);
   });
-  console.log(treatment.quantity);
+  //console.log(treatment.quantity);
   res.json(treatment);
 
 });
@@ -145,22 +145,22 @@ function createNextRappel(rappel) {
   // .exec(function (err, docs) {
   //   res.json(docs);
   // });
-  console.log('in createrappel function'+rappel);
-  console.log(typeof rappel);
+  //console.log('in createrappel function'+rappel);
+  //console.log(typeof rappel);
   var treatment = null ;
   Treatment.find({_id: rappel.traitementId}).exec(function (err, docs) {
     if(err)
     {
       res.json(' create next rappel failed');
     }else{
-      console.log(docs);
+      //console.log(docs);
       treatment = docs[0];
       var today = new Date();
       var endday = new Date(treatment.end);
-      console.log(treatment.typeFrequence);
-      console.log(TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
+      //console.log(treatment.typeFrequence);
+      //console.log(TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
       var nextDay = today.setDate(today.getDate() + TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
-      console.log(nextDay);
+      //console.log(nextDay);
       if(valideDate(nextDay, endday)) {
         var year = new Date(nextDay).getFullYear();
         var month = new Date(nextDay).getMonth();
@@ -180,7 +180,7 @@ function createNextRappel(rappel) {
         rappel.frequence = treatment.frequence;
         rappel.typeFrequence = treatment.typeFrequence;
         rappel.info = treatment.info;
-        console.log(DATETRANSLATION[treatment.takingState][0]);
+        //console.log(DATETRANSLATION[treatment.takingState][0]);
         for (var i = 0; i < rappel.frequence; i++) {
           new Reminder({
             userId: treatment.userId,
@@ -190,12 +190,12 @@ function createNextRappel(rappel) {
             date: newNextDay,
             expire: false
           }).save().then(function (content) {
-            console.log('date valide and create new rappel');
+            //console.log('date valide and create new rappel');
           });
         }
       }
         else {
-        console.log('date not valid');
+        //console.log('date not valid');
 
       }
 
@@ -224,7 +224,7 @@ function traitementToRappel(traitement) {
     rappel.frequence = traitement.frequence;
     rappel.typeFrequence = traitement.typeFrequence;
     rappel.info = traitement.info;
-    console.log(DATETRANSLATION[traitement.takingState][0]);
+    //console.log(DATETRANSLATION[traitement.takingState][0]);
     for (var i = 0; i < rappel.frequence; i++) {
           let tempRappel = new Reminder({
             userId: traitement.userId,
@@ -236,7 +236,7 @@ function traitementToRappel(traitement) {
           });
           newRappels.push(tempRappel);
         }
-    console.log(newRappels);
+    //console.log(newRappels);
     return newRappels;
     } else {
     return null;
@@ -244,8 +244,8 @@ function traitementToRappel(traitement) {
 }
 
 function valideDate(today, endday) {
-  console.log(today);
-  console.log(endday);
+  //console.log(today);
+  //console.log(endday);
   var year = new Date(today).getFullYear();
   var month = new Date(today).getMonth() + 1;
   var day = new Date(today).getDate();
@@ -254,7 +254,7 @@ function valideDate(today, endday) {
   var monthend = endday.getMonth() + 1;
   var dayend = endday.getDate();
   var newendday = new Date(yearend, monthend, dayend);
-  console.log('today:'+newToday.getTime());
+  //console.log('today:'+newToday.getTime());
   console.log('endday'+ newendday.getTime());
   if(newendday.getTime() >= newToday.getTime()) {
    return true;

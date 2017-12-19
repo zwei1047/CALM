@@ -32,7 +32,7 @@ export class MedicalFileService {
   }
 
   addGeneralDoctor(doctor: Doctor, id: string) {
-    console.log('id of the patient: ', id);
+    //console.log('id of the patient: ', id);
     return this.http.put(this.url + 'patient/' + id, doctor, this.authentication.getRequestOptions())
       .map(res => res);
   }

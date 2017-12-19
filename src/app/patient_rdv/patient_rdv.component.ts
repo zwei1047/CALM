@@ -13,6 +13,7 @@ import {AutorisationService} from "../shared/services/autorisation.service";
 import {Log} from "../shared/models/log";
 import {LogService} from "../shared/services/log.service";
 import {ActivatedRoute, ActivatedRouteSnapshot, Params, Router} from "@angular/router";
+import {Autorisation} from "../shared/models/autorisation";
 
 @Component({
   selector: 'app-patient_rdv',
@@ -88,6 +89,8 @@ export class PatientRdvComponent implements OnInit {
   }
 
   reserver() {
+
+
     console.log(this.motif);
     const jour = this.reservationBox['jour'];
     const mois = this.reservationBox['mois'];
@@ -105,6 +108,29 @@ export class PatientRdvComponent implements OnInit {
             consultation.patient = new Patient(myPatient[0]);
             consultation.motif = this.motif;
             consultation.date = new Date(an, mois - 1, jour, heure, minute, 0);
+
+
+            let autorisation = new Autorisation(null);
+            autorisation.confirm = false;
+            autorisation.subject = 'POST';
+            autorisation.type = 'READ';
+            autorisation.valide = false;
+            autorisation.user = this.me;
+            autorisation.observer = new User(myDoctor[0].user_id);
+
+            this.autorisationService.addAutorisation(autorisation)
+              .subscribe( resp => {
+                console.log(resp);
+              });
+
+            autorisation.user = new User(myDoctor[0].user_id);
+            autorisation.observer = this.me;
+
+            this.autorisationService.addAutorisation(autorisation)
+              .subscribe( resp => {
+                console.log(resp);
+              });
+
             this.doctorService.addConsultation(consultation)
               .subscribe(resp => {
                 console.log(resp);

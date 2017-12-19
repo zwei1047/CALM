@@ -118,7 +118,7 @@ export class PatientTreatmentComponent implements OnInit {
 
   updateUserTreatment(treatment: Treatment) {
     if (this.name != null && this.codeCIS != null) {
-      console.log('1');
+      //console.log('1');
       treatment.codeCIS = this.codeCIS;
       treatment.name = this.name;
     }

@@ -39,7 +39,7 @@ var MedicalFileService = (function () {
             .map(function (res) { return res.json(); });
     };
     MedicalFileService.prototype.addGeneralDoctor = function (doctor, id) {
-        console.log('id of the patient: ', id);
+        //console.log('id of the patient: ', id);
         return this.http.put(this.url + 'patient/' + id, doctor, this.authentication.getRequestOptions())
             .map(function (res) { return res; });
     };
@@ -573,6 +573,46 @@ module.exports = __webpack_require__(742);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(22);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autorisation; });
+
+var Autorisation = (function () {
+    function Autorisation(autorisationInfo) {
+        this.subjectList = ['POST', 'DOSSIER', 'RDV'];
+        this.typeList = ['READ', 'READ_WRITE'];
+        if (autorisationInfo) {
+            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.user);
+            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.observer);
+            if (autorisationInfo.type && autorisationInfo.subject) {
+                if (this.typeList.indexOf(autorisationInfo.type) !== -1 && this.subjectList.indexOf(autorisationInfo.subject) !== -1) {
+                    console.log('type & subject valid');
+                    this.type = autorisationInfo.type;
+                    this.subject = autorisationInfo.subject;
+                }
+            }
+            this.Created_at = autorisationInfo.Created_at;
+            this.valide = autorisationInfo.valide;
+            this.confirm = autorisationInfo.confirm;
+        }
+        else {
+            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
+            this.type = 'READ';
+            this.subject = 'POST';
+            this.valide = false;
+            this.confirm = false;
+        }
+    }
+    return Autorisation;
+}());
+//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/autorisation.js.map
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(14);
@@ -673,46 +713,6 @@ var User = (function () {
     return User;
 }());
 //# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/user.js.map
-
-/***/ }),
-
-/***/ 303:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(22);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autorisation; });
-
-var Autorisation = (function () {
-    function Autorisation(autorisationInfo) {
-        this.subjectList = ['POST', 'DOSSIER', 'RDV'];
-        this.typeList = ['READ', 'READ_WRITE'];
-        if (autorisationInfo) {
-            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.user);
-            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](autorisationInfo.observer);
-            if (autorisationInfo.type && autorisationInfo.subject) {
-                if (this.typeList.indexOf(autorisationInfo.type) !== -1 && this.subjectList.indexOf(autorisationInfo.subject) !== -1) {
-                    console.log('type & subject valid');
-                    this.type = autorisationInfo.type;
-                    this.subject = autorisationInfo.subject;
-                }
-            }
-            this.Created_at = autorisationInfo.Created_at;
-            this.valide = autorisationInfo.valide;
-            this.confirm = autorisationInfo.confirm;
-        }
-        else {
-            this.user = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.observer = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */](null);
-            this.type = 'READ';
-            this.subject = 'POST';
-            this.valide = false;
-            this.confirm = false;
-        }
-    }
-    return Autorisation;
-}());
-//# sourceMappingURL=/home/neko/Documents/Master2/Projet/CALM/src/autorisation.js.map
 
 /***/ }),
 
@@ -967,7 +967,7 @@ var RdvService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_service__ = __webpack_require__(14);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersService; });
@@ -1288,9 +1288,9 @@ var DoctorSpaceComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_treatment__ = __webpack_require__(873);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(22);
@@ -1395,7 +1395,7 @@ var PatientTreatmentComponent = (function () {
     PatientTreatmentComponent.prototype.updateUserTreatment = function (treatment) {
         var _this = this;
         if (this.name != null && this.codeCIS != null) {
-            console.log('1');
+            //console.log('1');
             treatment.codeCIS = this.codeCIS;
             treatment.name = this.name;
         }
@@ -1926,9 +1926,9 @@ var LoginComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_treatment_service__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_user__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(44);
@@ -2255,6 +2255,7 @@ var OrganisationSpaceComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__shared_models_log__ = __webpack_require__(871);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__shared_services_log_service__ = __webpack_require__(490);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_router__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_models_autorisation__ = __webpack_require__(209);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatientRdvComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2265,6 +2266,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -2357,6 +2359,23 @@ var PatientRdvComponent = (function () {
                 consultation.patient = new __WEBPACK_IMPORTED_MODULE_8__shared_models_patient__["a" /* Patient */](myPatient[0]);
                 consultation.motif = _this.motif;
                 consultation.date = new Date(an, mois - 1, jour, heure, minute, 0);
+                var autorisation = new __WEBPACK_IMPORTED_MODULE_15__shared_models_autorisation__["a" /* Autorisation */](null);
+                autorisation.confirm = false;
+                autorisation.subject = 'POST';
+                autorisation.type = 'READ';
+                autorisation.valide = false;
+                autorisation.user = _this.me;
+                autorisation.observer = new __WEBPACK_IMPORTED_MODULE_6__shared_models_user__["a" /* User */](myDoctor[0].user_id);
+                _this.autorisationService.addAutorisation(autorisation)
+                    .subscribe(function (resp) {
+                    console.log(resp);
+                });
+                autorisation.user = new __WEBPACK_IMPORTED_MODULE_6__shared_models_user__["a" /* User */](myDoctor[0].user_id);
+                autorisation.observer = _this.me;
+                _this.autorisationService.addAutorisation(autorisation)
+                    .subscribe(function (resp) {
+                    console.log(resp);
+                });
                 _this.doctorService.addConsultation(consultation)
                     .subscribe(function (resp) {
                     console.log(resp);
@@ -2713,7 +2732,7 @@ var GestionSupervisorComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_services_mail_service__ = __webpack_require__(305);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
@@ -3398,7 +3417,7 @@ var AutorisationService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_autorisation_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_treatment_service__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_treatment_service__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(99);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertInfoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3424,10 +3443,10 @@ var AlertInfoComponent = (function () {
         this.consultations = [];
     }
     AlertInfoComponent.prototype.ngOnInit = function () {
-        console.log("start");
+        //console.log("start");
         var _this = this;
         setTimeout(function () {
-            console.log("hello");
+            //console.log("hello");
             _this.getAutorisationDemands();
             _this.getTreatments();
             _this.getConsultations();
@@ -3462,9 +3481,9 @@ var AlertInfoComponent = (function () {
     };
     AlertInfoComponent.prototype.autoriserClick = function (demand_id) {
         if (confirm('vous etes sure?')) {
-            console.log('yes');
+            //console.log('yes');
             this.autorisationService.acceptAutorisation(demand_id).subscribe(function (info) {
-                console.log(info);
+                //console.log(info);
             });
             for (var _i = 0, _a = this.demands; _i < _a.length; _i++) {
                 var n = _a[_i];
@@ -3475,14 +3494,13 @@ var AlertInfoComponent = (function () {
             this.alertNumber = this.alertNumber - 1;
         }
         else {
-            console.log('no');
         }
     };
     AlertInfoComponent.prototype.nonAutoriserClick = function (demand_id) {
         if (confirm('vous etes sure?')) {
-            console.log('yes');
+            //console.log('yes');
             // this.openDialogBox();
-            console.log('it has been done:' + demand_id);
+            //console.log('it has been done:' + demand_id);
             this.autorisationService.refuseAutorisation(demand_id).subscribe(function (info) {
                 console.log(info);
             });
@@ -3552,7 +3570,7 @@ var AlertInfoComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing__ = __webpack_require__(863);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__register_register_component__ = __webpack_require__(484);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shared_services_authentication_service__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_treatment_service__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_services_treatment_service__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__ = __webpack_require__(480);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng_trim_value_accessor__ = __webpack_require__(858);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__medical_file_medical_file_component__ = __webpack_require__(474);
@@ -4028,7 +4046,7 @@ var ReminderComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_googlemaps_service__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_autorisation__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_autorisation__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleMapComponent; });
@@ -4223,7 +4241,7 @@ var GoogleMapComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_medical_file_service__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_autorisation__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_post__ = __webpack_require__(488);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_services_autorisation_service__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostComponent; });
@@ -4642,7 +4660,7 @@ var DoctorSpaceService = (function () {
             .map(function (res) { return res.json(); });
     };
     DoctorSpaceService.prototype.getConsultationOfThisDay = function (doctor_id, date) {
-        console.log('trying to get consultation of a particular date time');
+        //console.log('trying to get consultation of a particular date time');
         var myFormatDate = date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear() + ':' + date.getHours() + ':' + date.getMinutes();
         return this.http.get(this.url + 'consultation/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
             .map(function (res) { return res.json(); });
