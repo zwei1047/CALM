@@ -115,7 +115,6 @@
     </div>
 
     <!--//google map pour preciser l'address-->
-    <sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom"></sebm-google-map>
     <div *ngIf="user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0">
       {{displayAddress()}}
     </div>
@@ -124,7 +123,7 @@
     <sebm-google-map class="agm-map" [latitude]="user.address.latitude" [longitude]="user.address.longitude"
                      [zoom]="zoom*2" *ngIf="user.address.latitude !== 0">
       <sebm-google-map-marker [latitude]="user.address.latitude" [longitude]="user.address.longitude">
-      </sebm-google-map-marker><!-- marker ne s'afficha pas -->
+      </sebm-google-map-marker>
     </sebm-google-map>
 
     <sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom/2"

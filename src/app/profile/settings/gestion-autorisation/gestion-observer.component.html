@@ -16,7 +16,6 @@
         <td>{{autorisation.subject}} => {{autorisation.type}}</td>
         <td>
           <button (click)="deleteAutorisation(autorisation._id)">Supprimer</button>
-          <button [routerLink]="['/current-treatment' , {'id' : autorisation.observer._id}]">Consulter</button>
         </td>
       </tr>
     </table>

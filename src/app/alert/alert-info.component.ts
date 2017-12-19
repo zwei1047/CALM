@@ -25,10 +25,8 @@ export class AlertInfoComponent implements OnInit {
   consultations: any[] = [];
 
   ngOnInit() {
-    //console.log("start");
     let _this = this;
     setTimeout(function(){
-      //console.log("hello");
       _this.getAutorisationDemands();
       _this.getTreatments();
       _this.getConsultations();
@@ -109,14 +107,12 @@ export class AlertInfoComponent implements OnInit {
   }
 
   getConsultations() {
-    if (this.user.role[1] === 'medecin') {
-      console.log(this.user._id);
       this.doctorSpace.getConsultations(this.user._id)
         .subscribe(consultations => {
+          console.log(consultations);
           this.consultations = consultations;
           this.alertNumber = this.alertNumber + this.consultations.length;
         });
-    }
   }
 
 

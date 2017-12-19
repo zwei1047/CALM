@@ -9,7 +9,7 @@ var treatmentSchema = mongoose.Schema ({
   userId : String,
   codeCIS : String,
   name: String,
-  takingState : {type:String, enum:['','Avant-repas','Pendant-repas','Apres-repas','A-jeun','Avant-dormir','Au-reveil']},
+  takingState : {type:String, enum:['','Avant-repas','Pendant-repas','Apres-repas','A-jeun','Avant-dormir','Au-reveil'], default: ''},
   quantity: Number,
   frequence : Number,
   typeFrequence : {type:String, enum:['','heures','jours','semaines','mois','annees']},

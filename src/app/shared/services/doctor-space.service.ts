@@ -23,8 +23,14 @@ export class DoctorSpaceService {
     return this.http.get(this.url + 'consultation/' + doctor_id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
+
+  getConsultationsPatient(patient_id: string) {
+    return this.http.get(this.url + 'consultation/patient/' + patient_id, this.authentication.getRequestOptions())
+      .map(res => res.json());
+  }
+
+
   getConsultationOfThisDay(doctor_id: string, date: Date) {
-    //console.log('trying to get consultation of a particular date time');
     const myFormatDate = date.getDate()+':'+(date.getMonth()+1)+':'+date.getFullYear()+':'+date.getHours()+':'+date.getMinutes();
     return this.http.get(this.url + 'consultation/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
       .map(res => res.json());

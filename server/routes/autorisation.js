@@ -120,6 +120,7 @@ module.exports = function (passport) {
     Autorisation.find({
       user: req.params.user_id
     }).populate('observer')
+      .populate('user')
       .exec(function (err, docs) {
         console.log("erro info" + err);
         res.json(docs);
@@ -130,6 +131,7 @@ module.exports = function (passport) {
     Autorisation.find({
       observer: req.params.user_id
     }).populate('user')
+      .populate('observer')
       .exec(function (err, docs) {
         console.log("erro info" + err);
         res.json(docs);

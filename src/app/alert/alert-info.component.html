@@ -20,20 +20,19 @@
     </li>
     <li *ngFor="let n of treatments" class="clearfix" (click)="liClick($event)">
       <div class="displaybox">
-        A new treatment!!!<br/>
-        start:{{n.start}} <br/>
-        medicament: {{n.name}} <br/>
-        frequence:{{n.frequence}} <br/>
-        quantity: {{n.quantity}}
+        Nouveau traitement<br/>
+        début : {{n.start}} <br/>
+        médicament : {{n.name}} <br/>
+        frequence : {{n.frequence}} <br/>
+        quantité : {{n.quantity}}
       </div>
     </li>
     <li *ngFor="let n of consultations" class="clearfix" (click)="liClick($event)">
       <div class="displaybox">
-        A new consultation!!!<br/>
-        who:{{n.patient.user_id.first_name}} {{n.patient.user_id.last_name}}<br/>
-        date: {{n.date}} <br/>
-        motif:{{n.motif}} <br/>
-
+        Nouvelle consultation<br/>
+        {{n.patient.user_id.first_name}} {{n.patient.user_id.last_name}}<br/>
+        date : {{n.date}} <br/>
+        motif : {{n.motif}}
       </div>
 
     </li>

@@ -108,20 +108,12 @@ var AuthenticationService = (function () {
 
 /***/ }),
 
-/***/ 1108:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(492);
-
-
-/***/ }),
-
-/***/ 128:
+/***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(85);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patient; });
 
 
@@ -149,6 +141,14 @@ var Patient = (function () {
     return Patient;
 }());
 //# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/patient.js.map
+
+/***/ }),
+
+/***/ 1108:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(492);
+
 
 /***/ }),
 
@@ -732,7 +732,7 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuildingSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -808,7 +808,7 @@ var ContactComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_post__ = __webpack_require__(412);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceComponent; });
@@ -1126,10 +1126,10 @@ var PatientTreatmentComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_services_users_service__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_doctor__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(410);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_disponibilite__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_services_rdv_service__ = __webpack_require__(263);
@@ -1783,7 +1783,7 @@ var NotFoundComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrganisationSpaceComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1826,14 +1826,14 @@ var OrganisationSpaceComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_doctor__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_medical_file_service__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_users_service__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_user__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_models_consultation__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_patient__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_models_patient__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_models_disponibilite__ = __webpack_require__(411);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_services_rdv_service__ = __webpack_require__(263);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__shared_services_autorisation_service__ = __webpack_require__(70);
@@ -1990,6 +1990,7 @@ var PatientRdvComponent = (function () {
                                 .subscribe(function (resp) {
                                 console.log(resp);
                                 _this.openDetails(_this.doctorDetails['id']);
+                                _this;
                             });
                         }
                     });
@@ -2052,7 +2053,7 @@ var PatientRdvComponent = (function () {
                     // il suffit de recuperer les 'disponnibilite' pour chaque jour
                     _this.doctorService.getDisponnibiliteOf(doctor[0]._id)
                         .subscribe(function (dispos) {
-                        for (var i = 0; i < 7; i++) {
+                        for (var i = 1; i < 8; i++) {
                             // on ajoute 24 heure pour avoir lendemain
                             var dateUsed = new Date(dateNow.getTime() + i * 86400000);
                             _this.planningDays[i]['jour'] = jours[dateUsed.getDay()];
@@ -2112,6 +2113,8 @@ var PatientRdvComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_services_doctor_space_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_models_patient__ = __webpack_require__(100);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2126,10 +2129,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var ProfileComponent = (function () {
-    function ProfileComponent(authentication, usersService) {
+    function ProfileComponent(authentication, usersService, doctorspaceService) {
         this.authentication = authentication;
         this.usersService = usersService;
+        this.doctorspaceService = doctorspaceService;
         this.image = __webpack_require__(490);
     }
     ProfileComponent.prototype.ngOnInit = function () {
@@ -2143,7 +2149,16 @@ var ProfileComponent = (function () {
         this.usersService.getProfile()
             .subscribe(function (user) {
             _this.user = new __WEBPACK_IMPORTED_MODULE_3__shared_models_user__["a" /* User */](user);
-            console.log(_this.user);
+            _this.doctorspaceService.getPatientByUserId(_this.user._id)
+                .subscribe(function (patient) {
+                var patientObject = new __WEBPACK_IMPORTED_MODULE_5__shared_models_patient__["a" /* Patient */](patient[0]);
+                console.log(patientObject);
+                _this.doctorspaceService.getConsultationsPatient(patientObject._id)
+                    .subscribe(function (consultations) {
+                    console.log(consultations);
+                    _this.consultations_patient = consultations;
+                });
+            });
         });
     };
     ProfileComponent = __decorate([
@@ -2152,10 +2167,10 @@ var ProfileComponent = (function () {
             template: __webpack_require__(830),
             styles: [__webpack_require__(804)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__shared_services_authentication_service__["a" /* AuthenticationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__shared_services_users_service__["a" /* UsersService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__shared_services_doctor_space_service__["a" /* DoctorSpaceService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__shared_services_doctor_space_service__["a" /* DoctorSpaceService */]) === 'function' && _c) || Object])
     ], ProfileComponent);
     return ProfileComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/profile.component.js.map
 
@@ -2315,7 +2330,7 @@ var GestionSupervisorComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_users_service__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_models_patient__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_medical_file_service__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_models_autorisation__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_services_autorisation_service__ = __webpack_require__(70);
@@ -2635,8 +2650,8 @@ var Address = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__patient__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__patient__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(85);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Consultation; });
 
 
@@ -2666,7 +2681,7 @@ var Consultation = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(85);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Disponnibilite; });
 
 var Disponnibilite = (function () {
@@ -2925,7 +2940,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_autorisation_service__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_treatment_service__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertInfoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2950,10 +2965,8 @@ var AlertInfoComponent = (function () {
         this.consultations = [];
     }
     AlertInfoComponent.prototype.ngOnInit = function () {
-        //console.log("start");
         var _this = this;
         setTimeout(function () {
-            //console.log("hello");
             _this.getAutorisationDemands();
             _this.getTreatments();
             _this.getConsultations();
@@ -3033,14 +3046,12 @@ var AlertInfoComponent = (function () {
     };
     AlertInfoComponent.prototype.getConsultations = function () {
         var _this = this;
-        if (this.user.role[1] === 'medecin') {
-            console.log(this.user._id);
-            this.doctorSpace.getConsultations(this.user._id)
-                .subscribe(function (consultations) {
-                _this.consultations = consultations;
-                _this.alertNumber = _this.alertNumber + _this.consultations.length;
-            });
-        }
+        this.doctorSpace.getConsultations(this.user._id)
+            .subscribe(function (consultations) {
+            console.log(consultations);
+            _this.consultations = consultations;
+            _this.alertNumber = _this.alertNumber + _this.consultations.length;
+        });
     };
     AlertInfoComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3089,7 +3100,7 @@ var AlertInfoComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__medical_file_reminder_reminder_component__ = __webpack_require__(617);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__doctor_space_doctor_space_component__ = __webpack_require__(392);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__building_space_building_space_component__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__shared_services_doctor_space_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__shared_services_doctor_space_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__patient_rdv_google_map_google_map_component__ = __webpack_require__(618);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core__ = __webpack_require__(627);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_angular2_google_maps_core__);
@@ -3349,7 +3360,7 @@ var CalendarComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_medical_file_service__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_models_patient__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_services_authentication_service__ = __webpack_require__(10);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3496,9 +3507,20 @@ var ReminderComponent = (function () {
     };
     ReminderComponent.prototype.getRappels = function (userId) {
         var _this = this;
+        this.rappeles = [];
         this.reminderService.getRappel(userId)
             .subscribe(function (rappeles) {
-            _this.rappeles = rappeles;
+            for (var _i = 0, rappeles_1 = rappeles; _i < rappeles_1.length; _i++) {
+                var rap = rappeles_1[_i];
+                console.log(rap);
+                var currentDate = new Date(rap.date);
+                var today = new Date();
+                console.log(today);
+                console.log(currentDate);
+                if (currentDate.getDate() === today.getDate() && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear()) {
+                    _this.rappeles.push(rap);
+                }
+            }
             _this.rappelesNum = _this.rappeles.length;
             console.log(_this.rappeles);
         });
@@ -3913,7 +3935,7 @@ var PostComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doctor__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__(622);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Building; });
@@ -3995,7 +4017,7 @@ var Log = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doctor__ = __webpack_require__(85);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Service; });
 
 var Service = (function () {
@@ -4153,6 +4175,93 @@ var AutorisationService = (function () {
     var _a, _b;
 }());
 //# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/autorisation.service.js.map
+
+/***/ }),
+
+/***/ 71:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DoctorSpaceService = (function () {
+    function DoctorSpaceService(http, authentication) {
+        this.http = http;
+        this.authentication = authentication;
+        this.url = 'https://192.168.43.60:3000/api/';
+    }
+    DoctorSpaceService.prototype.getPatientFromDoctor = function (id) {
+        return this.http.get(this.url + 'patientsdoctor/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getConsultations = function (doctor_id) {
+        return this.http.get(this.url + 'consultation/' + doctor_id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getConsultationsPatient = function (patient_id) {
+        return this.http.get(this.url + 'consultation/patient/' + patient_id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getConsultationOfThisDay = function (doctor_id, date) {
+        var myFormatDate = date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear() + ':' + date.getHours() + ':' + date.getMinutes();
+        return this.http.get(this.url + 'consultation/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getDoctorByUserId = function (user_id) {
+        return this.http.get(this.url + 'userToDoctor/' + user_id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.addConsultation = function (consult) {
+        return this.http.put(this.url + 'consultation/', consult, this.authentication.getRequestOptions())
+            .map(function (res) { return res; });
+    };
+    DoctorSpaceService.prototype.getPatientByUserId = function (user_id) {
+        return this.http.get(this.url + 'userToPatient/' + user_id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getDisponnibiliteOf = function (doctor_id) {
+        return this.http.get(this.url + 'disponnibilite/doctor/' + doctor_id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getDisponnibilite = function (id) {
+        return this.http.get(this.url + 'disponnibilite/' + id, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.getDisponnibiliteOfThisDay = function (date, doctor_id) {
+        var myFormatDate = date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear() + ':' + date.getHours() + ':' + date.getMinutes();
+        return this.http.get(this.url + 'disponnibilite/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
+            .map(function (res) { return res.json(); });
+    };
+    DoctorSpaceService.prototype.addDisponnibilite = function (disp) {
+        return this.http.put(this.url + 'disponnibilite/', disp, this.authentication.getRequestOptions())
+            .map(function (res) { return res; });
+    };
+    DoctorSpaceService.prototype.modifyDisponnibilite = function (disp) {
+        return this.http.post(this.url + 'disponnibilite/', disp, this.authentication.getRequestOptions())
+            .map(function (res) { return res; });
+    };
+    DoctorSpaceService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
+    ], DoctorSpaceService);
+    return DoctorSpaceService;
+    var _a, _b;
+}());
+//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-space.service.js.map
 
 /***/ }),
 
@@ -4341,7 +4450,7 @@ module.exports = "<!-- Container (About Section) -->\n<div id=\"about\" class=\"
 /***/ 810:
 /***/ (function(module, exports) {
 
-module.exports = "<li id=\"infoSign\">\n  <button type=\"button\" class=\"btn btn-default btn-lg\" aria-label=\"Left Align\" data-toggle=\"dropdown\">\n    <span class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></span><span class=\"badge\">{{alertNumber}}</span>\n  </button>\n  <ul class=\"dropdown-menu\" id=\"alertTable\">\n    <li *ngFor=\"let n of demands\" class=\"clearfix\" (click)=\"liClick($event)\" [ngClass]=\"{'liConfirm': n.confirm}\">\n      <div class=\"displaybox\">\n        user:{{n.user.first_name}} {{n.user.last_name}}<br/>\n        user Mail:{{n.user.email}} <br/>\n        demande autorisation:{{n.subject}} <br/>\n        autorisation type: {{n.type}}<br/>\n        data:{{n.Created_at.toLocaleString()}}\n      </div>\n      <button type=\"button\" class=\"btn btn-danger success\" [ngClass]=\"{'buttonConfirm': n.confirm}\"\n              (click)=\"nonAutoriserClick(n._id)\">non autoriser\n      </button>\n      <button type=\"button\" class=\"btn btn-danger success\" [ngClass]=\"{'buttonConfirm': n.confirm}\"\n              (click)=\"autoriserClick(n._id)\">autoriser\n      </button>\n    </li>\n    <li *ngFor=\"let n of treatments\" class=\"clearfix\" (click)=\"liClick($event)\">\n      <div class=\"displaybox\">\n        A new treatment!!!<br/>\n        start:{{n.start}} <br/>\n        medicament: {{n.name}} <br/>\n        frequence:{{n.frequence}} <br/>\n        quantity: {{n.quantity}}\n      </div>\n    </li>\n    <li *ngFor=\"let n of consultations\" class=\"clearfix\" (click)=\"liClick($event)\">\n      <div class=\"displaybox\">\n        A new consultation!!!<br/>\n        who:{{n.patient.user_id.first_name}} {{n.patient.user_id.last_name}}<br/>\n        date: {{n.date}} <br/>\n        motif:{{n.motif}} <br/>\n\n      </div>\n\n    </li>\n  </ul>\n</li>\n"
+module.exports = "<li id=\"infoSign\">\n  <button type=\"button\" class=\"btn btn-default btn-lg\" aria-label=\"Left Align\" data-toggle=\"dropdown\">\n    <span class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></span><span class=\"badge\">{{alertNumber}}</span>\n  </button>\n  <ul class=\"dropdown-menu\" id=\"alertTable\">\n    <li *ngFor=\"let n of demands\" class=\"clearfix\" (click)=\"liClick($event)\" [ngClass]=\"{'liConfirm': n.confirm}\">\n      <div class=\"displaybox\">\n        user:{{n.user.first_name}} {{n.user.last_name}}<br/>\n        user Mail:{{n.user.email}} <br/>\n        demande autorisation:{{n.subject}} <br/>\n        autorisation type: {{n.type}}<br/>\n        data:{{n.Created_at.toLocaleString()}}\n      </div>\n      <button type=\"button\" class=\"btn btn-danger success\" [ngClass]=\"{'buttonConfirm': n.confirm}\"\n              (click)=\"nonAutoriserClick(n._id)\">non autoriser\n      </button>\n      <button type=\"button\" class=\"btn btn-danger success\" [ngClass]=\"{'buttonConfirm': n.confirm}\"\n              (click)=\"autoriserClick(n._id)\">autoriser\n      </button>\n    </li>\n    <li *ngFor=\"let n of treatments\" class=\"clearfix\" (click)=\"liClick($event)\">\n      <div class=\"displaybox\">\n        Nouveau traitement<br/>\n        début : {{n.start}} <br/>\n        médicament : {{n.name}} <br/>\n        frequence : {{n.frequence}} <br/>\n        quantité : {{n.quantity}}\n      </div>\n    </li>\n    <li *ngFor=\"let n of consultations\" class=\"clearfix\" (click)=\"liClick($event)\">\n      <div class=\"displaybox\">\n        Nouvelle consultation<br/>\n        {{n.patient.user_id.first_name}} {{n.patient.user_id.last_name}}<br/>\n        date : {{n.date}} <br/>\n        motif : {{n.motif}}\n      </div>\n\n    </li>\n  </ul>\n</li>\n"
 
 /***/ }),
 
@@ -4481,21 +4590,21 @@ module.exports = " <div *ngIf=\"isLogged\">\n    <!-- details -->\n    <div id=\
 /***/ 830:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n<h3>Page de profil</h3>\n\n<app-post></app-post>\n\n<div class=\"container\" *ngIf=\"isLogged\">\n  <div class=\"row\" *ngIf=\"user\">\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\n      <div class=\"well well-sm\">\n        <div class=\"row\">\n          <div class=\"col-sm-6 col-md-4\">\n            <img src=\"{{image}}\"\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\n          </div>\n          <div class=\"col-sm-6 col-md-8\">\n            <h4>\n              {{user.first_name}} {{user.last_name}}</h4>\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\n            </i></cite></small>\n            <p>\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\n              <br />\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\n            </p>\n            <!-- button -->\n            <div class=\"btn-group\">\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n\n<!--<div class=\"form-group\" [ngClass] = \"{\n         'has-error': profile_img.invalid && profile_img.touched,\n         'has-success': profile_img.valid && profile_img.touched}\">\n  <label class=\"control-label\">Image de profil</label>\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\n            Image de profil requise\n    </span>\n</div>-->\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n<h3>Page de profil</h3>\n\n<app-post></app-post>\n\n<div class=\"container\" *ngIf=\"isLogged\">\n  <div class=\"row\" *ngIf=\"user\">\n    <div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2\">\n      <div class=\"well well-sm\">\n        <div class=\"row\">\n          <div class=\"col-sm-6 col-md-4\">\n            <img src=\"{{image}}\"\n                 class=\"img-rounded\" alt=\"Image Profil\"/>\n          </div>\n          <div class=\"col-sm-6 col-md-8\">\n            <h4>\n              {{user.first_name}} {{user.last_name}}</h4>\n            <small><cite title=\"address\">{{user.address.city}}, {{user.address.country}} <i class=\"glyphicon glyphicon-map-marker\">\n            </i></cite></small>\n            <p>\n              <i class=\"glyphicon glyphicon-envelope\"></i>{{user.email}}\n              <br />\n              <i class=\"glyphicon glyphicon-gift\"></i>{{user.birth_date | date: 'dd/MM/yyyy'}}<br />\n              <i class=\"glyphicon glyphicon-info-sign\"></i>{{user.role}}\n            </p>\n            <!-- button -->\n            <div class=\"btn-group\">\n              <a type=\"button\" href=\"/settings\" routerLinkActive=\"active\" class=\"btn btn-default btn-lg\">\n                <i class=\"glyphicon glyphicon-cog\"></i> Paramètres</a>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div *ngFor=\"let consult of consultations_patient\" class=\"panel panel-info\">\n      <div class=\"panel-heading\">\n        Rendez-vous avec : {{consult.doctor.user_id.first_name}} {{consult.doctor.user_id.last_name}}\n      </div>\n      <div class=\"panel-body\">\n        Le : {{consult.date}}\n        Motif précisé : {{consult.motif}}\n      </div>\n    </div>\n  </div>\n</div>\n</div>\n\n<!--<div class=\"form-group\" [ngClass] = \"{\n         'has-error': profile_img.invalid && profile_img.touched,\n         'has-success': profile_img.valid && profile_img.touched}\">\n  <label class=\"control-label\">Image de profil</label>\n  <input name=\"profile_img\" type=\"file\" class=\"form-control\" [(ngModel)]=\"user.profile_img\"\n         (change)=\"handleFileSelect($event)\" #profile_img=\"ngModel\" accept=\"image/*\">\n  <span class=\"help-block\" *ngIf=\"profile_img.invalid && profile_img.touched\">\n            Image de profil requise\n    </span>\n</div>-->\n\n"
 
 /***/ }),
 
 /***/ 831:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion Observateur</div>\n    <table border=\"1\" class=\"table\">\n      <tr>\n        <td>Role</td>\n        <td>Prénom</td>\n        <td>Nom</td>\n        <td>Autorisations</td>\n        <td>Gestion</td>\n      </tr>\n      <tr *ngFor=\"let autorisation of autorisationValide\" >\n        <td>{{autorisation.observer.role[1]}}</td>\n        <td>{{autorisation.observer.first_name}}</td>\n        <td>{{autorisation.observer.last_name}}</td>\n        <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n        <td>\n          <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n          <button [routerLink]=\"['/current-treatment' , {'id' : autorisation.observer._id}]\">Consulter</button>\n        </td>\n      </tr>\n    </table>\n  </div>\n  <br />\n  <div class=\"signalColorValid\"></div>Autorisation Valide\n  <div class=\"signalColorRefuse\"></div>Autorisation Refusé\n  <div class=\"signalColorWait\"></div>Autorisation en attente\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion demande d'autorisation</div>\n  <table border=\"1\" class=\"table\">\n    <tr>\n    <td>status</td>\n    <td>Role</td>\n    <td>Prénom</td>\n    <td>Nom</td>\n    <td>Autorisations</td>\n    <td>Gestion</td>\n    </tr>\n    <tr *ngFor=\"let autorisation of autorisations\" >\n    <td *ngIf=\"!autorisation.confirm\" class=\"waitConfirm\"></td>\n    <td *ngIf=\"autorisation.confirm\" [ngStyle]=\"{'background-color':autorisation.valide? 'green' : 'red' }\"></td>\n    <td>{{autorisation.observer.role[1]}}</td>\n    <td>{{autorisation.observer.first_name}}</td>\n    <td>{{autorisation.observer.last_name}}</td>\n    <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n    <td>\n    <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n    </td>\n    </tr>\n  </table>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion Observateur</div>\n    <table border=\"1\" class=\"table\">\n      <tr>\n        <td>Role</td>\n        <td>Prénom</td>\n        <td>Nom</td>\n        <td>Autorisations</td>\n        <td>Gestion</td>\n      </tr>\n      <tr *ngFor=\"let autorisation of autorisationValide\" >\n        <td>{{autorisation.observer.role[1]}}</td>\n        <td>{{autorisation.observer.first_name}}</td>\n        <td>{{autorisation.observer.last_name}}</td>\n        <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n        <td>\n          <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n        </td>\n      </tr>\n    </table>\n  </div>\n  <br />\n  <div class=\"signalColorValid\"></div>Autorisation Valide\n  <div class=\"signalColorRefuse\"></div>Autorisation Refusé\n  <div class=\"signalColorWait\"></div>Autorisation en attente\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion demande d'autorisation</div>\n  <table border=\"1\" class=\"table\">\n    <tr>\n    <td>status</td>\n    <td>Role</td>\n    <td>Prénom</td>\n    <td>Nom</td>\n    <td>Autorisations</td>\n    <td>Gestion</td>\n    </tr>\n    <tr *ngFor=\"let autorisation of autorisations\" >\n    <td *ngIf=\"!autorisation.confirm\" class=\"waitConfirm\"></td>\n    <td *ngIf=\"autorisation.confirm\" [ngStyle]=\"{'background-color':autorisation.valide? 'green' : 'red' }\"></td>\n    <td>{{autorisation.observer.role[1]}}</td>\n    <td>{{autorisation.observer.first_name}}</td>\n    <td>{{autorisation.observer.last_name}}</td>\n    <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n    <td>\n    <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n    </td>\n    </tr>\n  </table>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
 /***/ 832:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion superviseur Panel</div>\n    <table border=\"1\" class=\"table\">\n      <tr>\n        <td>Role</td>\n        <td>Prénom</td>\n        <td>Nom</td>\n        <td>Autorisations</td>\n        <td>Gestion</td>\n      </tr>\n      <tr *ngFor=\"let autorisation of autorisations\" >\n        <td>{{autorisation.user.role[1]}}</td>\n        <td>{{autorisation.user.first_name}}</td>\n        <td>{{autorisation.user.last_name}}</td>\n        <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n        <td>\n          <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n        </td>\n      </tr>\n    </table>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">Gestion superviseur Panel</div>\n    <table border=\"1\" class=\"table\">\n      <tr>\n        <td>Role</td>\n        <td>Prénom</td>\n        <td>Nom</td>\n        <td>Autorisations</td>\n        <td>Gestion</td>\n      </tr>\n      <tr *ngFor=\"let autorisation of autorisations\" >\n        <td>{{autorisation.user.role[1]}}</td>\n        <td>{{autorisation.user.first_name}}</td>\n        <td>{{autorisation.user.last_name}}</td>\n        <td>{{autorisation.subject}} => {{autorisation.type}}</td>\n        <td>\n          <button (click)=\"deleteAutorisation(autorisation._id)\">Supprimer</button>\n          <button [routerLink]=\"['/current-treatment' , {'id' : autorisation.user._id}]\">Consulter</button>\n        </td>\n      </tr>\n    </table>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -4509,16 +4618,16 @@ module.exports = "<div class=\"jumbotron text-center\">\n  <app-post></app-post>
 /***/ 834:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page d'inscription</h2>\n\n  <div *ngIf=\"!submitted\">\n    <h3>Email already exist</h3>\n  </div>\n\n  <form (ngSubmit)=\"register()\" #form=\"ngForm\">\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': first_name.invalid && first_name.touched,\n         'has-success': first_name.valid && first_name.touched}\">\n      <label class=\"control-label\">Prénom</label>\n      <input type=\"text\" class=\"form-control\" name=\"first_name\" required\n             [(ngModel)]=\"user.first_name\"\n             #first_name=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"first_name.invalid && first_name.touched\">\n            Prénom requis\n        </span>\n    </div>\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': last_name.invalid && last_name.touched,\n         'has-success': last_name.valid && last_name.touched}\">\n      <label class=\"control-label\">Nom</label>\n      <input type=\"text\" class=\"form-control\" name=\"last_name\" required\n             [(ngModel)]=\"user.last_name\"\n             #last_name=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"last_name.invalid && last_name.touched\">\n            Nom requis\n        </span>\n    </div>\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': email.invalid && email.touched,\n         'has-success': email.valid && email.touched}\">\n      <label class=\"control-label\">Email</label>\n      <input type=\"email\" class=\"form-control\" name=\"email\" required\n             [(ngModel)]=\"user.email\"\n             #email=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n            Email requis\n        </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n      <label class=\"control-label\">Mot de passe</label>\n      <input type=\"password\" class=\"form-control\" name=\"password\" required\n             [(ngModel)]=\"user.password\"\n             #password=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n            Mot de passe requis\n        </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n      <label class=\"control-label\">Date de naissance</label>\n      <input type=\"date\" class=\"form-control\" name=\"birth_date\" required\n             [(ngModel)]=\"user.birth_date\" #birth_date=\"ngModel\" max=\"2017-01-01\">\n      <span class=\"help-block\" *ngIf=\"birth_date.invalid && birth_date.touched\">\n            Date de naissance requise\n    </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': role.invalid && role.touched,\n         'has-success': role.valid && role.touched}\">\n      <label class=\"control-label\">Choisissez votre profil</label>\n      <select name=\"role\" class=\"form-control\" required [(ngModel)]=\"user.role\" #role=\"ngModel\">\n        <option value=\"patient\">Patient</option>\n        <option value=\"medecin\">Medecin</option>\n        <option value=\"building\">Infrastructure</option>\n        <option value=\"organisation\">Organisation</option>\n      </select>\n      <span class=\"help-block\" *ngIf=\"role.invalid && role.touched\">\n            Profil requis\n    </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': country.invalid && country.touched,\n         'has-success': country.valid && country.touched}\">\n      <label class=\"control-label\">Pays</label>\n      <input type=\"text\" class=\"form-control\" name=\"country\" required\n             [(ngModel)]=\"user.address.country\"\n             #country=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Ville</label>\n      <input type=\"text\" class=\"form-control\" name=\"city\" required\n             [(ngModel)]=\"user.address.city\"\n             #city=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Rue</label>\n      <input type=\"text\" class=\"form-control\" name=\"street_address\" required\n             [(ngModel)]=\"user.address.street_address\"\n             #street_adress=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Numéro de rue</label>\n      <input type=\"text\" class=\"form-control\" name=\"num\" required\n             [(ngModel)]=\"user.address.num\"\n             #num=\"ngModel\">\n    </div>\n\n    <!--//google map pour preciser l'address-->\n    <sebm-google-map class=\"agm-map\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\"></sebm-google-map>\n    <div *ngIf=\"user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0\">\n      {{displayAddress()}}\n    </div>\n\n    <!--//google map pour preciser l'address-->\n    <sebm-google-map class=\"agm-map\" [latitude]=\"user.address.latitude\" [longitude]=\"user.address.longitude\"\n                     [zoom]=\"zoom*2\" *ngIf=\"user.address.latitude !== 0\">\n      <sebm-google-map-marker [latitude]=\"user.address.latitude\" [longitude]=\"user.address.longitude\">\n      </sebm-google-map-marker><!-- marker ne s'afficha pas -->\n    </sebm-google-map>\n\n    <sebm-google-map class=\"agm-map\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom/2\"\n                     *ngIf=\"user.address.latitude == 0\">\n    </sebm-google-map>\n\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">S'inscrire</button>\n    </div>\n\n  </form>\n</div>\n\n\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h2 class=\"text-center\">Page d'inscription</h2>\n\n  <div *ngIf=\"!submitted\">\n    <h3>Email already exist</h3>\n  </div>\n\n  <form (ngSubmit)=\"register()\" #form=\"ngForm\">\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': first_name.invalid && first_name.touched,\n         'has-success': first_name.valid && first_name.touched}\">\n      <label class=\"control-label\">Prénom</label>\n      <input type=\"text\" class=\"form-control\" name=\"first_name\" required\n             [(ngModel)]=\"user.first_name\"\n             #first_name=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"first_name.invalid && first_name.touched\">\n            Prénom requis\n        </span>\n    </div>\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': last_name.invalid && last_name.touched,\n         'has-success': last_name.valid && last_name.touched}\">\n      <label class=\"control-label\">Nom</label>\n      <input type=\"text\" class=\"form-control\" name=\"last_name\" required\n             [(ngModel)]=\"user.last_name\"\n             #last_name=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"last_name.invalid && last_name.touched\">\n            Nom requis\n        </span>\n    </div>\n\n    <div class=\"form-group\"\n         [ngClass]=\"{\n         'has-error': email.invalid && email.touched,\n         'has-success': email.valid && email.touched}\">\n      <label class=\"control-label\">Email</label>\n      <input type=\"email\" class=\"form-control\" name=\"email\" required\n             [(ngModel)]=\"user.email\"\n             #email=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"email.invalid && email.touched\">\n            Email requis\n        </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n      <label class=\"control-label\">Mot de passe</label>\n      <input type=\"password\" class=\"form-control\" name=\"password\" required\n             [(ngModel)]=\"user.password\"\n             #password=\"ngModel\">\n      <span class=\"help-block\" *ngIf=\"password.invalid && password.touched\">\n            Mot de passe requis\n        </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': password.invalid && password.touched,\n         'has-success': password.valid && password.touched}\">\n      <label class=\"control-label\">Date de naissance</label>\n      <input type=\"date\" class=\"form-control\" name=\"birth_date\" required\n             [(ngModel)]=\"user.birth_date\" #birth_date=\"ngModel\" max=\"2017-01-01\">\n      <span class=\"help-block\" *ngIf=\"birth_date.invalid && birth_date.touched\">\n            Date de naissance requise\n    </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': role.invalid && role.touched,\n         'has-success': role.valid && role.touched}\">\n      <label class=\"control-label\">Choisissez votre profil</label>\n      <select name=\"role\" class=\"form-control\" required [(ngModel)]=\"user.role\" #role=\"ngModel\">\n        <option value=\"patient\">Patient</option>\n        <option value=\"medecin\">Medecin</option>\n        <option value=\"building\">Infrastructure</option>\n        <option value=\"organisation\">Organisation</option>\n      </select>\n      <span class=\"help-block\" *ngIf=\"role.invalid && role.touched\">\n            Profil requis\n    </span>\n    </div>\n\n    <div class=\"form-group\" [ngClass]=\"{\n         'has-error': country.invalid && country.touched,\n         'has-success': country.valid && country.touched}\">\n      <label class=\"control-label\">Pays</label>\n      <input type=\"text\" class=\"form-control\" name=\"country\" required\n             [(ngModel)]=\"user.address.country\"\n             #country=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Ville</label>\n      <input type=\"text\" class=\"form-control\" name=\"city\" required\n             [(ngModel)]=\"user.address.city\"\n             #city=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Rue</label>\n      <input type=\"text\" class=\"form-control\" name=\"street_address\" required\n             [(ngModel)]=\"user.address.street_address\"\n             #street_adress=\"ngModel\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"control-label\">Numéro de rue</label>\n      <input type=\"text\" class=\"form-control\" name=\"num\" required\n             [(ngModel)]=\"user.address.num\"\n             #num=\"ngModel\">\n    </div>\n\n    <!--//google map pour preciser l'address-->\n    <div *ngIf=\"user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0\">\n      {{displayAddress()}}\n    </div>\n\n    <!--//google map pour preciser l'address-->\n    <sebm-google-map class=\"agm-map\" [latitude]=\"user.address.latitude\" [longitude]=\"user.address.longitude\"\n                     [zoom]=\"zoom*2\" *ngIf=\"user.address.latitude !== 0\">\n      <sebm-google-map-marker [latitude]=\"user.address.latitude\" [longitude]=\"user.address.longitude\">\n      </sebm-google-map-marker>\n    </sebm-google-map>\n\n    <sebm-google-map class=\"agm-map\" [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom/2\"\n                     *ngIf=\"user.address.latitude == 0\">\n    </sebm-google-map>\n\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"form.invalid\">S'inscrire</button>\n    </div>\n\n  </form>\n</div>\n\n\n"
 
 /***/ }),
 
-/***/ 84:
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__patient__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__patient__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__building__ = __webpack_require__(620);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Doctor; });
 
@@ -4554,90 +4663,6 @@ var Doctor = (function () {
     return Doctor;
 }());
 //# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor.js.map
-
-/***/ }),
-
-/***/ 85:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authentication_service__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorSpaceService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var DoctorSpaceService = (function () {
-    function DoctorSpaceService(http, authentication) {
-        this.http = http;
-        this.authentication = authentication;
-        this.url = 'https://192.168.43.60:3000/api/';
-    }
-    DoctorSpaceService.prototype.getPatientFromDoctor = function (id) {
-        return this.http.get(this.url + 'patientsdoctor/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getConsultations = function (doctor_id) {
-        return this.http.get(this.url + 'consultation/' + doctor_id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getConsultationOfThisDay = function (doctor_id, date) {
-        //console.log('trying to get consultation of a particular date time');
-        var myFormatDate = date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear() + ':' + date.getHours() + ':' + date.getMinutes();
-        return this.http.get(this.url + 'consultation/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getDoctorByUserId = function (user_id) {
-        return this.http.get(this.url + 'userToDoctor/' + user_id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.addConsultation = function (consult) {
-        return this.http.put(this.url + 'consultation/', consult, this.authentication.getRequestOptions())
-            .map(function (res) { return res; });
-    };
-    DoctorSpaceService.prototype.getPatientByUserId = function (user_id) {
-        return this.http.get(this.url + 'userToPatient/' + user_id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getDisponnibiliteOf = function (doctor_id) {
-        return this.http.get(this.url + 'disponnibilite/doctor/' + doctor_id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getDisponnibilite = function (id) {
-        return this.http.get(this.url + 'disponnibilite/' + id, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.getDisponnibiliteOfThisDay = function (date, doctor_id) {
-        var myFormatDate = date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear() + ':' + date.getHours() + ':' + date.getMinutes();
-        return this.http.get(this.url + 'disponnibilite/date/' + doctor_id + '/' + myFormatDate, this.authentication.getRequestOptions())
-            .map(function (res) { return res.json(); });
-    };
-    DoctorSpaceService.prototype.addDisponnibilite = function (disp) {
-        return this.http.put(this.url + 'disponnibilite/', disp, this.authentication.getRequestOptions())
-            .map(function (res) { return res; });
-    };
-    DoctorSpaceService.prototype.modifyDisponnibilite = function (disp) {
-        return this.http.post(this.url + 'disponnibilite/', disp, this.authentication.getRequestOptions())
-            .map(function (res) { return res; });
-    };
-    DoctorSpaceService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__authentication_service__["a" /* AuthenticationService */]) === 'function' && _b) || Object])
-    ], DoctorSpaceService);
-    return DoctorSpaceService;
-    var _a, _b;
-}());
-//# sourceMappingURL=C:/Users/sanga/Documents/Projets/CALM/CALM/src/doctor-space.service.js.map
 
 /***/ }),
 

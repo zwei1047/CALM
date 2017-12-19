@@ -50,9 +50,19 @@ export class ReminderComponent implements OnInit {
       });
   }
   getRappels(userId: string ) {
+    this.rappeles = [];
     this.reminderService.getRappel(userId)
       .subscribe(rappeles => {
-        this.rappeles = rappeles;
+        for (const rap of rappeles) {
+          console.log(rap);
+          const currentDate = new Date(rap.date);
+          const today = new Date();
+          console.log(today);
+          console.log(currentDate);
+          if (currentDate.getDate() === today.getDate() && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear()) {
+            this.rappeles.push(rap);
+          }
+        }
         this.rappelesNum = this.rappeles.length;
         console.log(this.rappeles);
       });

@@ -153,50 +153,52 @@ function createNextRappel(rappel) {
     {
       res.json(' create next rappel failed');
     }else{
-      //console.log(docs);
-      treatment = docs[0];
-      var today = new Date();
-      var endday = new Date(treatment.end);
-      //console.log(treatment.typeFrequence);
-      //console.log(TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
-      var nextDay = today.setDate(today.getDate() + TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
-      //console.log(nextDay);
-      if(valideDate(nextDay, endday)) {
-        var year = new Date(nextDay).getFullYear();
-        var month = new Date(nextDay).getMonth();
-        var day = new Date(nextDay).getDate();
-        var newNextDay = new Date(year, month, day);
-        var rappel = {
-          name: '',
-          quantity: '',
-          takingState: '',
-          frequence: '',
-          typeFrequence: '',
-          info: ''
-        };
-        rappel.name = treatment.name;
-        rappel.quantity = treatment.quantity;
-        rappel.takingState = treatment.takingState;
-        rappel.frequence = treatment.frequence;
-        rappel.typeFrequence = treatment.typeFrequence;
-        rappel.info = treatment.info;
-        //console.log(DATETRANSLATION[treatment.takingState][0]);
-        for (var i = 0; i < rappel.frequence; i++) {
-          new Reminder({
-            userId: treatment.userId,
-            rappel: rappel,
-            traitementId: treatment._id,
-            time: DATETRANSLATION[treatment.takingState][i],
-            date: newNextDay,
-            expire: false
-          }).save().then(function (content) {
-            //console.log('date valide and create new rappel');
-          });
+      if (docs[0]){
+        //console.log(docs);
+        treatment = docs[0];
+        var today = new Date();
+        var endday = new Date(treatment.end);
+        //console.log(treatment.typeFrequence);
+        //console.log(TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
+        var nextDay = today.setDate(today.getDate() + TYPEFREQUENCETRANSLATION[treatment.typeFrequence]);
+        //console.log(nextDay);
+        if(valideDate(nextDay, endday)) {
+          var year = new Date(nextDay).getFullYear();
+          var month = new Date(nextDay).getMonth();
+          var day = new Date(nextDay).getDate();
+          var newNextDay = new Date(year, month, day);
+          var rappel = {
+            name: '',
+            quantity: '',
+            takingState: '',
+            frequence: '',
+            typeFrequence: '',
+            info: ''
+          };
+          rappel.name = treatment.name;
+          rappel.quantity = treatment.quantity;
+          rappel.takingState = treatment.takingState;
+          rappel.frequence = treatment.frequence;
+          rappel.typeFrequence = treatment.typeFrequence;
+          rappel.info = treatment.info;
+          //console.log(DATETRANSLATION[treatment.takingState][0]);
+          for (var i = 0; i < rappel.frequence; i++) {
+            new Reminder({
+              userId: treatment.userId,
+              rappel: rappel,
+              traitementId: treatment._id,
+              time: DATETRANSLATION[treatment.takingState][i],
+              date: newNextDay,
+              expire: false
+            }).save().then(function (content) {
+              //console.log('date valide and create new rappel');
+            });
+          }
         }
-      }
         else {
-        //console.log('date not valid');
+          //console.log('date not valid');
 
+        }
       }
 
     }

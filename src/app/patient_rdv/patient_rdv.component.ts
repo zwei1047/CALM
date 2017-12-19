@@ -163,6 +163,8 @@ export class PatientRdvComponent implements OnInit {
                         .subscribe( resp => {
                           console.log(resp);
                           this.openDetails(this.doctorDetails['id']);
+
+                          this
                         });
                     }
                   });
@@ -226,7 +228,7 @@ export class PatientRdvComponent implements OnInit {
                 // il suffit de recuperer les 'disponnibilite' pour chaque jour
                 this.doctorService.getDisponnibiliteOf(doctor[0]._id)
                   .subscribe( dispos => {
-                    for (let i = 0; i < 7; i++) {
+                    for (let i = 1; i < 8; i++) {
                       // on ajoute 24 heure pour avoir lendemain
                       const dateUsed = new Date(dateNow.getTime() + i * 86400000);
                       this.planningDays[i]['jour'] = jours[dateUsed.getDay()];

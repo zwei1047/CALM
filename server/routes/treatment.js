@@ -17,17 +17,16 @@ module.exports = function (passport) {
     'Apres-repas': ['13:00', '21:00'],
     'A-jeun': ['7:00'],
     'Avant-dormir': ['22:00'],
-    'Au-reveil': ['6:30']
+    'Au-reveil': ['6:30'],
+    '': ['']
   };
   var Reminder = require('../models/reminder');
   var Treatment = require('../models/treatment');
 
   function createFirstRappel(treatment, res) {
-    var start = new Date();
-    start = start.toString();
+    var start = new Date(treatment.start);
     console.log(start);
     console.log(treatment);
-    start = new Date(start);
     var rappel = {
       name: '',
       quantity: '',
@@ -42,7 +41,6 @@ module.exports = function (passport) {
     rappel.frequence = treatment.frequence;
     rappel.typeFrequence = treatment.typeFrequence;
     rappel.info = treatment.info;
-    start = start.getDate() + "-" + (start.getMonth() + 1) + "-" + start.getFullYear();
     new Reminder({
       userId: treatment.userId,
       rappel: rappel,
@@ -108,9 +106,7 @@ module.exports = function (passport) {
         res.json(err)
       }
       if (response) {
-        var start1 = new Date();
-        start1 = start1.toString();
-        start1 = new Date(start1);
+        var start1 = new Date(req.body.start);
         var rappel = {
           name: '',
           quantity: '',
@@ -125,7 +121,6 @@ module.exports = function (passport) {
         rappel.frequence = response.frequence;
         rappel.typeFrequence = response.typeFrequence;
         rappel.info = response.info;
-        start1 = start1.getDate() + "-" + (start1.getMonth() + 1) + "-" + start1.getFullYear();
         Reminder.update({
           traitementId: req.params.id,
         }, {

@@ -23,6 +23,20 @@ module.exports = function(passport) {
       });
   });
 
+  router.get('/consultation/patient/:id', auth, function(req, res) {
+    if (req.params.id){
+      Consultation.find({patient: req.params.id})
+        .populate([{path: 'patient', populate: {path: 'user_id'}}, {path: 'doctor', populate: {path: 'user_id'}}])
+        .exec(function(err, docs) {
+          if(!err && docs) {
+            res.json(docs);
+          } else {
+            res.json(err);
+          }
+        });
+    }
+  });
+
   //add a new consultation
   router.put('/consultation/', auth, function(req, res) {
     var consult = new Consultation();
