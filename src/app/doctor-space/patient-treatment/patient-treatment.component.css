@@ -1,24 +1,22 @@
-.jumbotron {
-  background-color: white;
-  color: black;
-}
-
-textarea {
-  width: 200px;
-}
-
 [hidden] {
   display: none;
 }
 
+.list-item {
+  text-align: left;
+}
 
-
-.treatment-list {
-  margin-left: 1cm;
+.table {
+  width: 100% !important;
 }
 
 .table th {
   text-align: center;
+}
+
+.jumbotron {
+  background-color: white;
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -28,3 +26,4 @@ textarea {
     max-width:1200px;
   }
 }
+

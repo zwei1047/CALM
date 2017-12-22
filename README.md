@@ -1,6 +1,6 @@
 # Projet CALM
 
-Dans le cadre des projets ADICODE menés à l'ISEN Lille en M1, la start-up Care Analysis Lab (on) Mobile (CALM) nous a proposé un projet d’innovation dans le domaine de la santé.
+Dans le cadre des projets ADICODE menés à l'ISEN Lille en M1-M2, la start-up Care Analysis Lab (on) Mobile (CALM) nous a proposé un projet d’innovation dans le domaine de la santé.
  
 
 ### Présentation de l'entreprise 
@@ -43,6 +43,19 @@ Installation de l’environnement :
 - Lancer un navigateur et se connecter à l’URL : https://localhost:3000
 
 
+### Infos
+Le login s'appuie sur le protocole Oauth avec le module passport
+La prise de rendez-vous et la géolocalisation utilise l'api google map
+La partie traitement utilise la base de données publiques de médicaments (https://open-medicaments.fr/#/home)
+Un fichier (structure.png) contient un aperçu (très rapide) de la structure de l'application.
+
+
 ### Contributeurs
+M1 (début 2017)
 Romain VANMARCKE  
 Julien VERMEIL
+
+M2 (fin 2017)
+Hongchang Xu
+Quentin Drumez
+Pierre Barre

@@ -31,7 +31,6 @@ router.get('/getRappels/:userId', auth, function (req, res, next) {
     expire: 'false'
   }).sort({_id: -1})
     .exec(function (err, docs) {
-
       res.json(docs);
     });
 });
