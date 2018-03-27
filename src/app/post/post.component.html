@@ -1,39 +1,35 @@
- <div *ngIf="isLogged">
-    <!-- details -->
-    <div id="messagerie" *ngIf="isMessagerieOpen">
-      <h2>Messagerie</h2>
-      <button (click)="minimizeMessagerie()">Minimize messagerie</button>
-      <ul id="list_users">
-        <li *ngFor="let user of usersPost" (click)="openMessenger(user)">
-          {{user.first_name}} {{user.last_name}}
-        </li>
-      </ul>
+<div *ngIf="isLogged">
+  <!-- details -->
+
+  <div id="ouvreMessagerie" (click)="openMessagerie()" *ngIf="!isMessagerieOpen">
+    <span class="glyphicon glyphicon-envelope" aria-hidden="true" aria-label="Ouvrir la messagerie"></span>
+  </div>
+
+  <div id="messagerie" *ngIf="isMessagerieOpen">
+    <h2>Messagerie</h2>
+    <button (click)="minimizeMessagerie()">Réduire la messagerie</button>
+    <ul id="list_users">
+      <li *ngFor="let user of usersPost" (click)="openMessenger(user)">
+        {{user.first_name}} {{user.last_name}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div *ngIf="messengerBox['display'] == 'True'" id="message">
+    <h2>{{messengerBox['name']}}  <button (click)="deleteMessageBox()">X</button></h2>
+    <ul>
+      <li *ngFor="let post of messengerListPosts">
+        <div *ngIf="post.sender==me._id" style="left: 19%;">{{post.text}}<br/> à {{post.Created_at}}
+        </div>
+        <div *ngIf="!(post.sender==me._id)" style="left: 1%;">{{post.text}}<br/> à {{post.Created_at}}
+        </div>
+      </li>
+    </ul>
+    <div id="inputMessage">
+      <input type="text" name="newPost" placeholder="Nouveau message" id="newPost" [(ngModel)]="newPostText"
+      />
+      <input type="submit" value="Envoyer" id="sendPost" (click)="sendPost()" />
     </div>
-
-    <div id="ouvreMessagerie" (click)="openMessagerie()" *ngIf="!isMessagerieOpen">
-      Rétablir messagerie
-    </div>
-
-    <div *ngIf="messengerBox['display'] == 'True'" id="message">
-      <h2>{{messengerBox['name']}}  <button (click)="deleteMessageBox()">X</button></h2>
-      <ul>
-        <li *ngFor="let post of messengerListPosts">
-          <div *ngIf="post.sender==me._id" style="left: 19%;">{{post.text}}<br/>
-            à {{post.Created_at}}
-          </div>
-          <div *ngIf="!(post.sender==me._id)" style="left: 1%;">{{post.text}}<br/>
-            à {{post.Created_at}}
-          </div>
-        </li>
-      </ul>
-      <div id="inputMessage">
-        <input type="text" name="newPost" placeholder="Nouveau message" id="newPost" [(ngModel)]="newPostText"/>
-        <input type="submit" value="Envoyer" id="sendPost" (click)="sendPost()"/>
-      </div>
-    </div>
- </div>
-
-
-
-
-
+  </div>
+</div>
