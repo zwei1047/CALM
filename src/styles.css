@@ -31,6 +31,9 @@ h4 {
 
 .container-fluid {
   padding: 60px 50px;
+  width: 90%;
+  margin: auto;
+  max-width: 900px;
 }
 
 .bg-grey {
