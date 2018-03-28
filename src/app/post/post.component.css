@@ -25,12 +25,13 @@
   border-radius: 10px 0 0 10px;
   z-index: 999;
 }
-#ouvreMessagerie{
+#messagerieIsClosed{
   position: fixed;
   bottom: 10px;
   right:10px;
-  width: 190px;
+  width:50px;
   height:50px;
+
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
   background: #cedce7; /* Old browsers */
   background: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
@@ -38,9 +39,9 @@
   background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
 
-  color:rgb(50,50,50);
+  color:rgb(53, 50, 48);
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 100px;
   cursor: pointer;
 
   text-align: center;

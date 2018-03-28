@@ -1,7 +1,7 @@
 <div *ngIf="isLogged">
   <!-- details -->
 
-  <div id="ouvreMessagerie" (click)="openMessagerie()" *ngIf="!isMessagerieOpen">
+  <div id="messagerieIsClosed" (click)="openMessagerie()" *ngIf="!isMessagerieOpen">
     <span class="glyphicon glyphicon-envelope" aria-hidden="true" aria-label="Ouvrir la messagerie"></span>
   </div>
 
