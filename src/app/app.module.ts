@@ -46,6 +46,9 @@ import {AlertInfoComponent} from "./alert/alert-info.component";
 import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisation/gestion-supervisor.component";
 import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
 import {GooglemapsService} from "./shared/services/googlemaps.service";
+import { ReCaptchaModule } from 'angular2-recaptcha';
+import { ConfirmationComponent } from './register/confirmation/confirmation.component';
+
 
 @NgModule({
   declarations: [
@@ -76,7 +79,8 @@ import {GooglemapsService} from "./shared/services/googlemaps.service";
     DialogAnchorDirective,
     AlertInfoComponent,
     GestionSupervisorComponent,
-    GestionObserverComponent
+    GestionObserverComponent,
+    ConfirmationComponent
 
   ],
   imports: [
@@ -87,7 +91,8 @@ import {GooglemapsService} from "./shared/services/googlemaps.service";
     TrimValueAccessorModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDVDZy1qXBBu6ctMvyYcSONy3-cs5PjYNU'
-    })
+    }),
+    ReCaptchaModule
   ],
   providers: [
     UsersService,

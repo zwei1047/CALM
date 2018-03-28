@@ -1,3 +1,5 @@
+<head><script src='https://www.google.com/recaptcha/api.js'></script></head>
+
 <div class="jumbotron text-center">
   <h2 class="text-center">Page d'inscription</h2>
 
@@ -114,8 +116,8 @@
              #num="ngModel">
     </div>
 
-    <!--//google map pour preciser l'address-->
-    <sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom"></sebm-google-map>
+    <!--//google map pour preciser l'address
+    <sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom"></sebm-google-map>-->
     <div *ngIf="user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0">
       {{displayAddress()}}
     </div>
@@ -127,13 +129,16 @@
       </sebm-google-map-marker><!-- marker ne s'afficha pas -->
     </sebm-google-map>
 
-    <sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom/2"
+    <!--<sebm-google-map class="agm-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom/2"
                      *ngIf="user.address.latitude == 0">
-    </sebm-google-map>
+    </sebm-google-map>-->
 
+
+    <re-captcha site_key="6Le2J08UAAAAAGBY8-r2rg70Z4-ySnqdi7ySOuNz"></re-captcha>
     <div class="form-group">
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid">S'inscrire</button>
     </div>
+
 
   </form>
 </div>

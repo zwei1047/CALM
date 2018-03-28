@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectorRef} from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef, NgModule} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from "../shared/models/user";
@@ -6,11 +6,15 @@ import {Address} from '../shared/models/address';
 import {GooglemapsService} from "../shared/services/googlemaps.service";
 import {MailService} from "../shared/services/mail.service";
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+
+
 export class RegisterComponent implements OnInit {
   user = new User(null);
   submitted: boolean = true;
@@ -75,7 +79,8 @@ export class RegisterComponent implements OnInit {
           this.authentication.saveToken(res.token);
 
           // envoi mail de confirmation
-          const confText = "Bonjour, \n\nVotre inscription a bien été prise en compte, nous vous remercions de votre confiance.\n" +
+          const confText = "Bonjour, \n\nPour confirmer votre inscription au site CALM, veuillez vérifier votre adresse mail en vous " +
+            "rendant sur cette page :" + ", nous vous remercions de votre confiance.\n" +
             "Prenez votre premier rendez-vous grâce à CALM ! \n\n Cordialement, \n\n CALM";
           this.mailService.sendMail(this.user.email, "[CALM] Confirmation d'inscription", confText)
             .subscribe( resp => {
@@ -100,6 +105,7 @@ export class RegisterComponent implements OnInit {
     this.submitted = false;
   }
 }
+
 
 
 
