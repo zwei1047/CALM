@@ -23,9 +23,11 @@
 <!--<button class="btn btn-primary reminder" type="button">-->
   <!--Mes Rappels <span class="badge">4</span>-->
 <!--</button>-->
+
+
 <div class="btn-group" *ngIf="isLogged==true">
   <button type="button" class="btn btn-primary reminder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Mes  Rappels <span class="badge">{{rappelesNum}}</span>
+    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> <span class="badge">{{rappelesNum}}</span>
   </button>
   <ul class="dropdown-menu">
 

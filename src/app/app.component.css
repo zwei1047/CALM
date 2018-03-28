@@ -5,6 +5,20 @@
 .dropdown-menu {
   background-color: grey;
 }
-#infoSign button{
+
+#infoSign button {
   margin-left: 10px;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-right {
+  margin-right: 0px;
 }
