@@ -1,81 +1,363 @@
 <app-reminder></app-reminder>
 <header>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+
+  <nav class="navbar navbar-default navbar-fixed-top desktop">
+    <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a routerLink="/" class="navbar-brand"><i class="glyphicon glyphicon-apple"></i> Cappac </a>
+        <img class="navbar-brand" src="{{image}}" alt="Logo CALM"/>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li><a href="#about">A propos</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-
-          <li>
-            <div *ngIf="isLogged" class="dropdown">
-              <button class="btn btn-default btn-lg" type="button" data-toggle="dropdown" *ngIf="user">
-                {{user.first_name}}
-
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a
-                  *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
-                  [routerLink]="['/current-treatment' , {'id' : user._id}]"
-                  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                  <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
-                </a></li>
-
-                <li><a
-                  *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
-                  routerLink="patient_rdv"
-                  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                  <i class="glyphicon glyphicon-calendar"></i> Prendre rendez-vous
-                </a></li>
-
-                <li><a *ngIf="isLogged && (user.role[1] == 'medecin')" routerLink="doctor-space"
-                       routerLinkActive="active"
-                       [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace pro</a>
-                </li>
-
-                <li><a *ngIf="isLogged && (user.role[1] == 'building')" routerLink="building-space"
-                       routerLinkActive="active"
-                       [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
-                  infrastructure</a></li>
-
-                <li><a *ngIf="isLogged && (user.role[1] == 'organisation')" routerLink="organisation-space"
-                       routerLinkActive="active"
-                       [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
-                  organisation</a></li>
-                <li><a routerLink="profile" routerLinkActive="active">
-                  <i class="glyphicon glyphicon-user"></i> Profil
-                </a></li>
-                <li><a routerLink="settings" routerLinkActive="active">
-                  <i class="glyphicon glyphicon-cog"></i> Paramètres
-                </a></li>
-                <li><a routerLinkActive="active" (click)="logout()">
-                  <i class="glyphicon glyphicon-log-out"></i> Deconnexion
-                </a></li>
-              </ul>
+      <ul class="nav navbar-nav">
+        <li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Cappac</button>
+            <button button type="button" class="btn btn-default dropdown-toggle dropdown-toggle-split"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </button>
+            <div class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">A propos</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Contact</a>
+              </li>
             </div>
-          </li>
-          <li *ngIf="isLogged">
-            <alert-info [user]="user||null" class="dropdown"></alert-info>
-          </li>
+          </div>
+        </li>
 
-          <li><a *ngIf="!isLogged" routerLink="register" routerLinkActive="active">
-            <span class="glyphicon glyphicon-user"></span> Inscription</a></li>
-          <li><a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">
-            <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
-        </ul>
+        <li>
+          <div *ngIf="isLogged" class="btn-group">
+            <button type="button" class="btn btn-default" routerLink="medical-file" *ngIf="user">
+            {{user.first_name}}
+          </button>
+          <button button type="button" class="btn btn-default dropdown-toggle dropdown-toggle-split"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </button>
+            <div class="dropdown-menu">
+              <li>
+                <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                        [routerLink]="['/current-treatment' , {'id' : user._id}]" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
+                </a>
+              </li>
+              <li>
+                <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                        routerLink="patient_rdv" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-calendar"></i> Prendre rendez-vous
+                </a>
+              </li>
+              <li>
+                <a *ngIf="isLogged && (user.role[1] == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-briefcase"></i> Espace pro</a>
+              </li>
+              <li>
+                <a *ngIf="isLogged && (user.role[1] == 'building')" routerLink="building-space" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
+                  infrastructure</a>
+              </li>
+              <li>
+                <a *ngIf="isLogged && (user.role[1] == 'organisation')" routerLink="organisation-space"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-briefcase"></i> Espace
+                  organisation</a>
+              </li>
+              <li>
+                <a routerLink="profile" routerLinkActive="active">
+                  <i class="glyphicon glyphicon-user"></i> Profil
+                </a>
+              </li>
+              <li>
+                <a routerLink="settings" routerLinkActive="active">
+                  <i class="glyphicon glyphicon-cog"></i> Paramètres
+                </a>
+              </li>
+              <li>
+                <a routerLinkActive="active" (click)="logout()">
+                  <i class="glyphicon glyphicon-log-out"></i> Deconnexion
+                </a>
+              </li>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">
+            <span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+        </li>
+        <li>
+          <div *ngIf="isLogged">
+            <alert-info [user]="user||null" class="dropdown">
+            </alert-info>
+          </div>
+        </li>
+        <li>
+          <div *ngIf="isLogged">
+            <app-reminder></app-reminder>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <nav class="navbar navbar-fixed-top mobile">
+    <div class="navbar-header container d-flex justify-content-end">
+      <ul class="nav navbar-nav">
+
+        <a href="#">Home</a>
+
+        <a href="#about">A propos</a>
+
+        <a href="#contact">Contact</a>
+
+        <div *ngIf="isLogged" class="dropdown">
+          <button class="dropdown-toggle" type="button" data-toggle="dropdown" *ngIf="user">
+            {{user.first_name}}
+            <span class="caret"></span>
+          </button>
+
+          <div class="dropdown-menu">
+
+            <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                    [routerLink]="['/current-treatment' , {'id' : user._id}]" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
+                </a>
+
+
+            <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                    routerLink="patient_rdv" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-calendar"></i> Prendre rendez-vous
+                </a>
+
+            <a *ngIf="isLogged && (user.role[1] == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-briefcase"></i> Espace pro</a>
+
+            <a *ngIf="isLogged && (user.role[1] == 'building')" routerLink="building-space" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
+                  infrastructure</a>
+
+            <a *ngIf="isLogged && (user.role[1] == 'organisation')" routerLink="organisation-space"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-briefcase"></i> Espace
+                  organisation</a>
+
+            <a routerLink="profile" routerLinkActive="active">
+                  <i class="glyphicon glyphicon-user"></i> Profil
+                </a>
+
+            <a routerLink="settings" routerLinkActive="active">
+                  <i class="glyphicon glyphicon-cog"></i> Paramètres
+                </a>
+
+            <a routerLinkActive="active" (click)="logout()">
+                  <i class="glyphicon glyphicon-log-out"></i> Deconnexion
+                </a>
+
+          </div>
+        </div>
+        <a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">
+            <span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+
+      </ul>
+      <div class="">
+        <a class="navbar-brand" href="#">Cappac</a>
       </div>
     </div>
   </nav>
+
+  <nav class="navbar navbar-fixed-top mobile">
+    <div class="navbar-inner container d-flex justify-content-end">
+
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <a class="navbar-brand" href="#">Cappac</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav flex-column">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">A propos</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <div *ngIf="isLogged" class="dropright">
+              <button class=" " type="button" data-toggle="dropdown" *ngIf="user">
+                  {{user.first_name}}
+                  <span class="caret"></span>
+              </button>
+
+              <div class="dropdown-menu">
+                <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                        [routerLink]="['/current-treatment' , {'id' : user._id}]" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                    <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
+                  </a>
+
+                <a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+                        routerLink="patient_rdv" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <i class="glyphicon glyphicon-calendar"></i> Prendre rendez-vous
+                  </a>
+
+                <a *ngIf="isLogged && (user.role[1] == 'medecin')" routerLink="doctor-space" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                    <i class="glyphicon glyphicon-briefcase"></i> Espace pro</a>
+
+                <a *ngIf="isLogged && (user.role[1] == 'building')" routerLink="building-space" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
+                    infrastructure</a>
+
+                <a *ngIf="isLogged && (user.role[1] == 'organisation')" routerLink="organisation-space"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <i class="glyphicon glyphicon-briefcase"></i> Espace
+                    organisation</a>
+
+                <a routerLink="profile" routerLinkActive="active">
+                    <i class="glyphicon glyphicon-user"></i> Profil
+                  </a>
+
+                <a routerLink="settings" routerLinkActive="active">
+                    <i class="glyphicon glyphicon-cog"></i> Paramètres
+                  </a>
+
+                <a routerLinkActive="active" (click)="logout()">
+                    <i class="glyphicon glyphicon-log-out"></i> Deconnexion
+                  </a>
+
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a *ngIf="!isLogged" routerLink="login" routerLinkActive="active">
+              <span class="glyphicon glyphicon-log-in"></span> Connexion
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+
+
+  <!--
+  <nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top">
+    <div class="d-flex">
+
+      <div *ngIf="isLogged">
+        <alert-info [user]="user||null"
+                class="dropdown">
+        </alert-info>
+        <app-reminder></app-reminder>
+      </div>
+    </div>
+
+
+    <div class="collapse navbar-collapse"
+            id="myNavbar">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li>
+          <a href="#about">A propos</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <div *ngIf="isLogged"
+                  class="dropdown">
+            <button class=" "
+                    type="button"
+                    data-toggle="dropdown"
+                    *ngIf="user">
+                {{user.first_name}}
+                <span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+
+                     [routerLink]="['/current-treatment' , {'id' : user._id}]"
+                     routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-folder-open"></i> Mes traitements
+                </a></li>
+
+                <li><a *ngIf="isLogged && (user.role[0] == 'patient' && user.role[1] != 'building' && user.role[1] != 'organisation')"
+
+                     routerLink="patient_rdv"
+                     routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact:true}">
+                  <i class="glyphicon glyphicon-calendar"></i> Prendre rendez-vous
+                </a></li>
+
+                <li><a *ngIf="isLogged && (user.role[1] == 'medecin')"
+                     routerLink="doctor-space"
+                     routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace pro</a>
+                </li>
+
+                <li><a *ngIf="isLogged && (user.role[1] == 'building')"
+                     routerLink="building-space"
+                     routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
+                  infrastructure</a></li>
+
+                <li><a *ngIf="isLogged && (user.role[1] == 'organisation')"
+                     routerLink="organisation-space"
+                     routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact:true}"><i class="glyphicon glyphicon-briefcase"></i> Espace
+                  organisation</a></li>
+                <li><a routerLink="profile"
+                     routerLinkActive="active">
+                  <i class="glyphicon glyphicon-user"></i> Profil
+                </a></li>
+                <li><a routerLink="settings"
+                     routerLinkActive="active">
+                  <i class="glyphicon glyphicon-cog"></i> Paramètres
+                </a></li>
+                <li><a routerLinkActive="active"
+                     (click)="logout()">
+                  <i class="glyphicon glyphicon-log-out"></i> Deconnexion
+                </a></li>
+              </ul>
+
+
+          </div>
+        </li>
+
+
+        <li>
+          <a *ngIf="!isLogged"
+                  routerLink="register"
+                  routerLinkActive="active">
+            <span class="glyphicon glyphicon-user"></span> Inscription
+          </a>
+        </li>
+        <li>
+          <a *ngIf="!isLogged"
+                  routerLink="login"
+                  routerLinkActive="active">
+            <span class="glyphicon glyphicon-log-in"></span> Connexion
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </nav>-->
 </header>
 
 <main>
