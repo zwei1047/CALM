@@ -1,31 +1,38 @@
 .mobile {
-  display: none;
+    display: none;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
 }
 
 body {
-  font: 400 15px Lato, sans-serif;
-  line-height: 1.8;
-  color: #818181;
+    font: 400 15px Lato, sans-serif !important;
+    line-height: 1.8;
+    color: #818181;
 }
 
 h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #303030;
-  font-weight: 600;
-  margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  color: #303030;
-  font-weight: 400;
-  margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
+}
+form{
+  width: 80%;
 }
 
 /*
@@ -34,28 +41,29 @@ button:focus {
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
 }
+*/
 
 .titre {
-  background-color: #123396;
-  color: White;
-  padding: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 25px;
-  margin-top: 100px;
-  font-family: Montserrat, sans-serif;
+    background-color: #123396;
+    color: White;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 25px;
+    margin-top: 100px;
+    font-family: Montserrat, sans-serif;
 }
 
 .container-fluid {
-  padding: 60px 50px;
-  width: 90%;
-  margin: auto;
-  max-width: 900px;
+    padding: 60px 50px;
+    width: 90%;
+    margin: auto;
+    max-width: 900px;
+    min-width: 200px;
 }
 
-.bg-grey {
-  background-color: #f6f6f6;
-}
+/*
+
 
 .logo-small {
   color: #123396;
@@ -151,44 +159,51 @@ button:focus {
 }
 */
 
-.navbar-default{
+.navbar-default {
     background-color: #123396;
 }
 
 .navbar-default .navbar-nav>li button {
-  background-color: transparent;
-  color: #fff;
-  line-height: 20px;
-  position: relative;
-  display: block;
-  padding: 15px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-}
-
-/*
-.navbar {
-  margin-bottom: 0;
-  z-index: 9999;
-  border: none;
-  font-size: 12px !important;
-  line-height: 1.42857143 !important;
-  border-radius: 0;
-  font-family: Montserrat, sans-serif;
+    background-color: transparent;
+    color: #fff;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
 }
 
 .navbar-header {
-  border: none;
-  background-color: #123396;
+    border: none;
+    background-color: #123396;
 }
 
 .navbar-collapse {
-  width: 35%;
-  min-width: 110px;
-  background-color: #aebcd4;
-  border: none;
+    width: 50%;
+    min-width: 200px;
+    min-height: 435px;
+    background-color: #123396;
+    border: none;
 }
+
+.navbar-toggler {
+    float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+    background: none;
+    border-color: transparent;
+}
+
+span.glyphicon-menu-hamburger {
+    font-size: 1.8em;
+    color: White;
+}
+
+
+
+/*
 .navbar li a{
   color: #030a1e;
 }
@@ -259,61 +274,59 @@ footer .glyphicon {
   visibility: visible;
 }
 
+*/
 
-
-/*
 @keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 @-webkit-keyframes slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
 }
-*/
 
-/*
 @media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  .btn-lg {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-  .navbar-nav {
-    float: left;
-    margin: 0;
-  }
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inline;
+    }
 }
 
-/*
 @media screen and (max-width: 480px) {
-  .logo {
-    font-size: 150px;
-  }
-}*/
+    .logo {
+        font-size: 150px;
+    }
+}
 
-/*
 @media only screen and (max-width:500px) {
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: inline;
-  }
-}*/
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inline;
+    }
+
+}

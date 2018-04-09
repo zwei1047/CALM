@@ -39,3 +39,28 @@ span.glyphicon-menu-hamburger {
 ul>div{
   display: inline;
 }*/
+button>a, button>a:hover{
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  line-height: 20px;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+.mobile .dropdown-menu>li>a{
+  color: White;
+}
+.mobile .dropdown-menu>li>a:hover{
+  color:  #123396;
+  background-color: White;
+}
+.desktop .dropdown-menu>li>a{
+  color:  #123396;
+}
+.desktop .dropdown-menu>li>a:hover{
+  color:  White;
+  background-color: #123396;
+}
