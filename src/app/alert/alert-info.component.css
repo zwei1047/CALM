@@ -1,6 +1,4 @@
-#infoSign .badge {
-  background: red;
-}
+
 #alertTable {
   width: 300px;
   overflow-x: hidden;
@@ -27,4 +25,8 @@
 
 .dropdown-menu li:hover{
   background: #1e9055;
+}
+
+.btn-primary {
+  width: 70px;
 }

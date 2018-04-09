@@ -27,7 +27,7 @@ export class PostComponent implements OnInit {
   constructor(private auth: AuthenticationService, private medicalService: MedicalFileService,
               private autorisationService: AutorisationService) { }
   ngOnInit() {
-    this.isMessagerieOpen = true;
+    this.isMessagerieOpen = false;
     this.isLogged = this.auth.isLoggedIn();
     this.autorisation = new Autorisation(null);
     this.medicalService.getCurrentPatient()

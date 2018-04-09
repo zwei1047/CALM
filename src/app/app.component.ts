@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {User} from "./shared/models/user";
 import {UsersService} from "./shared/services/users.service";
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +13,8 @@ import {UsersService} from "./shared/services/users.service";
 export class AppComponent implements OnInit{
   isLogged: boolean; // if user is logged or not
   user= new User(null);
+  image = require('./shared/img/logo_calm.png');
+  
 
   constructor(private authenticationService: AuthenticationService,private router: Router, private usersService : UsersService) {}
 
