@@ -47,7 +47,6 @@ import {GestionSupervisorComponent} from "./profile/settings/gestion-autorisatio
 import {GestionObserverComponent} from "./profile/settings/gestion-autorisation/gestion-observer.component";
 import {GooglemapsService} from "./shared/services/googlemaps.service";
 import { ReCaptchaModule } from 'angular2-recaptcha';
-import { ConfirmationComponent } from './register/confirmation/confirmation.component';
 
 
 @NgModule({
@@ -80,7 +79,6 @@ import { ConfirmationComponent } from './register/confirmation/confirmation.comp
     AlertInfoComponent,
     GestionSupervisorComponent,
     GestionObserverComponent,
-    ConfirmationComponent
 
   ],
   imports: [
