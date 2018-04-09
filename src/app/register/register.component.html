@@ -1,3 +1,5 @@
+
+<head><script src='https://www.google.com/recaptcha/api.js'></script></head>
 <div class="center">
     <h2 class="text-center">Page d'inscription</h2>
 
@@ -103,7 +105,8 @@
         <div style="display:inline;" *ngIf="user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0">
             {{displayAddress()}}
         </div>
-
+        <re-captcha site_key="6Le2J08UAAAAAGBY8-r2rg70Z4-ySnqdi7ySOuNz"></re-captcha>
+        </br>
         <div class="form-group margin">
             <button type="submit" class="btn btn-primary" [disabled]="form.invalid">S'inscrire</button>
         </div>
