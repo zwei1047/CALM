@@ -13,6 +13,8 @@ import {UsersService} from "./shared/services/users.service";
 export class AppComponent implements OnInit{
   isLogged: boolean; // if user is logged or not
   user= new User(null);
+  image = require('./shared/img/logo_calm.png');
+  
 
   constructor(private authenticationService: AuthenticationService,private router: Router, private usersService : UsersService) {}
 
