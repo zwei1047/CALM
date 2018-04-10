@@ -7,26 +7,19 @@
 }
 
 .agm-map {
-<<<<<<< HEAD
-
-  height: 500px;
-=======
     min-width: 200px;
-    /*width: 80%;*/
     height: 500px;
-    /*float:right;*/
     margin-left: 10%;
     margin-right: 10%;
-
 }
 
-.center{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.margin{
-  margin-left: 20%;
-  margin-right: 20%;
->>>>>>> 7afd76228205d7f046825798697a9fad76054817
+
+.margin {
+    margin-left: 20%;
+    margin-right: 20%;
 }
