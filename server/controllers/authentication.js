@@ -22,11 +22,14 @@ module.exports.register = function(req, res) {
   address.city = req.body.address.city;
   address.street_address = req.body.address.street_address;
   address.num = req.body.address.num;
-  address.latitude = req.body.address.latitude;
-  address.longitude = req.body.address.longitude;
+  //address.latitude = req.body.address.latitude;
+  //address.longitude = req.body.address.longitude;
+
+  address.encrypt();
 
   //Create address
   address.save(function(err) {
+    console.log(err);
   });
 
   // console.log("req.body : ", req.body);
@@ -36,8 +39,10 @@ module.exports.register = function(req, res) {
   user.email = req.body.email;
   user.password = user.generateHash(req.body.password);
   user.birth_date = req.body.birth_date;
-  user.role = ['patient',req.body.role];
-  user.address = new Address(address);
+  user.role = ['patient', req.body.role];
+  user.address = address;
+
+  user.encrypt();
 
 
   // Verify that the email is not already used

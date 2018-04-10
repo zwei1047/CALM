@@ -18,6 +18,22 @@ module.exports.profileRead = function(req, res) {
       .findById(req.payload._id)
       .populate({path: 'address'})
       .exec(function(err, user) {
+        user.decrypt();
+        user.address.decrypt();
+
+        //user.first_name = user.decrypt(user.first_name);
+        //user.last_name = user.decrypt(user.last_name);
+        //user.role = ['patient', user.decrypt(user.role[1])];
+        //user.birth_date = user.decrypt(user.birth_date);
+
+        //user.address.decryptAll();
+        //user.address.country = user.address.decrypt(user.address.country);
+        //user.address.city = user.address.decrypt(user.address.city);
+        //user.address.street_address = user.address.decrypt(user.address.street_address);
+        //user.address.num = user.address.decrypt(user.address.num);
+        //user.address.latitude = user.address.decrypt(user.address.latitude);
+        //user.address.longitude = user.address.decrypt(user.address.longitude);
+
         res.json(user);
       });
   }

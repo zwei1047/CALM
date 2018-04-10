@@ -38,6 +38,8 @@ module.exports = function (passport) {
   router.get('/user/:id', auth, function (req, res) {
     User.findOne({_id: req.params.id})
       .exec(function (err, docs) {
+        docs.decrypt();
+
         res.json(docs);
       });
   });
@@ -47,6 +49,11 @@ module.exports = function (passport) {
     User.find({})
       .populate('address')
       .exec(function (err, docs) {
+        for (let i = 0; i < docs.length; i++){
+          docs[i].decrypt();
+          docs[i].address.decrypt();
+        }
+
         res.json(docs);
       });
   });
@@ -55,6 +62,12 @@ module.exports = function (passport) {
     Doctor.find({})
       .populate({path: 'user_id', populate: {path: 'address'}})
       .exec(function (err, docs) {
+        for (let i = 0; i < docs.length ; i++){
+          docs[i].decrypt();
+          docs[i].user_id.decrypt();
+          docs[i].user_id.address.decrypt();
+        }
+
         res.json(docs);
       });
   });
@@ -66,6 +79,11 @@ module.exports = function (passport) {
         if(err){
           res.json(err);
         } else {
+          for (let i = 0; i < docs.length; i++){
+            docs[i].decrypt();
+            docs[i].address.decrypt();
+          }
+
           res.json(docs);
         }
       });
@@ -76,6 +94,12 @@ module.exports = function (passport) {
       .populate('user_id')
       .populate('general_doctor')
       .exec(function (err, docs) {
+        for (let i = 0; i < docs.length; i++){
+          docs[i].decrypt();
+          docs[i].user_id.decrypt();
+          docs[i].general_doctor.decrypt();
+        }
+
         res.json(docs);
       });
   });
@@ -93,6 +117,12 @@ module.exports = function (passport) {
         populate: {path: 'user_id', populate: {path: 'address'}}
       })
       .exec(function (err, docs) {
+        docs.decrypt();
+        docs.user_id.decrypt();
+        /* docs.general_doctor.decrypt();
+        docs.general_doctor.user_id.decrypt();
+        docs.general_doctor.user_id.address.decrypt(); */
+
         res.json(docs);
       });
   });
@@ -108,6 +138,12 @@ module.exports = function (passport) {
         path: 'user_id'
       })
       .exec(function (err, docs) {
+        for (let i = 0; i < docs.length; i++){
+          docs[i].decrypt();
+          docs[i].general_doctor.decrypt();
+          docs[i].user_id.decrypt();
+        }
+
         res.json(docs);
       });
   });
@@ -115,6 +151,10 @@ module.exports = function (passport) {
   router.get('/addresses', auth, function (req, res) {
     Address.find({})
       .exec(function (err, docs) {
+        for (let i = 0; i < docs.length; i++){
+          docs[i].decrypt();
+        }
+
         res.json(docs);
       });
   });
@@ -123,6 +163,8 @@ module.exports = function (passport) {
     if (req.params.id) {
       Address.findById(req.params.id)
         .exec(function (err, user) {
+          docs.decrypt();
+
           res.json(user);
         });
     }
@@ -132,6 +174,8 @@ module.exports = function (passport) {
   router.get('/users/:id', auth, function (req, res) {
     if (req.params.id) {
       User.findOne({_id: req.params.id}, function (err, docs) {
+        docs.decrypt();
+
         res.json(docs);
       });
     }
@@ -144,6 +188,8 @@ module.exports = function (passport) {
         if (err) {
           res.json(err);
         } else {
+          docs.decrypt();
+
           res.json(docs);
         }
       });
