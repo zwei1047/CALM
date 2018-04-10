@@ -14,7 +14,7 @@ export class UsersService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'https://localhost:3000/api/';
+    this.url = 'http://vps531952.ovh.net/api/';
   }
 
   // Get all users from the API
@@ -24,7 +24,7 @@ export class UsersService {
   }
 
   getUser(id: string) {
-    return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
+    return this.http.get('http://vps531952.ovh.net/api/user/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 

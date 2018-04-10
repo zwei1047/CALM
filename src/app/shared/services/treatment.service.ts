@@ -11,37 +11,37 @@ export class TreatmentService {
   }
 
   getUserTreatment(id: string): Observable<any> {
-    return this.http.get('https://localhost:3000/api/treatment/' + id, this.authentication.getRequestOptions())
+    return this.http.get('http://vps531952.ovh.net/api/treatment/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   updateUserTreatment(id: string, updatedTreatment: Treatment): Observable<any> {
     console.log(updatedTreatment);
-    return this.http.put('https://localhost:3000/api/updateTreatment/' + id, updatedTreatment, this.authentication.getRequestOptions())
+    return this.http.put('http://vps531952.ovh.net/api/updateTreatment/' + id, updatedTreatment, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   getMedicamentList(medicName: string): Observable<any> {
-    return this.http.get('https://localhost:3000/api/getMedicName/' + medicName , this.authentication.getRequestOptions()).map(res => res.json());
+    return this.http.get('http://vps531952.ovh.net/api/getMedicName/' + medicName , this.authentication.getRequestOptions()).map(res => res.json());
   }
 
   deleteTreatment(id: string): Observable<any> {
-    return this.http.delete('https://localhost:3000/api/treatment/' + id, this.authentication.getRequestOptions())
+    return this.http.delete('http://vps531952.ovh.net/api/treatment/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   addTreatment(id: string, newTreatment: Treatment): Observable<any> {
-    return this.http.put('https://localhost:3000/api/treatment/' + id, newTreatment, this.authentication.getRequestOptions())
+    return this.http.put('http://vps531952.ovh.net/api/treatment/' + id, newTreatment, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   getTreatmentInfo(codeCIS: string): Observable<any> {
-    return this.http.get('https://localhost:3000/api/getMedicInfo/' + codeCIS, this.authentication.getRequestOptions())
+    return this.http.get('http://vps531952.ovh.net/api/getMedicInfo/' + codeCIS, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
   getTreatmentInteraction(ids: string): Observable<any> {
-    return this.http.get('https://localhost:3000/api/getMedicInteraction/' + ids, this.authentication.getRequestOptions())
+    return this.http.get('http://vps531952.ovh.net/api/getMedicInteraction/' + ids, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
