@@ -14,7 +14,7 @@ export class UsersService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'https://localhost:3000/api/';
+    this.url = 'http://54.38.243.4:3000/api/';
   }
 
   // Get all users from the API
@@ -24,10 +24,10 @@ export class UsersService {
   }
 
   getUser(id: string) {
-    return this.http.get('https://localhost:3000/api/user/' + id, this.authentication.getRequestOptions())
+    return this.http.get('http://54.38.243.4:3000/api/user/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
- 
+
   deleteUser(id: string): Observable<void> {
     if (this.authentication.currentUserId() === id) {
       this.authentication.logout();

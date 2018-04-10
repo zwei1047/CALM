@@ -26,11 +26,11 @@ export class CreateReminderService {
       userId: "5a098f391f982053ef3665b3",
       _id: "5a0b0936fecaf0101d591ff9"
     }];
-    return this.http.put('https://localhost:3000/api/createFirstRappel/', treatement, this.authentication.getRequestOptions())
+    return this.http.put('http://54.38.243.4:3000/api/createFirstRappel/', treatement, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
   createNextReminder(treatmentId: string) {
-    return this.http.put('https://localhost:3000/api/createNextRappel/', this.authentication.getRequestOptions())
+    return this.http.put('http://54.38.243.4:3000/api/createNextRappel/', this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 }
