@@ -8,7 +8,7 @@ export class MailService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'http://54.38.243.4:3000/api/';
+    this.url = 'https://localhost:3000/api/';
   }
 
   sendTestMail() {

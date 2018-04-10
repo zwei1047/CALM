@@ -63,7 +63,7 @@ export class AuthenticationService {
   };
 
   register(user): Observable<any> {
-    return this.http.post('http://54.38.243.4:3000/api/register', user)
+    return this.http.post('http://vps531952.ovh.net:3000/api/register', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
@@ -71,7 +71,7 @@ export class AuthenticationService {
   }
 
   login(user): Observable<any> {
-    return this.http.post('http://54.38.243.4:3000/api/login', user)
+    return this.http.post('http://vps531952.ovh.net:3000/api/login', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
