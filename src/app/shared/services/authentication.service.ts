@@ -72,7 +72,7 @@ export class AuthenticationService {
   }
 
   login(user): Observable<any> {
-    return this.http.post(environment.siteurl'/api/login', user)
+    return this.http.post(environment.siteurl+'/api/login', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
