@@ -7,13 +7,14 @@ import {Doctor} from "../models/doctor";
 import {Autorisation} from "../models/autorisation";
 import {User} from "../models/user";
 import {Post} from "../models/post";
+import {environment} from "../../../environments/environment";
 
 @Injectable()
 export class MedicalFileService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'http://vps531952.ovh.net/api/';
+    this.url = environment.siteurl+'/api/';
   }
 
 

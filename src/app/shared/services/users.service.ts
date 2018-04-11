@@ -8,13 +8,14 @@ import {User} from "../models/user";
 import {Observable} from "rxjs";
 import {AuthenticationService} from './authentication.service';
 import {Address} from "../models/address";
+import {environment} from "../../../environments/environment";
 
 @Injectable()
 export class UsersService {
   url: string;
 
   constructor(private http: Http, private authentication: AuthenticationService) {
-    this.url = 'http://vps531952.ovh.net/api/';
+    this.url = environment.siteurl+'/api/';
   }
 
   // Get all users from the API
@@ -24,7 +25,7 @@ export class UsersService {
   }
 
   getUser(id: string) {
-    return this.http.get('http://vps531952.ovh.net/api/user/' + id, this.authentication.getRequestOptions())
+    return this.http.get(environment.siteurl+'/api/user/' + id, this.authentication.getRequestOptions())
       .map(res => res.json());
   }
 
