@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  siteurl: 'http://www.cappac.fr'
+  siteurl: 'https://www.cappac.fr'
 };
