@@ -59,7 +59,7 @@
     "@types/jasmine": "^2.8.6",
     "@types/node": "^9.6.4",
     "codelyzer": "^4.2.1",
-    "jasmine-core": "2.5.2",
+    "jasmine-core": "^3.1.0",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
     "karma-chrome-launcher": "^2.0.0",
