@@ -7,7 +7,7 @@
 }
 
 body {
-    font: 400 15px Lato, sans-serif !important;
+    font: 400 18px Lato, sans-serif !important;
     line-height: 1.8;
     color: #818181;
 }
@@ -25,7 +25,11 @@ h4 {
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+p{
+  margin:10px !important;
 }
 
 button:focus {
@@ -36,6 +40,7 @@ form{
   margin-right: 10%;
   margin-left: 10% !important;
 }
+
 
 /*
 .jumbotron {
@@ -112,8 +117,8 @@ form{
 
 .item span {
   font-style: normal;
-}
-
+}*/
+/*---------------*/
 .panel {
   border: 1px solid #123396;
   border-radius: 0 !important;
@@ -159,7 +164,7 @@ form{
   background-color: #123396;
   color: #fff;
 }
-*/
+/*---------------*/
 
 .navbar-default {
     background-color: #123396;
@@ -185,7 +190,7 @@ form{
 .navbar-collapse {
     width: 50%;
     min-width: 200px;
-    min-height: 435px;
+    max-height: 500px;
     background-color: #123396;
     border: none;
 }
