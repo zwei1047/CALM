@@ -61,7 +61,7 @@
     <div class="form-group margin">
       <label class="control-label">Confirmation Mot de passe</label>
       <input id="password_confirmation" type="password" class="form-control" name="password_confirmation"
-              required onchange="confirmPasswd()">
+              required oninput="confirmPasswd()">
       <span class="help-block" *ngIf="password.invalid && password.touched">
                 Mot de passe requis
             </span>
