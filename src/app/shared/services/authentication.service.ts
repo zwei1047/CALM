@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from "rxjs";
+const request = require("request");
 import 'rxjs/Rx';
 import { environment } from '../../../environments/environment';
 
@@ -64,7 +65,7 @@ export class AuthenticationService {
   };
 
   register(user): Observable<any> {
-    return this.http.post(environment.siteurl + '/api/register', user)
+    return this.http.post(environment.siteurl + '/api/register/', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
@@ -72,7 +73,7 @@ export class AuthenticationService {
   }
 
   login(user): Observable<any> {
-    return this.http.post(environment.siteurl+'/api/login', user)
+    return this.http.post(environment.siteurl+'/api/login/', user)
       .map(res => res.json())
       .catch(error => {
         return Observable.throw(error.json());
