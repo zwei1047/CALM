@@ -37,7 +37,7 @@
     "http": "0.0.0",
     "install": "^0.11.0",
     "ipware": "^1.0.0",
-    "jsonwebtoken": "^7.3.0",
+    "jsonwebtoken": "^8.2.1",
     "method-override": "^2.3.8",
     "mongoose": "^4.10.8",
     "mongoose-findorcreate": "^1.0.1",
