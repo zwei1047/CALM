@@ -8,14 +8,12 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const configDB = require('./server/config/database');
 const fs = require('fs');
-const hskey = fs.readFileSync('server/cert/calm-key.pem');
-const hscert = fs.readFileSync('server/cert/calm-cert.pem');
 
 const port = process.env.PORT || '3000';
 var app = express();
 var options = {
-  key: hskey,
-  cert: hscert
+  key: fs.readFileSync('server/cert/calm-key.pem'),
+  cert: fs.readFileSync('server/cert/calm-cert.pem')
 };
 
 // Connect to database
