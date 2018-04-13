@@ -11,6 +11,7 @@ var Address = require('../models/address');
 var Doctor = require('../models/doctor');
 var Patient = require('../models/patient');
 var Building = require('../models/building');
+var logger = require('../config/logger');
 var fs = require('fs');
 
 
@@ -77,6 +78,7 @@ module.exports.register = function(req, res) {
           console.log("Default case");
           break;
       }
+      logger.info('New user registered :' + user._id);
     }
   });
 
@@ -103,6 +105,7 @@ module.exports.login = function(req, res) {
       res.json({
         "token" : token
       });
+      logger.info('User connected :' + user._id);
     } else {
       // If user is not found
       res.status(401).json(info);
