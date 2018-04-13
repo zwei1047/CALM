@@ -96,10 +96,10 @@
         </div>
 
         <!--//google map pour preciser l'address-->
-        <sebm-google-map style="float=right;" class="agm-map " [latitude]="user.address.latitude" [longitude]="user.address.longitude" [zoom]="zoom*2" *ngIf="user.address.latitude !== 0">
-            <sebm-google-map-marker [latitude]="user.address.latitude" [longitude]="user.address.longitude">
-            </sebm-google-map-marker> <!-- marker ne s'afficha pas -->
-        </sebm-google-map>
+        <agm-map style="float=right;" class="agm-map " [latitude]="user.address.latitude" [longitude]="user.address.longitude" [zoom]="zoom*2" *ngIf="user.address.latitude !== 0">
+            <agm-marker [latitude]="user.address.latitude" [longitude]="user.address.longitude">
+            </agm-marker> <!-- marker ne s'afficha pas -->
+        </agm-map>
 
         <div style="display:inline;" *ngIf="user.address.city !== '' && user.address.street_address !== '' && user.address.num !== 0">
             {{displayAddress()}}
