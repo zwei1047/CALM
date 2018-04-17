@@ -16,7 +16,7 @@ import {Router} from "@angular/router";
 export class GoogleMapComponent implements OnInit {
   lat: number = 50.6315144;
   lng: number = 3.056218;
-  zoom: number = 8;
+  zoom: number = 4;
   me: User;
   rayon: number;
   response: Object[] = [] ;
