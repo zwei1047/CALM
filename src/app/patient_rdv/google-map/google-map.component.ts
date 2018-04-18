@@ -113,7 +113,7 @@ export class GoogleMapComponent implements OnInit {
               // modifier centre maps
               this.lat = position.lat;
               this.lng = position.lng;
-              this.zoom = 12;
+              this.zoom = 16;
             }
           });
 
@@ -127,7 +127,7 @@ export class GoogleMapComponent implements OnInit {
     let _this = this;
     if(this.response.length !== 0)
     {
-      this.zoom = 8;
+      this.zoom = 16;
       let sumLng = 0 ;
       let sumLat = 0 ;
       for(let temp of this.response )
